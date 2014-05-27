@@ -1,0 +1,3 @@
+[submodule "NetworkSceneGraph/Dependencies/NetworkObjects"]
+	path = NetworkSceneGraph/Dependencies/NetworkObjects
+	url = https://github.com/colemancda/NetworkObjects.git
