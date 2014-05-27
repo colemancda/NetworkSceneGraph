@@ -18,6 +18,9 @@
 		6EB02C7819352F2000A732C7 /* NSGSceneView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02C7619352F2000A732C7 /* NSGSceneView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EB02C7919352F2000A732C7 /* NSGSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C7719352F2000A732C7 /* NSGSceneView.m */; };
 		6EB02C7A19352F2000A732C7 /* NSGSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C7719352F2000A732C7 /* NSGSceneView.m */; };
+		6EB02C7D1935311900A732C7 /* NSGSceneController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02C7B1935311900A732C7 /* NSGSceneController.h */; };
+		6EB02C7E1935311900A732C7 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C7C1935311900A732C7 /* NSGSceneController.m */; };
+		6EB02C7F1935311900A732C7 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C7C1935311900A732C7 /* NSGSceneController.m */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
@@ -93,6 +96,8 @@
 		6EB02C6F1935298600A732C7 /* NSGServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGServer.m; sourceTree = "<group>"; };
 		6EB02C7619352F2000A732C7 /* NSGSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSceneView.h; sourceTree = "<group>"; };
 		6EB02C7719352F2000A732C7 /* NSGSceneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSceneView.m; sourceTree = "<group>"; };
+		6EB02C7B1935311900A732C7 /* NSGSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSceneController.h; sourceTree = "<group>"; };
+		6EB02C7C1935311900A732C7 /* NSGSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSceneController.m; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6EBC63CE192FEF3E00FCF7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -149,6 +154,8 @@
 			children = (
 				6EB02C6E1935298600A732C7 /* NSGServer.h */,
 				6EB02C6F1935298600A732C7 /* NSGServer.m */,
+				6EB02C7B1935311900A732C7 /* NSGSceneController.h */,
+				6EB02C7C1935311900A732C7 /* NSGSceneController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB02C7D1935311900A732C7 /* NSGSceneController.h in Headers */,
 				6EB02C701935298600A732C7 /* NSGServer.h in Headers */,
 				6EB02C7819352F2000A732C7 /* NSGSceneView.h in Headers */,
 			);
@@ -399,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
+				6EB02C7E1935311900A732C7 /* NSGSceneController.m in Sources */,
 				6EB02C7919352F2000A732C7 /* NSGSceneView.m in Sources */,
 				6EB02C711935298600A732C7 /* NSGServer.m in Sources */,
 			);
@@ -410,6 +419,7 @@
 			files = (
 				6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
 				6EB02C721935298600A732C7 /* NSGServer.m in Sources */,
+				6EB02C7F1935311900A732C7 /* NSGSceneController.m in Sources */,
 				6EB02C7A19352F2000A732C7 /* NSGSceneView.m in Sources */,
 				6EBC63ED192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m in Sources */,
 			);
