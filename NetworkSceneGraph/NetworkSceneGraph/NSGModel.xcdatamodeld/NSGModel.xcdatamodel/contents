@@ -92,16 +92,16 @@
         <attribute name="mipFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="wrapS" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="wrapT" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="ambientMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="ambient" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="ambientMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="ambient" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialPropertyContent" inverseName="material" inverseEntity="NSGMaterialPropertyContent" syncable="YES"/>
-        <relationship name="diffuseMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="diffuse" inverseEntity="NSGMaterial" syncable="YES"/>
-        <relationship name="emissionMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="emission" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="diffuseMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="diffuse" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="emissionMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="emission" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="globoLight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="gobo" inverseEntity="NSGLight" syncable="YES"/>
-        <relationship name="multiplyMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="multiply" inverseEntity="NSGMaterial" syncable="YES"/>
-        <relationship name="normalMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="normal" inverseEntity="NSGMaterial" syncable="YES"/>
-        <relationship name="reflectiveMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="reflective" inverseEntity="NSGMaterial" syncable="YES"/>
-        <relationship name="specularMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="specular" inverseEntity="NSGMaterial" syncable="YES"/>
-        <relationship name="transparentMaterial" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGMaterial" inverseName="transparent" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="multiplyMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="multiply" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="normalMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="normal" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="reflectiveMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="reflective" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="specularMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="specular" inverseEntity="NSGMaterial" syncable="YES"/>
+        <relationship name="transparentMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="transparent" inverseEntity="NSGMaterial" syncable="YES"/>
     </entity>
     <entity name="NSGMaterialPropertyContent" isAbstract="YES" syncable="YES">
         <relationship name="material" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="content" inverseEntity="NSGMaterialProperty" syncable="YES"/>
