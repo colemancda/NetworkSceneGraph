@@ -11,6 +11,7 @@
 		6E06164E193438C80087D99B /* NetworkObjects.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E507DD319342B5400D6B91E /* NetworkObjects.framework */; };
 		6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
+		6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E124F3619350FFB004D6A32 /* SceneKit.framework */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63DA192FEF3E00FCF7C3 /* NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC63D9192FEF3E00FCF7C3 /* NetworkSceneGraph.m */; };
@@ -81,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		6E124F2F1934F840004D6A32 /* NSGModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSGModel.xcdatamodel; sourceTree = "<group>"; };
+		6E124F3619350FFB004D6A32 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */,
 				6E06164C193438B30087D99B /* NetworkObjects.framework in Frameworks */,
 				6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */,
 			);
@@ -155,6 +158,7 @@
 		6EBC63CA192FEF3E00FCF7C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E124F3619350FFB004D6A32 /* SceneKit.framework */,
 				6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */,
 				6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */,
 				6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */,
