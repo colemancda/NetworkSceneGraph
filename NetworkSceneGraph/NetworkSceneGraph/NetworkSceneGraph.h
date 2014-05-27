@@ -6,8 +6,5 @@
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <NetworkObjects/NetworkObjects.h>
 
-@interface NetworkSceneGraph : NSObject
-
-@end

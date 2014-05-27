@@ -8,6 +8,3 @@
 
 #import "NetworkSceneGraph.h"
 
-@implementation NetworkSceneGraph
-
-@end

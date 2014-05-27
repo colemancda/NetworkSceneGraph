@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E06164C193438B30087D99B /* NetworkObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E507DD319342B5400D6B91E /* NetworkObjects.framework */; };
+		6E06164E193438C80087D99B /* NetworkObjects.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E507DD319342B5400D6B91E /* NetworkObjects.framework */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63DA192FEF3E00FCF7C3 /* NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC63D9192FEF3E00FCF7C3 /* NetworkSceneGraph.m */; };
@@ -18,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6E061645193438A80087D99B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E2BD7BD1817309E00E9D04C;
+			remoteInfo = NetworkObjects;
+		};
 		6E507DD219342B5400D6B91E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */;
@@ -55,6 +64,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6E06164D193438BC0087D99B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E06164E193438C80087D99B /* NetworkObjects.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E06164C193438B30087D99B /* NetworkObjects.framework in Frameworks */,
 				6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,10 +229,12 @@
 				6EBC63C4192FEF3E00FCF7C3 /* Frameworks */,
 				6EBC63C5192FEF3E00FCF7C3 /* Headers */,
 				6EBC63C6192FEF3E00FCF7C3 /* Resources */,
+				6E06164D193438BC0087D99B /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6E061646193438A80087D99B /* PBXTargetDependency */,
 			);
 			name = NetworkSceneGraph;
 			productName = NetworkSceneGraph;
@@ -342,6 +367,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6E061646193438A80087D99B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkObjects;
+			targetProxy = 6E061645193438A80087D99B /* PBXContainerItemProxy */;
+		};
 		6EBC63E4192FEF3E00FCF7C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6EBC63C7192FEF3E00FCF7C3 /* NetworkSceneGraph */;
