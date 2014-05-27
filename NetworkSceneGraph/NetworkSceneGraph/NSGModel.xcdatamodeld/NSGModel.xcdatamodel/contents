@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="NSGCamera" syncable="YES"/>
+    <entity name="NSGGeometry" syncable="YES">
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="geometry" inverseEntity="NSGNode" syncable="YES"/>
+    </entity>
+    <entity name="NSGLight" syncable="YES">
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="light" inverseEntity="NSGNode" syncable="YES"/>
+    </entity>
+    <entity name="NSGLink" syncable="YES">
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="link" inverseEntity="NSGNode" syncable="YES"/>
+    </entity>
+    <entity name="NSGMaterial" syncable="YES"/>
+    <entity name="NSGMaterialProperty" syncable="YES"/>
+    <entity name="NSGNode" syncable="YES">
+        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="node" inverseEntity="NSGGeometry" syncable="YES"/>
+        <relationship name="light" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="node" inverseEntity="NSGLight" syncable="YES"/>
+        <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLink" inverseName="node" inverseEntity="NSGLink" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="NSGNode" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="NSGCamera" positionX="-36" positionY="9" width="128" height="45"/>
+        <element name="NSGLight" positionX="-18" positionY="27" width="128" height="58"/>
+        <element name="NSGGeometry" positionX="0" positionY="45" width="128" height="58"/>
+        <element name="NSGMaterial" positionX="18" positionY="63" width="128" height="45"/>
+        <element name="NSGMaterialProperty" positionX="36" positionY="81" width="128" height="45"/>
+        <element name="NSGLink" positionX="-9" positionY="36" width="128" height="73"/>
+    </elements>
+</model>
