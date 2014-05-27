@@ -15,8 +15,8 @@
 
 @property (readonly, nonatomic) SCNScene *scene;
 
-#pragma mark - Initializer
+#pragma mark - Initialization
 
-
+-(instancetype)initWithScene:(SCNScene *)scene;
 
 @end
