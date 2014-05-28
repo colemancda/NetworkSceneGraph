@@ -33,9 +33,6 @@
 		6EB02C9B1935954700A732C7 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02C991935954700A732C7 /* NSGGeometry.h */; };
 		6EB02C9C1935954700A732C7 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C9A1935954700A732C7 /* NSGGeometry.m */; };
 		6EB02C9D1935954700A732C7 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C9A1935954700A732C7 /* NSGGeometry.m */; };
-		6EB02CA01935954700A732C7 /* NSGCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02C9E1935954700A732C7 /* NSGCamera.h */; };
-		6EB02CA11935954700A732C7 /* NSGCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C9F1935954700A732C7 /* NSGCamera.m */; };
-		6EB02CA21935954700A732C7 /* NSGCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C9F1935954700A732C7 /* NSGCamera.m */; };
 		6EB02CA51935954700A732C7 /* NSGMaterialProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CA31935954700A732C7 /* NSGMaterialProperty.h */; };
 		6EB02CA61935954700A732C7 /* NSGMaterialProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CA41935954700A732C7 /* NSGMaterialProperty.m */; };
 		6EB02CA71935954700A732C7 /* NSGMaterialProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CA41935954700A732C7 /* NSGMaterialProperty.m */; };
@@ -147,8 +144,6 @@
 		6EB02C951935954700A732C7 /* NSGGeometryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometryElement.m; sourceTree = "<group>"; };
 		6EB02C991935954700A732C7 /* NSGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometry.h; sourceTree = "<group>"; };
 		6EB02C9A1935954700A732C7 /* NSGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometry.m; sourceTree = "<group>"; };
-		6EB02C9E1935954700A732C7 /* NSGCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGCamera.h; sourceTree = "<group>"; };
-		6EB02C9F1935954700A732C7 /* NSGCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGCamera.m; sourceTree = "<group>"; };
 		6EB02CA31935954700A732C7 /* NSGMaterialProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialProperty.h; sourceTree = "<group>"; };
 		6EB02CA41935954700A732C7 /* NSGMaterialProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialProperty.m; sourceTree = "<group>"; };
 		6EB02CA81935954700A732C7 /* NSGMaterialPropertyContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContent.h; sourceTree = "<group>"; };
@@ -247,8 +242,6 @@
 				6EB02CA91935954700A732C7 /* NSGMaterialPropertyContent.m */,
 				6EB02CA31935954700A732C7 /* NSGMaterialProperty.h */,
 				6EB02CA41935954700A732C7 /* NSGMaterialProperty.m */,
-				6EB02C9E1935954700A732C7 /* NSGCamera.h */,
-				6EB02C9F1935954700A732C7 /* NSGCamera.m */,
 				6EB02C991935954700A732C7 /* NSGGeometry.h */,
 				6EB02C9A1935954700A732C7 /* NSGGeometry.m */,
 				6EB02C941935954700A732C7 /* NSGGeometryElement.h */,
@@ -365,7 +358,6 @@
 				6EB02C9B1935954700A732C7 /* NSGGeometry.h in Headers */,
 				6EB02C7D1935311900A732C7 /* NSGSceneController.h in Headers */,
 				6EB02CA51935954700A732C7 /* NSGMaterialProperty.h in Headers */,
-				6EB02CA01935954700A732C7 /* NSGCamera.h in Headers */,
 				6EB02C871935954700A732C7 /* NSGScene.h in Headers */,
 				6EB02CB41935954700A732C7 /* NSGLink.h in Headers */,
 				6EB02CB91935954700A732C7 /* NSGMaterialPropertyContentImageURL.h in Headers */,
@@ -519,7 +511,6 @@
 			files = (
 				6EB02CCE1935954700A732C7 /* NSGMaterialPropertyContentImage.m in Sources */,
 				6EB02CAB1935954700A732C7 /* NSGMaterialPropertyContent.m in Sources */,
-				6EB02CA11935954700A732C7 /* NSGCamera.m in Sources */,
 				6EB02C921935954700A732C7 /* NSGMaterialPropertyContentColor.m in Sources */,
 				6EB02CB51935954700A732C7 /* NSGLink.m in Sources */,
 				6EB02CC41935954700A732C7 /* NSGLight.m in Sources */,
@@ -557,7 +548,6 @@
 				6EBC63ED192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m in Sources */,
 				6EB02C9D1935954700A732C7 /* NSGGeometry.m in Sources */,
 				6EB02CB11935954700A732C7 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
-				6EB02CA21935954700A732C7 /* NSGCamera.m in Sources */,
 				6EB02CCF1935954700A732C7 /* NSGMaterialPropertyContentImage.m in Sources */,
 				6EB02CC51935954700A732C7 /* NSGLight.m in Sources */,
 			);

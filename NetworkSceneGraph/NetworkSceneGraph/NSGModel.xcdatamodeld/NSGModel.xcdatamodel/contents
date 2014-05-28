@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="NSGCamera" representedClassName="NSGCamera" syncable="YES">
-        <attribute name="aperture" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="automaticallyAdjustsZRange" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="focalBlurRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="focalDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="focalSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="orthographicScale" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="usesOrthographicProjection" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="xFov" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="yFov" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="zFar" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="zNear" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="camera" inverseEntity="NSGNode" syncable="YES"/>
-    </entity>
     <entity name="NSGGeometry" representedClassName="NSGGeometry" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometryElements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometryElement" inverseName="geometry" inverseEntity="NSGGeometryElement" syncable="YES"/>
@@ -131,7 +116,6 @@
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="rotation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scale" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="node" inverseEntity="NSGCamera" syncable="YES"/>
         <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="parentNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="node" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="light" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="node" inverseEntity="NSGLight" syncable="YES"/>
@@ -145,7 +129,6 @@
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
     <elements>
-        <element name="NSGCamera" positionX="-36" positionY="9" width="128" height="238"/>
         <element name="NSGGeometry" positionX="0" positionY="45" width="128" height="118"/>
         <element name="NSGGeometryElement" positionX="0" positionY="81" width="128" height="133"/>
         <element name="NSGGeometrySource" positionX="9" positionY="90" width="128" height="193"/>
@@ -158,7 +141,7 @@
         <element name="NSGMaterialPropertyContentImage" positionX="45" positionY="189" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentImageURL" positionX="-9" positionY="135" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="9" positionY="153" width="128" height="58"/>
-        <element name="NSGNode" positionX="-63" positionY="-18" width="128" height="238"/>
+        <element name="NSGNode" positionX="-63" positionY="-18" width="128" height="223"/>
         <element name="NSGScene" positionX="0" positionY="144" width="128" height="88"/>
     </elements>
 </model>
