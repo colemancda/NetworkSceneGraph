@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="NSGCamera" syncable="YES">
+    <entity name="NSGCamera" representedClassName="NSGCamera" syncable="YES">
         <attribute name="aperture" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="automaticallyAdjustsZRange" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="focalBlurRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -15,19 +15,19 @@
         <attribute name="zNear" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="camera" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
-    <entity name="NSGFloor" parentEntity="NSGGeometry" syncable="YES">
+    <entity name="NSGFloor" representedClassName="NSGFloor" parentEntity="NSGGeometry" syncable="YES">
         <attribute name="reflectionFalloffEnd" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="reflectionFalloffStart" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="reflectivity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="NSGGeometry" syncable="YES">
+    <entity name="NSGGeometry" representedClassName="NSGGeometry" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometryElements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometryElement" inverseName="geometry" inverseEntity="NSGGeometryElement" syncable="YES"/>
         <relationship name="geometrySources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometrySource" inverseName="geometry" inverseEntity="NSGGeometrySource" syncable="YES"/>
         <relationship name="materials" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="geometry" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="geometry" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
-    <entity name="NSGGeometryElement" syncable="YES">
+    <entity name="NSGGeometryElement" representedClassName="NSGGeometryElement" syncable="YES">
         <attribute name="bytesPerIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="primitiveCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -35,7 +35,7 @@
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="geometryElements" inverseEntity="NSGGeometry" syncable="YES"/>
     </entity>
-    <entity name="NSGGeometrySource" syncable="YES">
+    <entity name="NSGGeometrySource" representedClassName="NSGGeometrySource" syncable="YES">
         <attribute name="bytesPerComponent" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="componentsPerVector" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
@@ -47,7 +47,7 @@
         <attribute name="vectorCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="geometrySources" inverseEntity="NSGGeometry" syncable="YES"/>
     </entity>
-    <entity name="NSGLight" syncable="YES">
+    <entity name="NSGLight" representedClassName="NSGLight" syncable="YES">
         <attribute name="castsShadow" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lightAttenuationEnd" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -64,13 +64,13 @@
         <relationship name="gobo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="globoLight" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="light" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
-    <entity name="NSGLink" syncable="YES">
+    <entity name="NSGLink" representedClassName="NSGLink" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="sceneResourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="link" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterial" syncable="YES">
+    <entity name="NSGMaterial" representedClassName="NSGMaterial" syncable="YES">
         <attribute name="cullMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="doubleSided" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="fresnelExponent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -91,7 +91,7 @@
         <relationship name="specular" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="specularMaterial" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="transparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="transparentMaterial" inverseEntity="NSGMaterialProperty" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialProperty" syncable="YES">
+    <entity name="NSGMaterialProperty" representedClassName="NSGMaterialProperty" syncable="YES">
         <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="magnificationFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mappingChannel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -113,23 +113,23 @@
         <relationship name="specularMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="specular" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="transparentMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="transparent" inverseEntity="NSGMaterial" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContent" isAbstract="YES" syncable="YES">
+    <entity name="NSGMaterialPropertyContent" representedClassName="NSGMaterialPropertyContent" isAbstract="YES" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="material" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="content" inverseEntity="NSGMaterialProperty" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContentColor" parentEntity="NSGMaterialPropertyContent" syncable="YES">
+    <entity name="NSGMaterialPropertyContentColor" representedClassName="NSGMaterialPropertyContentColor" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContentImage" syncable="YES">
+    <entity name="NSGMaterialPropertyContentImage" representedClassName="NSGMaterialPropertyContentImage" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContentImageURL" syncable="YES">
+    <entity name="NSGMaterialPropertyContentImageURL" representedClassName="NSGMaterialPropertyContentImageURL" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContentVideoHLS" syncable="YES">
+    <entity name="NSGMaterialPropertyContentVideoHLS" representedClassName="NSGMaterialPropertyContentVideoHLS" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
-    <entity name="NSGNode" syncable="YES">
+    <entity name="NSGNode" representedClassName="NSGNode" syncable="YES">
         <attribute name="hidden" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="opacity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
@@ -144,7 +144,7 @@
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="childNodes" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="nodes" inverseEntity="NSGScene" syncable="YES"/>
     </entity>
-    <entity name="NSGScene" syncable="YES">
+    <entity name="NSGScene" representedClassName="NSGScene" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="backgroundScene" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
@@ -152,11 +152,11 @@
     <elements>
         <element name="NSGCamera" positionX="-36" positionY="9" width="128" height="238"/>
         <element name="NSGGeometry" positionX="0" positionY="45" width="128" height="118"/>
-        <element name="NSGGeometryElement" positionX="0" positionY="81" width="128" height="135"/>
-        <element name="NSGGeometrySource" positionX="9" positionY="90" width="128" height="195"/>
+        <element name="NSGGeometryElement" positionX="0" positionY="81" width="128" height="133"/>
+        <element name="NSGGeometrySource" positionX="9" positionY="90" width="128" height="193"/>
         <element name="NSGLight" positionX="-18" positionY="27" width="128" height="268"/>
         <element name="NSGLink" positionX="-9" positionY="36" width="128" height="103"/>
-        <element name="NSGMaterial" positionX="18" positionY="63" width="128" height="330"/>
+        <element name="NSGMaterial" positionX="18" positionY="63" width="128" height="328"/>
         <element name="NSGMaterialProperty" positionX="36" positionY="81" width="128" height="343"/>
         <element name="NSGMaterialPropertyContent" positionX="18" positionY="135" width="128" height="73"/>
         <element name="NSGMaterialPropertyContentColor" positionX="27" positionY="144" width="128" height="58"/>

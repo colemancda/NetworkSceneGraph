@@ -8,5 +8,7 @@
 
 #import <NetworkObjects/NetworkObjects.h>
 
+#import <NetworkSceneGraph/NSGScene.h>
+
 
 

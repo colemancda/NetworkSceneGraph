@@ -7,10 +7,13 @@
 //
 
 #import "NSGSceneController.h"
+#import "NSGScene.h"
 
 @interface NSGSceneController ()
 
-@property (nonatomic) NSManagedObjectContext *context;
+@property (nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (nonatomic) NSDictionary *scenes;
 
 @end
 
@@ -18,7 +21,7 @@
 
 -(void)dealloc
 {
-    if (self.context) {
+    if (self.managedObjectContext) {
         
         [[NSNotificationCenter defaultCenter] removeObserver:self];
         
@@ -34,7 +37,7 @@
     
     if (self) {
         
-        self.context = context;
+        self.managedObjectContext = context;
         
         // notifications
         
@@ -60,8 +63,51 @@
 
 -(void)reloadScenes
 {
+    NSFetchRequest *scenesFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"NSGScene"];
     
+    scenesFetchRequest.returnsObjectsAsFaults = NO;
     
+    scenesFetchRequest.includesPropertyValues = YES;
+    
+    __block NSError *error;
+    
+    __block NSArray *results;
+    
+    [self.managedObjectContext performBlockAndWait:^{
+        
+        // execute fetch request
+        
+        results = [self.managedObjectContext executeFetchRequest:scenesFetchRequest
+                                                           error:&error];
+        
+    }];
+    
+    if (error) {
+        
+        [NSException raise:NSInternalInconsistencyException
+                    format:@"%@", error.localizedDescription];
+        
+        return;
+    }
+    
+    __block NSMutableDictionary *scenesDictionary = [[NSMutableDictionary alloc] init];
+    
+    [self.managedObjectContext performBlockAndWait:^{
+        
+        for (NSGScene *networkScene in results) {
+            
+            SCNScene *scene = [SCNScene scene];
+            
+            [scenesDictionary setObject:scene
+                                 forKey:networkScene.resourceID];
+            
+            
+            
+        }
+        
+    }];
+    
+    self.scenes = [NSDictionary dictionaryWithDictionary:scenesDictionary];
 }
 
 -(void)updateScenesWithObjectsDidChangeNotification:(NSNotification *)notification
