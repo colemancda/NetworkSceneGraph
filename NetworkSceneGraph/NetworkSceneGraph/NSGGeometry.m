@@ -16,7 +16,6 @@
 @implementation NSGGeometry
 
 @dynamic resourceID;
-@dynamic descriptionText;
 @dynamic geometryElements;
 @dynamic geometrySources;
 @dynamic materials;

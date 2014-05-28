@@ -29,6 +29,8 @@
 @dynamic parentNode;
 @dynamic scene;
 @dynamic camera;
+@dynamic descriptionText;
+
 
 #pragma mark - NOResourceKeysProtocol
 

@@ -42,12 +42,18 @@ static void *KVOContext = &KVOContext;
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 
-                // remove all child nodes
+                // get current nodes
+                
+                NSMutableArray *childNodesNames = [[NSMutableArray alloc] init];
                 
                 for (SCNNode *node in self.scene.rootNode.childNodes) {
                     
+                    // make sure its not a new
                     
+                    [childNodesNames addObject:node.name];
                 }
+                
+                //
                 
             }];
         }
@@ -77,12 +83,12 @@ static void *KVOContext = &KVOContext;
                forKeyPath:@"nodes"
                   options:NSKeyValueObservingOptionNew
                   context:KVOContext];
-        
-        // setup with child nodes
+         
+        // setup with child nodes...
         
         for (NSGNode *childNode in self.nodes) {
             
-            
+            [_scene.rootNode addChildNode:childNode.node];
         }
     }
     

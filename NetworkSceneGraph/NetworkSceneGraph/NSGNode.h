@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGGeometry, NSGLight, NSGLink, NSGNode, NSGScene;
 
@@ -27,6 +28,13 @@
 @property (nonatomic, retain) NSGNode *parentNode;
 @property (nonatomic, retain) NSGScene *scene;
 @property (nonatomic, retain) NSManagedObject *camera;
+@property (nonatomic, retain) NSString * descriptionText;
+
+
+// Transient
+
+@property (nonatomic, readonly) SCNNode *node;
+
 @end
 
 @interface NSGNode (CoreDataGeneratedAccessors)
