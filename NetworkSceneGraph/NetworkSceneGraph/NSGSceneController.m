@@ -10,8 +10,6 @@
 
 @interface NSGSceneController ()
 
-@property (nonatomic) SCNScene *scene;
-
 @property (nonatomic) NSManagedObjectContext *context;
 
 @end
@@ -30,19 +28,11 @@
 
 #pragma mark - Initialization
 
--(instancetype)initWithScene:(SCNScene *)scene
-                     context:(NSManagedObjectContext *)context;
+-(instancetype)initWithContext:(NSManagedObjectContext *)context;
 {
-    if (!scene) {
-        
-        return [self init];
-    }
-    
     self = [super init];
     
     if (self) {
-        
-        self.scene = scene;
         
         self.context = context;
         
@@ -51,7 +41,7 @@
         if (context) {
             
             [[NSNotificationCenter defaultCenter] addObserver:self
-                                                     selector:@selector(updateSceneWithObjectsDidChangeNotification:)
+                                                     selector:@selector(updateScenesWithObjectsDidChangeNotification:)
                                                          name:NSManagedObjectContextObjectsDidChangeNotification
                                                        object:context];
         }
@@ -68,13 +58,13 @@
 
 #pragma mark - Manage scene
 
--(void)reloadScene
+-(void)reloadScenes
 {
     
     
 }
 
--(void)updateSceneWithObjectsDidChangeNotification:(NSNotification *)notification
+-(void)updateScenesWithObjectsDidChangeNotification:(NSNotification *)notification
 {
     
     

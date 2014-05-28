@@ -9,15 +9,17 @@
 #import <Foundation/Foundation.h>
 @import SceneKit;
 
-/** Manages a @c SCNScene instance according to a @c NSManagedObjectContext instance. */
+/** Manages multiple @c SCNScene instances according to a @c NSManagedObjectContext instance. */
 
 @interface NSGSceneController : NSObject
 
 /** The scene graph this controller will manage. */
 
-@property (readonly, nonatomic) SCNScene *scene;
+@property (readonly, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property (readonly, nonatomic) NSManagedObjectContext *context;
+/** @c SCNScene instaces associated with their resourceIDs. */
+
+@property (readonly, nonatomic) NSDictionary *scenes;
 
 #pragma mark - Initialization
 
@@ -33,17 +35,16 @@
  
  */
 
--(instancetype)initWithScene:(SCNScene *)scene
-                     context:(NSManagedObjectContext *)context;
+-(instancetype)initWithContext:(NSManagedObjectContext *)context;
 
 #pragma mark - Manage scene
 
-/** Reloads the scene based on the managed object context. This is an intensive task and should only be called once. Incremental updates are less intensive tasks and should be used instead. */
+/** Reloads the scenes based on the managed object context. This is an intensive task and should only be called once. Incremental updates are less intensive tasks and should be used instead. */
 
--(void)reloadScene;
+-(void)reloadScenes;
 
-/** Updates the scene with the changes described in the @c NSManagedObjectContextObjectsDidChangeNotification notification. */
+/** Incrementally updates the scenes with the changes described in the @c NSManagedObjectContextObjectsDidChangeNotification notification. */
 
--(void)updateSceneWithObjectsDidChangeNotification:(NSNotification *)notification;
+-(void)updateScenesWithObjectsDidChangeNotification:(NSNotification *)notification;
 
 @end
