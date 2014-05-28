@@ -17,34 +17,6 @@
 		6EB02C7F1935311900A732C7 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C7C1935311900A732C7 /* NSGSceneController.m */; };
 		6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */; };
 		6EB02CD91936132F00A732C7 /* NSGGeometry+SCNGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */; };
-		6EB02CDC1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CDA1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.h */; };
-		6EB02CDD1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CDB1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.m */; };
-		6EB02CE41936448900A732C7 /* NSGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CE21936448900A732C7 /* NSGNode.h */; };
-		6EB02CE51936448900A732C7 /* NSGNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CE31936448900A732C7 /* NSGNode.m */; };
-		6EB02CE81936448900A732C7 /* NSGGeometrySource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CE61936448900A732C7 /* NSGGeometrySource.h */; };
-		6EB02CE91936448900A732C7 /* NSGGeometrySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CE71936448900A732C7 /* NSGGeometrySource.m */; };
-		6EB02CEC1936448900A732C7 /* NSGLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CEA1936448900A732C7 /* NSGLink.h */; };
-		6EB02CED1936448900A732C7 /* NSGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CEB1936448900A732C7 /* NSGLink.m */; };
-		6EB02CF01936448900A732C7 /* NSGGeometryElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CEE1936448900A732C7 /* NSGGeometryElement.h */; };
-		6EB02CF11936448900A732C7 /* NSGGeometryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CEF1936448900A732C7 /* NSGGeometryElement.m */; };
-		6EB02CF41936448900A732C7 /* NSGLight.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CF21936448900A732C7 /* NSGLight.h */; };
-		6EB02CF51936448900A732C7 /* NSGLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CF31936448900A732C7 /* NSGLight.m */; };
-		6EB02CF81936448900A732C7 /* NSGMaterialPropertyContentImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CF61936448900A732C7 /* NSGMaterialPropertyContentImage.h */; };
-		6EB02CF91936448900A732C7 /* NSGMaterialPropertyContentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CF71936448900A732C7 /* NSGMaterialPropertyContentImage.m */; };
-		6EB02CFC1936448A00A732C7 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CFA1936448A00A732C7 /* NSGGeometry.h */; };
-		6EB02CFD1936448A00A732C7 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CFB1936448A00A732C7 /* NSGGeometry.m */; };
-		6EB02D001936448A00A732C7 /* NSGMaterialPropertyContentColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CFE1936448A00A732C7 /* NSGMaterialPropertyContentColor.h */; };
-		6EB02D011936448A00A732C7 /* NSGMaterialPropertyContentColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CFF1936448A00A732C7 /* NSGMaterialPropertyContentColor.m */; };
-		6EB02D041936448A00A732C7 /* NSGMaterialPropertyContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02D021936448A00A732C7 /* NSGMaterialPropertyContent.h */; };
-		6EB02D051936448A00A732C7 /* NSGMaterialPropertyContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02D031936448A00A732C7 /* NSGMaterialPropertyContent.m */; };
-		6EB02D081936448A00A732C7 /* NSGMaterialPropertyContentImageURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02D061936448A00A732C7 /* NSGMaterialPropertyContentImageURL.h */; };
-		6EB02D091936448A00A732C7 /* NSGMaterialPropertyContentImageURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02D071936448A00A732C7 /* NSGMaterialPropertyContentImageURL.m */; };
-		6EB02D0C1936448A00A732C7 /* NSGScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02D0A1936448A00A732C7 /* NSGScene.h */; };
-		6EB02D0D1936448A00A732C7 /* NSGScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02D0B1936448A00A732C7 /* NSGScene.m */; };
-		6EB02D101936448A00A732C7 /* NSGMaterialProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02D0E1936448A00A732C7 /* NSGMaterialProperty.h */; };
-		6EB02D111936448A00A732C7 /* NSGMaterialProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02D0F1936448A00A732C7 /* NSGMaterialProperty.m */; };
-		6EB02D141936448A00A732C7 /* NSGMaterial.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02D121936448A00A732C7 /* NSGMaterial.h */; };
-		6EB02D151936448A00A732C7 /* NSGMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02D131936448A00A732C7 /* NSGMaterial.m */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
@@ -120,34 +92,6 @@
 		6EB02C7C1935311900A732C7 /* NSGSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSceneController.m; sourceTree = "<group>"; };
 		6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSGGeometry+SCNGeometry.h"; sourceTree = "<group>"; };
 		6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSGGeometry+SCNGeometry.m"; sourceTree = "<group>"; };
-		6EB02CDA1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentVideoHLS.h; sourceTree = "<group>"; };
-		6EB02CDB1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentVideoHLS.m; sourceTree = "<group>"; };
-		6EB02CE21936448900A732C7 /* NSGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGNode.h; sourceTree = "<group>"; };
-		6EB02CE31936448900A732C7 /* NSGNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGNode.m; sourceTree = "<group>"; };
-		6EB02CE61936448900A732C7 /* NSGGeometrySource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometrySource.h; sourceTree = "<group>"; };
-		6EB02CE71936448900A732C7 /* NSGGeometrySource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometrySource.m; sourceTree = "<group>"; };
-		6EB02CEA1936448900A732C7 /* NSGLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLink.h; sourceTree = "<group>"; };
-		6EB02CEB1936448900A732C7 /* NSGLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLink.m; sourceTree = "<group>"; };
-		6EB02CEE1936448900A732C7 /* NSGGeometryElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometryElement.h; sourceTree = "<group>"; };
-		6EB02CEF1936448900A732C7 /* NSGGeometryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometryElement.m; sourceTree = "<group>"; };
-		6EB02CF21936448900A732C7 /* NSGLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLight.h; sourceTree = "<group>"; };
-		6EB02CF31936448900A732C7 /* NSGLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLight.m; sourceTree = "<group>"; };
-		6EB02CF61936448900A732C7 /* NSGMaterialPropertyContentImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentImage.h; sourceTree = "<group>"; };
-		6EB02CF71936448900A732C7 /* NSGMaterialPropertyContentImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentImage.m; sourceTree = "<group>"; };
-		6EB02CFA1936448A00A732C7 /* NSGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometry.h; sourceTree = "<group>"; };
-		6EB02CFB1936448A00A732C7 /* NSGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometry.m; sourceTree = "<group>"; };
-		6EB02CFE1936448A00A732C7 /* NSGMaterialPropertyContentColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentColor.h; sourceTree = "<group>"; };
-		6EB02CFF1936448A00A732C7 /* NSGMaterialPropertyContentColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentColor.m; sourceTree = "<group>"; };
-		6EB02D021936448A00A732C7 /* NSGMaterialPropertyContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContent.h; sourceTree = "<group>"; };
-		6EB02D031936448A00A732C7 /* NSGMaterialPropertyContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContent.m; sourceTree = "<group>"; };
-		6EB02D061936448A00A732C7 /* NSGMaterialPropertyContentImageURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentImageURL.h; sourceTree = "<group>"; };
-		6EB02D071936448A00A732C7 /* NSGMaterialPropertyContentImageURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentImageURL.m; sourceTree = "<group>"; };
-		6EB02D0A1936448A00A732C7 /* NSGScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGScene.h; sourceTree = "<group>"; };
-		6EB02D0B1936448A00A732C7 /* NSGScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGScene.m; sourceTree = "<group>"; };
-		6EB02D0E1936448A00A732C7 /* NSGMaterialProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialProperty.h; sourceTree = "<group>"; };
-		6EB02D0F1936448A00A732C7 /* NSGMaterialProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialProperty.m; sourceTree = "<group>"; };
-		6EB02D121936448A00A732C7 /* NSGMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterial.h; sourceTree = "<group>"; };
-		6EB02D131936448A00A732C7 /* NSGMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterial.m; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6EBC63CE192FEF3E00FCF7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -211,34 +155,6 @@
 		6EB02C7419352EEB00A732C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6EB02D121936448A00A732C7 /* NSGMaterial.h */,
-				6EB02D131936448A00A732C7 /* NSGMaterial.m */,
-				6EB02D0E1936448A00A732C7 /* NSGMaterialProperty.h */,
-				6EB02D0F1936448A00A732C7 /* NSGMaterialProperty.m */,
-				6EB02D0A1936448A00A732C7 /* NSGScene.h */,
-				6EB02D0B1936448A00A732C7 /* NSGScene.m */,
-				6EB02D061936448A00A732C7 /* NSGMaterialPropertyContentImageURL.h */,
-				6EB02D071936448A00A732C7 /* NSGMaterialPropertyContentImageURL.m */,
-				6EB02D021936448A00A732C7 /* NSGMaterialPropertyContent.h */,
-				6EB02D031936448A00A732C7 /* NSGMaterialPropertyContent.m */,
-				6EB02CFE1936448A00A732C7 /* NSGMaterialPropertyContentColor.h */,
-				6EB02CFF1936448A00A732C7 /* NSGMaterialPropertyContentColor.m */,
-				6EB02CFA1936448A00A732C7 /* NSGGeometry.h */,
-				6EB02CFB1936448A00A732C7 /* NSGGeometry.m */,
-				6EB02CF61936448900A732C7 /* NSGMaterialPropertyContentImage.h */,
-				6EB02CF71936448900A732C7 /* NSGMaterialPropertyContentImage.m */,
-				6EB02CF21936448900A732C7 /* NSGLight.h */,
-				6EB02CF31936448900A732C7 /* NSGLight.m */,
-				6EB02CEE1936448900A732C7 /* NSGGeometryElement.h */,
-				6EB02CEF1936448900A732C7 /* NSGGeometryElement.m */,
-				6EB02CEA1936448900A732C7 /* NSGLink.h */,
-				6EB02CEB1936448900A732C7 /* NSGLink.m */,
-				6EB02CE61936448900A732C7 /* NSGGeometrySource.h */,
-				6EB02CE71936448900A732C7 /* NSGGeometrySource.m */,
-				6EB02CE21936448900A732C7 /* NSGNode.h */,
-				6EB02CE31936448900A732C7 /* NSGNode.m */,
-				6EB02CDA1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.h */,
-				6EB02CDB1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.m */,
 				6EB02CD5193612E800A732C7 /* Categories */,
 			);
 			name = Model;
@@ -341,22 +257,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB02CF01936448900A732C7 /* NSGGeometryElement.h in Headers */,
-				6EB02D0C1936448A00A732C7 /* NSGScene.h in Headers */,
-				6EB02CE81936448900A732C7 /* NSGGeometrySource.h in Headers */,
-				6EB02D001936448A00A732C7 /* NSGMaterialPropertyContentColor.h in Headers */,
-				6EB02CF81936448900A732C7 /* NSGMaterialPropertyContentImage.h in Headers */,
 				6EB02C7D1935311900A732C7 /* NSGSceneController.h in Headers */,
-				6EB02D101936448A00A732C7 /* NSGMaterialProperty.h in Headers */,
-				6EB02CDC1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.h in Headers */,
-				6EB02D081936448A00A732C7 /* NSGMaterialPropertyContentImageURL.h in Headers */,
-				6EB02CF41936448900A732C7 /* NSGLight.h in Headers */,
-				6EB02D041936448A00A732C7 /* NSGMaterialPropertyContent.h in Headers */,
 				6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */,
-				6EB02CEC1936448900A732C7 /* NSGLink.h in Headers */,
-				6EB02CE41936448900A732C7 /* NSGNode.h in Headers */,
-				6EB02D141936448A00A732C7 /* NSGMaterial.h in Headers */,
-				6EB02CFC1936448A00A732C7 /* NSGGeometry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,21 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB02CF91936448900A732C7 /* NSGMaterialPropertyContentImage.m in Sources */,
-				6EB02CDD1936448900A732C7 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
-				6EB02D091936448A00A732C7 /* NSGMaterialPropertyContentImageURL.m in Sources */,
-				6EB02D151936448A00A732C7 /* NSGMaterial.m in Sources */,
-				6EB02CF51936448900A732C7 /* NSGLight.m in Sources */,
-				6EB02CE91936448900A732C7 /* NSGGeometrySource.m in Sources */,
-				6EB02D051936448A00A732C7 /* NSGMaterialPropertyContent.m in Sources */,
-				6EB02CED1936448900A732C7 /* NSGLink.m in Sources */,
-				6EB02D011936448A00A732C7 /* NSGMaterialPropertyContentColor.m in Sources */,
-				6EB02CE51936448900A732C7 /* NSGNode.m in Sources */,
 				6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
-				6EB02D111936448A00A732C7 /* NSGMaterialProperty.m in Sources */,
-				6EB02D0D1936448A00A732C7 /* NSGScene.m in Sources */,
-				6EB02CFD1936448A00A732C7 /* NSGGeometry.m in Sources */,
-				6EB02CF11936448900A732C7 /* NSGGeometryElement.m in Sources */,
 				6EB02C7E1935311900A732C7 /* NSGSceneController.m in Sources */,
 				6EB02CD91936132F00A732C7 /* NSGGeometry+SCNGeometry.m in Sources */,
 			);

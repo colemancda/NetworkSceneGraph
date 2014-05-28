@@ -4,20 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>NetworkSceneGraph.xcscheme</key>
+		<key>SceneGraphServer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6EBC63C7192FEF3E00FCF7C3</key>
+		<key>6E4EBB3519365D3000FC2546</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EBC63DE192FEF3E00FCF7C3</key>
+		<key>6E4EBB5619365D3000FC2546</key>
 		<dict>
 			<key>primary</key>
 			<true/>
