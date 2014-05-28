@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGMaterialProperty, NSGNode;
 
@@ -18,6 +19,13 @@
 @property (nonatomic, retain) NSGMaterialProperty *background;
 @property (nonatomic, retain) NSSet *nodes;
 @property (nonatomic, retain) NSManagedObject *pointOfView;
+
+// Transient
+
+/** This scene is lazily initialized based on the managed object context object graph. After is it initialized it will be constantly updated to reflect the managed object context. */
+
+@property (nonatomic, readonly) SCNScene *scene;
+
 @end
 
 @interface NSGScene (CoreDataGeneratedAccessors)

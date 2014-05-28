@@ -10,6 +10,7 @@
 #import "NSGMaterialProperty.h"
 #import "NSGNode.h"
 
+static void *KVOContext = &KVOContext;
 
 @implementation NSGScene
 
@@ -17,6 +18,57 @@
 @dynamic background;
 @dynamic nodes;
 @dynamic pointOfView;
+
+@synthesize scene = _scene;
+
+-(void)dealloc
+{
+    [self removeObserver:self
+              forKeyPath:@"nodes"];
+    
+}
+
+-(void)awakeFromFetch
+{
+    [super awakeFromFetch];
+    
+    // KVO
+    
+    [self addObserver:self
+           forKeyPath:@"nodes"
+              options:NSKeyValueObservingOptionNew
+              context:KVOContext];
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        // update transient scene
+        
+        if ([keyPath isEqualToString:@"nodes"] && self.scene) {
+            
+            
+            
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+#pragma mark - Transient Properties
+
+-(SCNScene *)scene
+{
+    if (!_scene) {
+        
+        
+    }
+    
+    return _scene;
+}
 
 #pragma mark - NOResourceKeysProtocol
 
