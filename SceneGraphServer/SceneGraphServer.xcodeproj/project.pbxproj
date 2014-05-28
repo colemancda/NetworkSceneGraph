@@ -18,6 +18,7 @@
 		6E4EBB5A19365D3000FC2546 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4EBB3919365D3000FC2546 /* Cocoa.framework */; };
 		6E4EBB6219365D3000FC2546 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E4EBB6019365D3000FC2546 /* InfoPlist.strings */; };
 		6E4EBB6419365D3000FC2546 /* SceneGraphServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBB6319365D3000FC2546 /* SceneGraphServerTests.m */; };
+		6E4EBBAC193667EE00FC2546 /* SGSAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBAB193667EE00FC2546 /* SGSAppController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		6E4EBB5F19365D3000FC2546 /* SceneGraphServerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SceneGraphServerTests-Info.plist"; sourceTree = "<group>"; };
 		6E4EBB6119365D3000FC2546 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E4EBB6319365D3000FC2546 /* SceneGraphServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneGraphServerTests.m; sourceTree = "<group>"; };
+		6E4EBBAA193667EE00FC2546 /* SGSAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSAppController.h; sourceTree = "<group>"; };
+		6E4EBBAB193667EE00FC2546 /* SGSAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSAppController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				6E4EBB4B19365D3000FC2546 /* SGSAppDelegate.h */,
 				6E4EBB4C19365D3000FC2546 /* SGSAppDelegate.m */,
+				6E4EBBAA193667EE00FC2546 /* SGSAppController.h */,
+				6E4EBBAB193667EE00FC2546 /* SGSAppController.m */,
 				6E4EBB4E19365D3000FC2546 /* MainMenu.xib */,
 				6E4EBB5119365D3000FC2546 /* Images.xcassets */,
 				6E4EBB4019365D3000FC2546 /* Supporting Files */,
@@ -255,6 +260,7 @@
 			files = (
 				6E4EBB4D19365D3000FC2546 /* SGSAppDelegate.m in Sources */,
 				6E4EBB4619365D3000FC2546 /* main.m in Sources */,
+				6E4EBBAC193667EE00FC2546 /* SGSAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="NSGCamera" syncable="YES">
+    <entity name="NSGCamera" representedClassName="NSGCamera" syncable="YES">
         <attribute name="aperture" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="automaticallyAdjustsZRange" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="focalBlurRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>

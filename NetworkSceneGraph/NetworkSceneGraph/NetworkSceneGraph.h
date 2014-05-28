@@ -9,6 +9,7 @@
 #import <NetworkObjects/NetworkObjects.h>
 
 #import <NetworkSceneGraph/NSGScene.h>
-
+#import <NetworkSceneGraph/NSNode.h>
+#import <NetworkSceneGraph/NSGeometry.h>
 
 
