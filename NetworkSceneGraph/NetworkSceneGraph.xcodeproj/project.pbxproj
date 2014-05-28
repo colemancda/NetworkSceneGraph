@@ -32,8 +32,6 @@
 		6E4EBB9019365F8B00FC2546 /* NSGMaterialPropertyContentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBB8E19365F8B00FC2546 /* NSGMaterialPropertyContentImage.m */; };
 		6E4EBB9319365F8B00FC2546 /* NSGCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBB9119365F8B00FC2546 /* NSGCamera.h */; };
 		6E4EBB9419365F8B00FC2546 /* NSGCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBB9219365F8B00FC2546 /* NSGCamera.m */; };
-		6E4EBB9719365F8B00FC2546 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBB9519365F8B00FC2546 /* NSGGeometry.h */; };
-		6E4EBB9819365F8B00FC2546 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBB9619365F8B00FC2546 /* NSGGeometry.m */; };
 		6E4EBB9B19365F8B00FC2546 /* NSGMaterialPropertyContentColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBB9919365F8B00FC2546 /* NSGMaterialPropertyContentColor.h */; };
 		6E4EBB9C19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBB9A19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m */; };
 		6E4EBB9F19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBB9D19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.h */; };
@@ -42,6 +40,8 @@
 		6E4EBBA419365F8B00FC2546 /* NSGGeometrySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBA219365F8B00FC2546 /* NSGGeometrySource.m */; };
 		6E4EBBA719365F8B00FC2546 /* NSGLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBA519365F8B00FC2546 /* NSGLink.h */; };
 		6E4EBBA819365F8B00FC2546 /* NSGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBA619365F8B00FC2546 /* NSGLink.m */; };
+		6E4EBBAF19366C4C00FC2546 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBAD19366C4C00FC2546 /* NSGGeometry.h */; };
+		6E4EBBB019366C4C00FC2546 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBAE19366C4C00FC2546 /* NSGGeometry.m */; };
 		6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */; };
 		6EB02CD91936132F00A732C7 /* NSGGeometry+SCNGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
@@ -134,8 +134,6 @@
 		6E4EBB8E19365F8B00FC2546 /* NSGMaterialPropertyContentImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentImage.m; sourceTree = "<group>"; };
 		6E4EBB9119365F8B00FC2546 /* NSGCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGCamera.h; sourceTree = "<group>"; };
 		6E4EBB9219365F8B00FC2546 /* NSGCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGCamera.m; sourceTree = "<group>"; };
-		6E4EBB9519365F8B00FC2546 /* NSGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometry.h; sourceTree = "<group>"; };
-		6E4EBB9619365F8B00FC2546 /* NSGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometry.m; sourceTree = "<group>"; };
 		6E4EBB9919365F8B00FC2546 /* NSGMaterialPropertyContentColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentColor.h; sourceTree = "<group>"; };
 		6E4EBB9A19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentColor.m; sourceTree = "<group>"; };
 		6E4EBB9D19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentVideoHLS.h; sourceTree = "<group>"; };
@@ -144,6 +142,8 @@
 		6E4EBBA219365F8B00FC2546 /* NSGGeometrySource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometrySource.m; sourceTree = "<group>"; };
 		6E4EBBA519365F8B00FC2546 /* NSGLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLink.h; sourceTree = "<group>"; };
 		6E4EBBA619365F8B00FC2546 /* NSGLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLink.m; sourceTree = "<group>"; };
+		6E4EBBAD19366C4C00FC2546 /* NSGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometry.h; sourceTree = "<group>"; };
+		6E4EBBAE19366C4C00FC2546 /* NSGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometry.m; sourceTree = "<group>"; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
 		6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSGGeometry+SCNGeometry.h"; sourceTree = "<group>"; };
 		6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSGGeometry+SCNGeometry.m"; sourceTree = "<group>"; };
@@ -229,10 +229,10 @@
 				6E4EBB7219365F8A00FC2546 /* NSGScene.m */,
 				6E4EBB7919365F8A00FC2546 /* NSGNode.h */,
 				6E4EBB7A19365F8A00FC2546 /* NSGNode.m */,
+				6E4EBBAD19366C4C00FC2546 /* NSGGeometry.h */,
+				6E4EBBAE19366C4C00FC2546 /* NSGGeometry.m */,
 				6E4EBBA519365F8B00FC2546 /* NSGLink.h */,
 				6E4EBBA619365F8B00FC2546 /* NSGLink.m */,
-				6E4EBB9519365F8B00FC2546 /* NSGGeometry.h */,
-				6E4EBB9619365F8B00FC2546 /* NSGGeometry.m */,
 				6E4EBB7D19365F8A00FC2546 /* NSGLight.h */,
 				6E4EBB7E19365F8A00FC2546 /* NSGLight.m */,
 				6E4EBB9119365F8B00FC2546 /* NSGCamera.h */,
@@ -348,7 +348,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4EBB9719365F8B00FC2546 /* NSGGeometry.h in Headers */,
 				6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */,
 				6E4EBB8719365F8B00FC2546 /* NSGMaterialProperty.h in Headers */,
 				6E4EBB7719365F8A00FC2546 /* NSGMaterialPropertyContent.h in Headers */,
@@ -356,6 +355,7 @@
 				6E4EBB7319365F8A00FC2546 /* NSGScene.h in Headers */,
 				6E4EBB9319365F8B00FC2546 /* NSGCamera.h in Headers */,
 				6E4EBB6F19365F8900FC2546 /* NSGGeometryElement.h in Headers */,
+				6E4EBBAF19366C4C00FC2546 /* NSGGeometry.h in Headers */,
 				6E4EBB8F19365F8B00FC2546 /* NSGMaterialPropertyContentImage.h in Headers */,
 				6E4EBB7B19365F8A00FC2546 /* NSGNode.h in Headers */,
 				6E4EBB7F19365F8A00FC2546 /* NSGLight.h in Headers */,
@@ -510,8 +510,8 @@
 				6E4EBBA019365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
 				6E4EBB7819365F8A00FC2546 /* NSGMaterialPropertyContent.m in Sources */,
 				6E4EBB7019365F8900FC2546 /* NSGGeometryElement.m in Sources */,
+				6E4EBBB019366C4C00FC2546 /* NSGGeometry.m in Sources */,
 				6E4EBB9019365F8B00FC2546 /* NSGMaterialPropertyContentImage.m in Sources */,
-				6E4EBB9819365F8B00FC2546 /* NSGGeometry.m in Sources */,
 				6E4EBB9C19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m in Sources */,
 				6E4EBB8C19365F8B00FC2546 /* NSGMaterial.m in Sources */,
 				6E4EBB8019365F8A00FC2546 /* NSGLight.m in Sources */,

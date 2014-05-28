@@ -32,7 +32,7 @@
 
 +(NSString *)resourcePath
 {
-    return @"geometrysource";
+    return @"geometrySource";
 }
 
 #pragma mark - NOResourceProtocol
@@ -44,7 +44,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"url"]];
+    return [NSSet setWithArray:@[@"data"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session

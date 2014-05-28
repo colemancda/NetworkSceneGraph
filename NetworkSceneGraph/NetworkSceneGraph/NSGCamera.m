@@ -49,7 +49,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"url"]];
+    return [NSSet setWithArray:@[@"node"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session

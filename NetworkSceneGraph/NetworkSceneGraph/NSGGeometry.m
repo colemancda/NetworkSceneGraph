@@ -16,6 +16,7 @@
 @implementation NSGGeometry
 
 @dynamic resourceID;
+@dynamic descriptionText;
 @dynamic geometryElements;
 @dynamic geometrySources;
 @dynamic materials;
@@ -42,7 +43,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"url"]];
+    return [NSSet setWithArray:@[@"node"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session

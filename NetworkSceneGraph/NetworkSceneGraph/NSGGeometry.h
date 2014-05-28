@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import <NetworkObjects/NetworkObjects.h>
 
 @class NSGGeometryElement, NSGGeometrySource, NSGMaterial, NSGNode;
 
-@interface NSGGeometry : NSManagedObject <NOResourceProtocol>
+@interface NSGGeometry : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * resourceID;
+@property (nonatomic, retain) NSString * descriptionText;
 @property (nonatomic, retain) NSSet *geometryElements;
 @property (nonatomic, retain) NSSet *geometrySources;
 @property (nonatomic, retain) NSSet *materials;

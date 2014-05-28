@@ -17,6 +17,7 @@
         <relationship name="pointOfViewScene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="pointOfView" inverseEntity="NSGScene" syncable="YES"/>
     </entity>
     <entity name="NSGGeometry" representedClassName="NSGGeometry" syncable="YES">
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometryElements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometryElement" inverseName="geometry" inverseEntity="NSGGeometryElement" syncable="YES"/>
         <relationship name="geometrySources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometrySource" inverseName="geometry" inverseEntity="NSGGeometrySource" syncable="YES"/>
@@ -148,7 +149,7 @@
     </entity>
     <elements>
         <element name="NSGCamera" positionX="0" positionY="144" width="128" height="253"/>
-        <element name="NSGGeometry" positionX="0" positionY="45" width="128" height="118"/>
+        <element name="NSGGeometry" positionX="0" positionY="45" width="128" height="133"/>
         <element name="NSGGeometryElement" positionX="0" positionY="81" width="128" height="133"/>
         <element name="NSGGeometrySource" positionX="9" positionY="90" width="128" height="193"/>
         <element name="NSGLight" positionX="-101" positionY="414" width="128" height="268"/>

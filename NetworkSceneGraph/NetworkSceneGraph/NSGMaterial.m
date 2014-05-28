@@ -42,7 +42,7 @@
 
 +(NSString *)resourcePath
 {
-    return @"link";
+    return @"material";
 }
 
 #pragma mark - NOResourceProtocol
@@ -54,7 +54,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"url"]];
+    return nil;
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session

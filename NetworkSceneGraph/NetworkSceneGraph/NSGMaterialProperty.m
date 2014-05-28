@@ -45,7 +45,7 @@
 
 +(NSString *)resourcePath
 {
-    return @"link";
+    return @"materialProperty";
 }
 
 #pragma mark - NOResourceProtocol
