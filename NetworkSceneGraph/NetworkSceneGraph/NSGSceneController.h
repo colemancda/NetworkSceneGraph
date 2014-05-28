@@ -13,11 +13,25 @@
 
 @interface NSGSceneController : NSObject
 
+/** The scene graph this controller wil manage. */
+
 @property (readonly, nonatomic) SCNScene *scene;
 
 @property (readonly, nonatomic) NSManagedObjectContext *context;
 
 #pragma mark - Initialization
+
+/** 
+ 
+ This a initializes a new instance and manipulates the nodes in the @c scene according to the scene described by the @c context.
+ 
+ @param scene The scene graph this controller wil manage.
+ 
+ @param context The managed object context this controller will use to manage the its @c scene property.
+ 
+ @return A newly initialized instance.
+ 
+ */
 
 -(instancetype)initWithScene:(SCNScene *)scene
                      context:(NSManagedObjectContext *)context;
