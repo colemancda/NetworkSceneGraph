@@ -15,8 +15,13 @@
 
 @property (readonly, nonatomic) SCNScene *scene;
 
+@property (readonly, nonatomic) NSManagedObjectContext *context;
+
 #pragma mark - Initialization
 
--(instancetype)initWithScene:(SCNScene *)scene;
+-(instancetype)initWithScene:(SCNScene *)scene
+                     context:(NSManagedObjectContext *)context;
+
+#pragma mark - 
 
 @end

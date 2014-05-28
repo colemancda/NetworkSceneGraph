@@ -12,13 +12,16 @@
 
 @property (nonatomic) SCNScene *scene;
 
+@property (nonatomic) NSManagedObjectContext *context;
+
 @end
 
 @implementation NSGSceneController
 
 #pragma mark - Initialization
 
--(instancetype)initWithScene:(SCNScene *)scene;
+-(instancetype)initWithScene:(SCNScene *)scene
+                     context:(NSManagedObjectContext *)context;
 {
     if (!scene) {
         
@@ -30,20 +33,13 @@
     if (self) {
         
         self.scene = scene;
+        
+        self.context = context;
     }
     
     return self;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-        self.scene = [SCNScene scene];
-        
-    }
-    return self;
-}
+#pragma mark - 
 
 @end
