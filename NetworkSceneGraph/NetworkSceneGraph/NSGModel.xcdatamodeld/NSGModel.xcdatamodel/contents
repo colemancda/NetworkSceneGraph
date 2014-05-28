@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="NSGCamera" syncable="YES"/>
     <entity name="NSGGeometry" representedClassName="NSGGeometry" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometryElements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometryElement" inverseName="geometry" inverseEntity="NSGGeometryElement" syncable="YES"/>
@@ -100,13 +101,13 @@
     <entity name="NSGMaterialPropertyContentColor" representedClassName="NSGMaterialPropertyContentColor" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContentImage" representedClassName="NSGMaterialPropertyContentImage" syncable="YES">
+    <entity name="NSGMaterialPropertyContentImage" representedClassName="NSGMaterialPropertyContentImage" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContentImageURL" representedClassName="NSGMaterialPropertyContentImageURL" syncable="YES">
+    <entity name="NSGMaterialPropertyContentImageURL" representedClassName="NSGMaterialPropertyContentImageURL" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
-    <entity name="NSGMaterialPropertyContentVideoHLS" representedClassName="NSGMaterialPropertyContentVideoHLS" syncable="YES">
+    <entity name="NSGMaterialPropertyContentVideoHLS" representedClassName="NSGMaterialPropertyContentVideoHLS" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
     <entity name="NSGNode" representedClassName="NSGNode" syncable="YES">
@@ -121,6 +122,7 @@
         <relationship name="light" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="node" inverseEntity="NSGLight" syncable="YES"/>
         <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLink" inverseName="node" inverseEntity="NSGLink" syncable="YES"/>
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="childNodes" inverseEntity="NSGNode" syncable="YES"/>
+        <relationship name="parentSkinner" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="nodes" inverseEntity="NSGScene" syncable="YES"/>
     </entity>
     <entity name="NSGScene" representedClassName="NSGScene" syncable="YES">
@@ -128,6 +130,7 @@
         <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="backgroundScene" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
+    <configuration name="Client"/>
     <elements>
         <element name="NSGGeometry" positionX="0" positionY="45" width="128" height="118"/>
         <element name="NSGGeometryElement" positionX="0" positionY="81" width="128" height="133"/>
@@ -141,7 +144,8 @@
         <element name="NSGMaterialPropertyContentImage" positionX="45" positionY="189" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentImageURL" positionX="-9" positionY="135" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="9" positionY="153" width="128" height="58"/>
-        <element name="NSGNode" positionX="-63" positionY="-18" width="128" height="223"/>
-        <element name="NSGScene" positionX="0" positionY="144" width="128" height="88"/>
+        <element name="NSGNode" positionX="-63" positionY="-18" width="128" height="238"/>
+        <element name="NSGScene" positionX="0" positionY="144" width="128" height="90"/>
+        <element name="NSGCamera" positionX="0" positionY="144" width="128" height="45"/>
     </elements>
 </model>

@@ -2,7 +2,7 @@
 //  NSGLight.m
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 5/27/14.
+//  Created by Alsey Coleman Miller on 5/28/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -13,20 +13,20 @@
 
 @implementation NSGLight
 
-@dynamic type;
-@dynamic shadowRadius;
-@dynamic shadowColor;
 @dynamic castsShadow;
 @dynamic color;
-@dynamic lightAttenuationStart;
 @dynamic lightAttenuationEnd;
 @dynamic lightAttenuationFalloffExponent;
-@dynamic lightSpotInnerAngle;
-@dynamic lightSpotOuterAngle;
+@dynamic lightAttenuationStart;
 @dynamic lightShadowFarClipping;
 @dynamic lightShadowNearClipping;
+@dynamic lightSpotInnerAngle;
+@dynamic lightSpotOuterAngle;
 @dynamic resourceID;
-@dynamic node;
+@dynamic shadowColor;
+@dynamic shadowRadius;
+@dynamic type;
 @dynamic gobo;
+@dynamic node;
 
 @end

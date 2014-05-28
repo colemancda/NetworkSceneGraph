@@ -2,7 +2,7 @@
 //  NSGMaterial.m
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 5/27/14.
+//  Created by Alsey Coleman Miller on 5/28/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -19,10 +19,10 @@
 @dynamic lightingModelName;
 @dynamic litPerPixel;
 @dynamic locksAmbientWithDiffuse;
+@dynamic resourceID;
 @dynamic shininess;
 @dynamic transparency;
 @dynamic transparencyMode;
-@dynamic resourceID;
 @dynamic ambient;
 @dynamic diffuse;
 @dynamic emission;

@@ -2,30 +2,31 @@
 //  NSGNode.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 5/27/14.
+//  Created by Alsey Coleman Miller on 5/28/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSGNode;
+@class NSGGeometry, NSGLight, NSGLink, NSGNode, NSGScene, NSGSkinner;
 
 @interface NSGNode : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * hidden;
 @property (nonatomic, retain) NSNumber * opacity;
 @property (nonatomic, retain) NSString * position;
+@property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSString * rotation;
 @property (nonatomic, retain) NSString * scale;
-@property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSSet *childNodes;
-@property (nonatomic, retain) NSManagedObject *geometry;
-@property (nonatomic, retain) NSManagedObject *light;
-@property (nonatomic, retain) NSManagedObject *link;
+@property (nonatomic, retain) NSGGeometry *geometry;
+@property (nonatomic, retain) NSGLight *light;
+@property (nonatomic, retain) NSGLink *link;
 @property (nonatomic, retain) NSGNode *parentNode;
-@property (nonatomic, retain) NSManagedObject *camera;
-@property (nonatomic, retain) NSManagedObject *scene;
+@property (nonatomic, retain) NSGScene *scene;
+@property (nonatomic, retain) NSGSkinner *parentSkinner;
+@property (nonatomic, retain) NSGSkinner *skinner;
 @end
 
 @interface NSGNode (CoreDataGeneratedAccessors)

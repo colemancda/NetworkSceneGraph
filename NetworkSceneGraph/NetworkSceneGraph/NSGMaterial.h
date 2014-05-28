@@ -2,7 +2,7 @@
 //  NSGMaterial.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 5/27/14.
+//  Created by Alsey Coleman Miller on 5/28/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -19,10 +19,10 @@
 @property (nonatomic, retain) NSString * lightingModelName;
 @property (nonatomic, retain) NSNumber * litPerPixel;
 @property (nonatomic, retain) NSNumber * locksAmbientWithDiffuse;
+@property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSNumber * shininess;
 @property (nonatomic, retain) NSNumber * transparency;
 @property (nonatomic, retain) NSNumber * transparencyMode;
-@property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGMaterialProperty *ambient;
 @property (nonatomic, retain) NSGMaterialProperty *diffuse;
 @property (nonatomic, retain) NSGMaterialProperty *emission;

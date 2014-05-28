@@ -2,14 +2,14 @@
 //  NSGGeometry.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 5/27/14.
+//  Created by Alsey Coleman Miller on 5/28/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSGGeometryElement, NSGGeometrySource, NSGNode;
+@class NSGGeometryElement, NSGGeometrySource, NSGMaterial, NSGNode;
 
 @interface NSGGeometry : NSManagedObject
 
@@ -32,8 +32,8 @@
 - (void)addGeometrySources:(NSSet *)values;
 - (void)removeGeometrySources:(NSSet *)values;
 
-- (void)addMaterialsObject:(NSManagedObject *)value;
-- (void)removeMaterialsObject:(NSManagedObject *)value;
+- (void)addMaterialsObject:(NSGMaterial *)value;
+- (void)removeMaterialsObject:(NSGMaterial *)value;
 - (void)addMaterials:(NSSet *)values;
 - (void)removeMaterials:(NSSet *)values;
 
