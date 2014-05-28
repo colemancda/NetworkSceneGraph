@@ -22,7 +22,7 @@
 
 // Transient
 
-/** This scene is lazily initialized based on the managed object context object graph. After is it initialized it will be constantly updated to reflect the managed object context. */
+/** This scene is lazily initialized based on the managed object context object graph. After is it initialized it will be constantly updated to reflect the managed object context. This property should only be accessed from the main thread.*/
 
 @property (nonatomic, readonly) SCNScene *scene;
 

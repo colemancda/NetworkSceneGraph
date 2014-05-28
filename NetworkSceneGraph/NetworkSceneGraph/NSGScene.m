@@ -23,21 +23,11 @@ static void *KVOContext = &KVOContext;
 
 -(void)dealloc
 {
-    [self removeObserver:self
+    if (self.scene) {
+        
+        [self removeObserver:self
               forKeyPath:@"nodes"];
-    
-}
-
--(void)awakeFromFetch
-{
-    [super awakeFromFetch];
-    
-    // KVO
-    
-    [self addObserver:self
-           forKeyPath:@"nodes"
-              options:NSKeyValueObservingOptionNew
-              context:KVOContext];
+    }
 }
 
 #pragma mark - KVO
@@ -46,25 +36,54 @@ static void *KVOContext = &KVOContext;
 {
     if (context == KVOContext) {
         
-        // update transient scene
+        // update transient scene's nodes
         
-        if ([keyPath isEqualToString:@"nodes"] && self.scene) {
+        if ([keyPath isEqualToString:@"nodes"]) {
             
-            
-            
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
+                // remove all child nodes
+                
+                for (SCNNode *node in self.scene.rootNode.childNodes) {
+                    
+                    
+                }
+                
+            }];
         }
         
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
+
+#pragma mark - Validation
+
+
+
 #pragma mark - Transient Properties
 
 -(SCNScene *)scene
 {
     if (!_scene) {
         
+        // lazily initialize
         
+        _scene = [SCNScene scene];
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"nodes"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        // setup with child nodes
+        
+        for (NSGNode *childNode in self.nodes) {
+            
+            
+        }
     }
     
     return _scene;
