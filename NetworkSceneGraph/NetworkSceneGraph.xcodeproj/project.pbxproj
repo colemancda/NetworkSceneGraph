@@ -42,9 +42,6 @@
 		6E4EBBA419365F8B00FC2546 /* NSGGeometrySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBA219365F8B00FC2546 /* NSGGeometrySource.m */; };
 		6E4EBBA719365F8B00FC2546 /* NSGLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBA519365F8B00FC2546 /* NSGLink.h */; };
 		6E4EBBA819365F8B00FC2546 /* NSGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBA619365F8B00FC2546 /* NSGLink.m */; };
-		6EB02C7D1935311900A732C7 /* NSGSceneController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02C7B1935311900A732C7 /* NSGSceneController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EB02C7E1935311900A732C7 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C7C1935311900A732C7 /* NSGSceneController.m */; };
-		6EB02C7F1935311900A732C7 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02C7C1935311900A732C7 /* NSGSceneController.m */; };
 		6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */; };
 		6EB02CD91936132F00A732C7 /* NSGGeometry+SCNGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
@@ -148,8 +145,6 @@
 		6E4EBBA519365F8B00FC2546 /* NSGLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLink.h; sourceTree = "<group>"; };
 		6E4EBBA619365F8B00FC2546 /* NSGLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLink.m; sourceTree = "<group>"; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
-		6EB02C7B1935311900A732C7 /* NSGSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSceneController.h; sourceTree = "<group>"; };
-		6EB02C7C1935311900A732C7 /* NSGSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSceneController.m; sourceTree = "<group>"; };
 		6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSGGeometry+SCNGeometry.h"; sourceTree = "<group>"; };
 		6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSGGeometry+SCNGeometry.m"; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,8 +218,6 @@
 		6EB02C731935299000A732C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6EB02C7B1935311900A732C7 /* NSGSceneController.h */,
-				6EB02C7C1935311900A732C7 /* NSGSceneController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -355,7 +348,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB02C7D1935311900A732C7 /* NSGSceneController.h in Headers */,
 				6E4EBB9719365F8B00FC2546 /* NSGGeometry.h in Headers */,
 				6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */,
 				6E4EBB8719365F8B00FC2546 /* NSGMaterialProperty.h in Headers */,
@@ -519,7 +511,6 @@
 				6E4EBB7819365F8A00FC2546 /* NSGMaterialPropertyContent.m in Sources */,
 				6E4EBB7019365F8900FC2546 /* NSGGeometryElement.m in Sources */,
 				6E4EBB9019365F8B00FC2546 /* NSGMaterialPropertyContentImage.m in Sources */,
-				6EB02C7E1935311900A732C7 /* NSGSceneController.m in Sources */,
 				6E4EBB9819365F8B00FC2546 /* NSGGeometry.m in Sources */,
 				6E4EBB9C19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m in Sources */,
 				6E4EBB8C19365F8B00FC2546 /* NSGMaterial.m in Sources */,
@@ -536,7 +527,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
-				6EB02C7F1935311900A732C7 /* NSGSceneController.m in Sources */,
 				6EBC63ED192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
