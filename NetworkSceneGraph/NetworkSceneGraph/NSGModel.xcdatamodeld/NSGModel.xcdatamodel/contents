@@ -15,11 +15,6 @@
         <attribute name="zNear" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="camera" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
-    <entity name="NSGFloor" representedClassName="NSGFloor" parentEntity="NSGGeometry" syncable="YES">
-        <attribute name="reflectionFalloffEnd" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="reflectionFalloffStart" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="reflectivity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-    </entity>
     <entity name="NSGGeometry" representedClassName="NSGGeometry" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometryElements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometryElement" inverseName="geometry" inverseEntity="NSGGeometryElement" syncable="YES"/>
@@ -164,7 +159,6 @@
         <element name="NSGMaterialPropertyContentImageURL" positionX="-9" positionY="135" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="9" positionY="153" width="128" height="58"/>
         <element name="NSGNode" positionX="-63" positionY="-18" width="128" height="238"/>
-        <element name="NSGFloor" positionX="-9" positionY="135" width="128" height="88"/>
         <element name="NSGScene" positionX="0" positionY="144" width="128" height="88"/>
     </elements>
 </model>
