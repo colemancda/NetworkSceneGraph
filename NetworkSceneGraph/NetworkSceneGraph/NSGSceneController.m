@@ -18,6 +18,16 @@
 
 @implementation NSGSceneController
 
+-(void)dealloc
+{
+    if (self.context) {
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+    }
+    
+}
+
 #pragma mark - Initialization
 
 -(instancetype)initWithScene:(SCNScene *)scene
@@ -35,11 +45,39 @@
         self.scene = scene;
         
         self.context = context;
+        
+        // notifications
+        
+        if (context) {
+            
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(updateSceneWithObjectsDidChangeNotification:)
+                                                         name:NSManagedObjectContextObjectsDidChangeNotification
+                                                       object:context];
+        }
+        
     }
     
     return self;
 }
 
-#pragma mark - 
+- (instancetype)init
+{
+    return nil;
+}
+
+#pragma mark - Manage scene
+
+-(void)reloadScene
+{
+    
+    
+}
+
+-(void)updateSceneWithObjectsDidChangeNotification:(NSNotification *)notification
+{
+    
+    
+}
 
 @end

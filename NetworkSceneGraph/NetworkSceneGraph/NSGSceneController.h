@@ -13,7 +13,7 @@
 
 @interface NSGSceneController : NSObject
 
-/** The scene graph this controller wil manage. */
+/** The scene graph this controller will manage. */
 
 @property (readonly, nonatomic) SCNScene *scene;
 
@@ -23,7 +23,7 @@
 
 /** 
  
- This a initializes a new instance and manipulates the nodes in the @c scene according to the scene described by the @c context.
+ Defualt initializer. This a initializes a new instance and manipulates the nodes in the @c scene according to the scene described by the managed object context.
  
  @param scene The scene graph this controller wil manage.
  
@@ -36,6 +36,14 @@
 -(instancetype)initWithScene:(SCNScene *)scene
                      context:(NSManagedObjectContext *)context;
 
-#pragma mark - 
+#pragma mark - Manage scene
+
+/** Reloads the scene based on the managed object context. This is an intensive task and should only be called once. Incremental updates are less intensive tasks and should be used instead. */
+
+-(void)reloadScene;
+
+/** Updates the scene with the changes described in the @c NSManagedObjectContextObjectsDidChangeNotification notification. */
+
+-(void)updateSceneWithObjectsDidChangeNotification:(NSNotification *)notification;
 
 @end
