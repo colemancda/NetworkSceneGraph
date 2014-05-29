@@ -86,14 +86,7 @@ static void *KVOContext = &KVOContext;
 
 -(void)startObservingMaterialPropertyWithName:(NSString *)name
 {
-    NSGMaterialProperty *materialProperty = [self valueForKey:name];
-    
-    SCNMaterialProperty *sceneMaterialProperty = materialProperty.materialProperty;
-    
     for (NSString *propertyName in [self materialPropertyProperties]) {
-        
-        
-        
         
         [self addObserver:self
                forKeyPath:[NSString stringWithFormat:@"%@.materialProperty.%@", name, propertyName]
@@ -310,7 +303,12 @@ static void *KVOContext = &KVOContext;
                 
                 if ([keyPath isEqualToString:[NSString stringWithFormat:@"%@.materialProperty.%@", name, property]]) {
                     
-                    SCNMaterialProperty *material
+                    SCNMaterialProperty *duplicateMaterialProperty = [self.material valueForKey:@"name"];
+                    
+                    SCNMaterialProperty *originalMaterialProperty = [self valueForKeyPath:@"%@.materialProperty"];
+                    
+                    [duplicateMaterialProperty setValue:[originalMaterialProperty valueForKey:property]
+                                                 forKey:property];
                     
                     return;
                 }
