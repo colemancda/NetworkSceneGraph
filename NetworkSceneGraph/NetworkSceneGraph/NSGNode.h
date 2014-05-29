@@ -33,7 +33,7 @@
 
 // Transient
 
-@property (nonatomic, readonly) SCNNode *node;
+@property (nonatomic) SCNNode *node;
 
 @end
 

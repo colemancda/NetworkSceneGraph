@@ -31,6 +31,8 @@
 @dynamic camera;
 @dynamic descriptionText;
 
+@synthesize node = _node;
+
 
 #pragma mark - NOResourceKeysProtocol
 
@@ -53,7 +55,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"url"]];
+    return nil;
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session

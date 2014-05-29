@@ -40,22 +40,49 @@ static void *KVOContext = &KVOContext;
         
         if ([keyPath isEqualToString:@"nodes"]) {
             
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            // remove nodes that dont match
+            
+            for (SCNNode *sceneNode in self.scene.rootNode.childNodes) {
                 
-                // get current nodes
+                BOOL nodeExists = NO;
                 
-                NSMutableArray *childNodesNames = [[NSMutableArray alloc] init];
-                
-                for (SCNNode *node in self.scene.rootNode.childNodes) {
+                for (NSGNode *node in self.nodes) {
                     
-                    // make sure its not a new
-                    
-                    [childNodesNames addObject:node.name];
+                    if ([[NSString stringWithFormat:@"%@", node.resourceID] isEqualToString:sceneNode.name]) {
+                        
+                        nodeExists = YES;
+                        
+                        break;
+                    }
                 }
                 
-                //
+                if (!nodeExists) {
+                    
+                    [sceneNode removeFromParentNode];
+                }
+            }
+            
+            // add new nodes
+            
+            for (NSGNode *node in self.nodes) {
                 
-            }];
+                BOOL nodeExists = NO;
+                
+                for (SCNNode *sceneNode in self.scene.rootNode.childNodes) {
+                    
+                    if ([[NSString stringWithFormat:@"%@", node.resourceID] isEqualToString:sceneNode.name]) {
+                        
+                        nodeExists = YES;
+                        
+                        break;
+                    }
+                }
+                
+                if (!nodeExists) {
+                    
+                    [self.scene.rootNode addChildNode:node.node];
+                }
+            }
         }
         
     } else {
@@ -93,6 +120,28 @@ static void *KVOContext = &KVOContext;
     }
     
     return _scene;
+}
+
+-(void)setScene:(SCNScene *)scene
+{
+    // remove all child nodes from scene
+    
+    if (self.scene.rootNode.childNodes.count) {
+        
+        for (SCNNode *node in self.scene.rootNode.childNodes) {
+            
+            [node removeFromParentNode];
+        }
+    }
+    
+    // import nodes
+    
+    NSMutableSet *newNodes = [[NSMutableSet alloc] init];
+    
+    for (SCNNode *node in scene.rootNode.childNodes) {
+        
+        
+    }
 }
 
 #pragma mark - NOResourceKeysProtocol
