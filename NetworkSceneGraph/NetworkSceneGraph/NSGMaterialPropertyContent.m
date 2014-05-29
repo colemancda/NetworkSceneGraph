@@ -15,4 +15,11 @@
 @dynamic resourceID;
 @dynamic material;
 
+#pragma mark - Transient Properties
+
+-(id)contents
+{
+    return nil;
+}
+
 @end

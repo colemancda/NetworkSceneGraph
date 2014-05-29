@@ -17,4 +17,6 @@
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGMaterialProperty *material;
 
+@property (nonatomic, readonly) id contents;
+
 @end

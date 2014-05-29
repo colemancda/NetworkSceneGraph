@@ -26,7 +26,7 @@
 @property (nonatomic, retain) NSNumber * wrapT;
 @property (nonatomic, retain) NSGMaterial *ambientMaterial;
 @property (nonatomic, retain) NSGScene *backgroundScene;
-@property (nonatomic, retain) NSGMaterialPropertyContent *content;
+@property (nonatomic, retain) NSGMaterialPropertyContent *contents;
 @property (nonatomic, retain) NSGMaterial *diffuseMaterial;
 @property (nonatomic, retain) NSGMaterial *emissionMaterial;
 @property (nonatomic, retain) NSGMaterial *multiplyMaterial;
