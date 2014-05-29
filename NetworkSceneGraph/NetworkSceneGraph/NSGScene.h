@@ -24,7 +24,7 @@
 
 /** This scene is lazily initialized based on the managed object context object graph. After is it initialized it will be constantly updated to reflect the managed object context. You can also import a scene into the managed object context using this property's setter method.*/
 
-@property (nonatomic) SCNScene *scene;
+@property (nonatomic, readonly) SCNScene *scene;
 
 @end
 

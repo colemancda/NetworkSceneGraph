@@ -122,28 +122,6 @@ static void *KVOContext = &KVOContext;
     return _scene;
 }
 
--(void)setScene:(SCNScene *)scene
-{
-    // remove all child nodes from scene
-    
-    if (self.scene.rootNode.childNodes.count) {
-        
-        for (SCNNode *node in self.scene.rootNode.childNodes) {
-            
-            [node removeFromParentNode];
-        }
-    }
-    
-    // import nodes
-    
-    NSMutableSet *newNodes = [[NSMutableSet alloc] init];
-    
-    for (SCNNode *node in scene.rootNode.childNodes) {
-        
-        
-    }
-}
-
 #pragma mark - NOResourceKeysProtocol
 
 +(NSString *)resourceIDKey
