@@ -10,6 +10,7 @@
 #import "NSGGeometry.h"
 #import "NSGMaterialProperty.h"
 
+static void *KVOContext = &KVOContext;
 
 @implementation NSGMaterial
 
@@ -33,6 +34,186 @@
 @dynamic specular;
 @dynamic transparent;
 
+@synthesize material = _material;
+
+-(void)dealloc
+{
+    if (self.material) {
+        
+        [self removeObserver:self
+                  forKeyPath:@"cullMode"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"doubleSided"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"fresnelExponent"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightingModelName"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"litPerPixel"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"locksAmbientWithDiffuse"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"resourceID"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"shininess"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"transparency"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"transparencyMode"];
+        
+    }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:@"cullMode"]) {
+            
+            self.material.cullMode = self.cullMode.integerValue;
+        }
+        
+        if ([keyPath isEqualToString:@"doubleSided"]) {
+            
+            self.material.doubleSided = self.doubleSided.boolValue;
+        }
+        
+        if ([keyPath isEqualToString:@"fresnelExponent"]) {
+            
+            self.material.fresnelExponent = self.fresnelExponent.floatValue;
+        }
+        
+        if ([keyPath isEqualToString:@"lightingModelName"]) {
+            
+            self.material.lightingModelName = self.lightingModelName;
+        }
+        
+        if ([keyPath isEqualToString:@"litPerPixel"]) {
+            
+            self.material.litPerPixel = self.litPerPixel.boolValue;
+        }
+        
+        if ([keyPath isEqualToString:@"locksAmbientWithDiffuse"]) {
+            
+            self.material.locksAmbientWithDiffuse = self.locksAmbientWithDiffuse.boolValue;
+        }
+        
+        if ([keyPath isEqualToString:@"resourceID"]) {
+            
+            self.material.name = [NSString stringWithFormat:@"%@", self.resourceID];
+        }
+        
+        if ([keyPath isEqualToString:@"shininess"]) {
+            
+            self.material.shininess = self.shininess.floatValue;
+        }
+        
+        if ([keyPath isEqualToString:@"transparency"]) {
+            
+            self.material.transparency = self.transparency.floatValue;
+        }
+        
+        if ([keyPath isEqualToString:@"transparencyMode"]) {
+            
+            self.material.transparencyMode = self.transparencyMode.integerValue;
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Transient Properties
+
+-(SCNMaterial *)material
+{
+    if (!_material) {
+        
+        // lazily initialize
+        
+        _material = [SCNMaterial material];
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"cullMode"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"doubleSided"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"fresnelExponent"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"lightingModelName"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"litPerPixel"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"locksAmbientWithDiffuse"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"resourceID"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"shininess"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"transparency"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"transparencyMode"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        // Set properties
+        
+        self.material.cullMode = self.cullMode.integerValue;
+        self.material.doubleSided = self.doubleSided.boolValue;
+        self.material.fresnelExponent = self.fresnelExponent.floatValue;
+        self.material.lightingModelName = self.lightingModelName;
+        self.material.litPerPixel = self.litPerPixel.boolValue;
+        self.material.locksAmbientWithDiffuse = self.locksAmbientWithDiffuse.boolValue;
+        self.material.name = [NSString stringWithFormat:@"%@", self.resourceID];
+        self.material.shininess = self.shininess.floatValue;
+        self.material.transparency = self.transparency.floatValue;
+        self.material.transparencyMode = self.transparencyMode.integerValue;
+        
+    }
+    
+    return _material;
+}
+
 #pragma mark - NOResourceKeysProtocol
 
 +(NSString *)resourceIDKey
@@ -54,7 +235,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return nil;
+    return [NSSet setWithArray:@[@"geometry"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session
