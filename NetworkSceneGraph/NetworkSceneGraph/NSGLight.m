@@ -119,9 +119,52 @@ static void *KVOContext = &KVOContext;
             
         }
         
-        if ([keyPath isEqualToString:@"resourceID"]) {
+        if ([keyPath isEqualToString:@"lightAttenuationEnd"]) {
             
-            self.light.name = [NSString stringWithFormat:@"%@", self.resourceID];
+            [self.light setAttribute:self.lightAttenuationEnd
+                              forKey:SCNLightAttenuationEndKey];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"lightAttenuationFalloffExponent"]) {
+            
+            [self.light setAttribute:self.lightAttenuationFalloffExponent
+                              forKey:SCNLightAttenuationFalloffExponentKey];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"lightAttenuationStart"]) {
+            
+            [self.light setAttribute:self.lightAttenuationStart
+                              forKey:SCNLightAttenuationStartKey];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"lightShadowFarClipping"]) {
+            
+            [self.light setAttribute:self.lightShadowFarClipping
+                              forKey:SCNLightShadowFarClippingKey];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"lightShadowNearClipping"]) {
+            
+            [self.light setAttribute:self.lightShadowNearClipping
+                              forKey:SCNLightShadowNearClippingKey];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"lightSpotInnerAngle"]) {
+            
+            [self.light setAttribute:self.lightSpotInnerAngle
+                              forKey:SCNLightSpotInnerAngleKey];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"lightSpotOuterAngle"]) {
+            
+            [self.light setAttribute:self.lightSpotOuterAngle
+                              forKey:SCNLightSpotOuterAngleKey];
             
         }
         
@@ -173,14 +216,74 @@ static void *KVOContext = &KVOContext;
                   context:KVOContext];
         
         [self addObserver:self
-               forKeyPath:@"resourceID"
+               forKeyPath:@"lightAttenuationEnd"
                   options:NSKeyValueObservingOptionNew
                   context:KVOContext];
         
         [self addObserver:self
-               forKeyPath:@"resourceID"
+               forKeyPath:@"lightAttenuationFalloffExponent"
                   options:NSKeyValueObservingOptionNew
                   context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"lightAttenuationStart"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"lightShadowFarClipping"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"lightShadowNearClipping"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"lightSpotInnerAngle"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"lightSpotOuterAngle"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        // set properties
+        
+        self.light.name = [NSString stringWithFormat:@"%@", self.resourceID];
+        
+        self.light.color = (__bridge id)([self.color CGColorRefValue]);
+        
+        self.light.shadowColor = (__bridge id)([self.shadowColor CGColorRefValue]);
+        
+        self.light.type = self.type;
+        
+        self.light.castsShadow = self.castsShadow.boolValue;
+            
+        self.light.shadowRadius = self.shadowRadius.floatValue;
+        
+        [self.light setAttribute:self.lightAttenuationEnd
+                              forKey:SCNLightAttenuationEndKey];
+        
+        [self.light setAttribute:self.lightAttenuationFalloffExponent
+                              forKey:SCNLightAttenuationFalloffExponentKey];
+        
+        [self.light setAttribute:self.lightAttenuationStart
+                              forKey:SCNLightAttenuationStartKey];
+        
+        [self.light setAttribute:self.lightShadowFarClipping
+                              forKey:SCNLightShadowFarClippingKey];
+        
+        [self.light setAttribute:self.lightShadowNearClipping
+                              forKey:SCNLightShadowNearClippingKey];
+        
+        [self.light setAttribute:self.lightSpotInnerAngle
+                              forKey:SCNLightSpotInnerAngleKey];
+        
+        [self.light setAttribute:self.lightSpotOuterAngle
+                              forKey:SCNLightSpotOuterAngleKey];
         
     }
     
