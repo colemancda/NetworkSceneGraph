@@ -57,7 +57,6 @@
         <attribute name="shadowColor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shadowRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="gobo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="globoLight" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="light" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
     <entity name="NSGLink" representedClassName="NSGLink" syncable="YES">
@@ -102,7 +101,6 @@
         <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialPropertyContent" inverseName="material" inverseEntity="NSGMaterialPropertyContent" syncable="YES"/>
         <relationship name="diffuseMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="diffuse" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="emissionMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="emission" inverseEntity="NSGMaterial" syncable="YES"/>
-        <relationship name="globoLight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="gobo" inverseEntity="NSGLight" syncable="YES"/>
         <relationship name="multiplyMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="multiply" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="normalMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="normal" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="reflectiveMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="reflective" inverseEntity="NSGMaterial" syncable="YES"/>
@@ -152,10 +150,10 @@
         <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="118"/>
         <element name="NSGGeometryElement" positionX="-9" positionY="83" width="128" height="133"/>
         <element name="NSGGeometrySource" positionX="-36" positionY="-144" width="128" height="193"/>
-        <element name="NSGLight" positionX="-254" positionY="297" width="128" height="268"/>
+        <element name="NSGLight" positionX="-254" positionY="297" width="128" height="255"/>
         <element name="NSGLink" positionX="-254" positionY="171" width="128" height="103"/>
         <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="328"/>
-        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="343"/>
+        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="328"/>
         <element name="NSGMaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
         <element name="NSGMaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>

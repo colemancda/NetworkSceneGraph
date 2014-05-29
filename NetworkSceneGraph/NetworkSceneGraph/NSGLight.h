@@ -11,7 +11,7 @@
 #import <NetworkObjects/NetworkObjects.h>
 #import <SceneKit/SceneKit.h>
 
-@class NSGMaterialProperty, NSGNode;
+@class NSGNode;
 
 @interface NSGLight : NSManagedObject <NOResourceProtocol>
 
@@ -28,7 +28,6 @@
 @property (nonatomic, retain) NSString * shadowColor;
 @property (nonatomic, retain) NSNumber * shadowRadius;
 @property (nonatomic, retain) NSString * type;
-@property (nonatomic, retain) NSGMaterialProperty *gobo;
 @property (nonatomic, retain) NSGNode *node;
 
 // Transient

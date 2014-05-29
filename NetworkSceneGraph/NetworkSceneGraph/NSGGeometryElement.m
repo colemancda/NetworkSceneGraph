@@ -19,6 +19,8 @@
 @dynamic resourceID;
 @dynamic geometry;
 
+@synthesize geometryElement = _geometryElement;
+
 #pragma mark - NOResourceKeysProtocol
 
 +(NSString *)resourceIDKey

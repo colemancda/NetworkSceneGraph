@@ -29,12 +29,13 @@
 @dynamic content;
 @dynamic diffuseMaterial;
 @dynamic emissionMaterial;
-@dynamic globoLight;
 @dynamic multiplyMaterial;
 @dynamic normalMaterial;
 @dynamic reflectiveMaterial;
 @dynamic specularMaterial;
 @dynamic transparentMaterial;
+
+@synthesize materialProperty = _materialProperty;
 
 #pragma mark - NOResourceKeysProtocol
 

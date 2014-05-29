@@ -11,6 +11,8 @@
 #import "NSGNode.h"
 #import "NSString+CGColorRef.h"
 
+static void *KVOContext = &KVOContext;
+
 @implementation NSGLight
 
 @dynamic castsShadow;
@@ -26,7 +28,6 @@
 @dynamic shadowColor;
 @dynamic shadowRadius;
 @dynamic type;
-@dynamic gobo;
 @dynamic node;
 
 @synthesize light = _light;
@@ -40,7 +41,150 @@
         
         [self removeObserver:self
                   forKeyPath:@"color"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"type"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"castsShadow"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"shadowColor"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightAttenuationEnd"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightAttenuationFalloffExponent"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightAttenuationStart"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightShadowFarClipping"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightShadowNearClipping"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightSpotInnerAngle"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"lightSpotOuterAngle"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"shadowRadius"];
     }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:@"resourceID"]) {
+            
+            self.light.name = [NSString stringWithFormat:@"%@", self.resourceID];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"color"]) {
+            
+            self.light.color = (__bridge id)([self.color CGColorRefValue]);
+            
+        }
+        
+        if ([keyPath isEqualToString:@"shadowColor"]) {
+            
+            self.light.shadowColor = (__bridge id)([self.shadowColor CGColorRefValue]);
+            
+        }
+        
+        if ([keyPath isEqualToString:@"type"]) {
+            
+            self.light.type = self.type;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"castsShadow"]) {
+            
+            self.light.castsShadow = self.castsShadow.boolValue;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"shadowRadius"]) {
+            
+            self.light.shadowRadius = self.shadowRadius.floatValue;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"resourceID"]) {
+            
+            self.light.name = [NSString stringWithFormat:@"%@", self.resourceID];
+            
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Transient Properties
+
+-(SCNLight *)light
+{
+    if (!_light) {
+        
+        // Lazy initialization
+        
+        _light = [SCNLight light];
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"resourceID"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"color"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"shadowColor"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"type"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"castsShadow"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"shadowRadius"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"resourceID"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"resourceID"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+    }
+    
+    return _light;
 }
 
 #pragma mark - NOResourceKeysProtocol

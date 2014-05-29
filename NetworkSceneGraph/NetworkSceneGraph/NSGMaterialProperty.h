@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGLight, NSGMaterial, NSGMaterialPropertyContent, NSGScene;
 
@@ -28,11 +29,14 @@
 @property (nonatomic, retain) NSGMaterialPropertyContent *content;
 @property (nonatomic, retain) NSGMaterial *diffuseMaterial;
 @property (nonatomic, retain) NSGMaterial *emissionMaterial;
-@property (nonatomic, retain) NSGLight *globoLight;
 @property (nonatomic, retain) NSGMaterial *multiplyMaterial;
 @property (nonatomic, retain) NSGMaterial *normalMaterial;
 @property (nonatomic, retain) NSGMaterial *reflectiveMaterial;
 @property (nonatomic, retain) NSGMaterial *specularMaterial;
 @property (nonatomic, retain) NSGMaterial *transparentMaterial;
+
+#pragma mark - Transient Properties
+
+@property (nonatomic, readonly) SCNMaterialProperty *materialProperty;
 
 @end

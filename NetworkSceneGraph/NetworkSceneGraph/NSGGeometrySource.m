@@ -23,6 +23,8 @@
 @dynamic vectorCount;
 @dynamic geometry;
 
+@synthesize geometrySource = _geometrySource;
+
 #pragma mark - NOResourceKeysProtocol
 
 +(NSString *)resourceIDKey
