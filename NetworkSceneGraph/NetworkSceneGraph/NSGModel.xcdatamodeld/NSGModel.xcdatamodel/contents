@@ -87,6 +87,7 @@
         <relationship name="transparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="transparentMaterial" inverseEntity="NSGMaterialProperty" syncable="YES"/>
     </entity>
     <entity name="NSGMaterialProperty" representedClassName="NSGMaterialProperty" syncable="YES">
+        <attribute name="borderColor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="magnificationFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mappingChannel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -153,7 +154,7 @@
         <element name="NSGLight" positionX="-254" positionY="297" width="128" height="255"/>
         <element name="NSGLink" positionX="-254" positionY="171" width="128" height="103"/>
         <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="328"/>
-        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="328"/>
+        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="343"/>
         <element name="NSGMaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
         <element name="NSGMaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>

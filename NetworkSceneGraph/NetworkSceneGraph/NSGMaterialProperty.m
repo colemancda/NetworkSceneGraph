@@ -58,7 +58,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return nil;
+    return [NSSet setWithArray:@[@"content"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session

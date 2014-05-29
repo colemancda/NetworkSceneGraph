@@ -12,6 +12,49 @@
 
 static void *KVOContext = &KVOContext;
 
+@implementation SCNMaterialProperty (Duplicate)
+
+-(void)setValuesUsingMaterialProperty:(SCNMaterialProperty *)materialProperty
+{
+    self.contents = materialProperty.contents;
+    
+    self.intensity = materialProperty.intensity;
+    
+    self.minificationFilter = materialProperty.minificationFilter;
+    
+    self.magnificationFilter = materialProperty.magnificationFilter;
+    
+    self.mipFilter = materialProperty.mipFilter;
+    
+    self.contentsTransform = materialProperty.contentsTransform;
+    
+    self.wrapS = materialProperty.wrapS;
+    
+    self.wrapT = materialProperty.wrapT;
+    
+    self.borderColor = materialProperty.borderColor;
+    
+    self.mappingChannel = materialProperty.mappingChannel;
+    
+    self.maxAnisotropy = materialProperty.maxAnisotropy;
+}
+
+@end
+
+@implementation NSGMaterial (KVOMaterialProperty)
+
+-(void)observeMaterialPropertyWithName
+{
+    
+}
+
+-(void)stopObservingMaterialProperty
+{
+    
+}
+
+@end
+
 @implementation NSGMaterial
 
 @dynamic cullMode;
@@ -70,6 +113,30 @@ static void *KVOContext = &KVOContext;
         [self removeObserver:self
                   forKeyPath:@"transparencyMode"];
         
+        [self removeObserver:self
+                  forKeyPath:@"ambient"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"diffuse"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"emission"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"multiply"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"normal"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"reflective"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"specular"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"transparent"];
+        
     }
 }
 
@@ -127,6 +194,47 @@ static void *KVOContext = &KVOContext;
         if ([keyPath isEqualToString:@"transparencyMode"]) {
             
             self.material.transparencyMode = self.transparencyMode.integerValue;
+        }
+        
+        if ([keyPath isEqualToString:@"ambient"]) {
+            
+            [self.material.ambient setValuesUsingMaterialProperty:self.ambient.materialProperty];
+        }
+        
+        if ([keyPath isEqualToString:@"diffuse"]) {
+            
+            
+            [self.material.diffuse setValuesUsingMaterialProperty:self.diffuse.materialProperty];
+        }
+        
+        if ([keyPath isEqualToString:@"emission"]) {
+            
+            [self.material.emission setValuesUsingMaterialProperty:self.emission.materialProperty];
+        }
+        
+        if ([keyPath isEqualToString:@"multiply"]) {
+            
+            [self.material.multiply setValuesUsingMaterialProperty:self.multiply.materialProperty];
+        }
+        
+        if ([keyPath isEqualToString:@"normal"]) {
+            
+            [self.material.normal setValuesUsingMaterialProperty:self.normal.materialProperty];
+        }
+        
+        if ([keyPath isEqualToString:@"reflective"]) {
+            
+            [self.material.reflective setValuesUsingMaterialProperty:self.reflective.materialProperty];
+        }
+        
+        if ([keyPath isEqualToString:@"specular"]) {
+            
+            [self.material.specular setValuesUsingMaterialProperty:self.specular.materialProperty];
+        }
+        
+        if ([keyPath isEqualToString:@"transparent"]) {
+            
+            [self.material.transparent setValuesUsingMaterialProperty:self.transparent.materialProperty];
         }
         
     } else {
@@ -196,7 +304,49 @@ static void *KVOContext = &KVOContext;
                   options:NSKeyValueObservingOptionNew
                   context:KVOContext];
         
-        // Set properties
+        [self addObserver:self
+               forKeyPath:@"ambient"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"diffuse"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"emission"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"multiply"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"normal"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"reflective"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"specular"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"transparent"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        // update transient property
+        
+        // set attributes
         
         self.material.cullMode = self.cullMode.integerValue;
         self.material.doubleSided = self.doubleSided.boolValue;
@@ -208,6 +358,17 @@ static void *KVOContext = &KVOContext;
         self.material.shininess = self.shininess.floatValue;
         self.material.transparency = self.transparency.floatValue;
         self.material.transparencyMode = self.transparencyMode.integerValue;
+        
+        // set material properties
+        
+        [self.material.ambient setValuesUsingMaterialProperty:self.ambient.materialProperty];
+        [self.material.diffuse setValuesUsingMaterialProperty:self.diffuse.materialProperty];
+        [self.material.emission setValuesUsingMaterialProperty:self.emission.materialProperty];
+        [self.material.multiply setValuesUsingMaterialProperty:self.multiply.materialProperty];
+        [self.material.normal setValuesUsingMaterialProperty:self.normal.materialProperty];
+        [self.material.reflective setValuesUsingMaterialProperty:self.reflective.materialProperty];
+        [self.material.specular setValuesUsingMaterialProperty:self.specular.materialProperty];
+        [self.material.transparent setValuesUsingMaterialProperty:self.transparent.materialProperty];
         
     }
     
