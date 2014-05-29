@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGGeometry, NSGMaterialProperty;
 
@@ -33,5 +34,9 @@
 @property (nonatomic, retain) NSGMaterialProperty *reflective;
 @property (nonatomic, retain) NSGMaterialProperty *specular;
 @property (nonatomic, retain) NSGMaterialProperty *transparent;
+
+// Transient
+
+@property (nonatomic, readonly) SCNMaterial *material;
 
 @end

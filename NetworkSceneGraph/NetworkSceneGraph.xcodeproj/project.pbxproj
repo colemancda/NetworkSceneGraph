@@ -40,7 +40,7 @@
 		6E4EBBA419365F8B00FC2546 /* NSGGeometrySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBA219365F8B00FC2546 /* NSGGeometrySource.m */; };
 		6E4EBBA719365F8B00FC2546 /* NSGLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBA519365F8B00FC2546 /* NSGLink.h */; };
 		6E4EBBA819365F8B00FC2546 /* NSGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBA619365F8B00FC2546 /* NSGLink.m */; };
-		6E4EBBAF19366C4C00FC2546 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBAD19366C4C00FC2546 /* NSGGeometry.h */; };
+		6E4EBBAF19366C4C00FC2546 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBAD19366C4C00FC2546 /* NSGGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBB019366C4C00FC2546 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBAE19366C4C00FC2546 /* NSGGeometry.m */; };
 		6E4EBBB61936B82100FC2546 /* NSGServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBB41936B82100FC2546 /* NSGServer.h */; };
 		6E4EBBB71936B82100FC2546 /* NSGServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBB51936B82100FC2546 /* NSGServer.m */; };

@@ -192,6 +192,10 @@ static void *KVOContext = &KVOContext;
 {
     if (!_node) {
         
+        // lazily initialize
+        
+        _node = [SCNNode node];
+        
         // KVO
         
         [self addObserver:self

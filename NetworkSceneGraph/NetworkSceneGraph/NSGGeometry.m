@@ -12,6 +12,7 @@
 #import "NSGMaterial.h"
 #import "NSGNode.h"
 
+static void *KVOContext = &KVOContext;
 
 @implementation NSGGeometry
 
@@ -20,6 +21,116 @@
 @dynamic geometrySources;
 @dynamic materials;
 @dynamic node;
+
+@synthesize geometry = _geometry;
+
+-(void)dealloc
+{
+    if (self.geometry) {
+        
+        [self removeObserver:self
+                  forKeyPath:@"resourceID"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"materials"];
+        
+    }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:@"resourceID"]) {
+            
+            self.geometry.name = [NSString stringWithFormat:@"%@", self.resourceID];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"materials"]) {
+            
+            NSMutableArray *materials = [[NSMutableArray alloc] init];
+            
+            for (NSGMaterial *material in self.materials) {
+                
+                [materials addObject:material.material];
+                
+            }
+            
+            self.geometry.materials = [NSArray arrayWithArray:materials];
+            
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Transient Properties
+
+-(SCNGeometry *)geometry
+{
+    if (!_geometry) {
+        
+        // lazily initialize
+        
+        if (!self.geometryElements && !self.geometrySources) {
+            
+            _geometry = [SCNGeometry geometry];
+        }
+        else {
+            
+            NSMutableArray *sources = [[NSMutableArray alloc] init];
+            
+            for (NSGGeometrySource *geometrySource in self.geometrySources) {
+                
+                [sources addObject:geometrySource.geometrySource];
+            }
+            
+            NSMutableArray *elements = [[NSMutableArray alloc] init];
+            
+            for (NSGGeometryElement *geometryElement in self.geometryElements) {
+                
+                [elements addObject:geometryElement.geometryElement];
+                
+            }
+            
+            _geometry = [SCNGeometry geometryWithSources:[NSArray arrayWithArray:sources]
+                                                elements:[NSArray arrayWithArray:elements]];
+        }
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"resourceID"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"materials"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        // setup
+        
+        self.geometry.name = [NSString stringWithFormat:@"%@", self.resourceID];
+        
+        NSMutableArray *materials = [[NSMutableArray alloc] init];
+        
+        for (NSGMaterial *material in self.materials) {
+            
+            [materials addObject:material.material];
+            
+        }
+        
+        self.geometry.materials = [NSArray arrayWithArray:materials];
+        
+        
+    }
+    return _geometry;
+}
 
 #pragma mark - NOResourceKeysProtocol
 
@@ -74,6 +185,18 @@
 -(NOResourcePermission)permissionForRelationship:(NSString *)relationshipName
                                          session:(NSManagedObject<NOSessionProtocol> *)session
 {
+    // cant edit properties that can only be set when created
+    
+    if ([relationshipName isEqualToString:@"geometryElements"] && self.geometryElements) {
+        
+        return NOReadOnlyPermission;
+    }
+    
+    if ([relationshipName isEqualToString:@"geometrySources"] && self.geometrySources) {
+        
+        return NOReadOnlyPermission;
+    }
+    
     return NOEditPermission;
 }
 

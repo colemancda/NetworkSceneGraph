@@ -12,4 +12,7 @@
 #import <NetworkSceneGraph/NSNode.h>
 #import <NetworkSceneGraph/NSGeometry.h>
 
+// Additions
 
+#import <NetworkSceneGraph/NSString+SCNVector3.h>
+#import <NetworkSceneGraph/NSString+SCNVector4.h>

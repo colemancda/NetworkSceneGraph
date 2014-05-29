@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGGeometry;
 
@@ -20,5 +21,10 @@
 @property (nonatomic, retain) NSNumber * primitiveType;
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGGeometry *geometry;
+
+// Transient
+
+@property (nonatomic, readonly) SCNGeometryElement *geometryElement;
+
 
 @end
