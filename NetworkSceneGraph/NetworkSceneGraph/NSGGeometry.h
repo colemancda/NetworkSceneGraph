@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGGeometryElement, NSGGeometrySource, NSGMaterial, NSGNode;
 
@@ -18,6 +19,11 @@
 @property (nonatomic, retain) NSSet *geometrySources;
 @property (nonatomic, retain) NSSet *materials;
 @property (nonatomic, retain) NSGNode *node;
+
+// Transient
+
+@property (nonatomic, readonly) SCNGeometry *geometry;
+
 @end
 
 @interface NSGGeometry (CoreDataGeneratedAccessors)

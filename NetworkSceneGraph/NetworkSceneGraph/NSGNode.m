@@ -12,6 +12,9 @@
 #import "NSGLink.h"
 #import "NSGNode.h"
 #import "NSGScene.h"
+#import "NSGCamera.h"
+#import "NSString+SCNVector3.h"
+#import "NSString+SCNVector4.h"
 
 static void *KVOContext = &KVOContext;
 
@@ -40,6 +43,33 @@ static void *KVOContext = &KVOContext;
         
         [self removeObserver:self
                   forKeyPath:@"hidden"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"opacity"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"position"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"resourceID"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"rotation"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"scale"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"childNodes"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"geometry"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"light"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"camera"];
     }
 }
 
@@ -51,7 +81,103 @@ static void *KVOContext = &KVOContext;
         
         if ([keyPath isEqualToString:@"hidden"]) {
             
+            self.node.hidden = self.hidden.boolValue;
             
+        }
+        
+        if ([keyPath isEqualToString:@"opacity"]) {
+            
+            self.node.opacity = self.opacity.floatValue;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"position"]) {
+            
+            self.node.position = self.position.SCNVector3Value;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"resourceID"]) {
+            
+            self.node.name = [NSString stringWithFormat:@"%@", self.resourceID];
+            
+        }
+        
+        if ([keyPath isEqualToString:@"rotation"]) {
+            
+            self.node.rotation = self.rotation.SCNVector4Value;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"scale"]) {
+            
+            self.node.scale = self.scale.SCNVector3Value;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"childNodes"]) {
+            
+            // remove nodes that dont match
+            
+            for (SCNNode *sceneNode in self.node.childNodes) {
+                
+                BOOL nodeExists = NO;
+                
+                for (NSGNode *node in self.childNodes) {
+                    
+                    if ([[NSString stringWithFormat:@"%@", node.resourceID] isEqualToString:sceneNode.name]) {
+                        
+                        nodeExists = YES;
+                        
+                        break;
+                    }
+                }
+                
+                if (!nodeExists) {
+                    
+                    [sceneNode removeFromParentNode];
+                }
+            }
+            
+            // add new nodes
+            
+            for (NSGNode *node in self.childNodes) {
+                
+                BOOL nodeExists = NO;
+                
+                for (SCNNode *sceneNode in self.node.childNodes) {
+                    
+                    if ([[NSString stringWithFormat:@"%@", node.resourceID] isEqualToString:sceneNode.name]) {
+                        
+                        nodeExists = YES;
+                        
+                        break;
+                    }
+                }
+                
+                if (!nodeExists) {
+                    
+                    [self.node addChildNode:node.node];
+                }
+            }
+                        
+        }
+        
+        if ([keyPath isEqualToString:@"geometry"]) {
+            
+            self.node.geometry = self.geometry.geometry;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"light"]) {
+            
+            self.node.light = self.light.light;
+            
+        }
+        
+        if ([keyPath isEqualToString:@"camera"]) {
+            
+            self.node.camera = self.camera.camera;
             
         }
         
@@ -72,6 +198,79 @@ static void *KVOContext = &KVOContext;
                forKeyPath:@"hidden"
                   options:NSKeyValueObservingOptionNew
                   context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"opacity"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"position"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"resourceID"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"rotation"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"scale"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"childNodes"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"geometry"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"light"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"camera"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        
+        // setup node...
+        
+        self.node.hidden = self.hidden.boolValue;
+        
+        self.node.opacity = self.opacity.floatValue;
+        
+        self.node.position = self.position.SCNVector3Value;
+        
+        self.node.name = [NSString stringWithFormat:@"%@", self.resourceID];
+        
+        self.node.rotation = self.rotation.SCNVector4Value;
+        
+        self.node.scale = self.scale.SCNVector3Value;
+
+        self.node.geometry = self.geometry.geometry;
+        
+        self.node.light = self.light.light;
+        
+        self.node.camera = self.camera.camera;
+        
+        // add node children
+        
+        for (NSGNode *childNode in self.childNodes) {
+            
+            [_node addChildNode:childNode.node];
+        }
         
     }
     

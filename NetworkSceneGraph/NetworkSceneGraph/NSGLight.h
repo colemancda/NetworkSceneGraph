@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGMaterialProperty, NSGNode;
 
@@ -29,5 +30,9 @@
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSGMaterialProperty *gobo;
 @property (nonatomic, retain) NSGNode *node;
+
+// Transient
+
+@property (nonatomic, readonly) SCNLight *light;
 
 @end

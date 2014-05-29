@@ -48,6 +48,10 @@
 		6E4EBBC21936B8D000FC2546 /* NOStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */; };
 		6E4EBBC91936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */; };
 		6E4EBBCA1936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */; };
+		6E4EBBD71936D1E600FC2546 /* NSString+SCNVector3.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBD51936D1E600FC2546 /* NSString+SCNVector3.h */; };
+		6E4EBBD81936D1E600FC2546 /* NSString+SCNVector3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */; };
+		6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */; };
+		6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
@@ -154,6 +158,10 @@
 		6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOStore+SceneKitImport.m"; sourceTree = "<group>"; };
 		6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOAPICachedStore+SceneKitImport.h"; sourceTree = "<group>"; };
 		6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOAPICachedStore+SceneKitImport.m"; sourceTree = "<group>"; };
+		6E4EBBD51936D1E600FC2546 /* NSString+SCNVector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCNVector3.h"; sourceTree = "<group>"; };
+		6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCNVector3.m"; sourceTree = "<group>"; };
+		6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCNVector4.h"; sourceTree = "<group>"; };
+		6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCNVector4.m"; sourceTree = "<group>"; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -237,6 +245,17 @@
 			name = Client;
 			sourceTree = "<group>";
 		};
+		6E4EBBD41936D1B400FC2546 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6E4EBBD51936D1E600FC2546 /* NSString+SCNVector3.h */,
+				6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */,
+				6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */,
+				6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		6E507DCB19342B5400D6B91E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +280,7 @@
 		6EB02C7419352EEB00A732C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6E4EBBD41936D1B400FC2546 /* Categories */,
 				6E4EBB7119365F8A00FC2546 /* NSGScene.h */,
 				6E4EBB7219365F8A00FC2546 /* NSGScene.m */,
 				6E4EBB7919365F8A00FC2546 /* NSGNode.h */,
@@ -385,7 +405,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4EBB8719365F8B00FC2546 /* NSGMaterialProperty.h in Headers */,
+				6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */,
 				6E4EBBC11936B8D000FC2546 /* NOStore+SceneKitImport.h in Headers */,
+				6E4EBBD71936D1E600FC2546 /* NSString+SCNVector3.h in Headers */,
 				6E4EBBB61936B82100FC2546 /* NSGServer.h in Headers */,
 				6E4EBB7719365F8A00FC2546 /* NSGMaterialPropertyContent.h in Headers */,
 				6E4EBB8B19365F8B00FC2546 /* NSGMaterial.h in Headers */,
@@ -548,7 +570,9 @@
 				6E4EBB8419365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.m in Sources */,
 				6E4EBBA019365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
 				6E4EBB7819365F8A00FC2546 /* NSGMaterialPropertyContent.m in Sources */,
+				6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */,
 				6E4EBB7019365F8900FC2546 /* NSGGeometryElement.m in Sources */,
+				6E4EBBD81936D1E600FC2546 /* NSString+SCNVector3.m in Sources */,
 				6E4EBBB019366C4C00FC2546 /* NSGGeometry.m in Sources */,
 				6E4EBB9019365F8B00FC2546 /* NSGMaterialPropertyContentImage.m in Sources */,
 				6E4EBB9C19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m in Sources */,

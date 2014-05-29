@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGNode, NSGScene;
 
@@ -28,5 +29,9 @@
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGNode *node;
 @property (nonatomic, retain) NSGScene *pointOfViewScene;
+
+// Transient
+
+@property (nonatomic, readonly) SCNCamera *camera;
 
 @end
