@@ -9,7 +9,7 @@
 #import "NSGLight.h"
 #import "NSGMaterialProperty.h"
 #import "NSGNode.h"
-
+#import "NSString+CGColorRef.h"
 
 @implementation NSGLight
 
@@ -28,6 +28,20 @@
 @dynamic type;
 @dynamic gobo;
 @dynamic node;
+
+@synthesize light = _light;
+
+-(void)dealloc
+{
+    if (self.light) {
+        
+        [self removeObserver:self
+                  forKeyPath:@"resourceID"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"color"];
+    }
+}
 
 #pragma mark - NOResourceKeysProtocol
 

@@ -38,7 +38,7 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"url", @"node"]];
+    return [NSSet setWithArray:@[@"url", @"sceneResourceID", @"node"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session

@@ -52,6 +52,8 @@
 		6E4EBBD81936D1E600FC2546 /* NSString+SCNVector3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */; };
 		6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */; };
 		6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */; };
+		6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */; };
+		6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
@@ -162,6 +164,8 @@
 		6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCNVector3.m"; sourceTree = "<group>"; };
 		6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCNVector4.h"; sourceTree = "<group>"; };
 		6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCNVector4.m"; sourceTree = "<group>"; };
+		6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CGColorRef.h"; sourceTree = "<group>"; };
+		6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CGColorRef.m"; sourceTree = "<group>"; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -252,6 +256,8 @@
 				6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */,
 				6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */,
 				6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */,
+				6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */,
+				6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				6E4EBBB61936B82100FC2546 /* NSGServer.h in Headers */,
 				6E4EBB7719365F8A00FC2546 /* NSGMaterialPropertyContent.h in Headers */,
 				6E4EBB8B19365F8B00FC2546 /* NSGMaterial.h in Headers */,
+				6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */,
 				6E4EBB7319365F8A00FC2546 /* NSGScene.h in Headers */,
 				6E4EBB9319365F8B00FC2546 /* NSGCamera.h in Headers */,
 				6E4EBB6F19365F8900FC2546 /* NSGGeometryElement.h in Headers */,
@@ -569,6 +576,7 @@
 				6E4EBBA419365F8B00FC2546 /* NSGGeometrySource.m in Sources */,
 				6E4EBB8419365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.m in Sources */,
 				6E4EBBA019365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
+				6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */,
 				6E4EBB7819365F8A00FC2546 /* NSGMaterialPropertyContent.m in Sources */,
 				6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */,
 				6E4EBB7019365F8900FC2546 /* NSGGeometryElement.m in Sources */,
