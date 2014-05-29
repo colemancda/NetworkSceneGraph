@@ -43,14 +43,72 @@ static void *KVOContext = &KVOContext;
 
 @implementation NSGMaterial (KVOMaterialProperty)
 
--(void)observeMaterialPropertyWithName
+-(NSArray *)materialPropertyProperties
 {
+    static NSArray *properties;
     
+    if (!properties) {
+        
+        properties = @[@"contents",
+                       @"intensity",
+                       @"minificationFilter",
+                       @"magnificationFilter",
+                       @"mipFilter",
+                       @"contentsTransform",
+                       @"wrapS",
+                       @"wrapT",
+                       @"borderColor",
+                       @"mappingChannel",
+                       @"maxAnisotropy"];
+    }
+    
+    return properties;
 }
 
--(void)stopObservingMaterialProperty
+-(NSArray *)materialPropertyNames
 {
+    static NSArray *names;
     
+    if (!names) {
+        
+        names = @[@"ambient",
+                  @"diffuse",
+                  @"emission",
+                  @"multiply",
+                  @"normal",
+                  @"reflective",
+                  @"specular",
+                  @"transparent"];
+    }
+    
+    return names;
+}
+
+-(void)startObservingMaterialPropertyWithName:(NSString *)name
+{
+    NSGMaterialProperty *materialProperty = [self valueForKey:name];
+    
+    SCNMaterialProperty *sceneMaterialProperty = materialProperty.materialProperty;
+    
+    for (NSString *propertyName in [self materialPropertyProperties]) {
+        
+        
+        
+        
+        [self addObserver:self
+               forKeyPath:[NSString stringWithFormat:@"%@.materialProperty.%@", name, propertyName]
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+    }
+}
+
+-(void)stopObservingMaterialPropertyWithName:(NSString *)name
+{
+    for (NSString *propertyName in [self materialPropertyProperties]) {
+        
+        [self removeObserver:self
+                  forKeyPath:[NSString stringWithFormat:@"%@.materialProperty.%@", name, propertyName]];
+    }
 }
 
 @end
@@ -136,6 +194,13 @@ static void *KVOContext = &KVOContext;
         
         [self removeObserver:self
                   forKeyPath:@"transparent"];
+        
+        // KVO material properties
+        
+        for (NSString *name in [self materialPropertyNames]) {
+            
+            [self stopObservingMaterialPropertyWithName:name];
+        }
         
     }
 }
@@ -235,6 +300,21 @@ static void *KVOContext = &KVOContext;
         if ([keyPath isEqualToString:@"transparent"]) {
             
             [self.material.transparent setValuesUsingMaterialProperty:self.transparent.materialProperty];
+        }
+        
+        // KVO Material Properties
+        
+        for (NSString *name in [self materialPropertyNames]) {
+            
+            for (NSString *property in [self materialPropertyProperties]) {
+                
+                if ([keyPath isEqualToString:[NSString stringWithFormat:@"%@.materialProperty.%@", name, property]]) {
+                    
+                    SCNMaterialProperty *material
+                    
+                    return;
+                }
+            }
         }
         
     } else {
@@ -344,7 +424,14 @@ static void *KVOContext = &KVOContext;
                   options:NSKeyValueObservingOptionNew
                   context:KVOContext];
         
-        // update transient property
+        // KVO Material Properties
+        
+        for (NSString *name in [self materialPropertyNames]) {
+            
+            [self startObservingMaterialPropertyWithName:name];
+        }
+        
+        // update transient property...
         
         // set attributes
         
