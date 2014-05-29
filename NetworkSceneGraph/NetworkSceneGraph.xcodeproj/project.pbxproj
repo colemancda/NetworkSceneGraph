@@ -48,8 +48,6 @@
 		6E4EBBC21936B8D000FC2546 /* NOStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */; };
 		6E4EBBC91936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */; };
 		6E4EBBCA1936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */; };
-		6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */; };
-		6EB02CD91936132F00A732C7 /* NSGGeometry+SCNGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
@@ -157,8 +155,6 @@
 		6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOAPICachedStore+SceneKitImport.h"; sourceTree = "<group>"; };
 		6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOAPICachedStore+SceneKitImport.m"; sourceTree = "<group>"; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
-		6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSGGeometry+SCNGeometry.h"; sourceTree = "<group>"; };
-		6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSGGeometry+SCNGeometry.m"; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6EBC63CE192FEF3E00FCF7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -199,23 +195,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E4EBBA91936675200FC2546 /* Material Property Content */ = {
-			isa = PBXGroup;
-			children = (
-				6E4EBB7519365F8A00FC2546 /* NSGMaterialPropertyContent.h */,
-				6E4EBB7619365F8A00FC2546 /* NSGMaterialPropertyContent.m */,
-				6E4EBB9D19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.h */,
-				6E4EBB9E19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.m */,
-				6E4EBB9919365F8B00FC2546 /* NSGMaterialPropertyContentColor.h */,
-				6E4EBB9A19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m */,
-				6E4EBB8119365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.h */,
-				6E4EBB8219365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.m */,
-				6E4EBB8D19365F8B00FC2546 /* NSGMaterialPropertyContentImage.h */,
-				6E4EBB8E19365F8B00FC2546 /* NSGMaterialPropertyContentImage.m */,
-			);
-			name = "Material Property Content";
-			sourceTree = "<group>";
-		};
 		6E4EBBBC1936B82A00FC2546 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,10 +206,8 @@
 		6E4EBBBD1936B83800FC2546 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				6E4EBBBF1936B8D000FC2546 /* NOStore+SceneKitImport.h */,
-				6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */,
-				6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */,
-				6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */,
+				6E4EBBCB1936BBE500FC2546 /* Server */,
+				6E4EBBCC1936BBF100FC2546 /* Client */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -240,6 +217,24 @@
 			children = (
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		6E4EBBCB1936BBE500FC2546 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				6E4EBBBF1936B8D000FC2546 /* NOStore+SceneKitImport.h */,
+				6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		6E4EBBCC1936BBF100FC2546 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */,
+				6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */,
+			);
+			name = Client;
 			sourceTree = "<group>";
 		};
 		6E507DCB19342B5400D6B91E /* Products */ = {
@@ -286,19 +281,18 @@
 				6E4EBB6E19365F8900FC2546 /* NSGGeometryElement.m */,
 				6E4EBB8519365F8B00FC2546 /* NSGMaterialProperty.h */,
 				6E4EBB8619365F8B00FC2546 /* NSGMaterialProperty.m */,
-				6E4EBBA91936675200FC2546 /* Material Property Content */,
-				6EB02CD5193612E800A732C7 /* Categories */,
+				6E4EBB7519365F8A00FC2546 /* NSGMaterialPropertyContent.h */,
+				6E4EBB7619365F8A00FC2546 /* NSGMaterialPropertyContent.m */,
+				6E4EBB9D19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.h */,
+				6E4EBB9E19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.m */,
+				6E4EBB9919365F8B00FC2546 /* NSGMaterialPropertyContentColor.h */,
+				6E4EBB9A19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m */,
+				6E4EBB8119365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.h */,
+				6E4EBB8219365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.m */,
+				6E4EBB8D19365F8B00FC2546 /* NSGMaterialPropertyContentImage.h */,
+				6E4EBB8E19365F8B00FC2546 /* NSGMaterialPropertyContentImage.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		6EB02CD5193612E800A732C7 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6EB02CD61936132F00A732C7 /* NSGGeometry+SCNGeometry.h */,
-				6EB02CD71936132F00A732C7 /* NSGGeometry+SCNGeometry.m */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 		6EBC63BE192FEF3E00FCF7C3 = {
@@ -390,7 +384,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB02CD81936132F00A732C7 /* NSGGeometry+SCNGeometry.h in Headers */,
 				6E4EBB8719365F8B00FC2546 /* NSGMaterialProperty.h in Headers */,
 				6E4EBBC11936B8D000FC2546 /* NOStore+SceneKitImport.h in Headers */,
 				6E4EBBB61936B82100FC2546 /* NSGServer.h in Headers */,
@@ -563,7 +556,6 @@
 				6E4EBB8C19365F8B00FC2546 /* NSGMaterial.m in Sources */,
 				6E4EBB8019365F8A00FC2546 /* NSGLight.m in Sources */,
 				6E4EBBA819365F8B00FC2546 /* NSGLink.m in Sources */,
-				6EB02CD91936132F00A732C7 /* NSGGeometry+SCNGeometry.m in Sources */,
 				6E4EBBC21936B8D000FC2546 /* NOStore+SceneKitImport.m in Sources */,
 				6E4EBB9419365F8B00FC2546 /* NSGCamera.m in Sources */,
 				6E4EBB7C19365F8A00FC2546 /* NSGNode.m in Sources */,

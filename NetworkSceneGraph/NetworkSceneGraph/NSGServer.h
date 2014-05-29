@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <NetworkObjects/NetworkObjects.h>
 
-@interface NSGServer : NSObject
+@interface NSGServer : NOServer
+
+
 
 @end

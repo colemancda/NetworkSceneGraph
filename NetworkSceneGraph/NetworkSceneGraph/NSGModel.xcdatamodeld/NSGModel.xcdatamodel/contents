@@ -148,20 +148,20 @@
         <relationship name="pointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="pointOfViewScene" inverseEntity="NSGCamera" syncable="YES"/>
     </entity>
     <elements>
-        <element name="NSGCamera" positionX="0" positionY="144" width="128" height="253"/>
-        <element name="NSGGeometry" positionX="0" positionY="45" width="128" height="118"/>
-        <element name="NSGGeometryElement" positionX="0" positionY="81" width="128" height="133"/>
-        <element name="NSGGeometrySource" positionX="9" positionY="90" width="128" height="193"/>
-        <element name="NSGLight" positionX="-101" positionY="414" width="128" height="268"/>
-        <element name="NSGLink" positionX="-29" positionY="-108" width="128" height="103"/>
-        <element name="NSGMaterial" positionX="18" positionY="63" width="128" height="328"/>
-        <element name="NSGMaterialProperty" positionX="36" positionY="81" width="128" height="343"/>
-        <element name="NSGMaterialPropertyContent" positionX="18" positionY="135" width="128" height="73"/>
-        <element name="NSGMaterialPropertyContentColor" positionX="27" positionY="144" width="128" height="58"/>
-        <element name="NSGMaterialPropertyContentImage" positionX="45" positionY="189" width="128" height="58"/>
-        <element name="NSGMaterialPropertyContentImageURL" positionX="-9" positionY="135" width="128" height="58"/>
-        <element name="NSGMaterialPropertyContentVideoHLS" positionX="151" positionY="374" width="128" height="58"/>
-        <element name="NSGNode" positionX="-270" positionY="66" width="128" height="253"/>
-        <element name="NSGScene" positionX="-279" positionY="-81" width="128" height="103"/>
+        <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="253"/>
+        <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="118"/>
+        <element name="NSGGeometryElement" positionX="-9" positionY="83" width="128" height="133"/>
+        <element name="NSGGeometrySource" positionX="-36" positionY="-144" width="128" height="193"/>
+        <element name="NSGLight" positionX="-254" positionY="297" width="128" height="268"/>
+        <element name="NSGLink" positionX="-254" positionY="171" width="128" height="103"/>
+        <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="328"/>
+        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="343"/>
+        <element name="NSGMaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
+        <element name="NSGMaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="58"/>
+        <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
+        <element name="NSGMaterialPropertyContentImageURL" positionX="567" positionY="126" width="128" height="58"/>
+        <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="253"/>
+        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="103"/>
     </elements>
 </model>

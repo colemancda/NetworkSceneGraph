@@ -13,6 +13,7 @@
 #import "NSGNode.h"
 #import "NSGScene.h"
 
+static void *KVOContext = &KVOContext;
 
 @implementation NSGNode
 
@@ -33,6 +34,49 @@
 
 @synthesize node = _node;
 
+-(void)dealloc
+{
+    if (self.node) {
+        
+        [self removeObserver:self
+                  forKeyPath:@"hidden"];
+    }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:@"hidden"]) {
+            
+            
+            
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Transient Properties
+
+-(SCNNode *)node
+{
+    if (!_node) {
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"hidden"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+    }
+    
+    return _node;
+}
 
 #pragma mark - NOResourceKeysProtocol
 

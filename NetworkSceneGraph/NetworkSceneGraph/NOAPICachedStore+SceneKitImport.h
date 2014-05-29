@@ -7,7 +7,10 @@
 //
 
 #import <NetworkObjects/NetworkObjects.h>
+#import <SceneKit/SceneKit.h>
 
 @interface NOAPICachedStore (SceneKitImport)
+
+-(void)importScene:(SCNScene *)scene;
 
 @end

@@ -11,7 +11,7 @@
 #import <NetworkObjects/NetworkObjects.h>
 #import <SceneKit/SceneKit.h>
 
-@class NSGGeometry, NSGLight, NSGLink, NSGNode, NSGScene;
+@class NSGGeometry, NSGLight, NSGLink, NSGNode, NSGScene, NSGCamera;
 
 @interface NSGNode : NSManagedObject <NOResourceProtocol>
 
@@ -27,7 +27,7 @@
 @property (nonatomic, retain) NSGLink *link;
 @property (nonatomic, retain) NSGNode *parentNode;
 @property (nonatomic, retain) NSGScene *scene;
-@property (nonatomic, retain) NSManagedObject *camera;
+@property (nonatomic, retain) NSGCamera *camera;
 @property (nonatomic, retain) NSString * descriptionText;
 
 

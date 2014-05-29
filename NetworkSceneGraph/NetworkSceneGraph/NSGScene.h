@@ -11,14 +11,14 @@
 #import <NetworkObjects/NetworkObjects.h>
 #import <SceneKit/SceneKit.h>
 
-@class NSGMaterialProperty, NSGNode;
+@class NSGMaterialProperty, NSGNode, NSGCamera;
 
 @interface NSGScene : NSManagedObject <NOResourceProtocol>
 
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGMaterialProperty *background;
 @property (nonatomic, retain) NSSet *nodes;
-@property (nonatomic, retain) NSManagedObject *pointOfView;
+@property (nonatomic, retain) NSGCamera *pointOfView;
 
 // Transient
 
