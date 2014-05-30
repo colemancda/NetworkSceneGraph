@@ -139,12 +139,29 @@
         <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLink" inverseName="node" inverseEntity="NSGLink" syncable="YES"/>
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="childNodes" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="nodes" inverseEntity="NSGScene" syncable="YES"/>
+        <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="node" inverseEntity="NSGSound" syncable="YES"/>
     </entity>
     <entity name="NSGScene" representedClassName="NSGScene" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="backgroundScene" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="pointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="pointOfViewScene" inverseEntity="NSGCamera" syncable="YES"/>
+    </entity>
+    <entity name="NSGSound" syncable="YES">
+        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="dataSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSoundDataSource" inverseName="sound" inverseEntity="NSGSoundDataSource" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="sound" inverseEntity="NSGNode" syncable="YES"/>
+    </entity>
+    <entity name="NSGSoundDataSource" isAbstract="YES" syncable="YES">
+        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="dataSource" inverseEntity="NSGSound" syncable="YES"/>
+    </entity>
+    <entity name="NSGSoundDataSourceData" parentEntity="NSGSoundDataSource" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="loops" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundDataSource" syncable="YES">
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="253"/>
@@ -160,7 +177,11 @@
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentImageURL" positionX="567" positionY="126" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
-        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="253"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="268"/>
         <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="103"/>
+        <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="88"/>
+        <element name="NSGSoundDataSourceHLSStream" positionX="-360" positionY="-135" width="128" height="58"/>
+        <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
+        <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
     </elements>
 </model>

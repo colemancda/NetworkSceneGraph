@@ -8,17 +8,71 @@
 
 #import "NSGMaterialPropertyContentVideoHLS.h"
 
+static void *KVOContext = &KVOContext;
+
+@interface NSGMaterialPropertyContentVideoHLS ()
+
+@property (nonatomic) AVPlayer *player;
+
+@end
 
 @implementation NSGMaterialPropertyContentVideoHLS
 
 @dynamic url;
 
-#pragma mark - NOResourceKeysProtocol
+@synthesize player = _player;
 
-+(NSString *)resourceIDKey
+-(void)dealloc
 {
-    return @"resourceID";
+    if (self.url) {
+        
+        [self removeObserver:self
+                  forKeyPath:@"url"];
+    }
 }
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:@"url"]) {
+            
+            CALayer *layer = self.contents;
+            
+            
+            
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Transient Properties
+
+-(id)contents
+{
+    if (!_layer) {
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"url"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        self.player = [AVPlayer playerWithURL:[NSURL URLWithString:self.url]];
+        
+        
+        
+    }
+    
+    return _layer;
+}
+
+#pragma mark - NOResourceKeysProtocol
 
 +(NSString *)resourcePath
 {
@@ -27,104 +81,20 @@
 
 #pragma mark - NOResourceProtocol
 
-+(BOOL)requireSession
-{
-    return NO;
-}
-
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"url"]];
+    return [[super requiredInitialProperties] setByAddingObjectsFromArray:@[@"url"]];
 }
 
-+(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session
+-(NOResourcePermission)permissionForAttribute:(NSString *)attributeName session:(NSManagedObject<NOSessionProtocol> *)session
 {
-    return YES;
-}
-
-+(BOOL)canCreateNewInstanceFromSession:(NSManagedObject<NOSessionProtocol> *)session;
-{
-    return YES;
-}
-
--(BOOL)canDeleteFromSession:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return YES;
-}
-
--(NOResourcePermission)permissionForSession:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return NOEditPermission;
-}
-
--(NOResourcePermission)permissionForAttribute:(NSString *)attributeName
-                                      session:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return NOEditPermission;
-}
-
--(NOResourcePermission)permissionForRelationship:(NSString *)relationshipName
-                                         session:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return NOEditPermission;
-}
-
--(BOOL)canPerformFunction:(NSString *)functionName
-                  session:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return YES;
-}
-
--(void)wasCreatedBySession:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return;
-}
-
--(void)wasAccessedBySession:(NSManagedObject<NOSessionProtocol> *)session;
-{
-    return;
-}
-
--(void)wasEditedBySession:(NSManagedObject<NOSessionProtocol> *)session;
-{
-    return;
-}
-
--(void)attribute:(NSString *)attributeName
-wasAccessedBySession:(NSManagedObject<NOSessionProtocol> *)session;
-{
-    return;
-}
-
--(void)attribute:(NSString *)attributeName
-wasEditedBySession:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return;
-}
-
--(void)relationship:(NSString *)relationshipName
-wasAccessedBySession:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return;
-}
-
--(void)relationship:(NSString *)relationshipName
- wasEditedBySession:(NSManagedObject<NOSessionProtocol> *)session
-{
-    return;
-}
-
-+(NSSet *)resourceFunctions
-{
-    return nil;
-}
-
--(NOResourceFunctionCode)performFunction:(NSString *)functionName
-                             withSession:(NSManagedObject<NOSessionProtocol> *)session
-                      recievedJsonObject:(NSDictionary *)recievedJsonObject
-                                response:(NSDictionary **)jsonObjectResponse
-{
-    return NOFunctionPerformedSuccesfully;
+    if ([attributeName isEqualToString:@"url"]) {
+        
+        return NOReadOnlyPermission;
+    }
+    
+    return [super permissionForAttribute:attributeName
+                                 session:session];
 }
 
 @end

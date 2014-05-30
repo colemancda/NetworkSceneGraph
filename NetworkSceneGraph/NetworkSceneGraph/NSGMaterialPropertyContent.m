@@ -22,4 +22,123 @@
     return nil;
 }
 
+#pragma mark - NOResourceKeysProtocol
+
++(NSString *)resourceIDKey
+{
+    return @"resourceID";
+}
+
++(NSString *)resourcePath
+{
+    return nil;
+}
+
+#pragma mark - NOResourceProtocol
+
++(BOOL)requireSession
+{
+    return NO;
+}
+
++(NSSet *)requiredInitialProperties
+{
+    return [NSSet setWithArray:@[@"material"]];
+}
+
++(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return YES;
+}
+
++(BOOL)canCreateNewInstanceFromSession:(NSManagedObject<NOSessionProtocol> *)session;
+{
+    return YES;
+}
+
+-(BOOL)canDeleteFromSession:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return YES;
+}
+
+-(NOResourcePermission)permissionForSession:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return NOEditPermission;
+}
+
+-(NOResourcePermission)permissionForAttribute:(NSString *)attributeName
+                                      session:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return NOEditPermission;
+}
+
+-(NOResourcePermission)permissionForRelationship:(NSString *)relationshipName
+                                         session:(NSManagedObject<NOSessionProtocol> *)session
+{
+    if ([relationshipName isEqualToString:@"material"]) {
+        
+        return NOReadOnlyPermission;
+    }
+    
+    return NOEditPermission;
+}
+
+-(BOOL)canPerformFunction:(NSString *)functionName
+                  session:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return YES;
+}
+
+-(void)wasCreatedBySession:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return;
+}
+
+-(void)wasAccessedBySession:(NSManagedObject<NOSessionProtocol> *)session;
+{
+    return;
+}
+
+-(void)wasEditedBySession:(NSManagedObject<NOSessionProtocol> *)session;
+{
+    return;
+}
+
+-(void)attribute:(NSString *)attributeName
+wasAccessedBySession:(NSManagedObject<NOSessionProtocol> *)session;
+{
+    return;
+}
+
+-(void)attribute:(NSString *)attributeName
+wasEditedBySession:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return;
+}
+
+-(void)relationship:(NSString *)relationshipName
+wasAccessedBySession:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return;
+}
+
+-(void)relationship:(NSString *)relationshipName
+ wasEditedBySession:(NSManagedObject<NOSessionProtocol> *)session
+{
+    return;
+}
+
++(NSSet *)resourceFunctions
+{
+    return nil;
+}
+
+-(NOResourceFunctionCode)performFunction:(NSString *)functionName
+                             withSession:(NSManagedObject<NOSessionProtocol> *)session
+                      recievedJsonObject:(NSDictionary *)recievedJsonObject
+                                response:(NSDictionary **)jsonObjectResponse
+{
+    return NOFunctionPerformedSuccesfully;
+}
+
 @end

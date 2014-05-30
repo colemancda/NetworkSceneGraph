@@ -12,7 +12,7 @@
 
 @class NSGMaterialProperty;
 
-@interface NSGMaterialPropertyContent : NSManagedObject
+@interface NSGMaterialPropertyContent : NSManagedObject <NOResourceProtocol>
 
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGMaterialProperty *material;

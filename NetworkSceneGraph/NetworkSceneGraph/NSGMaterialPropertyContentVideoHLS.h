@@ -10,10 +10,20 @@
 #import <CoreData/CoreData.h>
 #import "NSGMaterialPropertyContent.h"
 #import <NetworkObjects/NetworkObjects.h>
-
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface NSGMaterialPropertyContentVideoHLS : NSGMaterialPropertyContent <NOResourceProtocol>
+{
+    // Transient variables
+    
+    AVPlayerLayer *_layer;
+}
 
 @property (nonatomic, retain) NSString * url;
+
+#pragma mark - Transient Properties
+
+@property (nonatomic, readonly) AVPlayer *player;
 
 @end
