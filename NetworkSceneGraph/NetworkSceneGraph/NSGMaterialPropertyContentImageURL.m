@@ -39,7 +39,11 @@ static void *KVOContext = &KVOContext;
         
         if ([keyPath isEqualToString:@"url"]) {
             
+            [self willChangeValueForKey:@"contents"];
+            
             self.image = [[NSImage alloc] initWithContentsOfURL:[NSURL URLWithString:self.url]];
+            
+            [self didChangeValueForKey:@"contents"];
         }
         
     } else {

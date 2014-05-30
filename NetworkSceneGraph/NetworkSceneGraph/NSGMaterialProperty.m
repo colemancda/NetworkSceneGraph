@@ -68,6 +68,9 @@ static void *KVOContext = &KVOContext;
         
         [self removeObserver:self
                   forKeyPath:@"contents"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"contents.contents"];
     }
 }
 
@@ -118,6 +121,11 @@ static void *KVOContext = &KVOContext;
         }
         
         if ([keyPath isEqualToString:@"contents"]) {
+            
+            self.materialProperty.contents = self.contents.contents;
+        }
+        
+        if ([keyPath isEqualToString:@"contents.contents"]) {
             
             self.materialProperty.contents = self.contents.contents;
         }
@@ -181,6 +189,11 @@ static void *KVOContext = &KVOContext;
         
         [self addObserver:self
                forKeyPath:@"contents"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+        
+        [self addObserver:self
+               forKeyPath:@"contents.contents"
                   options:NSKeyValueObservingOptionNew
                   context:KVOContext];
         

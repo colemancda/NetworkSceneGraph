@@ -17,6 +17,8 @@
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGMaterialProperty *material;
 
-@property (nonatomic, readonly) id contents;
+#pragma mark - Transient Properties
+
+@property (nonatomic, readonly) id contents; // KVO compliant
 
 @end

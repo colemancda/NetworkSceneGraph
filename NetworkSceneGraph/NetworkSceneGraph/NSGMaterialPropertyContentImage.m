@@ -39,7 +39,11 @@ static void *KVOContext = &KVOContext;
         
         if ([keyPath isEqualToString:@"data"]) {
             
+            [self willChangeValueForKey:@"contents"];
+            
             self.image = [[NSImage alloc] initWithData:self.data];
+            
+            [self didChangeValueForKey:@"contents"];
         }
         
     } else {
