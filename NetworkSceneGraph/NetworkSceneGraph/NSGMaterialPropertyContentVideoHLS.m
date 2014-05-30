@@ -24,7 +24,7 @@ static void *KVOContext = &KVOContext;
 
 -(void)dealloc
 {
-    if (self.url) {
+    if (_layer) {
         
         [self removeObserver:self
                   forKeyPath:@"url"];

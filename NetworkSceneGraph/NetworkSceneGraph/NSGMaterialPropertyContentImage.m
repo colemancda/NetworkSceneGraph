@@ -8,10 +8,65 @@
 
 #import "NSGMaterialPropertyContentImage.h"
 
+static void *KVOContext = &KVOContext;
+
+@interface NSGMaterialPropertyContentImage ()
+
+@property (nonatomic) NSImage *image;
+
+@end
 
 @implementation NSGMaterialPropertyContentImage
 
 @dynamic data;
+
+@synthesize image = _image;
+
+-(void)dealloc
+{
+    if (self.image) {
+        
+        [self removeObserver:self
+                  forKeyPath:@"data"];
+    }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:@"data"]) {
+            
+            self.image = [[NSImage alloc] initWithData:self.data];
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Transient Properties
+
+-(id)contents
+{
+    if (!_image) {
+        
+        // lazily initialize
+        
+        self.image = [[NSImage alloc] initWithData:self.data];
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"url"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+    }
+    
+    return _image;
+}
 
 #pragma mark - NOResourceKeysProtocol
 

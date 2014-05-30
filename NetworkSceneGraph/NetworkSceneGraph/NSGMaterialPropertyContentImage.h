@@ -16,4 +16,8 @@
 
 @property (nonatomic, retain) NSData * data;
 
+#pragma mark - Transient Properties
+
+@property (nonatomic, readonly) NSImage *image;
+
 @end

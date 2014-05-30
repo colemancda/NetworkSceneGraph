@@ -7,11 +7,59 @@
 //
 
 #import "NSGMaterialPropertyContentColor.h"
+#import "NSString+CGColorRef.h"
 
+static void *KVOContext = &KVOContext;
 
 @implementation NSGMaterialPropertyContentColor
 
 @dynamic value;
+
+-(void)dealloc
+{
+    if (_color) {
+        
+        [self removeObserver:self
+                  forKeyPath:@"value"];
+    }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:@"value"]) {
+            
+            _color = self.value.CGColorRefValue;
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Transient Properties
+
+-(id)contents
+{
+    if (!_color) {
+        
+        // lazily initialize
+        
+        _color = self.value.CGColorRefValue;
+        
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:@"value"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
+    }
+    
+    return (__bridge id)(_color);
+}
 
 #pragma mark - NOResourceKeysProtocol
 

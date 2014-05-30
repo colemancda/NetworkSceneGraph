@@ -13,6 +13,9 @@
 
 
 @interface NSGMaterialPropertyContentColor : NSGMaterialPropertyContent <NOResourceProtocol>
+{
+    CGColorRef _color;
+}
 
 @property (nonatomic, retain) NSString * value;
 

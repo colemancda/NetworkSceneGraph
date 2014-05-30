@@ -147,20 +147,20 @@
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="pointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="pointOfViewScene" inverseEntity="NSGCamera" syncable="YES"/>
     </entity>
-    <entity name="NSGSound" syncable="YES">
+    <entity name="NSGSound" representedClassName="NSGSound" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="dataSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSoundDataSource" inverseName="sound" inverseEntity="NSGSoundDataSource" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="sound" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
-    <entity name="NSGSoundDataSource" isAbstract="YES" syncable="YES">
+    <entity name="NSGSoundDataSource" representedClassName="NSGSoundDataSource" isAbstract="YES" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="dataSource" inverseEntity="NSGSound" syncable="YES"/>
     </entity>
-    <entity name="NSGSoundDataSourceData" parentEntity="NSGSoundDataSource" syncable="YES">
+    <entity name="NSGSoundDataSourceData" representedClassName="NSGSoundDataSourceData" parentEntity="NSGSoundDataSource" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="loops" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
-    <entity name="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundDataSource" syncable="YES">
+    <entity name="NSGSoundDataSourceHLSStream" representedClassName="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundDataSource" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
