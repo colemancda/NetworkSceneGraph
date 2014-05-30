@@ -21,6 +21,23 @@
 
 @synthesize geometryElement = _geometryElement;
 
+#pragma mark - Transient Properties
+
+-(SCNGeometryElement *)geometryElement
+{
+    if (_geometryElement) {
+        
+        // Lazily initialize
+        
+        _geometryElement = [SCNGeometryElement geometryElementWithData:self.data
+                                                         primitiveType:self.primitiveType.integerValue
+                                                        primitiveCount:self.primitiveCount.integerValue
+                                                         bytesPerIndex:self.bytesPerIndex.integerValue];
+    }
+    
+    return _geometryElement;
+}
+
 #pragma mark - NOResourceKeysProtocol
 
 +(NSString *)resourceIDKey
@@ -42,7 +59,10 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"data", @"geometry"]];
+    return [NSSet setWithArray:@[@"data",
+                                 @"bytesPerIndex",
+                                 @"primitiveCount",
+                                 @"primitiveType"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session
@@ -68,6 +88,11 @@
 -(NOResourcePermission)permissionForAttribute:(NSString *)attributeName
                                       session:(NSManagedObject<NOSessionProtocol> *)session
 {
+    if ([self valueForKey:attributeName]) {
+        
+        return NOReadOnlyPermission;
+    }
+    
     return NOEditPermission;
 }
 
