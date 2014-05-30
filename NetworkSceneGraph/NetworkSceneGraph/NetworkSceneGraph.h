@@ -33,3 +33,8 @@
 
 #import <NetworkSceneGraph/NSString+SCNVector3.h>
 #import <NetworkSceneGraph/NSString+SCNVector4.h>
+#import <NetworkSceneGraph/NSString+CGColorRef.h>
+#import <NetworkSceneGraph/NSManagedObjectModel+NetworkSceneGraph.h>
+#import <NetworkSceneGraph/NOServer+NetworkSceneGraph.h>
+
+

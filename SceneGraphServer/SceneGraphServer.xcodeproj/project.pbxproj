@@ -19,6 +19,7 @@
 		6E4EBB6219365D3000FC2546 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E4EBB6019365D3000FC2546 /* InfoPlist.strings */; };
 		6E4EBB6419365D3000FC2546 /* SceneGraphServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBB6319365D3000FC2546 /* SceneGraphServerTests.m */; };
 		6E4EBBAC193667EE00FC2546 /* SGSAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBAB193667EE00FC2546 /* SGSAppController.m */; };
+		6EB390361939105700078904 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB390351939105700078904 /* SceneKit.framework */; };
 		6ED5C6231938BB6300CE0EE0 /* NetworkSceneGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED5C61D1938BB3500CE0EE0 /* NetworkSceneGraph.framework */; };
 		6ED5C6251938BB9C00CE0EE0 /* NetworkSceneGraph.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6ED5C61D1938BB3500CE0EE0 /* NetworkSceneGraph.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,8 @@
 		6E4EBBAA193667EE00FC2546 /* SGSAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSAppController.h; sourceTree = "<group>"; };
 		6E4EBBAB193667EE00FC2546 /* SGSAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSAppController.m; sourceTree = "<group>"; };
 		6E4EBC1219383DB000FC2546 /* SceneGraphServerXPCService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SceneGraphServerXPCService.xcodeproj; path = SceneGraphServerXPCService/SceneGraphServerXPCService.xcodeproj; sourceTree = "<group>"; };
+		6EB390311939105000078904 /* NetworkObjects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkObjects.framework; path = "../../../../Library/Developer/Xcode/DerivedData/NetworkSceneGraph_Workspace-elazxlvknrtnzhgrqvxzyfftworw/Build/Products/Debug/NetworkObjects.framework"; sourceTree = "<group>"; };
+		6EB390351939105700078904 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		6ED5C6171938BB3500CE0EE0 /* NetworkSceneGraph.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkSceneGraph.xcodeproj; path = ../NetworkSceneGraph/NetworkSceneGraph.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB390361939105700078904 /* SceneKit.framework in Frameworks */,
 				6ED5C6231938BB6300CE0EE0 /* NetworkSceneGraph.framework in Frameworks */,
 				6E4EBB3A19365D3000FC2546 /* Cocoa.framework in Frameworks */,
 			);
@@ -145,6 +149,8 @@
 		6E4EBB3819365D3000FC2546 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EB390351939105700078904 /* SceneKit.framework */,
+				6EB390311939105000078904 /* NetworkObjects.framework */,
 				6ED5C6171938BB3500CE0EE0 /* NetworkSceneGraph.xcodeproj */,
 				6E4EBB3919365D3000FC2546 /* Cocoa.framework */,
 				6E4EBB5819365D3000FC2546 /* XCTest.framework */,
@@ -499,6 +505,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NetworkSceneGraph_Workspace-elazxlvknrtnzhgrqvxzyfftworw/Build/Products/Debug",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneGraphServer/SceneGraphServer-Prefix.pch";
 				INFOPLIST_FILE = "SceneGraphServer/SceneGraphServer-Info.plist";
@@ -512,6 +522,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NetworkSceneGraph_Workspace-elazxlvknrtnzhgrqvxzyfftworw/Build/Products/Debug",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneGraphServer/SceneGraphServer-Prefix.pch";
 				INFOPLIST_FILE = "SceneGraphServer/SceneGraphServer-Info.plist";

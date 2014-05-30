@@ -56,6 +56,7 @@
 		6E4EBBF11938231A00FC2546 /* NSGSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBEF1938231A00FC2546 /* NSGSound.m */; };
 		6E4EBBF41938231A00FC2546 /* NSGSoundDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBF21938231A00FC2546 /* NSGSoundDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBF51938231A00FC2546 /* NSGSoundDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBF31938231A00FC2546 /* NSGSoundDataSource.m */; };
+		6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBC63D8192FEF3E00FCF7C3 /* NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
@@ -63,14 +64,12 @@
 		6EBC63E5192FEF3E00FCF7C3 /* NetworkSceneGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */; };
 		6EBC63EB192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63E9192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63ED192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC63EC192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m */; };
-		6ED5C6281938C5D800CE0EE0 /* NSGStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C6261938C5D800CE0EE0 /* NSGStore.h */; };
-		6ED5C6291938C5D800CE0EE0 /* NSGStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6271938C5D800CE0EE0 /* NSGStore.m */; };
-		6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */; };
+		6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED5C62E1938C63300CE0EE0 /* NOStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */; };
-		6ED5C6311938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */; };
+		6ED5C6311938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED5C6321938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */; };
-		6ED5C6351938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C6331938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h */; };
-		6ED5C6361938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6341938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m */; };
+		6ED5C6391938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C6371938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ED5C63A1938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6381938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,14 +192,12 @@
 		6EBC63E8192FEF3E00FCF7C3 /* NetworkSceneGraphTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetworkSceneGraphTests-Info.plist"; sourceTree = "<group>"; };
 		6EBC63EA192FEF3E00FCF7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EBC63EC192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkSceneGraphTests.m; sourceTree = "<group>"; };
-		6ED5C6261938C5D800CE0EE0 /* NSGStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGStore.h; sourceTree = "<group>"; };
-		6ED5C6271938C5D800CE0EE0 /* NSGStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGStore.m; sourceTree = "<group>"; };
 		6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOStore+SceneKitImport.h"; sourceTree = "<group>"; };
 		6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOStore+SceneKitImport.m"; sourceTree = "<group>"; };
 		6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOServer+NetworkSceneGraph.h"; sourceTree = "<group>"; };
 		6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOServer+NetworkSceneGraph.m"; sourceTree = "<group>"; };
-		6ED5C6331938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOStore+NetworkSceneGraph.h"; sourceTree = "<group>"; };
-		6ED5C6341938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOStore+NetworkSceneGraph.m"; sourceTree = "<group>"; };
+		6ED5C6371938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+NetworkSceneGraph.h"; sourceTree = "<group>"; };
+		6ED5C6381938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+NetworkSceneGraph.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,8 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				6ED5C62A1938C5DE00CE0EE0 /* Categories */,
-				6ED5C6261938C5D800CE0EE0 /* NSGStore.h */,
-				6ED5C6271938C5D800CE0EE0 /* NSGStore.m */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -255,6 +250,8 @@
 				6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */,
 				6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */,
 				6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */,
+				6ED5C6371938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h */,
+				6ED5C6381938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -411,8 +408,6 @@
 			children = (
 				6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */,
 				6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */,
-				6ED5C6331938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h */,
-				6ED5C6341938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -429,10 +424,8 @@
 				6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */,
 				6E4EBBD71936D1E600FC2546 /* NSString+SCNVector3.h in Headers */,
 				6E4EBBEC1938231A00FC2546 /* NSGSoundDataSourceData.h in Headers */,
-				6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */,
 				6E4EBB7719365F8A00FC2546 /* NSGMaterialPropertyContent.h in Headers */,
 				6E4EBBF41938231A00FC2546 /* NSGSoundDataSource.h in Headers */,
-				6ED5C6351938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h in Headers */,
 				6E4EBB8B19365F8B00FC2546 /* NSGMaterial.h in Headers */,
 				6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */,
 				6E4EBB7319365F8A00FC2546 /* NSGScene.h in Headers */,
@@ -445,10 +438,12 @@
 				6E4EBB7F19365F8A00FC2546 /* NSGLight.h in Headers */,
 				6E4EBB8319365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.h in Headers */,
 				6E4EBB9F19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.h in Headers */,
+				6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */,
 				6E4EBBA319365F8B00FC2546 /* NSGGeometrySource.h in Headers */,
-				6ED5C6281938C5D800CE0EE0 /* NSGStore.h in Headers */,
 				6E4EBB9B19365F8B00FC2546 /* NSGMaterialPropertyContentColor.h in Headers */,
 				6E4EBBA719365F8B00FC2546 /* NSGLink.h in Headers */,
+				6ED5C6391938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h in Headers */,
+				6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */,
 				6ED5C6311938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +585,7 @@
 			files = (
 				6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
 				6E4EBB7419365F8A00FC2546 /* NSGScene.m in Sources */,
+				6ED5C63A1938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m in Sources */,
 				6E4EBB8819365F8B00FC2546 /* NSGMaterialProperty.m in Sources */,
 				6E4EBBA419365F8B00FC2546 /* NSGGeometrySource.m in Sources */,
 				6E4EBB8419365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.m in Sources */,
@@ -600,14 +596,12 @@
 				6ED5C6321938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m in Sources */,
 				6E4EBB7819365F8A00FC2546 /* NSGMaterialPropertyContent.m in Sources */,
 				6E4EBBE91938231900FC2546 /* NSGSoundDataSourceHLSStream.m in Sources */,
-				6ED5C6291938C5D800CE0EE0 /* NSGStore.m in Sources */,
 				6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */,
 				6E4EBBF11938231A00FC2546 /* NSGSound.m in Sources */,
 				6E4EBB7019365F8900FC2546 /* NSGGeometryElement.m in Sources */,
 				6E4EBBD81936D1E600FC2546 /* NSString+SCNVector3.m in Sources */,
 				6E4EBBB019366C4C00FC2546 /* NSGGeometry.m in Sources */,
 				6E4EBB9019365F8B00FC2546 /* NSGMaterialPropertyContentImage.m in Sources */,
-				6ED5C6361938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m in Sources */,
 				6E4EBB9C19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m in Sources */,
 				6E4EBBED1938231A00FC2546 /* NSGSoundDataSourceData.m in Sources */,
 				6E4EBB8C19365F8B00FC2546 /* NSGMaterial.m in Sources */,

@@ -7,12 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@import SceneKit;
+#import <SceneKit/SceneKit.h>
+#import <NetworkSceneGraph/NetworkSceneGraph.h>
 
 @interface SGSAppDelegate : NSObject <NSApplicationDelegate>
+
+#pragma amrk - IB Outlets
 
 @property (assign) IBOutlet NSWindow *window;
 
 @property (weak) IBOutlet SCNView *sceneView;
+
+#pragma mark -
 
 @end
