@@ -20,7 +20,7 @@
 @property (nonatomic, retain) NSSet *materials;
 @property (nonatomic, retain) NSGNode *node;
 
-// Transient
+#pragma mark - Transient Properties
 
 @property (nonatomic, readonly) SCNGeometry *geometry;
 

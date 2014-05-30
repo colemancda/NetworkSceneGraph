@@ -30,7 +30,7 @@
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSGNode *node;
 
-// Transient
+#pragma mark - Transient Properties
 
 @property (nonatomic, readonly) SCNLight *light;
 

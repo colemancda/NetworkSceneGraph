@@ -35,7 +35,7 @@
 @property (nonatomic, retain) NSGMaterialProperty *specular;
 @property (nonatomic, retain) NSGMaterialProperty *transparent;
 
-// Transient
+#pragma mark - Transient Properties
 
 @property (nonatomic, readonly) SCNMaterial *material;
 

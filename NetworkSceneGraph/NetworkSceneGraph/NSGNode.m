@@ -34,6 +34,7 @@ static void *KVOContext = &KVOContext;
 @dynamic scene;
 @dynamic camera;
 @dynamic descriptionText;
+@dynamic sound;
 
 @synthesize node = _node;
 

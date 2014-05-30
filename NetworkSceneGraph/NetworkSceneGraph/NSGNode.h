@@ -11,7 +11,7 @@
 #import <NetworkObjects/NetworkObjects.h>
 #import <SceneKit/SceneKit.h>
 
-@class NSGGeometry, NSGLight, NSGLink, NSGNode, NSGScene, NSGCamera;
+@class NSGGeometry, NSGLight, NSGLink, NSGNode, NSGScene, NSGCamera, NSGSound;
 
 @interface NSGNode : NSManagedObject <NOResourceProtocol>
 
@@ -29,9 +29,9 @@
 @property (nonatomic, retain) NSGScene *scene;
 @property (nonatomic, retain) NSGCamera *camera;
 @property (nonatomic, retain) NSString * descriptionText;
+@property (nonatomic, retain) NSGSound *sound;
 
-
-// Transient
+#pragma mark - Transient Properties
 
 @property (nonatomic, readonly) SCNNode *node;
 

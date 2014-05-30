@@ -30,7 +30,7 @@
 @property (nonatomic, retain) NSGNode *node;
 @property (nonatomic, retain) NSGScene *pointOfViewScene;
 
-// Transient
+#pragma mark - Transient Properties
 
 @property (nonatomic, readonly) SCNCamera *camera;
 
