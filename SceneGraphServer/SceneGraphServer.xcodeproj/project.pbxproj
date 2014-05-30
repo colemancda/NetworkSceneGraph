@@ -29,6 +29,13 @@
 			remoteGlobalIDString = 6E4EBB3519365D3000FC2546;
 			remoteInfo = SceneGraphServer;
 		};
+		6E4EBC1619383DB100FC2546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E4EBC1219383DB000FC2546 /* SceneGraphServerXPCService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E4EBBFF19383DB000FC2546;
+			remoteInfo = SceneGraphServerXPCService;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +60,7 @@
 		6E4EBB6319365D3000FC2546 /* SceneGraphServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneGraphServerTests.m; sourceTree = "<group>"; };
 		6E4EBBAA193667EE00FC2546 /* SGSAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSAppController.h; sourceTree = "<group>"; };
 		6E4EBBAB193667EE00FC2546 /* SGSAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSAppController.m; sourceTree = "<group>"; };
+		6E4EBC1219383DB000FC2546 /* SceneGraphServerXPCService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SceneGraphServerXPCService.xcodeproj; path = SceneGraphServerXPCService/SceneGraphServerXPCService.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 		6E4EBB2D19365D3000FC2546 = {
 			isa = PBXGroup;
 			children = (
+				6E4EBC1219383DB000FC2546 /* SceneGraphServerXPCService.xcodeproj */,
 				6E4EBB3F19365D3000FC2546 /* SceneGraphServer */,
 				6E4EBB5D19365D3000FC2546 /* SceneGraphServerTests */,
 				6E4EBB3819365D3000FC2546 /* Frameworks */,
@@ -159,6 +168,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6E4EBC1319383DB000FC2546 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E4EBC1719383DB100FC2546 /* com.ColemanCDA.SceneGraphServerXPCService.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +240,12 @@
 			mainGroup = 6E4EBB2D19365D3000FC2546;
 			productRefGroup = 6E4EBB3719365D3000FC2546 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6E4EBC1319383DB000FC2546 /* Products */;
+					ProjectRef = 6E4EBC1219383DB000FC2546 /* SceneGraphServerXPCService.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6E4EBB3519365D3000FC2546 /* SceneGraphServer */,
@@ -230,6 +253,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6E4EBC1719383DB100FC2546 /* com.ColemanCDA.SceneGraphServerXPCService.xpc */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = com.ColemanCDA.SceneGraphServerXPCService.xpc;
+			remoteRef = 6E4EBC1619383DB100FC2546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6E4EBB3419365D3000FC2546 /* Resources */ = {
@@ -473,6 +506,7 @@
 				6E4EBB6919365D3000FC2546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E4EBB6A19365D3000FC2546 /* Build configuration list for PBXNativeTarget "SceneGraphServerTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +515,7 @@
 				6E4EBB6C19365D3000FC2546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
