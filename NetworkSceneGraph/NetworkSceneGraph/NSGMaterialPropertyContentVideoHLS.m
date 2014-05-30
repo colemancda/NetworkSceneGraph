@@ -28,6 +28,9 @@ static void *KVOContext = &KVOContext;
         
         [self removeObserver:self
                   forKeyPath:@"url"];
+        
+        [self removeObserver:self
+                  forKeyPath:@"player.currentItem.status"];
     }
 }
 
@@ -39,10 +42,15 @@ static void *KVOContext = &KVOContext;
         
         if ([keyPath isEqualToString:@"url"]) {
             
-            CALayer *layer = self.contents;
+            self.player = [AVPlayer playerWithURL:[NSURL URLWithString:self.url]];
             
+            _layer.player = self.player;
             
+        }
+        
+        if ([keyPath isEqualToString:@"player.status"]) {
             
+            [self.player play];
         }
         
     } else {
@@ -56,6 +64,12 @@ static void *KVOContext = &KVOContext;
 {
     if (!_layer) {
         
+        // lazily initialize
+        
+        self.player = [AVPlayer playerWithURL:[NSURL URLWithString:self.url]];
+        
+        _layer = [AVPlayerLayer playerLayerWithPlayer:self.player];
+        
         // KVO
         
         [self addObserver:self
@@ -65,7 +79,12 @@ static void *KVOContext = &KVOContext;
         
         self.player = [AVPlayer playerWithURL:[NSURL URLWithString:self.url]];
         
+        // KVO
         
+        [self addObserver:self
+               forKeyPath:@"player.status"
+                  options:NSKeyValueObservingOptionNew
+                  context:KVOContext];
         
     }
     
