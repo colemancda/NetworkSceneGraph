@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <NetworkObjects/NetworkObjects.h>
+#import "NSGSoundDataSource.h"
 
-
-@interface NSGSoundDataSourceData : NSManagedObject
+@interface NSGSoundDataSourceData : NSGSoundDataSource
 
 @property (nonatomic, retain) NSData * data;
 @property (nonatomic, retain) NSNumber * loops;

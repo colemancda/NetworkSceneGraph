@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <NetworkObjects/NetworkObjects.h>
 
 @class NSGSound;
 
-@interface NSGSoundDataSource : NSManagedObject
+@interface NSGSoundDataSource : NSManagedObject <NOResourceProtocol>
 
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGSound *sound;

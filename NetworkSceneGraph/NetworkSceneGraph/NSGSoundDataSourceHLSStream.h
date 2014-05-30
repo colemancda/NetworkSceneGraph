@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <NetworkObjects/NetworkObjects.h>
+#import "NSGSoundDataSource.h"
 
-
-@interface NSGSoundDataSourceHLSStream : NSManagedObject
+@interface NSGSoundDataSourceHLSStream : NSGSoundDataSource
 
 @property (nonatomic, retain) NSString * url;
 

@@ -14,9 +14,7 @@
 {
     // Insert code here to initialize your application
     
-    SCNScene *scene = [SCNScene scene];
-    
-    self.sceneView.pointOfView
+    self.sceneView.scene =
 }
 
 @end

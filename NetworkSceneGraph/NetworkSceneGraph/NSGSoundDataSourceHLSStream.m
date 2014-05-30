@@ -13,4 +13,23 @@
 
 @dynamic url;
 
+#pragma mark - NOResourceKeysProtocol
+
++(NSString *)resourceIDKey
+{
+    return @"resourceID";
+}
+
++(NSString *)resourcePath
+{
+    return @"SoundDataSourceHLSStream";
+}
+
+#pragma mark - NOResourceProtocol
+
++(NSSet *)requiredInitialProperties
+{
+    return [[super requiredInitialProperties] setByAddingObjectsFromArray:@[@"url"]];
+}
+
 @end

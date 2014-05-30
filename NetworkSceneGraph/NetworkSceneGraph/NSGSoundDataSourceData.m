@@ -14,4 +14,23 @@
 @dynamic data;
 @dynamic loops;
 
+#pragma mark - NOResourceKeysProtocol
+
++(NSString *)resourceIDKey
+{
+    return @"resourceID";
+}
+
++(NSString *)resourcePath
+{
+    return @"SoundDataSourceData";
+}
+
+#pragma mark - NOResourceProtocol
+
++(NSSet *)requiredInitialProperties
+{
+    return [[super requiredInitialProperties] setByAddingObjectsFromArray:@[@"data"]];
+}
+
 @end

@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <NetworkObjects/NetworkObjects.h>
 
-@class NSGNode;
+@class NSGNode, NSGSoundDataSource;
 
 @interface NSGSound : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGNode *node;
-@property (nonatomic, retain) NSManagedObject *dataSource;
+@property (nonatomic, retain) NSGSoundDataSource *dataSource;
 
 @end
