@@ -1,16 +1,13 @@
 //
-//  NSGServer.h
+//  NOStore+NetworkSceneGraph.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 5/28/14.
+//  Created by Alsey Coleman Miller on 5/30/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <NetworkObjects/NetworkObjects.h>
 
-@interface NSGServer : NOServer
-
-
+@interface NOStore (NetworkSceneGraph)
 
 @end

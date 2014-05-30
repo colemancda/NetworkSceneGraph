@@ -1,13 +1,13 @@
 //
-//  NOStore+SceneKitImport.m
+//  NSGStore.m
 //  NetworkSceneGraph
 //
 //  Created by Alsey Coleman Miller on 5/30/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
-#import "NOStore+SceneKitImport.h"
+#import "NSGStore.h"
 
-@implementation NOStore (SceneKitImport)
+@implementation NSGStore
 
 @end

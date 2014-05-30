@@ -42,12 +42,6 @@
 		6E4EBBA819365F8B00FC2546 /* NSGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBA619365F8B00FC2546 /* NSGLink.m */; };
 		6E4EBBAF19366C4C00FC2546 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBAD19366C4C00FC2546 /* NSGGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBB019366C4C00FC2546 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBAE19366C4C00FC2546 /* NSGGeometry.m */; };
-		6E4EBBB61936B82100FC2546 /* NSGServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBB41936B82100FC2546 /* NSGServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E4EBBB71936B82100FC2546 /* NSGServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBB51936B82100FC2546 /* NSGServer.m */; };
-		6E4EBBC11936B8D000FC2546 /* NOStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBBF1936B8D000FC2546 /* NOStore+SceneKitImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E4EBBC21936B8D000FC2546 /* NOStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */; };
-		6E4EBBC91936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E4EBBCA1936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */; };
 		6E4EBBD71936D1E600FC2546 /* NSString+SCNVector3.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBD51936D1E600FC2546 /* NSString+SCNVector3.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBD81936D1E600FC2546 /* NSString+SCNVector3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */; };
 		6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +63,14 @@
 		6EBC63E5192FEF3E00FCF7C3 /* NetworkSceneGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */; };
 		6EBC63EB192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63E9192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63ED192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC63EC192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m */; };
+		6ED5C6281938C5D800CE0EE0 /* NSGStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C6261938C5D800CE0EE0 /* NSGStore.h */; };
+		6ED5C6291938C5D800CE0EE0 /* NSGStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6271938C5D800CE0EE0 /* NSGStore.m */; };
+		6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */; };
+		6ED5C62E1938C63300CE0EE0 /* NOStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */; };
+		6ED5C6311938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */; };
+		6ED5C6321938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */; };
+		6ED5C6351938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C6331938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h */; };
+		6ED5C6361938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6341938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,12 +164,6 @@
 		6E4EBBA619365F8B00FC2546 /* NSGLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLink.m; sourceTree = "<group>"; };
 		6E4EBBAD19366C4C00FC2546 /* NSGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometry.h; sourceTree = "<group>"; };
 		6E4EBBAE19366C4C00FC2546 /* NSGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometry.m; sourceTree = "<group>"; };
-		6E4EBBB41936B82100FC2546 /* NSGServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGServer.h; sourceTree = "<group>"; };
-		6E4EBBB51936B82100FC2546 /* NSGServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGServer.m; sourceTree = "<group>"; };
-		6E4EBBBF1936B8D000FC2546 /* NOStore+SceneKitImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOStore+SceneKitImport.h"; sourceTree = "<group>"; };
-		6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOStore+SceneKitImport.m"; sourceTree = "<group>"; };
-		6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOAPICachedStore+SceneKitImport.h"; sourceTree = "<group>"; };
-		6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOAPICachedStore+SceneKitImport.m"; sourceTree = "<group>"; };
 		6E4EBBD51936D1E600FC2546 /* NSString+SCNVector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCNVector3.h"; sourceTree = "<group>"; };
 		6E4EBBD61936D1E600FC2546 /* NSString+SCNVector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCNVector3.m"; sourceTree = "<group>"; };
 		6E4EBBD91936D30500FC2546 /* NSString+SCNVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCNVector4.h"; sourceTree = "<group>"; };
@@ -197,6 +193,14 @@
 		6EBC63E8192FEF3E00FCF7C3 /* NetworkSceneGraphTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetworkSceneGraphTests-Info.plist"; sourceTree = "<group>"; };
 		6EBC63EA192FEF3E00FCF7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EBC63EC192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkSceneGraphTests.m; sourceTree = "<group>"; };
+		6ED5C6261938C5D800CE0EE0 /* NSGStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGStore.h; sourceTree = "<group>"; };
+		6ED5C6271938C5D800CE0EE0 /* NSGStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGStore.m; sourceTree = "<group>"; };
+		6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOStore+SceneKitImport.h"; sourceTree = "<group>"; };
+		6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOStore+SceneKitImport.m"; sourceTree = "<group>"; };
+		6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOServer+NetworkSceneGraph.h"; sourceTree = "<group>"; };
+		6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOServer+NetworkSceneGraph.m"; sourceTree = "<group>"; };
+		6ED5C6331938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOStore+NetworkSceneGraph.h"; sourceTree = "<group>"; };
+		6ED5C6341938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOStore+NetworkSceneGraph.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,43 +230,20 @@
 		6E4EBBBC1936B82A00FC2546 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				6E4EBBBD1936B83800FC2546 /* Categories */,
+				6ED5C62A1938C5DE00CE0EE0 /* Categories */,
+				6ED5C6261938C5D800CE0EE0 /* NSGStore.h */,
+				6ED5C6271938C5D800CE0EE0 /* NSGStore.m */,
 			);
 			name = Stores;
-			sourceTree = "<group>";
-		};
-		6E4EBBBD1936B83800FC2546 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6E4EBBCB1936BBE500FC2546 /* Server */,
-				6E4EBBCC1936BBF100FC2546 /* Client */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 		6E4EBBBE1936B86400FC2546 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */,
+				6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */,
 			);
 			name = Categories;
-			sourceTree = "<group>";
-		};
-		6E4EBBCB1936BBE500FC2546 /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				6E4EBBBF1936B8D000FC2546 /* NOStore+SceneKitImport.h */,
-				6E4EBBC01936B8D000FC2546 /* NOStore+SceneKitImport.m */,
-			);
-			name = Server;
-			sourceTree = "<group>";
-		};
-		6E4EBBCC1936BBF100FC2546 /* Client */ = {
-			isa = PBXGroup;
-			children = (
-				6E4EBBC71936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h */,
-				6E4EBBC81936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m */,
-			);
-			name = Client;
 			sourceTree = "<group>";
 		};
 		6E4EBBD41936D1B400FC2546 /* Categories */ = {
@@ -293,8 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				6E4EBBBE1936B86400FC2546 /* Categories */,
-				6E4EBBB41936B82100FC2546 /* NSGServer.h */,
-				6E4EBBB51936B82100FC2546 /* NSGServer.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -427,6 +406,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6ED5C62A1938C5DE00CE0EE0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */,
+				6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */,
+				6ED5C6331938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h */,
+				6ED5C6341938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -437,12 +427,12 @@
 				6E4EBB8719365F8B00FC2546 /* NSGMaterialProperty.h in Headers */,
 				6E4EBBF01938231A00FC2546 /* NSGSound.h in Headers */,
 				6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */,
-				6E4EBBC11936B8D000FC2546 /* NOStore+SceneKitImport.h in Headers */,
 				6E4EBBD71936D1E600FC2546 /* NSString+SCNVector3.h in Headers */,
 				6E4EBBEC1938231A00FC2546 /* NSGSoundDataSourceData.h in Headers */,
-				6E4EBBB61936B82100FC2546 /* NSGServer.h in Headers */,
+				6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */,
 				6E4EBB7719365F8A00FC2546 /* NSGMaterialPropertyContent.h in Headers */,
 				6E4EBBF41938231A00FC2546 /* NSGSoundDataSource.h in Headers */,
+				6ED5C6351938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.h in Headers */,
 				6E4EBB8B19365F8B00FC2546 /* NSGMaterial.h in Headers */,
 				6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */,
 				6E4EBB7319365F8A00FC2546 /* NSGScene.h in Headers */,
@@ -455,10 +445,11 @@
 				6E4EBB7F19365F8A00FC2546 /* NSGLight.h in Headers */,
 				6E4EBB8319365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.h in Headers */,
 				6E4EBB9F19365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.h in Headers */,
-				6E4EBBC91936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.h in Headers */,
 				6E4EBBA319365F8B00FC2546 /* NSGGeometrySource.h in Headers */,
+				6ED5C6281938C5D800CE0EE0 /* NSGStore.h in Headers */,
 				6E4EBB9B19365F8B00FC2546 /* NSGMaterialPropertyContentColor.h in Headers */,
 				6E4EBBA719365F8B00FC2546 /* NSGLink.h in Headers */,
+				6ED5C6311938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,29 +589,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
-				6E4EBBB71936B82100FC2546 /* NSGServer.m in Sources */,
 				6E4EBB7419365F8A00FC2546 /* NSGScene.m in Sources */,
 				6E4EBB8819365F8B00FC2546 /* NSGMaterialProperty.m in Sources */,
 				6E4EBBA419365F8B00FC2546 /* NSGGeometrySource.m in Sources */,
 				6E4EBB8419365F8B00FC2546 /* NSGMaterialPropertyContentImageURL.m in Sources */,
 				6E4EBBA019365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
+				6ED5C62E1938C63300CE0EE0 /* NOStore+SceneKitImport.m in Sources */,
 				6E4EBBF51938231A00FC2546 /* NSGSoundDataSource.m in Sources */,
 				6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */,
+				6ED5C6321938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m in Sources */,
 				6E4EBB7819365F8A00FC2546 /* NSGMaterialPropertyContent.m in Sources */,
 				6E4EBBE91938231900FC2546 /* NSGSoundDataSourceHLSStream.m in Sources */,
+				6ED5C6291938C5D800CE0EE0 /* NSGStore.m in Sources */,
 				6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */,
 				6E4EBBF11938231A00FC2546 /* NSGSound.m in Sources */,
 				6E4EBB7019365F8900FC2546 /* NSGGeometryElement.m in Sources */,
 				6E4EBBD81936D1E600FC2546 /* NSString+SCNVector3.m in Sources */,
 				6E4EBBB019366C4C00FC2546 /* NSGGeometry.m in Sources */,
 				6E4EBB9019365F8B00FC2546 /* NSGMaterialPropertyContentImage.m in Sources */,
+				6ED5C6361938CDBF00CE0EE0 /* NOStore+NetworkSceneGraph.m in Sources */,
 				6E4EBB9C19365F8B00FC2546 /* NSGMaterialPropertyContentColor.m in Sources */,
-				6E4EBBCA1936BB7E00FC2546 /* NOAPICachedStore+SceneKitImport.m in Sources */,
 				6E4EBBED1938231A00FC2546 /* NSGSoundDataSourceData.m in Sources */,
 				6E4EBB8C19365F8B00FC2546 /* NSGMaterial.m in Sources */,
 				6E4EBB8019365F8A00FC2546 /* NSGLight.m in Sources */,
 				6E4EBBA819365F8B00FC2546 /* NSGLink.m in Sources */,
-				6E4EBBC21936B8D000FC2546 /* NOStore+SceneKitImport.m in Sources */,
 				6E4EBB9419365F8B00FC2546 /* NSGCamera.m in Sources */,
 				6E4EBB7C19365F8A00FC2546 /* NSGNode.m in Sources */,
 			);

@@ -14,7 +14,7 @@
 {
     // Insert code here to initialize your application
     
-    self.sceneView.scene =
+    self.sceneView.scene;
 }
 
 @end

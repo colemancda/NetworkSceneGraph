@@ -1,5 +1,5 @@
 //
-//  NOStore+SceneKitImport.h
+//  NOServer+NetworkSceneGraph.h
 //  NetworkSceneGraph
 //
 //  Created by Alsey Coleman Miller on 5/30/14.
@@ -8,6 +8,8 @@
 
 #import <NetworkObjects/NetworkObjects.h>
 
-@interface NOStore (SceneKitImport)
+@interface NOServer (NetworkSceneGraph)
+
++(instancetype)NSGServerWithStore:(NOStore *)store;
 
 @end
