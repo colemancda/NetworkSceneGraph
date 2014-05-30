@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6E06164C193438B30087D99B /* NetworkObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E507DD319342B5400D6B91E /* NetworkObjects.framework */; };
-		6E06164E193438C80087D99B /* NetworkObjects.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E507DD319342B5400D6B91E /* NetworkObjects.framework */; };
 		6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E124F3619350FFB004D6A32 /* SceneKit.framework */; };
@@ -124,7 +123,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6E06164E193438C80087D99B /* NetworkObjects.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

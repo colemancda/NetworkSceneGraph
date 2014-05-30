@@ -18,6 +18,10 @@
 
 @property (weak) IBOutlet SCNView *sceneView;
 
-#pragma mark -
+#pragma mark - Properties
+
+@property (nonatomic, readonly) NOServer *server;
+
+@property (nonatomic, readonly) NOStore *store;
 
 @end
