@@ -98,9 +98,14 @@
 -(NOResourcePermission)permissionForAttribute:(NSString *)attributeName
                                       session:(NSManagedObject<NOSessionProtocol> *)session
 {
-    // all attributes are immutable
+    // all attributes are immutable once set to a value
     
-    return NOReadOnlyPermission;
+    if ([self valueForKey:attributeName]) {
+        
+        return NOReadOnlyPermission;
+    }
+    
+    return NOEditPermission;
 }
 
 -(NOResourcePermission)permissionForRelationship:(NSString *)relationshipName

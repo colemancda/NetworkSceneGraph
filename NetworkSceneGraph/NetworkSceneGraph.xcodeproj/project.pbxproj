@@ -367,8 +367,8 @@
 		6EBC63CA192FEF3E00FCF7C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6E124F3619350FFB004D6A32 /* SceneKit.framework */,
 				6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */,
+				6E124F3619350FFB004D6A32 /* SceneKit.framework */,
 				6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */,
 				6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */,
 				6EBC63CD192FEF3E00FCF7C3 /* Other Frameworks */,
