@@ -26,7 +26,7 @@
 @property (nonatomic, retain) NSNumber * vectorCount;
 @property (nonatomic, retain) NSGGeometry *geometry;
 
-// Transient
+#pragma mark - Transient Properties
 
 @property (nonatomic, readonly) SCNGeometrySource *geometrySource;
 

@@ -25,6 +25,25 @@
 
 @synthesize geometrySource = _geometrySource;
 
+#pragma mark - Transient Properties
+
+-(SCNGeometrySource *)geometrySource
+{
+    if (!_geometrySource) {
+        
+        _geometrySource = [SCNGeometrySource geometrySourceWithData:self.data
+                                                           semantic:self.semantic
+                                                        vectorCount:self.vectorCount.integerValue
+                                                    floatComponents:self.floatComponents.boolValue
+                                                componentsPerVector:self.componentsPerVector.integerValue
+                                                  bytesPerComponent:self.bytesPerComponent.integerValue
+                                                         dataOffset:self.dataOffset.integerValue
+                                                         dataStride:self.dataStride.integerValue];
+    }
+    
+    return _geometrySource;
+}
+
 #pragma mark - NOResourceKeysProtocol
 
 +(NSString *)resourceIDKey
@@ -46,7 +65,14 @@
 
 +(NSSet *)requiredInitialProperties
 {
-    return [NSSet setWithArray:@[@"data"]];
+    return [NSSet setWithArray:@[@"data",
+                                 @"bytesPerComponent",
+                                 @"componentsPerVector",
+                                 @"dataOffset",
+                                 @"dataStride",
+                                 @"floatComponents",
+                                 @"semantic",
+                                 @"vectorCount"]];
 }
 
 +(BOOL)canSearchFromSession:(NSManagedObject<NOSessionProtocol> *)session
@@ -72,7 +98,9 @@
 -(NOResourcePermission)permissionForAttribute:(NSString *)attributeName
                                       session:(NSManagedObject<NOSessionProtocol> *)session
 {
-    return NOEditPermission;
+    // all attributes are immutable
+    
+    return NOReadOnlyPermission;
 }
 
 -(NOResourcePermission)permissionForRelationship:(NSString *)relationshipName
