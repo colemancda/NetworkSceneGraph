@@ -55,6 +55,8 @@
 		6E4EBBF11938231A00FC2546 /* NSGSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBEF1938231A00FC2546 /* NSGSound.m */; };
 		6E4EBBF41938231A00FC2546 /* NSGSoundDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBF21938231A00FC2546 /* NSGSoundDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBF51938231A00FC2546 /* NSGSoundDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBF31938231A00FC2546 /* NSGSoundDataSource.m */; };
+		6EAC095D1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EAC095B1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h */; };
+		6EAC095E1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC095C1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m */; };
 		6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBC63D8192FEF3E00FCF7C3 /* NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
@@ -176,6 +178,8 @@
 		6E4EBBF21938231A00FC2546 /* NSGSoundDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSoundDataSource.h; sourceTree = "<group>"; };
 		6E4EBBF31938231A00FC2546 /* NSGSoundDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSoundDataSource.m; sourceTree = "<group>"; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
+		6EAC095B1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOAPICachedStore+NetworkSceneGraph.h"; sourceTree = "<group>"; };
+		6EAC095C1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOAPICachedStore+NetworkSceneGraph.m"; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6EBC63CE192FEF3E00FCF7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -406,6 +410,8 @@
 			children = (
 				6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */,
 				6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */,
+				6EAC095B1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h */,
+				6EAC095C1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 				6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */,
 				6E4EBBD71936D1E600FC2546 /* NSString+SCNVector3.h in Headers */,
 				6E4EBBEC1938231A00FC2546 /* NSGSoundDataSourceData.h in Headers */,
+				6EAC095D1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h in Headers */,
 				6E4EBB7719365F8A00FC2546 /* NSGMaterialPropertyContent.h in Headers */,
 				6E4EBBF41938231A00FC2546 /* NSGSoundDataSource.h in Headers */,
 				6E4EBB8B19365F8B00FC2546 /* NSGMaterial.h in Headers */,
@@ -590,6 +597,7 @@
 				6E4EBBA019365F8B00FC2546 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
 				6ED5C62E1938C63300CE0EE0 /* NOStore+SceneKitImport.m in Sources */,
 				6E4EBBF51938231A00FC2546 /* NSGSoundDataSource.m in Sources */,
+				6EAC095E1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m in Sources */,
 				6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */,
 				6ED5C6321938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m in Sources */,
 				6E4EBB7819365F8A00FC2546 /* NSGMaterialPropertyContent.m in Sources */,

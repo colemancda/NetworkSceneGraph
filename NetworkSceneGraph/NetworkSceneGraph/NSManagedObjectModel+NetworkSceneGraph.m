@@ -12,9 +12,7 @@
 
 +(instancetype)NSGModel
 {
-    NSURL *frameworkURL = [[NSBundle mainBundle] URLForResource:@"NetworkSceneGraph" withExtension:@"framework"];
-    
-    NSBundle *frameworkBundle = [NSBundle bundleWithURL:frameworkURL];
+    NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:@"com.ColemanCDA.NetworkSceneGraph"];
     
     NSURL *modelURL = [frameworkBundle URLForResource:@"NSGModel" withExtension:@"momd"];
     
