@@ -11,7 +11,7 @@
 
 @implementation NOAPICachedStore (NetworkSceneGraph)
 
-+(instancetype)NSGAPICachedStoreWithDateCachedAttributeName:(NSString *)dateCachedAttributeName
+-(instancetype)initWithNSGAPICachedStoreWithDateCachedAttributeName:(NSString *)dateCachedAttributeName
 {
     NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
     
@@ -23,7 +23,15 @@
     [options addEntriesFromDictionary:@{NOAPISearchPathOption: @"search",
                                         NOAPIModelOption: [NSManagedObjectModel NSGModel]}];
     
-    return [[NOAPICachedStore alloc] initWithOptions:options];
+    
+    
+    self = [super initWithOptions:options];
+    if (self) {
+        
+        
+        
+    }
+    return self;;
 }
 
 @end

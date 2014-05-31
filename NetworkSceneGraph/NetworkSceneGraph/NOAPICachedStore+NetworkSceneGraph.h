@@ -10,6 +10,6 @@
 
 @interface NOAPICachedStore (NetworkSceneGraph)
 
-+(instancetype)NSGAPICachedStoreWithDateCachedAttributeName:(NSString *)dateCachedAttributeName;
+-(instancetype)initWithNSGAPICachedStoreWithDateCachedAttributeName:(NSString *)dateCachedAttributeName;
 
 @end
