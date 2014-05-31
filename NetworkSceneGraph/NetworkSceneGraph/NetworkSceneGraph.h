@@ -36,5 +36,7 @@
 #import <NetworkSceneGraph/NSString+CGColorRef.h>
 #import <NetworkSceneGraph/NSManagedObjectModel+NetworkSceneGraph.h>
 #import <NetworkSceneGraph/NOServer+NetworkSceneGraph.h>
+#import <NetworkSceneGraph/NOAPICachedStore+NetworkSceneGraph.h>
+
 
 
