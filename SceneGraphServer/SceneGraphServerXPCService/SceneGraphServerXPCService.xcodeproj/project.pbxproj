@@ -105,6 +105,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = ColemanCDA;
+				TargetAttributes = {
+					6E4EBBFE19383DB000FC2546 = {
+						DevelopmentTeam = 4W79SG34MW;
+					};
+				};
 			};
 			buildConfigurationList = 6E4EBBFA19383DB000FC2546 /* Build configuration list for PBXProject "SceneGraphServerXPCService" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -230,6 +235,7 @@
 		6E4EBC1019383DB000FC2546 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneGraphServerXPCService/SceneGraphServerXPCService-Prefix.pch";
@@ -243,6 +249,7 @@
 		6E4EBC1119383DB000FC2546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneGraphServerXPCService/SceneGraphServerXPCService-Prefix.pch";
@@ -272,6 +279,7 @@
 				6E4EBC1119383DB000FC2546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
