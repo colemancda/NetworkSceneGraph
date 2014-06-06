@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EBC63C7192FEF3E00FCF7C3"
+               BlueprintIdentifier = "6E20B4FE19421C3300830D55"
                BuildableName = "NetworkSceneGraph.framework"
                BlueprintName = "NetworkSceneGraph"
                ReferencedContainer = "container:NetworkSceneGraph.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EBC63DE192FEF3E00FCF7C3"
+               BlueprintIdentifier = "6E20B50919421C3300830D55"
                BuildableName = "NetworkSceneGraphTests.xctest"
                BlueprintName = "NetworkSceneGraphTests"
                ReferencedContainer = "container:NetworkSceneGraph.xcodeproj">

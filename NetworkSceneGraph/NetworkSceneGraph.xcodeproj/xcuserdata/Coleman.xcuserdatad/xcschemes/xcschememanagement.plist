@@ -7,17 +7,17 @@
 		<key>NetworkSceneGraph.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6EBC63C7192FEF3E00FCF7C3</key>
+		<key>6E20B4FE19421C3300830D55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EBC63DE192FEF3E00FCF7C3</key>
+		<key>6E20B50919421C3300830D55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
