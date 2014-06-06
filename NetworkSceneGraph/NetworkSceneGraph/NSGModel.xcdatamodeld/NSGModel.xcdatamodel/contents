@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="14A238x" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="NSGCamera" representedClassName="NSGCamera" syncable="YES">
         <attribute name="aperture" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="automaticallyAdjustsZRange" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -141,10 +141,23 @@
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="nodes" inverseEntity="NSGScene" syncable="YES"/>
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="node" inverseEntity="NSGSound" syncable="YES"/>
     </entity>
+    <entity name="NSGPhysicsBehavior" isAbstract="YES" syncable="YES">
+        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsWorld" inverseName="behaviors" inverseEntity="NSGPhysicsWorld" syncable="YES"/>
+    </entity>
+    <entity name="NSGPhysicsHingeJoint" parentEntity="NSGPhysicsBehavior" syncable="YES"/>
+    <entity name="NSGPhysicsWorld" syncable="YES">
+        <attribute name="gravity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="timeStep" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="behaviors" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBehavior" inverseName="physicsWorld" inverseEntity="NSGPhysicsBehavior" syncable="YES"/>
+        <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="physicsWorld" inverseEntity="NSGScene" syncable="YES"/>
+    </entity>
     <entity name="NSGScene" representedClassName="NSGScene" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="backgroundScene" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
+        <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsWorld" inverseName="scene" inverseEntity="NSGPhysicsWorld" syncable="YES"/>
         <relationship name="pointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="pointOfViewScene" inverseEntity="NSGCamera" syncable="YES"/>
     </entity>
     <entity name="NSGSound" representedClassName="NSGSound" syncable="YES">
@@ -160,7 +173,7 @@
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="loops" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
-    <entity name="NSGSoundDataSourceHLSStream" representedClassName="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundDataSource" syncable="YES">
+    <entity name="NSGSoundDataSourceHLS" representedClassName="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundDataSource" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
@@ -178,10 +191,13 @@
         <element name="NSGMaterialPropertyContentImageURL" positionX="567" positionY="126" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
         <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="268"/>
-        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="103"/>
+        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="118"/>
         <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="88"/>
-        <element name="NSGSoundDataSourceHLSStream" positionX="-360" positionY="-135" width="128" height="58"/>
         <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
         <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
+        <element name="NSGSoundDataSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
+        <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="118"/>
+        <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
+        <element name="NSGPhysicsHingeJoint" positionX="-396" positionY="-171" width="128" height="43"/>
     </elements>
 </model>
