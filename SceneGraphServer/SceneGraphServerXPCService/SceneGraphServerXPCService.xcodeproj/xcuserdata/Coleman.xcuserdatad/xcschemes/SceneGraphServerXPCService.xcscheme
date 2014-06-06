@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EBC63C7192FEF3E00FCF7C3"
-               BuildableName = "NetworkSceneGraph.framework"
-               BlueprintName = "NetworkSceneGraph"
-               ReferencedContainer = "container:NetworkSceneGraph.xcodeproj">
+               BlueprintIdentifier = "6E4EBBFE19383DB000FC2546"
+               BuildableName = "com.ColemanCDA.SceneGraphServerXPCService.xpc"
+               BlueprintName = "SceneGraphServerXPCService"
+               ReferencedContainer = "container:SceneGraphServerXPCService.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EBC63DE192FEF3E00FCF7C3"
-               BuildableName = "NetworkSceneGraphTests.xctest"
-               BlueprintName = "NetworkSceneGraphTests"
-               ReferencedContainer = "container:NetworkSceneGraph.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

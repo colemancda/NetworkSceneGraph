@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EBC63C7192FEF3E00FCF7C3"
-               BuildableName = "NetworkSceneGraph.framework"
-               BlueprintName = "NetworkSceneGraph"
-               ReferencedContainer = "container:NetworkSceneGraph.xcodeproj">
+               BlueprintIdentifier = "6E4EBB3519365D3000FC2546"
+               BuildableName = "SceneGraphServer.app"
+               BlueprintName = "SceneGraphServer"
+               ReferencedContainer = "container:SceneGraphServer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,13 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EBC63DE192FEF3E00FCF7C3"
-               BuildableName = "NetworkSceneGraphTests.xctest"
-               BlueprintName = "NetworkSceneGraphTests"
-               ReferencedContainer = "container:NetworkSceneGraph.xcodeproj">
+               BlueprintIdentifier = "6E4EBB5619365D3000FC2546"
+               BuildableName = "SceneGraphServerTests.xctest"
+               BlueprintName = "SceneGraphServerTests"
+               ReferencedContainer = "container:SceneGraphServer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6E4EBB3519365D3000FC2546"
+            BuildableName = "SceneGraphServer.app"
+            BlueprintName = "SceneGraphServer"
+            ReferencedContainer = "container:SceneGraphServer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -49,6 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6E4EBB3519365D3000FC2546"
+            BuildableName = "SceneGraphServer.app"
+            BlueprintName = "SceneGraphServer"
+            ReferencedContainer = "container:SceneGraphServer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -58,6 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6E4EBB3519365D3000FC2546"
+            BuildableName = "SceneGraphServer.app"
+            BlueprintName = "SceneGraphServer"
+            ReferencedContainer = "container:SceneGraphServer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
