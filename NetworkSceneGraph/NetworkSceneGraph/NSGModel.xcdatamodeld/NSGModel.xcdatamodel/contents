@@ -132,6 +132,12 @@
     <entity name="NSGMaterialPropertyContentVideoHLS" representedClassName="NSGMaterialPropertyContentVideoHLS" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
+    <entity name="NSGMopher" syncable="YES">
+        <attribute name="calculationMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="weights" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="targets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometry" syncable="YES"/>
+    </entity>
     <entity name="NSGNode" representedClassName="NSGNode" syncable="YES">
         <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
@@ -147,10 +153,17 @@
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="node" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="light" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="node" inverseEntity="NSGLight" syncable="YES"/>
         <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLink" inverseName="node" inverseEntity="NSGLink" syncable="YES"/>
+        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMopher" syncable="YES"/>
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="childNodes" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="physicsbody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" inverseName="node" inverseEntity="NSGPhysicsBody" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="nodes" inverseEntity="NSGScene" syncable="YES"/>
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="node" inverseEntity="NSGSound" syncable="YES"/>
+    </entity>
+    <entity name="NSGPhysicsBallSocketJoint" parentEntity="NSGPhysicsBehavior" syncable="YES">
+        <attribute name="anchorA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="anchorB" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bodyA" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGPhysicsBody" syncable="YES"/>
+        <relationship name="bodyB" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGPhysicsBody" syncable="YES"/>
     </entity>
     <entity name="NSGPhysicsBehavior" isAbstract="YES" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -189,7 +202,14 @@
         <attribute name="strength" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="usesEllipsoidalExtent" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
-    <entity name="NSGPhysicsHingeJoint" parentEntity="NSGPhysicsBehavior" syncable="YES"/>
+    <entity name="NSGPhysicsHingeJoint" parentEntity="NSGPhysicsBehavior" syncable="YES">
+        <attribute name="anchorA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="anchorB" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="axisA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="axisB" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bodyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" syncable="YES"/>
+        <relationship name="bodyB" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" syncable="YES"/>
+    </entity>
     <entity name="NSGPhysicsShape" syncable="YES">
         <attribute name="shapeKeepAsCompound" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="shapeScale" optional="YES" attributeType="String" syncable="YES"/>
@@ -199,6 +219,43 @@
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" syncable="YES"/>
         <relationship name="parentShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsShape" inverseName="shapes" inverseEntity="NSGPhysicsShape" syncable="YES"/>
         <relationship name="shapes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGPhysicsShape" inverseName="parentShape" inverseEntity="NSGPhysicsShape" syncable="YES"/>
+    </entity>
+    <entity name="NSGPhysicsSliderJoint" parentEntity="NSGPhysicsBehavior" syncable="YES">
+        <attribute name="anchorA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="anchorB" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="axisA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="axisB" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maximumAngularLimit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="maximumLinearLimit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="minimumAngularLimit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="minimumLinearLimit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="motorMaximumForce" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="motorMaximumTorque" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="motorTargetAngularVelocity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="motorTargetLinearVelocity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="bodyA" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGPhysicsBody" syncable="YES"/>
+        <relationship name="bodyB" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NSGPhysicsBody" syncable="YES"/>
+    </entity>
+    <entity name="NSGPhysicsVehicle" parentEntity="NSGPhysicsBehavior" syncable="YES">
+        <attribute name="speedInKilometersPerHour" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="chassisBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" syncable="YES"/>
+        <relationship name="wheels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGPhysicsVehicleWheel" inverseName="vehicle" inverseEntity="NSGPhysicsVehicleWheel" syncable="YES"/>
+    </entity>
+    <entity name="NSGPhysicsVehicleWheel" syncable="YES">
+        <attribute name="axle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="connectionPosition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frictionSlip" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="maximumSuspensionForce" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="maximumSuspensionTravel" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="radius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="steeringAxis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suspensionCompression" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="suspensionDamping" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="suspensionRestLength" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="suspensionStiffness" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" syncable="YES"/>
+        <relationship name="vehicle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsVehicle" inverseName="wheels" inverseEntity="NSGPhysicsVehicle" syncable="YES"/>
     </entity>
     <entity name="NSGPhysicsWorld" syncable="YES">
         <attribute name="gravity" optional="YES" attributeType="String" syncable="YES"/>
@@ -259,10 +316,10 @@
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentImageURL" positionX="567" positionY="126" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
-        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="315"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="328"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGPhysicsBody" positionX="-414" positionY="-189" width="128" height="298"/>
-        <element name="NSGPhysicsHingeJoint" positionX="-396" positionY="-171" width="128" height="43"/>
+        <element name="NSGPhysicsHingeJoint" positionX="-396" positionY="-171" width="128" height="133"/>
         <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
         <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="193"/>
         <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="88"/>
@@ -273,5 +330,10 @@
         <element name="NSGMaterialPropertyContentCubeMapImages" positionX="-396" positionY="-171" width="128" height="133"/>
         <element name="NSGSkinner" positionX="-387" positionY="-162" width="128" height="165"/>
         <element name="NSGPhysicsField" positionX="-378" positionY="-153" width="128" height="225"/>
+        <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
+        <element name="NSGPhysicsSliderJoint" positionX="-360" positionY="-135" width="128" height="253"/>
+        <element name="NSGPhysicsVehicleWheel" positionX="-414" positionY="-189" width="128" height="253"/>
+        <element name="NSGPhysicsVehicle" positionX="-405" positionY="-180" width="128" height="88"/>
+        <element name="NSGMopher" positionX="-396" positionY="-171" width="128" height="103"/>
     </elements>
 </model>
