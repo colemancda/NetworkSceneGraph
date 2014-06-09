@@ -25,6 +25,7 @@
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="geometry" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="physicsShapeGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsShape" inverseName="geometry" inverseEntity="NSGPhysicsShape" syncable="YES"/>
         <relationship name="skinnerBaseGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSkinner" inverseName="baseGeometry" inverseEntity="NSGSkinner" syncable="YES"/>
+        <relationship name="soundAudibleGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="audibleGeometry" inverseEntity="NSGSound" syncable="YES"/>
     </entity>
     <entity name="NSGGeometryElement" representedClassName="NSGGeometryElement" syncable="YES">
         <attribute name="bytesPerIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -306,6 +307,7 @@
     </entity>
     <entity name="NSGSound" representedClassName="NSGSound" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="audibleGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="soundAudibleGeometry" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="dataSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSoundDataSource" inverseName="sound" inverseEntity="NSGSoundDataSource" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="sound" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
@@ -322,7 +324,7 @@
     </entity>
     <elements>
         <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="253"/>
-        <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="163"/>
+        <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="178"/>
         <element name="NSGGeometryElement" positionX="-9" positionY="83" width="128" height="133"/>
         <element name="NSGGeometrySource" positionX="-36" positionY="-144" width="128" height="223"/>
         <element name="NSGLight" positionX="-254" positionY="297" width="128" height="255"/>
@@ -349,7 +351,7 @@
         <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
         <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="193"/>
         <element name="NSGSkinner" positionX="-387" positionY="-162" width="128" height="163"/>
-        <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="88"/>
+        <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
         <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGSoundDataSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
