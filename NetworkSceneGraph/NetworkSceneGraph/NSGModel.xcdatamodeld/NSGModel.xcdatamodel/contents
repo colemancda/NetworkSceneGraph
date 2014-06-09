@@ -23,6 +23,7 @@
         <relationship name="materials" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="geometry" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMopher" inverseName="targets" inverseEntity="NSGMopher" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="geometry" inverseEntity="NSGNode" syncable="YES"/>
+        <relationship name="particleSystemEmitterShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="emitterShape" inverseEntity="NSGParticleSystem" syncable="YES"/>
         <relationship name="physicsShapeGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsShape" inverseName="geometry" inverseEntity="NSGPhysicsShape" syncable="YES"/>
         <relationship name="skinnerBaseGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSkinner" inverseName="baseGeometry" inverseEntity="NSGSkinner" syncable="YES"/>
         <relationship name="soundAudibleGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="audibleGeometry" inverseEntity="NSGSound" syncable="YES"/>
@@ -169,6 +170,66 @@
         <relationship name="skinnerBones" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSkinner" inverseName="bones" inverseEntity="NSGSkinner" syncable="YES"/>
         <relationship name="skinnerSkeleton" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSkinner" inverseName="skeleton" inverseEntity="NSGSkinner" syncable="YES"/>
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="node" inverseEntity="NSGSound" syncable="YES"/>
+    </entity>
+    <entity name="NSGParticleSystem" syncable="YES">
+        <attribute name="acceleration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="affectedByGravity" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="affectedByPhysicsFields" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="birthDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="birthLocation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="birthRate" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="birthRateVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="blackPassEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="blendMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="dampingFactor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="emissionDuration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="emissionDurationVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="emittingDirection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fresnelExponent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="idleDuration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="idleDurationVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageSequenceAnimationMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="imageSequenceColumnCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="imageSequenceFrameRate" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageSequenceFrameRateVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageSequenceInitialFrame" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageSequenceInitialFrameVariation" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="imageSequenceRowCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="lightingEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="local" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="loops" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="orientationMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="particleAngle" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleAngleVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleAngularVelocity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleAngularVelocityVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleBounce" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleBounceVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="particleColorVariation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="particleDiesOnCollision" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="particleFriction" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleFrictionVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleImageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="particleLifeSpan" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleLifeSpanVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleMass" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleMassVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleSizeVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleVelocity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="particleVelocityVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="sortingMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="speedFactor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="spreadingAngle" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="stretchFactor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="warmupDuration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="colliderNodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" syncable="YES"/>
+        <relationship name="emitterShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="particleSystemEmitterShape" inverseEntity="NSGGeometry" syncable="YES"/>
+        <relationship name="systemSpawnedOnCollision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="systemSpawnedOnDying" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="systemSpawnedOnLiving" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" syncable="YES"/>
     </entity>
     <entity name="NSGPhysicsBallSocketJoint" parentEntity="NSGPhysicsBehavior" syncable="YES">
         <attribute name="anchorA" optional="YES" attributeType="String" syncable="YES"/>
@@ -339,14 +400,13 @@
     </entity>
     <elements>
         <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="253"/>
-        <element name="NSGPhysicsDragField" positionX="-414" positionY="-189" width="128" height="43"/>
-        <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="178"/>
+        <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="30"/>
         <element name="NSGGeometryElement" positionX="-9" positionY="83" width="128" height="133"/>
         <element name="NSGGeometrySource" positionX="-36" positionY="-144" width="128" height="223"/>
         <element name="NSGLight" positionX="-254" positionY="297" width="128" height="255"/>
         <element name="NSGLink" positionX="-254" positionY="171" width="128" height="103"/>
-        <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="328"/>
-        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="343"/>
+        <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="30"/>
+        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="30"/>
         <element name="NSGMaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
         <element name="NSGMaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentCubeMapImages" positionX="-396" positionY="-171" width="128" height="133"/>
@@ -358,12 +418,21 @@
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGPhysicsBody" positionX="-414" positionY="-189" width="128" height="403"/>
+        <element name="NSGPhysicsDragField" positionX="-414" positionY="-189" width="128" height="45"/>
+        <element name="NSGPhysicsElectricField" positionX="-360" positionY="-126" width="128" height="45"/>
         <element name="NSGPhysicsField" positionX="-378" positionY="-153" width="128" height="223"/>
         <element name="NSGPhysicsHingeJoint" positionX="-396" positionY="-171" width="128" height="133"/>
+        <element name="NSGPhysicsLinearGravityField" positionX="-396" positionY="-162" width="128" height="45"/>
+        <element name="NSGPhysicsMagneticField" positionX="-414" positionY="-180" width="128" height="45"/>
+        <element name="NSGPhysicsNoiseField" positionX="-387" positionY="-153" width="128" height="30"/>
+        <element name="NSGPhysicsRadialGravityField" positionX="-414" positionY="-189" width="128" height="45"/>
         <element name="NSGPhysicsShape" positionX="-405" positionY="-171" width="128" height="178"/>
         <element name="NSGPhysicsSliderJoint" positionX="-360" positionY="-135" width="128" height="253"/>
+        <element name="NSGPhysicsSpringField" positionX="-369" positionY="-135" width="128" height="45"/>
+        <element name="NSGPhysicsTurbulenceField" positionX="-378" positionY="-144" width="128" height="30"/>
         <element name="NSGPhysicsVehicle" positionX="-405" positionY="-180" width="128" height="88"/>
         <element name="NSGPhysicsVehicleWheel" positionX="-414" positionY="-189" width="128" height="253"/>
+        <element name="NSGPhysicsVortexField" positionX="-405" positionY="-180" width="128" height="45"/>
         <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
         <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="193"/>
         <element name="NSGSkinner" positionX="-387" positionY="-162" width="128" height="163"/>
@@ -371,13 +440,6 @@
         <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
         <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGSoundDataSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
-        <element name="NSGPhysicsRadialGravityField" positionX="-414" positionY="-189" width="128" height="28"/>
-        <element name="NSGPhysicsVortexField" positionX="-405" positionY="-180" width="128" height="28"/>
-        <element name="NSGPhysicsLinearGravityField" positionX="-396" positionY="-162" width="128" height="30"/>
-        <element name="NSGPhysicsNoiseField" positionX="-387" positionY="-153" width="128" height="30"/>
-        <element name="NSGPhysicsTurbulenceField" positionX="-378" positionY="-144" width="128" height="30"/>
-        <element name="NSGPhysicsSpringField" positionX="-369" positionY="-135" width="128" height="30"/>
-        <element name="NSGPhysicsElectricField" positionX="-360" positionY="-126" width="128" height="30"/>
-        <element name="NSGPhysicsMagneticField" positionX="-414" positionY="-180" width="128" height="30"/>
+        <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="30"/>
     </elements>
 </model>
