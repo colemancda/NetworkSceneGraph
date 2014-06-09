@@ -206,7 +206,9 @@
         <relationship name="physicsSliderJointBodyB" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsSliderJoint" inverseName="bodyB" inverseEntity="NSGPhysicsSliderJoint" syncable="YES"/>
         <relationship name="vehicle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsVehicle" inverseName="chassisBody" inverseEntity="NSGPhysicsVehicle" syncable="YES"/>
     </entity>
-    <entity name="NSGPhysicsField" syncable="YES">
+    <entity name="NSGPhysicsDragField" parentEntity="NSGPhysicsField" syncable="YES"/>
+    <entity name="NSGPhysicsElectricField" parentEntity="NSGPhysicsField" syncable="YES"/>
+    <entity name="NSGPhysicsField" isAbstract="YES" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="direction" optional="YES" attributeType="String" syncable="YES"/>
@@ -228,6 +230,13 @@
         <relationship name="bodyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" inverseName="physicsHingeJointBodyA" inverseEntity="NSGPhysicsBody" syncable="YES"/>
         <relationship name="bodyB" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" inverseName="physicsHingeJointBodyB" inverseEntity="NSGPhysicsBody" syncable="YES"/>
     </entity>
+    <entity name="NSGPhysicsLinearGravityField" parentEntity="NSGPhysicsField" syncable="YES"/>
+    <entity name="NSGPhysicsMagneticField" parentEntity="NSGPhysicsField" syncable="YES"/>
+    <entity name="NSGPhysicsNoiseField" parentEntity="NSGPhysicsField" syncable="YES">
+        <attribute name="smoothness" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="NSGPhysicsRadialGravityField" parentEntity="NSGPhysicsField" syncable="YES"/>
     <entity name="NSGPhysicsShape" syncable="YES">
         <attribute name="shapeKeepAsCompound" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="shapeScale" optional="YES" attributeType="String" syncable="YES"/>
@@ -255,6 +264,11 @@
         <relationship name="bodyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" inverseName="physicsSliderJointBodyA" inverseEntity="NSGPhysicsBody" syncable="YES"/>
         <relationship name="bodyB" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" inverseName="physicsSliderJointBodyB" inverseEntity="NSGPhysicsBody" syncable="YES"/>
     </entity>
+    <entity name="NSGPhysicsSpringField" parentEntity="NSGPhysicsField" syncable="YES"/>
+    <entity name="NSGPhysicsTurbulenceField" parentEntity="NSGPhysicsField" syncable="YES">
+        <attribute name="smoothness" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <entity name="NSGPhysicsVehicle" parentEntity="NSGPhysicsBehavior" syncable="YES">
         <attribute name="speedInKilometersPerHour" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="chassisBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" inverseName="vehicle" inverseEntity="NSGPhysicsBody" syncable="YES"/>
@@ -276,6 +290,7 @@
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="physicsVehicleWheelNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="vehicle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsVehicle" inverseName="wheels" inverseEntity="NSGPhysicsVehicle" syncable="YES"/>
     </entity>
+    <entity name="NSGPhysicsVortexField" parentEntity="NSGPhysicsField" syncable="YES"/>
     <entity name="NSGPhysicsWorld" syncable="YES">
         <attribute name="gravity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -324,6 +339,7 @@
     </entity>
     <elements>
         <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="253"/>
+        <element name="NSGPhysicsDragField" positionX="-414" positionY="-189" width="128" height="43"/>
         <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="178"/>
         <element name="NSGGeometryElement" positionX="-9" positionY="83" width="128" height="133"/>
         <element name="NSGGeometrySource" positionX="-36" positionY="-144" width="128" height="223"/>
@@ -342,7 +358,7 @@
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGPhysicsBody" positionX="-414" positionY="-189" width="128" height="403"/>
-        <element name="NSGPhysicsField" positionX="-378" positionY="-153" width="128" height="225"/>
+        <element name="NSGPhysicsField" positionX="-378" positionY="-153" width="128" height="223"/>
         <element name="NSGPhysicsHingeJoint" positionX="-396" positionY="-171" width="128" height="133"/>
         <element name="NSGPhysicsShape" positionX="-405" positionY="-171" width="128" height="178"/>
         <element name="NSGPhysicsSliderJoint" positionX="-360" positionY="-135" width="128" height="253"/>
@@ -355,5 +371,13 @@
         <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
         <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGSoundDataSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
+        <element name="NSGPhysicsRadialGravityField" positionX="-414" positionY="-189" width="128" height="28"/>
+        <element name="NSGPhysicsVortexField" positionX="-405" positionY="-180" width="128" height="28"/>
+        <element name="NSGPhysicsLinearGravityField" positionX="-396" positionY="-162" width="128" height="30"/>
+        <element name="NSGPhysicsNoiseField" positionX="-387" positionY="-153" width="128" height="30"/>
+        <element name="NSGPhysicsTurbulenceField" positionX="-378" positionY="-144" width="128" height="30"/>
+        <element name="NSGPhysicsSpringField" positionX="-369" positionY="-135" width="128" height="30"/>
+        <element name="NSGPhysicsElectricField" positionX="-360" positionY="-126" width="128" height="30"/>
+        <element name="NSGPhysicsMagneticField" positionX="-414" positionY="-180" width="128" height="30"/>
     </elements>
 </model>
