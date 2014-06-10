@@ -17,8 +17,6 @@
 		6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */; };
 		6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */; };
-		6EAC095D1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EAC095B1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EAC095E1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC095C1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m */; };
 		6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBC63D8192FEF3E00FCF7C3 /* NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
@@ -27,10 +25,6 @@
 		6EBC63E5192FEF3E00FCF7C3 /* NetworkSceneGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */; };
 		6EBC63EB192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63E9192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63ED192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC63EC192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m */; };
-		6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6ED5C62E1938C63300CE0EE0 /* NOStore+SceneKitImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */; };
-		6ED5C6311938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6ED5C6321938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */; };
 		6ED5C6391938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5C6371938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED5C63A1938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C6381938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m */; };
 /* End PBXBuildFile section */
@@ -102,8 +96,6 @@
 		6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CGColorRef.h"; sourceTree = "<group>"; };
 		6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CGColorRef.m"; sourceTree = "<group>"; };
 		6E507DCA19342B5400D6B91E /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/Framework/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
-		6EAC095B1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOAPICachedStore+NetworkSceneGraph.h"; sourceTree = "<group>"; };
-		6EAC095C1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOAPICachedStore+NetworkSceneGraph.m"; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6EBC63CE192FEF3E00FCF7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,10 +110,6 @@
 		6EBC63E8192FEF3E00FCF7C3 /* NetworkSceneGraphTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetworkSceneGraphTests-Info.plist"; sourceTree = "<group>"; };
 		6EBC63EA192FEF3E00FCF7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EBC63EC192FEF3E00FCF7C3 /* NetworkSceneGraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkSceneGraphTests.m; sourceTree = "<group>"; };
-		6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOStore+SceneKitImport.h"; sourceTree = "<group>"; };
-		6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOStore+SceneKitImport.m"; sourceTree = "<group>"; };
-		6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOServer+NetworkSceneGraph.h"; sourceTree = "<group>"; };
-		6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NOServer+NetworkSceneGraph.m"; sourceTree = "<group>"; };
 		6ED5C6371938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+NetworkSceneGraph.h"; sourceTree = "<group>"; };
 		6ED5C6381938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+NetworkSceneGraph.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,18 +141,8 @@
 		6E4EBBBC1936B82A00FC2546 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				6ED5C62A1938C5DE00CE0EE0 /* Categories */,
 			);
 			name = Stores;
-			sourceTree = "<group>";
-		};
-		6E4EBBBE1936B86400FC2546 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6ED5C62F1938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h */,
-				6ED5C6301938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 		6E4EBBD41936D1B400FC2546 /* Categories */ = {
@@ -196,7 +174,6 @@
 		6EB02C731935299000A732C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6E4EBBBE1936B86400FC2546 /* Categories */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,17 +268,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6ED5C62A1938C5DE00CE0EE0 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6ED5C62B1938C63300CE0EE0 /* NOStore+SceneKitImport.h */,
-				6ED5C62C1938C63300CE0EE0 /* NOStore+SceneKitImport.m */,
-				6EAC095B1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h */,
-				6EAC095C1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -311,12 +277,9 @@
 			files = (
 				6E4EBBDB1936D30500FC2546 /* NSString+SCNVector4.h in Headers */,
 				6E4EBBD71936D1E600FC2546 /* NSString+SCNVector3.h in Headers */,
-				6EAC095D1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.h in Headers */,
 				6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */,
 				6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */,
 				6ED5C6391938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h in Headers */,
-				6ED5C62D1938C63300CE0EE0 /* NOStore+SceneKitImport.h in Headers */,
-				6ED5C6311938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,10 +420,7 @@
 			files = (
 				6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
 				6ED5C63A1938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m in Sources */,
-				6ED5C62E1938C63300CE0EE0 /* NOStore+SceneKitImport.m in Sources */,
-				6EAC095E1939942D008E7B84 /* NOAPICachedStore+NetworkSceneGraph.m in Sources */,
 				6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */,
-				6ED5C6321938C67E00CE0EE0 /* NOServer+NetworkSceneGraph.m in Sources */,
 				6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */,
 				6E4EBBD81936D1E600FC2546 /* NSString+SCNVector3.m in Sources */,
 			);
