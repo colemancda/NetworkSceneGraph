@@ -16,6 +16,7 @@
 		6E4EBBDC1936D30500FC2546 /* NSString+SCNVector4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDA1936D30500FC2546 /* NSString+SCNVector4.m */; };
 		6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */; };
+		6E5CFB5E194D3751000DD664 /* NetworkObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB48407194D2CD00086D744 /* NetworkObjects.framework */; };
 		6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBC63D8192FEF3E00FCF7C3 /* NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
@@ -29,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6E5CFB5F194D3758000DD664 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EB48401194D2CD00086D744 /* NetworkObjects.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E38BEDA194A6F0800FD5513;
+			remoteInfo = NetworkObjects;
+		};
 		6EB48406194D2CD00086D744 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6EB48401194D2CD00086D744 /* NetworkObjects.xcodeproj */;
@@ -97,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5CFB5E194D3751000DD664 /* NetworkObjects.framework in Frameworks */,
 				6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */,
 				6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */,
 			);
@@ -274,6 +283,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E5CFB60194D3758000DD664 /* PBXTargetDependency */,
 			);
 			name = NetworkSceneGraph;
 			productName = NetworkSceneGraph;
@@ -401,6 +411,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6E5CFB60194D3758000DD664 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkObjects;
+			targetProxy = 6E5CFB5F194D3758000DD664 /* PBXContainerItemProxy */;
+		};
 		6EBC63E4192FEF3E00FCF7C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6EBC63C7192FEF3E00FCF7C3 /* NetworkSceneGraph */;
