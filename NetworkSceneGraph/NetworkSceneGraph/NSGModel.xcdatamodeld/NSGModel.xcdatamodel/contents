@@ -23,7 +23,7 @@
         <relationship name="geometrySources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometrySource" inverseName="geometry" inverseEntity="NSGGeometrySource" syncable="YES"/>
         <relationship name="levelsOfDetail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="geometryLevelOfDetail" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="materials" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGMaterial" inverseName="geometry" inverseEntity="NSGMaterial" syncable="YES"/>
-        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMopher" inverseName="targets" inverseEntity="NSGMopher" syncable="YES"/>
+        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMorpher" inverseName="targets" inverseEntity="NSGMorpher" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="geometry" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="particleSystemEmitterShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="emitterShape" inverseEntity="NSGParticleSystem" syncable="YES"/>
         <relationship name="physicsShapeGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsShape" inverseName="geometry" inverseEntity="NSGPhysicsShape" syncable="YES"/>
@@ -141,7 +141,7 @@
     <entity name="NSGMaterialPropertyContentVideoHLS" representedClassName="NSGMaterialPropertyContentVideoHLS" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
-    <entity name="NSGMopher" syncable="YES">
+    <entity name="NSGMorpher" syncable="YES">
         <attribute name="calculationMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="weights" optional="YES" attributeType="String" syncable="YES"/>
@@ -163,8 +163,9 @@
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="node" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="light" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="node" inverseEntity="NSGLight" syncable="YES"/>
         <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLink" inverseName="node" inverseEntity="NSGLink" syncable="YES"/>
-        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMopher" inverseName="node" inverseEntity="NSGMopher" syncable="YES"/>
+        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMorpher" inverseName="node" inverseEntity="NSGMorpher" syncable="YES"/>
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="childNodes" inverseEntity="NSGNode" syncable="YES"/>
+        <relationship name="particleSystemColliderNodes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="colliderNodes" inverseEntity="NSGParticleSystem" syncable="YES"/>
         <relationship name="physicsbody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsBody" inverseName="node" inverseEntity="NSGPhysicsBody" syncable="YES"/>
         <relationship name="physicsShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsShape" inverseName="node" inverseEntity="NSGPhysicsShape" syncable="YES"/>
         <relationship name="physicsVehicleWheelNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsVehicleWheel" inverseName="node" inverseEntity="NSGPhysicsVehicleWheel" syncable="YES"/>
@@ -227,11 +228,14 @@
         <attribute name="spreadingAngle" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="stretchFactor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="warmupDuration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="colliderNodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" syncable="YES"/>
+        <relationship name="colliderNodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="particleSystemColliderNodes" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="emitterShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="particleSystemEmitterShape" inverseEntity="NSGGeometry" syncable="YES"/>
-        <relationship name="systemSpawnedOnCollision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" syncable="YES"/>
-        <relationship name="systemSpawnedOnDying" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" syncable="YES"/>
-        <relationship name="systemSpawnedOnLiving" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="particleSystemSystemSpawnedOnCollision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="systemSpawnedOnCollision" inverseEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="particleSystemSystemSpawnedOnDying" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="systemSpawnedOnDying" inverseEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="particleSystemSystemSpawnedOnLiving" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="systemSpawnedOnLiving" inverseEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="systemSpawnedOnCollision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="particleSystemSystemSpawnedOnCollision" inverseEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="systemSpawnedOnDying" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="particleSystemSystemSpawnedOnDying" inverseEntity="NSGParticleSystem" syncable="YES"/>
+        <relationship name="systemSpawnedOnLiving" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="particleSystemSystemSpawnedOnLiving" inverseEntity="NSGParticleSystem" syncable="YES"/>
     </entity>
     <entity name="NSGPhysicsBallSocketJoint" parentEntity="NSGPhysicsBehavior" syncable="YES">
         <attribute name="anchorA" optional="YES" attributeType="String" syncable="YES"/>
@@ -415,8 +419,9 @@
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentImageURL" positionX="567" positionY="126" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
-        <element name="NSGMopher" positionX="-396" positionY="-171" width="128" height="118"/>
-        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="388"/>
+        <element name="NSGMorpher" positionX="-396" positionY="-171" width="128" height="120"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="405"/>
+        <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="958"/>
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGPhysicsBody" positionX="-414" positionY="-189" width="128" height="403"/>
@@ -442,6 +447,5 @@
         <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
         <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGSoundDataSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
-        <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="30"/>
     </elements>
 </model>
