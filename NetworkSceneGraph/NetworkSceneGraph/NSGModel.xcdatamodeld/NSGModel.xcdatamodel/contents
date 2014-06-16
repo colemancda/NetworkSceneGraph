@@ -2,9 +2,11 @@
 <model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="14A238x" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="NSGBox" parentEntity="NSGGeometry" syncable="YES">
         <attribute name="chamferRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="chamferSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="heightSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lengthSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="widthSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
@@ -421,6 +423,14 @@
         <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="widthSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="NSGPyramid" parentEntity="NSGGeometry" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="heightSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lengthSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="widthSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="NSGScene" representedClassName="NSGScene" syncable="YES">
         <attribute name="fogColor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fogDensityExponent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -508,6 +518,7 @@
         <element name="NSGIKConstraint" positionX="-387" positionY="-162" width="128" height="88"/>
         <element name="NSGIKConstraintMaxAllowedRotationAngleForJoint" positionX="-378" positionY="-153" width="128" height="88"/>
         <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
-        <element name="NSGBox" positionX="-360" positionY="-135" width="128" height="133"/>
+        <element name="NSGBox" positionX="-360" positionY="-135" width="128" height="163"/>
+        <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
     </elements>
 </model>
