@@ -33,6 +33,12 @@
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="constraints" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
+    <entity name="NSGCylinder" parentEntity="NSGGeometry" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="heightSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="radialSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="radius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <entity name="NSGGeometry" representedClassName="NSGGeometry" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="subdivisionLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -474,6 +480,21 @@
     <entity name="NSGSoundDataSourceHLS" representedClassName="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundDataSource" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="NSGSphere" parentEntity="NSGGeometry" syncable="YES">
+        <attribute name="geodesic" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="radius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="segmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="NSGText" parentEntity="NSGGeometry" syncable="YES">
+        <attribute name="alignmentMode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attributedStringData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="chamferRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="containerFrame" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="extrusionDepth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="textSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="truncationMode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wrapped" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
     <elements>
         <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="283"/>
         <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="283"/>
@@ -524,5 +545,8 @@
         <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
         <element name="NSGBox" positionX="-360" positionY="-135" width="128" height="163"/>
         <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
+        <element name="NSGSphere" positionX="-405" positionY="-180" width="128" height="88"/>
+        <element name="NSGCylinder" positionX="-396" positionY="-171" width="128" height="103"/>
+        <element name="NSGText" positionX="-387" positionY="-162" width="128" height="163"/>
     </elements>
 </model>
