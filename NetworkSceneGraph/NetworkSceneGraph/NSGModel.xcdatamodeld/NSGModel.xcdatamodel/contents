@@ -41,6 +41,7 @@
         <relationship name="geometryElements" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGGeometryElement" inverseName="geometry" inverseEntity="NSGGeometryElement" syncable="YES"/>
         <relationship name="geometryLevelOfDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="levelsOfDetail" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="geometrySources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometrySource" inverseName="geometry" inverseEntity="NSGGeometrySource" syncable="YES"/>
+        <relationship name="levelofDetailGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLevelOfDetail" inverseName="geometry" inverseEntity="NSGLevelOfDetail" syncable="YES"/>
         <relationship name="levelsOfDetail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="geometryLevelOfDetail" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="materials" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGMaterial" inverseName="geometry" inverseEntity="NSGMaterial" syncable="YES"/>
         <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMorpher" inverseName="targets" inverseEntity="NSGMorpher" syncable="YES"/>
@@ -76,18 +77,18 @@
     </entity>
     <entity name="NSGIKConstraint" parentEntity="NSGConstraint" syncable="YES">
         <attribute name="targetPosition" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="chainRootNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" syncable="YES"/>
+        <relationship name="chainRootNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="ikConstraintChainRootNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="maxAllowedRotationAngles" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" inverseName="constraint" inverseEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" syncable="YES"/>
     </entity>
     <entity name="NSGIKConstraintMaxAllowedRotationAngleForJoint" syncable="YES">
         <attribute name="angle" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="constraint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGIKConstraint" inverseName="maxAllowedRotationAngles" inverseEntity="NSGIKConstraint" syncable="YES"/>
-        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="ikConstraintMaxAllowedRotationAngleForJoint" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
     <entity name="NSGLevelOfDetail" syncable="YES">
         <attribute name="screenSpaceRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="worldSpaceDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" syncable="YES"/>
+        <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="levelofDetailGeometry" inverseEntity="NSGGeometry" syncable="YES"/>
     </entity>
     <entity name="NSGLight" representedClassName="NSGLight" syncable="YES">
         <attribute name="attenuationEndDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -121,7 +122,7 @@
     </entity>
     <entity name="NSGLookAtConstraint" parentEntity="NSGConstraint" syncable="YES">
         <attribute name="gimbalLockEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="target" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" syncable="YES"/>
+        <relationship name="target" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="lookAtConstraintTarget" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
     <entity name="NSGMaterial" representedClassName="NSGMaterial" syncable="YES">
         <attribute name="cullMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -211,8 +212,11 @@
         <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGNode" inverseName="parentNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="constraints" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGConstraint" inverseName="node" inverseEntity="NSGConstraint" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="node" inverseEntity="NSGGeometry" syncable="YES"/>
+        <relationship name="ikConstraintChainRootNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGIKConstraint" inverseName="chainRootNode" inverseEntity="NSGIKConstraint" syncable="YES"/>
+        <relationship name="ikConstraintMaxAllowedRotationAngleForJoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" inverseName="node" inverseEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" syncable="YES"/>
         <relationship name="light" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLight" inverseName="node" inverseEntity="NSGLight" syncable="YES"/>
         <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLink" inverseName="node" inverseEntity="NSGLink" syncable="YES"/>
+        <relationship name="lookAtConstraintTarget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGLookAtConstraint" inverseName="target" inverseEntity="NSGLookAtConstraint" syncable="YES"/>
         <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMorpher" inverseName="node" inverseEntity="NSGMorpher" syncable="YES"/>
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="childNodes" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="particleSystemColliderNodes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGParticleSystem" inverseName="colliderNodes" inverseEntity="NSGParticleSystem" syncable="YES"/>
@@ -472,7 +476,7 @@
     </entity>
     <elements>
         <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="283"/>
-        <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="268"/>
+        <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="283"/>
         <element name="NSGGeometryElement" positionX="-9" positionY="83" width="128" height="148"/>
         <element name="NSGGeometrySource" positionX="-36" positionY="-144" width="128" height="238"/>
         <element name="NSGLight" positionX="-254" positionY="297" width="128" height="358"/>
@@ -485,7 +489,7 @@
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
         <element name="NSGMorpher" positionX="-396" positionY="-171" width="128" height="120"/>
-        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="448"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="493"/>
         <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="958"/>
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
