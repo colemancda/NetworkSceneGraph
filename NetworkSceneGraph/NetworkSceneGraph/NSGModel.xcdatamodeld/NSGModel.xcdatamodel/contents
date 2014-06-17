@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="14A238x" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="14A261i" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="NSGBox" parentEntity="NSGGeometry" syncable="YES">
         <attribute name="chamferRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="chamferSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -18,7 +18,10 @@
         <attribute name="focalDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="focalSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="orthographicScale" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="projectionTransform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectionTransformW" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="projectionTransformX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="projectionTransformY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="projectionTransformZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="usesOrthographicProjection" optional="YES" attributeType="Boolean" defaultValueString="0.0" syncable="YES"/>
         <attribute name="xFov" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -82,7 +85,9 @@
         <relationship name="skinnerBoneWeights" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSkinner" inverseName="boneWeights" inverseEntity="NSGSkinner" syncable="YES"/>
     </entity>
     <entity name="NSGIKConstraint" parentEntity="NSGConstraint" syncable="YES">
-        <attribute name="targetPosition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetPositionX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="targetPositionY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="targetPositionZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="chainRootNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="ikConstraintChainRootNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="maxAllowedRotationAngles" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" inverseName="constraint" inverseEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" syncable="YES"/>
     </entity>
@@ -204,16 +209,28 @@
     </entity>
     <entity name="NSGNode" representedClassName="NSGNode" syncable="YES">
         <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="eulerAngles" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eulerAnglesX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="eulerAnglesY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="eulerAnglesZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="hidden" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="opacity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="orientation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orientationW" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="orientationX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="orientationY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="orientationZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="paused" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="pivot" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="positionX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="positionY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="positionZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="rotation" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rotationW" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rotationX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rotationY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rotationZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="scaleX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="scaleY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="scaleZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="node" inverseEntity="NSGCamera" syncable="YES"/>
         <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGNode" inverseName="parentNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="constraints" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGConstraint" inverseName="node" inverseEntity="NSGConstraint" syncable="YES"/>
@@ -496,12 +513,19 @@
         <attribute name="wrapped" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="283"/>
+        <element name="NSGBox" positionX="-360" positionY="-135" width="128" height="163"/>
+        <element name="NSGCamera" positionX="-252" positionY="-253" width="128" height="328"/>
+        <element name="NSGConstraint" positionX="-405" positionY="-180" width="128" height="88"/>
+        <element name="NSGCylinder" positionX="-396" positionY="-171" width="128" height="103"/>
         <element name="NSGGeometry" positionX="-252" positionY="26" width="128" height="283"/>
         <element name="NSGGeometryElement" positionX="-9" positionY="83" width="128" height="148"/>
         <element name="NSGGeometrySource" positionX="-36" positionY="-144" width="128" height="238"/>
+        <element name="NSGIKConstraint" positionX="-387" positionY="-162" width="128" height="120"/>
+        <element name="NSGIKConstraintMaxAllowedRotationAngleForJoint" positionX="-378" positionY="-153" width="128" height="88"/>
+        <element name="NSGLevelOfDetail" positionX="-414" positionY="-189" width="128" height="88"/>
         <element name="NSGLight" positionX="-254" positionY="297" width="128" height="358"/>
         <element name="NSGLink" positionX="-254" positionY="171" width="128" height="118"/>
+        <element name="NSGLookAtConstraint" positionX="-396" positionY="-171" width="128" height="73"/>
         <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="30"/>
         <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="358"/>
         <element name="NSGMaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
@@ -510,7 +534,7 @@
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
         <element name="NSGMorpher" positionX="-396" positionY="-171" width="128" height="120"/>
-        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="493"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="30"/>
         <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="958"/>
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
@@ -531,22 +555,15 @@
         <element name="NSGPhysicsVehicleWheel" positionX="-414" positionY="-189" width="128" height="253"/>
         <element name="NSGPhysicsVortexField" positionX="-405" positionY="-180" width="128" height="45"/>
         <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
+        <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
+        <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
         <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="193"/>
         <element name="NSGSkinner" positionX="-387" positionY="-162" width="128" height="163"/>
         <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
         <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="NSGSoundDataSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
-        <element name="NSGLevelOfDetail" positionX="-414" positionY="-189" width="128" height="88"/>
-        <element name="NSGConstraint" positionX="-405" positionY="-180" width="128" height="88"/>
-        <element name="NSGLookAtConstraint" positionX="-396" positionY="-171" width="128" height="73"/>
-        <element name="NSGIKConstraint" positionX="-387" positionY="-162" width="128" height="88"/>
-        <element name="NSGIKConstraintMaxAllowedRotationAngleForJoint" positionX="-378" positionY="-153" width="128" height="88"/>
-        <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
-        <element name="NSGBox" positionX="-360" positionY="-135" width="128" height="163"/>
-        <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
         <element name="NSGSphere" positionX="-405" positionY="-180" width="128" height="88"/>
-        <element name="NSGCylinder" positionX="-396" positionY="-171" width="128" height="103"/>
         <element name="NSGText" positionX="-387" positionY="-162" width="128" height="163"/>
     </elements>
 </model>
