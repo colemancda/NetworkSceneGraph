@@ -234,7 +234,7 @@
         <attribute name="scaleZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="node" inverseEntity="NSGCamera" syncable="YES"/>
         <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGNode" inverseName="parentNode" inverseEntity="NSGNode" syncable="YES"/>
-        <relationship name="constraints" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGConstraint" inverseName="node" inverseEntity="NSGConstraint" syncable="YES"/>
+        <relationship name="constraints" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGConstraint" inverseName="node" inverseEntity="NSGConstraint" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="node" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="ikConstraintChainRootNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGIKConstraint" inverseName="chainRootNode" inverseEntity="NSGIKConstraint" syncable="YES"/>
         <relationship name="ikConstraintMaxAllowedRotationAngleForJoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" inverseName="node" inverseEntity="NSGIKConstraintMaxAllowedRotationAngleForJoint" syncable="YES"/>
