@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="14A261i" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="NSGAnimation" syncable="YES">
-        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
-        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="animations" inverseEntity="NSGNode" syncable="YES"/>
-    </entity>
     <entity name="NSGBox" parentEntity="NSGGeometry" syncable="YES">
         <attribute name="chamferRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="chamferSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -236,7 +232,6 @@
         <attribute name="scaleX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="scaleY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="scaleZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="animations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGAnimation" inverseName="node" inverseEntity="NSGAnimation" syncable="YES"/>
         <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="node" inverseEntity="NSGCamera" syncable="YES"/>
         <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGNode" inverseName="parentNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="constraints" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGConstraint" inverseName="node" inverseEntity="NSGConstraint" syncable="YES"/>
@@ -540,7 +535,7 @@
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
         <element name="NSGMorpher" positionX="-396" positionY="-171" width="128" height="120"/>
-        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="688"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="673"/>
         <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="958"/>
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
@@ -571,6 +566,5 @@
         <element name="NSGSoundSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
         <element name="NSGSphere" positionX="-405" positionY="-180" width="128" height="88"/>
         <element name="NSGText" positionX="-387" positionY="-162" width="128" height="163"/>
-        <element name="NSGAnimation" positionX="-414" positionY="-189" width="128" height="73"/>
     </elements>
 </model>
