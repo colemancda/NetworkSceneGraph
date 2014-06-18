@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="14A261i" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="NSGAnimation" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="animations" inverseEntity="NSGNode" syncable="YES"/>
+    </entity>
     <entity name="NSGBox" parentEntity="NSGGeometry" syncable="YES">
         <attribute name="chamferRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="chamferSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -158,9 +162,10 @@
     </entity>
     <entity name="NSGMaterialProperty" representedClassName="NSGMaterialProperty" syncable="YES">
         <attribute name="borderColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentsTransform" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="magnificationFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="mappingChannel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mappingChannel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="maxAnisotropy" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="minificationFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mipFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -231,6 +236,7 @@
         <attribute name="scaleX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="scaleY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="scaleZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="animations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGAnimation" inverseName="node" inverseEntity="NSGAnimation" syncable="YES"/>
         <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="node" inverseEntity="NSGCamera" syncable="YES"/>
         <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGNode" inverseName="parentNode" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="constraints" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGConstraint" inverseName="node" inverseEntity="NSGConstraint" syncable="YES"/>
@@ -483,18 +489,18 @@
     <entity name="NSGSound" representedClassName="NSGSound" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="audibleGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="soundAudibleGeometry" inverseEntity="NSGGeometry" syncable="YES"/>
-        <relationship name="dataSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSoundDataSource" inverseName="sound" inverseEntity="NSGSoundDataSource" syncable="YES"/>
+        <relationship name="dataSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSoundSource" inverseName="sound" inverseEntity="NSGSoundSource" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="sound" inverseEntity="NSGNode" syncable="YES"/>
     </entity>
-    <entity name="NSGSoundDataSource" representedClassName="NSGSoundDataSource" isAbstract="YES" syncable="YES">
+    <entity name="NSGSoundSource" representedClassName="NSGSoundDataSource" isAbstract="YES" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGSound" inverseName="dataSource" inverseEntity="NSGSound" syncable="YES"/>
     </entity>
-    <entity name="NSGSoundDataSourceData" representedClassName="NSGSoundDataSourceData" parentEntity="NSGSoundDataSource" syncable="YES">
+    <entity name="NSGSoundSourceData" representedClassName="NSGSoundDataSourceData" parentEntity="NSGSoundSource" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="loops" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
-    <entity name="NSGSoundDataSourceHLS" representedClassName="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundDataSource" syncable="YES">
+    <entity name="NSGSoundSourceHLS" representedClassName="NSGSoundDataSourceHLSStream" parentEntity="NSGSoundSource" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="NSGSphere" parentEntity="NSGGeometry" syncable="YES">
@@ -527,14 +533,14 @@
         <element name="NSGLink" positionX="-254" positionY="171" width="128" height="118"/>
         <element name="NSGLookAtConstraint" positionX="-396" positionY="-171" width="128" height="73"/>
         <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="30"/>
-        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="358"/>
+        <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="373"/>
         <element name="NSGMaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
         <element name="NSGMaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentCubeMapImages" positionX="-396" positionY="-171" width="128" height="133"/>
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
         <element name="NSGMorpher" positionX="-396" positionY="-171" width="128" height="120"/>
-        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="30"/>
+        <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="688"/>
         <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="958"/>
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGPhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
@@ -560,10 +566,11 @@
         <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="193"/>
         <element name="NSGSkinner" positionX="-387" positionY="-162" width="128" height="163"/>
         <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="103"/>
-        <element name="NSGSoundDataSource" positionX="-414" positionY="-189" width="128" height="73"/>
-        <element name="NSGSoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
-        <element name="NSGSoundDataSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
+        <element name="NSGSoundSource" positionX="-414" positionY="-189" width="128" height="75"/>
+        <element name="NSGSoundSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
+        <element name="NSGSoundSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
         <element name="NSGSphere" positionX="-405" positionY="-180" width="128" height="88"/>
         <element name="NSGText" positionX="-387" positionY="-162" width="128" height="163"/>
+        <element name="NSGAnimation" positionX="-414" positionY="-189" width="128" height="73"/>
     </elements>
 </model>
