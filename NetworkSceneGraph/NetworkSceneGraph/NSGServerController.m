@@ -45,8 +45,7 @@
    managedObjectContextForRequest:(RouteRequest *)request
                          withType:(NOServerRequestType)requestType
 {
-    
-    
+    return self.managedObjectContext;
 }
 
 -(NSNumber *)server:(NOServer *)server newResourceIDForEntity:(NSEntityDescription *)entity

@@ -12,8 +12,13 @@
 
 -(CGColorRef)CGColorRefValue
 {
-    NSColor *color = [NSColor colorWithCIColor:[CIColor colorWithString:self]];
+#if TARGET_OS_IPHONE
+    UIColor *color = [UIColor colorWithCIColor:[CIColor colorWithString:self]];
     
+#else
+    NSColor *color = [NSColor colorWithCIColor:[CIColor colorWithString:self]];
+#endif
+
     return color.CGColor;
 }
 

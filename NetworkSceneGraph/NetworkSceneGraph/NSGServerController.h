@@ -19,4 +19,6 @@
 
 @property (nonatomic, readonly) NOServer *server;
 
+@property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
+
 @end
