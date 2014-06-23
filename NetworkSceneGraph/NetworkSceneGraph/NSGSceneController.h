@@ -14,10 +14,14 @@
 
 /** The networked 3D scene that this controller accessing. */
 
-@property SCNScene *scene;
+@property (nonatomic, readonly, copy) SCNScene *scene;
+
+/** The camera defines how this scene is displayed in a 2D view. */
+
+@property (nonatomic, readonly, copy) SCNCamera *camera;
 
 /** The store that will cache the managed object representation of the scene. */
 
-@property NOStore *store;
+@property (nonatomic, readonly) NOStore *store;
 
 @end

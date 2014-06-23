@@ -458,10 +458,6 @@
         <attribute name="widthSegmentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="NSGScene" representedClassName="NSGScene" syncable="YES">
-        <attribute name="fogColor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="fogDensityExponent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="fogEndDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="fogStartDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="upAxisAttribute" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="sceneBackground" inverseEntity="NSGMaterialProperty" syncable="YES"/>
@@ -559,7 +555,8 @@
         <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
         <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
         <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
-        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="193"/>
+        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="133"/>
+        <element name="NSGSceneLink" positionX="-414" positionY="-189" width="128" height="58"/>
         <element name="NSGSkinner" positionX="-387" positionY="-162" width="128" height="163"/>
         <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="NSGSoundSource" positionX="-414" positionY="-189" width="128" height="75"/>
@@ -567,6 +564,5 @@
         <element name="NSGSoundSourceHLS" positionX="-360" positionY="-135" width="128" height="60"/>
         <element name="NSGSphere" positionX="-405" positionY="-180" width="128" height="88"/>
         <element name="NSGText" positionX="-387" positionY="-162" width="128" height="163"/>
-        <element name="NSGSceneLink" positionX="-414" positionY="-189" width="128" height="58"/>
     </elements>
 </model>

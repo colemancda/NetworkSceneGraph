@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
-#import <NetworkObjects/NetworkObjects.h>
+#import <NetworkSceneGraph/NSGDefines.h>
+#import <NetworkSceneGraph/NSGSceneController.h>
+#import <NetworkSceneGraph/NSGServerController.h>
+
+// NSManagedObject subclasses
 
 #import <NetworkSceneGraph/NSGScene.h>
 #import <NetworkSceneGraph/NSGNode.h>
@@ -31,12 +35,7 @@
 
 // Additions
 
-#import <NetworkSceneGraph/NSString+SCNVector3.h>
-#import <NetworkSceneGraph/NSString+SCNVector4.h>
 #import <NetworkSceneGraph/NSString+CGColorRef.h>
-#import <NetworkSceneGraph/NSManagedObjectModel+NetworkSceneGraph.h>
-#import <NetworkSceneGraph/NOServer+NetworkSceneGraph.h>
-#import <NetworkSceneGraph/NOAPICachedStore+NetworkSceneGraph.h>
 
 
 

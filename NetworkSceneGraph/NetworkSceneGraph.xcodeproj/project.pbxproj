@@ -10,7 +10,7 @@
 		6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E124F3619350FFB004D6A32 /* SceneKit.framework */; };
-		6E40F0A91955CBC900850881 /* NSGSceneController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E40F0A71955CBC900850881 /* NSGSceneController.h */; };
+		6E40F0A91955CBC900850881 /* NSGSceneController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E40F0A71955CBC900850881 /* NSGSceneController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E40F0AA1955CBC900850881 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40F0A81955CBC900850881 /* NSGSceneController.m */; };
 		6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */; };

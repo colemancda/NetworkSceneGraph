@@ -8,6 +8,16 @@
 
 #import "NSGSceneController.h"
 
+@interface NSGSceneController ()
+
+@property (nonatomic) SCNScene *scene;
+
+@property (nonatomic) SCNCamera *camera;
+
+@property (nonatomic) NOStore *store;
+
+@end
+
 @implementation NSGSceneController
 
 @end
