@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h>
 #import <NetworkObjects/NetworkObjects.h>
+@class NSGNode;
 
 @interface NSGSceneController : NSObject
 
-/** The networked 3D scene that this controller accessing. */
+/** The networked 3D scene that this controller is accessing. */
 
 @property (nonatomic, readonly, copy) SCNScene *scene;
 
@@ -23,5 +24,18 @@
 /** The store that will cache the managed object representation of the scene. */
 
 @property (nonatomic, readonly) NOStore *store;
+
+-(void)downloadScene;
+
+-(NSGNode *)managedObjectForNode:(SCNNode *)node;
+
+@end
+
+@protocol NSGSceneControllerDelegate <NSObject>
+
+-(void)sceneController:(NSGSceneController *)sceneController didDownloadScene:(SCNScene *)scene withCamera:(SCNCamera *)camera;
+
+-(void)sceneController:(NSGSceneController *)sceneController didDownloadScene:(SCNScene *)scene withCamera:(SCNCamera *)camera;
+
 
 @end
