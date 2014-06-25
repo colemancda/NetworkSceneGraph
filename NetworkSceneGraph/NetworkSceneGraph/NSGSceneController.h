@@ -10,6 +10,8 @@
 #import <SceneKit/SceneKit.h>
 #import <NetworkObjects/NetworkObjects.h>
 
+@protocol NSGSceneControllerDelegate;
+
 @interface NSGSceneController : NSObject
 
 /** The store that will cache the managed object representation of the server's scene's. */
@@ -18,13 +20,15 @@
 
 @property (nonatomic, readonly) NSURLSession *URLSession;
 
+@property (nonatomic) id<NSGSceneControllerDelegate> delegate;
+
 -(void)fetchSceneWithResourceID:(NSNumber *)resourceID;
 
 @end
 
 @protocol NSGSceneControllerDelegate <NSObject>
 
--(void)sceneController:(NSGSceneController *)sceneController didCacheManagedObject:(id)managedObject withError:(NSError *)error;
+-(void)sceneController:(NSGSceneController *)sceneController didCacheManagedObject:(NSManagedObject *)managedObject withError:(NSError *)error;
 
 
 @end

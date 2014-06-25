@@ -20,4 +20,10 @@
 
 @implementation NSGSceneController
 
+-(void)fetchSceneWithResourceID:(NSNumber *)resourceID
+{
+    
+    
+}
+
 @end
