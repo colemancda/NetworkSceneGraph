@@ -48,6 +48,8 @@
     return self.managedObjectContext;
 }
 
+/*
+
 -(NSNumber *)server:(NOServer *)server newResourceIDForEntity:(NSEntityDescription *)entity
 {
     
@@ -68,6 +70,6 @@
 
 #pragma mark - NOServerDelegate
 
-
+*/
 
 @end

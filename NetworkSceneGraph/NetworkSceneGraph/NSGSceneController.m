@@ -10,20 +10,30 @@
 
 @interface NSGSceneController ()
 
-@property (nonatomic) SCNScene *scene;
-
-@property (nonatomic) SCNCamera *camera;
-
-@property (nonatomic) NOStore *store;
-
 @end
 
 @implementation NSGSceneController
 
--(void)fetchSceneWithResourceID:(NSNumber *)resourceID
+-(void)fetchScene
 {
+    // fetch the scene according to the resource ID
     
-    
+    [self.store fetchEntityWithName:@"NSGScene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+        
+        if (error) {
+            
+            [self.store.managedObjectContext performBlock:^{
+                
+                [self.delegate sceneController:self didFetchScene:nil withError:error];
+                
+            }];
+            
+            return;
+        }
+        
+        
+        
+    }];
 }
 
 @end

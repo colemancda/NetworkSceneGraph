@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h>
 #import <NetworkObjects/NetworkObjects.h>
+@class NSGScene;
 
 @protocol NSGSceneControllerDelegate;
 
@@ -16,19 +17,25 @@
 
 /** The store that will cache the managed object representation of the server's scene's. */
 
-@property (nonatomic, readonly) NOStore *store;
+@property (nonatomic) NOStore *store;
 
-@property (nonatomic, readonly) NSURLSession *URLSession;
+@property (nonatomic) NSURLSession *URLSession;
+
+@property (nonatomic) NSNumber *sceneResourceID;
 
 @property (nonatomic) id<NSGSceneControllerDelegate> delegate;
 
--(void)fetchSceneWithResourceID:(NSNumber *)resourceID;
+-(void)fetchScene;
 
 @end
 
+/** Delegate protocol for incrementally downloading and caching the network scene graph. The delegate methods will be called on the same queue as the controller's store's managed object context. */
+
 @protocol NSGSceneControllerDelegate <NSObject>
 
--(void)sceneController:(NSGSceneController *)sceneController didCacheManagedObject:(NSManagedObject *)managedObject withError:(NSError *)error;
+-(void)sceneController:(NSGSceneController *)sceneController didFetchScene:(NSGScene *)scene withError:(NSError *)error;
+
+-(void)sceneController:(NSGSceneController *)sceneController didFetchSceneGraphElement:(NSManagedObject *)element withError:(NSError *)error;
 
 
 @end

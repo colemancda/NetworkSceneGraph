@@ -131,8 +131,6 @@
 		6E40F0A119554F7500850881 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6E40F0A71955CBC900850881 /* NSGSceneController.h */,
-				6E40F0A81955CBC900850881 /* NSGSceneController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -158,6 +156,8 @@
 		6EB02C731935299000A732C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E40F0A71955CBC900850881 /* NSGSceneController.h */,
+				6E40F0A81955CBC900850881 /* NSGSceneController.m */,
 				6E7170B01950E11A00C5F0E2 /* NSGServerController.h */,
 				6E7170B11950E11A00C5F0E2 /* NSGServerController.m */,
 			);
