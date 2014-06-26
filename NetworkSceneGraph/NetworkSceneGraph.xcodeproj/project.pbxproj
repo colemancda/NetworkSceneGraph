@@ -113,6 +113,8 @@
 		6E0C66AC195C63B300841DB5 /* NSGIKConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C66AA195C63B300841DB5 /* NSGIKConstraint.m */; };
 		6E0C66AF195C63B300841DB5 /* NSGSound.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0C66AD195C63B300841DB5 /* NSGSound.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0C66B0195C63B300841DB5 /* NSGSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C66AE195C63B300841DB5 /* NSGSound.m */; };
+		6E0C66BA195C7A9E00841DB5 /* NSGSceneController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0C66B8195C7A9E00841DB5 /* NSGSceneController.h */; };
+		6E0C66BB195C7A9E00841DB5 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C66B9195C7A9E00841DB5 /* NSGSceneController.m */; };
 		6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E124F3619350FFB004D6A32 /* SceneKit.framework */; };
@@ -284,6 +286,8 @@
 		6E0C66AA195C63B300841DB5 /* NSGIKConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGIKConstraint.m; sourceTree = "<group>"; };
 		6E0C66AD195C63B300841DB5 /* NSGSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSound.h; sourceTree = "<group>"; };
 		6E0C66AE195C63B300841DB5 /* NSGSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSound.m; sourceTree = "<group>"; };
+		6E0C66B8195C7A9E00841DB5 /* NSGSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSceneController.h; sourceTree = "<group>"; };
+		6E0C66B9195C7A9E00841DB5 /* NSGSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSceneController.m; sourceTree = "<group>"; };
 		6E124F2F1934F840004D6A32 /* NSGModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSGModel.xcdatamodel; sourceTree = "<group>"; };
 		6E124F3619350FFB004D6A32 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CGColorRef.h"; sourceTree = "<group>"; };
@@ -362,6 +366,8 @@
 		6EB02C731935299000A732C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E0C66B8195C7A9E00841DB5 /* NSGSceneController.h */,
+				6E0C66B9195C7A9E00841DB5 /* NSGSceneController.m */,
 				6E7170B01950E11A00C5F0E2 /* NSGServerController.h */,
 				6E7170B11950E11A00C5F0E2 /* NSGServerController.m */,
 			);
@@ -594,6 +600,7 @@
 				6E0C668B195C63B200841DB5 /* NSGMaterialPropertyContent.h in Headers */,
 				6E0C6623195C63AF00841DB5 /* NSGSoundDataSourceData.h in Headers */,
 				6E0C65FF195C63AE00841DB5 /* NSGLevelOfDetail.h in Headers */,
+				6E0C66BA195C7A9E00841DB5 /* NSGSceneController.h in Headers */,
 				6E0C665F195C63B100841DB5 /* NSGPhysicsLinearGravityField.h in Headers */,
 				6E0C6673195C63B100841DB5 /* NSGMaterialProperty.h in Headers */,
 				6E0C66A7195C63B300841DB5 /* NSGSphere.h in Headers */,
@@ -805,6 +812,7 @@
 				6E7170B31950E11A00C5F0E2 /* NSGServerController.m in Sources */,
 				6E0C6678195C63B100841DB5 /* NSGPhysicsBody.m in Sources */,
 				6E0C65E8195C63AD00841DB5 /* NSGLookAtConstraint.m in Sources */,
+				6E0C66BB195C7A9E00841DB5 /* NSGSceneController.m in Sources */,
 				6E0C6624195C63AF00841DB5 /* NSGSoundDataSourceData.m in Sources */,
 				6E0C65E4195C63AD00841DB5 /* NSGLight.m in Sources */,
 				6E0C662C195C63AF00841DB5 /* NSGPhysicsSliderJoint.m in Sources */,
