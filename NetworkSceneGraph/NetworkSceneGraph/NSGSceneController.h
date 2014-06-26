@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h>
 #import <NetworkObjects/NetworkObjects.h>
+@class NSGScene;
 
 @protocol NSGSceneControllerDelegate;
 
@@ -16,7 +17,7 @@
 
 #pragma mark - Configuration Properties
 
-// These properties setup the controller, should not be changed during a download operation.
+// These properties setup the controller, should not be changed while fetching.
 
 /** The store that will cache the managed object representation of the server's scene's. */
 
