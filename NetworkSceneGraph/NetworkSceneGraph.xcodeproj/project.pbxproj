@@ -116,8 +116,6 @@
 		6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E124F3619350FFB004D6A32 /* SceneKit.framework */; };
-		6E40F0A91955CBC900850881 /* NSGSceneController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E40F0A71955CBC900850881 /* NSGSceneController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E40F0AA1955CBC900850881 /* NSGSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40F0A81955CBC900850881 /* NSGSceneController.m */; };
 		6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4EBBE01936E87200FC2546 /* NSString+CGColorRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */; };
 		6E5CFB5E194D3751000DD664 /* NetworkObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB48407194D2CD00086D744 /* NetworkObjects.framework */; };
@@ -288,8 +286,6 @@
 		6E0C66AE195C63B300841DB5 /* NSGSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSound.m; sourceTree = "<group>"; };
 		6E124F2F1934F840004D6A32 /* NSGModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSGModel.xcdatamodel; sourceTree = "<group>"; };
 		6E124F3619350FFB004D6A32 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		6E40F0A71955CBC900850881 /* NSGSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSceneController.h; sourceTree = "<group>"; };
-		6E40F0A81955CBC900850881 /* NSGSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSceneController.m; sourceTree = "<group>"; };
 		6E4EBBDD1936E87200FC2546 /* NSString+CGColorRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CGColorRef.h"; sourceTree = "<group>"; };
 		6E4EBBDE1936E87200FC2546 /* NSString+CGColorRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CGColorRef.m"; sourceTree = "<group>"; };
 		6E7170B01950E11A00C5F0E2 /* NSGServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGServerController.h; sourceTree = "<group>"; };
@@ -366,8 +362,6 @@
 		6EB02C731935299000A732C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6E40F0A71955CBC900850881 /* NSGSceneController.h */,
-				6E40F0A81955CBC900850881 /* NSGSceneController.m */,
 				6E7170B01950E11A00C5F0E2 /* NSGServerController.h */,
 				6E7170B11950E11A00C5F0E2 /* NSGServerController.m */,
 			);
@@ -644,7 +638,6 @@
 				6E0C65DF195C63AB00841DB5 /* NSGLink.h in Headers */,
 				6E0C6653195C63B000841DB5 /* NSGPhysicsVehicleWheel.h in Headers */,
 				6E0C6617195C63AE00841DB5 /* NSGPhysicsBehavior.h in Headers */,
-				6E40F0A91955CBC900850881 /* NSGSceneController.h in Headers */,
 				6E4EBBDF1936E87200FC2546 /* NSString+CGColorRef.h in Headers */,
 				6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */,
 				6ED5C6391938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h in Headers */,
@@ -808,7 +801,6 @@
 				6E0C6648195C63B000841DB5 /* NSGPhysicsShape.m in Sources */,
 				6E0C6694195C63B200841DB5 /* NSGBox.m in Sources */,
 				6E0C6660195C63B100841DB5 /* NSGPhysicsLinearGravityField.m in Sources */,
-				6E40F0AA1955CBC900850881 /* NSGSceneController.m in Sources */,
 				6E7170B81950EA0900C5F0E2 /* NSGDefines.m in Sources */,
 				6E7170B31950E11A00C5F0E2 /* NSGServerController.m in Sources */,
 				6E0C6678195C63B100841DB5 /* NSGPhysicsBody.m in Sources */,
