@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h>
 #import <NetworkObjects/NetworkObjects.h>
-@class NSGScene;
 
 @protocol NSGSceneControllerDelegate;
 
@@ -25,7 +24,19 @@
 
 @property (nonatomic) id<NSGSceneControllerDelegate> delegate;
 
--(void)fetchScene;
+@property (nonatomic, readonly) SCNScene *scene;
+
+@property (nonatomic, readonly) SCNCamera *pointOfView;
+
+@property (nonatomic, readonly) id audioStream;
+
+/** Downloads the scene graph's elements if the cache is older than the specified date. */
+
+-(void)downloadSceneWithCacheNewerThanDate:(NSDate *)date;
+
+#pragma mark - Internal Methods
+
+-(void)didFetchSceneGraphElement:(NSManagedObject *)element;
 
 @end
 
@@ -33,9 +44,9 @@
 
 @protocol NSGSceneControllerDelegate <NSObject>
 
--(void)sceneController:(NSGSceneController *)sceneController didFetchScene:(NSGScene *)scene withError:(NSError *)error;
+-(void)sceneController:(NSGSceneController *)sceneController didFetchSceneWithError:(NSError *)error;
 
--(void)sceneController:(NSGSceneController *)sceneController didFetchSceneGraphElement:(NSManagedObject *)element withError:(NSError *)error;
+-(id)sceneController:(NSGSceneController *)sceneController sceneModelForSceneGraphElement:(NSManagedObject *)element;
 
 
 @end

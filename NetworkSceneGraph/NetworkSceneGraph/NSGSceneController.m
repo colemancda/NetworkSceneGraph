@@ -15,29 +15,42 @@
 
 @end
 
+@interface NSGSceneController (SceneKitConversion)
+
+-(void)addSceneGraphElementToScene:(NSManagedObject *)element;
+
+@end
+
 @interface NSGSceneController ()
+
+@property (nonatomic) SCNScene *scene;
+
+@property (nonatomic) SCNCamera *pointOfView;
 
 @end
 
 @implementation NSGSceneController
 
--(void)fetchScene
+- (instancetype)init
 {
-    // fetch the scene according to the resource ID
-    
+    self = [super init];
+    if (self) {
+        
+        self.scene = [SCNScene scene];
+        
+        self.pointOfView = [SCNCamera camera];
+        
+    }
+    return self;
+}
+
+-(void)downloadSceneWithCacheNewerThanDate:(NSDate *)date
+{
     [self.store fetchEntityWithName:@"NSGScene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
         
-        // call delegate
-        
-        [self.store.managedObjectContext performBlock:^{
-            
-            [self.delegate sceneController:self didFetchScene:(NSGScene *)managedObject withError:error];
-            
-        }];
-        
-        // cannot continue to fetch network scene graph if the scene cannot be fetched
-        
         if (error) {
+            
+            [self.delegate sceneController:self didFetchSceneWithError:error];
             
             return;
         }
@@ -47,6 +60,15 @@
         [self incrementallyFetchRelationshipValuesOfManagedObject:managedObject newerThanDate:[NSDate date]];
         
     }];
+    
+}
+
+-(void)didFetchSceneGraphElement:(NSManagedObject *)element
+{
+    if ([element.entity.name isEqualToString:@"NSG"]) {
+        <#statements#>
+    }
+    
 }
 
 @end
@@ -88,7 +110,7 @@
                     
                     [self.store.managedObjectContext performBlock:^{
                         
-                        [self.delegate sceneController:self didFetchSceneGraphElement:destinationObject withError:error];
+                        [self didFetchSceneGraphElement:managedObject];
                         
                         // download the relationship values of this managed object
                         
@@ -115,7 +137,7 @@
                             
                             [self.store.managedObjectContext performBlock:^{
                                 
-                                [self.delegate sceneController:self didFetchSceneGraphElement:destinationObject withError:error];
+                                [self didFetchSceneGraphElement:managedObject];
                                 
                                 // download the relationship values of this managed object
                                 
