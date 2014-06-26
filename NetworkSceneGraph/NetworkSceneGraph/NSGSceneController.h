@@ -14,6 +14,10 @@
 
 @interface NSGSceneController : NSObject
 
+#pragma mark - Configuration Properties
+
+// These properties setup the controller, should not be changed during a download operation.
+
 /** The store that will cache the managed object representation of the server's scene's. */
 
 @property (nonatomic) NOStore *store;
@@ -22,21 +26,21 @@
 
 @property (nonatomic) NSNumber *sceneResourceID;
 
+@property (nonatomic) NSNumber *destinationNodeResourceID;
+
 @property (nonatomic) id<NSGSceneControllerDelegate> delegate;
 
-@property (nonatomic, readonly) SCNScene *scene;
+#pragma mark - Output Properties
 
-@property (nonatomic, readonly) SCNCamera *pointOfView;
+// These properties are created and managed by the controller
+
+@property (nonatomic, readonly) NSGScene *scene;
 
 @property (nonatomic, readonly) id audioStream;
 
-/** Downloads the scene graph's elements if the cache is older than the specified date. */
+/** Downloads the scene graph's elements. */
 
--(void)downloadSceneWithCacheNewerThanDate:(NSDate *)date;
-
-#pragma mark - Internal Methods
-
--(void)didFetchSceneGraphElement:(NSManagedObject *)element;
+-(void)fetchScene;
 
 @end
 
@@ -45,8 +49,5 @@
 @protocol NSGSceneControllerDelegate <NSObject>
 
 -(void)sceneController:(NSGSceneController *)sceneController didFetchSceneWithError:(NSError *)error;
-
--(id)sceneController:(NSGSceneController *)sceneController sceneModelForSceneGraphElement:(NSManagedObject *)element;
-
 
 @end

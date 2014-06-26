@@ -20,7 +20,6 @@
 		6E7170B71950EA0900C5F0E2 /* NSGDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7170B51950EA0900C5F0E2 /* NSGDefines.h */; };
 		6E7170B81950EA0900C5F0E2 /* NSGDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7170B61950EA0900C5F0E2 /* NSGDefines.m */; };
 		6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBC63D8192FEF3E00FCF7C3 /* NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
 		6EBC63E2192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */; };
@@ -111,7 +110,6 @@
 			files = (
 				6E5CFB5E194D3751000DD664 /* NetworkObjects.framework in Frameworks */,
 				6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */,
-				6EBC63CC192FEF3E00FCF7C3 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +530,6 @@
 		6EBC63F1192FEF3E00FCF7C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -549,7 +546,6 @@
 		6EBC63F2192FEF3E00FCF7C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -28,9 +28,9 @@
 #import <NetworkSceneGraph/NSGMaterialPropertyContentImage.h>
 #import <NetworkSceneGraph/NSGMaterialPropertyContentImageURL.h>
 #import <NetworkSceneGraph/NSGSound.h>
-#import <NetworkSceneGraph/NSGSoundDataSource.h>
-#import <NetworkSceneGraph/NSGSoundDataSourceData.h>
-#import <NetworkSceneGraph/NSGSoundDataSourceHLSStream.h>
+#import <NetworkSceneGraph/NSGSoundSource.h>
+#import <NetworkSceneGraph/NSGSoundSourceData.h>
+#import <NetworkSceneGraph/NSGSoundSourceHLS.h>
 
 
 // Additions

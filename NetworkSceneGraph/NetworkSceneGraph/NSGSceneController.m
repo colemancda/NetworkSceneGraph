@@ -8,16 +8,13 @@
 
 #import "NSGSceneController.h"
 
-@interface NSGSceneController (IncrementallyFetchRelationshipValues)
+@interface NSGSceneController (DownloadScene)
 
--(void)incrementallyFetchRelationshipValuesOfManagedObject:(NSManagedObject *)managedObject
-                                             newerThanDate:(NSDate *)date;
+-(void)downloadRootNodesOfScene:(NSGScene *)scene;
 
-@end
+-(void)downloadPhysicsWorldOfScene:(NSGScene *)scene;
 
-@interface NSGSceneController (SceneKitConversion)
-
--(void)addSceneGraphElementToScene:(NSManagedObject *)element;
+-(void)downloadBackgroundOfScene:(NSGScene *)scene;
 
 @end
 
@@ -44,7 +41,7 @@
     return self;
 }
 
--(void)downloadSceneWithCacheNewerThanDate:(NSDate *)date
+-(void)downloadScene
 {
     [self.store fetchEntityWithName:@"NSGScene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
         
@@ -55,19 +52,25 @@
             return;
         }
         
-        // fetch scene graph elements (basically "faulting" relationships over the internet) recursively
+        // download scene...
         
-        [self incrementallyFetchRelationshipValuesOfManagedObject:managedObject newerThanDate:[NSDate date]];
+        [self downloadRootNodesOfScene];
+        
+        [self downloadScenePhysicsWorld];
+        
+        [self downloadSceneBackground];
         
     }];
     
 }
 
--(void)didFetchSceneGraphElement:(NSManagedObject *)element
+@end
+
+@implementation NSGSceneController (DownloadScene)
+
+-(void)downloadSceneRootNodes
 {
-    if ([element.entity.name isEqualToString:@"NSG"]) {
-        <#statements#>
-    }
+    
     
 }
 

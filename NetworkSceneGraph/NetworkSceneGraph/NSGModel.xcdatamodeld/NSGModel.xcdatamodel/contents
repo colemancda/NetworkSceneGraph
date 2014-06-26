@@ -29,7 +29,7 @@
         <attribute name="zFar" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="zNear" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="camera" inverseEntity="NSGNode" syncable="YES"/>
-        <relationship name="scenePointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" inverseName="pointOfView" inverseEntity="NSGScene" syncable="YES"/>
+        <relationship name="scenePointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGScene" syncable="YES"/>
     </entity>
     <entity name="NSGConstraint" isAbstract="YES" syncable="YES">
         <attribute name="influenceFactor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -463,9 +463,9 @@
         <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="sceneBackground" inverseEntity="NSGMaterialProperty" syncable="YES"/>
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsWorld" inverseName="scene" inverseEntity="NSGPhysicsWorld" syncable="YES"/>
-        <relationship name="pointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGCamera" inverseName="scenePointOfView" inverseEntity="NSGCamera" syncable="YES"/>
     </entity>
     <entity name="NSGSceneLink" parentEntity="NSGLink" syncable="YES">
+        <attribute name="destinationNodeResourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="sceneResourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="NSGSkinner" syncable="YES">
@@ -556,8 +556,8 @@
         <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
         <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
         <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
-        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="133"/>
-        <element name="NSGSceneLink" positionX="-468" positionY="-306" width="128" height="58"/>
+        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="118"/>
+        <element name="NSGSceneLink" positionX="-468" positionY="-306" width="128" height="28"/>
         <element name="NSGSkinner" positionX="-65" positionY="-576" width="128" height="163"/>
         <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="118"/>
         <element name="NSGSoundSource" positionX="-299" positionY="-396" width="128" height="75"/>
