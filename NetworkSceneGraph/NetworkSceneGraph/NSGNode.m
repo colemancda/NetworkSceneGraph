@@ -174,7 +174,42 @@
     
     // child nodes
     
+    // remove extra nodes first
     
+    if (managedObject.childNodes.count < self.childNodes.count) {
+        
+        NSUInteger extraNodes = self.childNodes.count - managedObject.childNodes.count;
+        
+        for (int i = 0; i < extraNodes; i++) {
+            
+            SCNNode *node = self.childNodes[i];
+            
+            [node removeFromParentNode];
+        }
+    }
+    
+    for (NSGNode *nodeManagedObject in managedObject.childNodes) {
+        
+        NSUInteger index = [managedObject.childNodes indexOfObject:nodeManagedObject];
+        
+        // get current scenekit node
+        
+        if (index <= self.childNodes.count - 1) {
+            
+            SCNNode *currentNode = self.childNodes[index];
+            
+            [currentNode setValuesForManagedObject:nodeManagedObject];
+        }
+        
+        else {
+            
+            SCNNode *newNode = [SCNNode node];
+            
+            [newNode setValuesForManagedObject:nodeManagedObject];
+            
+            [self addChildNode:newNode];
+        }
+    }
     
     // set scalar values
     
