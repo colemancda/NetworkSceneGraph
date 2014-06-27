@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGMaterialProperty, NSGNode, NSGPhysicsWorld;
 
@@ -25,5 +26,11 @@
 - (void)removeNodesObject:(NSGNode *)value;
 - (void)addNodes:(NSSet *)values;
 - (void)removeNodes:(NSSet *)values;
+
+@end
+
+@interface SCNScene (NetworkSceneGraphAdditions)
+
+-(void)setValuesForManagedObject:(NSGScene *)managedObject;
 
 @end

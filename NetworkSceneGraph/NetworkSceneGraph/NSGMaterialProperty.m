@@ -39,3 +39,12 @@
 @dynamic sceneBackground;
 
 @end
+
+@implementation SCNMaterialProperty (NetworkSceneGraphAdditions)
+
+-(void)setValuesForManagedObject:(NSGMaterialProperty *)managedObject
+{
+    self = [SCNMaterialProperty materialPropertyWithContents:nil];
+}
+
+@end

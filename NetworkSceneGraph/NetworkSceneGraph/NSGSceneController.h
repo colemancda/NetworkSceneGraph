@@ -45,7 +45,7 @@
 
 #pragma mark - Internal Methods
 
--(void)managedObjectContextObjectsDidChangeNotification:(NSNotification *)notification;
+
 
 @end
 
@@ -54,5 +54,8 @@
 @protocol NSGSceneControllerDelegate <NSObject>
 
 -(void)sceneController:(NSGSceneController *)sceneController didFetchSceneWithError:(NSError *)error;
+
+-(void)sceneController:(NSGSceneController *)sceneController didFetchNodeWithError:(NSError *)error;
+
 
 @end

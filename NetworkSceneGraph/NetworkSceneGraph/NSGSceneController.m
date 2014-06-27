@@ -7,8 +7,10 @@
 //
 
 #import "NSGSceneController.h"
+
 #import "NSGScene.h"
 #import "NSGNode.h"
+#import "NSGMaterialProperty.h"
 
 static void *KVOContext = &KVOContext;
 
@@ -22,71 +24,20 @@ static void *KVOContext = &KVOContext;
 
 @implementation NSGSceneController
 
--(void)dealloc
-{
-    if (self.store) {
-        
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-    }
-    
-    // KVO
-    
-    [self removeObserver:self
-              forKeyPath:NSStringFromSelector(@selector(store))
-                 context:KVOContext];
-}
-
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         
-        // KVO
+        self.scene = [SCNScene scene];
         
-        [self addObserver:self
-               forKeyPath:NSStringFromSelector(@selector(store))
-                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                  context:KVOContext];
+        self.pointOfView = [SCNCamera camera];
         
     }
     return self;
 }
 
-#pragma mark - KVO
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if (context == KVOContext) {
-        
-        if ([keyPath isEqualToString:NSStringFromSelector(@selector(store))]) {
-            
-            NOStore *oldValue = change[NSKeyValueChangeOldKey];
-            
-            NOStore *newValue = change[NSKeyValueChangeNewKey];
-            
-            if (oldValue) {
-                
-                [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                                name:NSManagedObjectContextObjectsDidChangeNotification
-                                                              object:oldValue];
-            }
-            
-            if (newValue) {
-                
-                [[NSNotificationCenter defaultCenter] addObserver:self
-                                                         selector:@selector(managedObjectContextObjectsDidChangeNotification:)
-                                                             name:NSManagedObjectContextObjectsDidChangeNotification
-                                                           object:newValue];
-            }
-            
-        }
-        
-    } else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
-}
-
-#pragma mark - Fetch Scnene
+#pragma mark - Fetch Scene
 
 -(void)fetchScene
 {
@@ -100,6 +51,16 @@ static void *KVOContext = &KVOContext;
         }
         
         NSGScene *scene = (NSGScene *)managedObject;
+        
+        // download background
+        
+        [self.store fetchEntityWithName:@"NSGMaterialProperty" resourceID:scene.background.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+           
+            NSGMaterialProperty *background = (NSGMaterialProperty *)managedObject;
+            
+            [self.scene.background configureUsingManagedObject:background];
+            
+        }];
         
         // download root nodes
         

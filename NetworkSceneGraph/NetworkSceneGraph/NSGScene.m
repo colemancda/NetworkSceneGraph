@@ -20,3 +20,16 @@
 @dynamic physicsWorld;
 
 @end
+
+@implementation SCNScene (NetworkSceneGraphAdditions)
+
+-(void)setValuesForManagedObject:(NSGScene *)managedObject
+{
+    if (managedObject.background) {
+        
+        [self.background setValuesForManagedObject:managedObject.background];
+    }
+    
+}
+
+@end

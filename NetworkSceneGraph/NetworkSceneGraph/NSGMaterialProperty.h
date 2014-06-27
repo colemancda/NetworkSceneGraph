@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+@import SceneKit;
 
 @class NSGLight, NSGMaterial, NSGMaterialPropertyContent, NSGScene;
 
@@ -35,5 +36,11 @@
 @property (nonatomic, retain) NSGMaterial *materialSpecular;
 @property (nonatomic, retain) NSGMaterial *materialTransparent;
 @property (nonatomic, retain) NSGScene *sceneBackground;
+
+@end
+
+@interface SCNMaterialProperty (NetworkSceneGraphAdditions)
+
+-(void)setValuesForManagedObject:(NSGMaterialProperty *)managedObject;
 
 @end
