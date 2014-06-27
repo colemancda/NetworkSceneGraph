@@ -2,37 +2,53 @@
 //  NSGSceneController.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/21/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h>
+#import <NetworkObjects/NetworkObjects.h>
+@class NSGScene;
+
+@protocol NSGSceneControllerDelegate;
 
 @interface NSGSceneController : NSObject
 
+#pragma mark - Configuration Properties
+
+// These properties setup the controller, should not be changed while fetching.
+
+/** The store that will cache the managed object representation of the server's scene's. */
+
+@property (nonatomic) NOStore *store;
+
+@property (nonatomic) NSURLSession *URLSession;
+
+@property (nonatomic) NSNumber *sceneResourceID;
+
+@property (nonatomic) NSNumber *destinationNodeResourceID;
+
+@property (nonatomic) id<NSGSceneControllerDelegate> delegate;
+
+#pragma mark - Output Properties
+
+// These properties are created and managed by the controller
+
 @property (nonatomic, readonly) SCNScene *scene;
 
-@property (nonatomic, readonly) NSUInteger rootNodesCount;
+@property (nonatomic, readonly) id audioStream;
 
--(IBAction)reloadScene:(id)sender;
+/** Downloads the scene graph's elements. */
 
-@end
-
-@protocol NSGSceneControllerDataSource <NSObject>
-
--(NSUInteger)numberOfRootNodesInSceneController:(NSGSceneController *)sceneController;
-
--(SCNNode *)sceneController:(NSGSceneController *)sceneController rootNodeForIndex:(NSUInteger)index;
-
--(SCNMaterialProperty *)backgroundForSceneController:(NSGSceneController *)sceneController;
-
--(SCNPhysicsWorld *)physicsWorld
+-(void)fetchScene;
 
 @end
+
+/** Delegate protocol for incrementally downloading and caching the network scene graph. */
 
 @protocol NSGSceneControllerDelegate <NSObject>
 
-
+-(void)sceneController:(NSGSceneController *)sceneController didFetchSceneWithError:(NSError *)error;
 
 @end

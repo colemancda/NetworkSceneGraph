@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGLight, NSGMaterial, NSGMaterialPropertyContent, NSGScene;
 
@@ -35,5 +36,7 @@
 @property (nonatomic, retain) NSGMaterial *materialSpecular;
 @property (nonatomic, retain) NSGMaterial *materialTransparent;
 @property (nonatomic, retain) NSGScene *sceneBackground;
+
+@property (nonatomic, readonly) SCNMaterialProperty *transientValue; // not KVO compliant
 
 @end

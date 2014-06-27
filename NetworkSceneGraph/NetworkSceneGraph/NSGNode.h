@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <SceneKit/SceneKit.h>
 
 @class NSGCamera, NSGGeometry, NSGLight, NSGLink, NSGLookAtConstraint, NSGMorpher, NSGNode, NSGParticleSystem, NSGScene, NSGSkinner, NSGSound;
 
@@ -55,6 +56,9 @@
 @property (nonatomic, retain) NSGSkinner *skinnerBones;
 @property (nonatomic, retain) NSGSkinner *skinnerSkeleton;
 @property (nonatomic, retain) NSGSound *sound;
+
+@property (nonatomic, readonly) SCNNode *transientValue; // not KVO compliant
+
 @end
 
 @interface NSGNode (CoreDataGeneratedAccessors)

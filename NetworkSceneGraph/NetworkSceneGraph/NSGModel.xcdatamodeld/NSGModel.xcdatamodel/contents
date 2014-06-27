@@ -553,7 +553,7 @@
         <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
         <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
         <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
-        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="28"/>
+        <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="103"/>
         <element name="NSGSceneLink" positionX="-468" positionY="-306" width="128" height="28"/>
         <element name="NSGSkinner" positionX="-65" positionY="-576" width="128" height="163"/>
         <element name="NSGSound" positionX="-369" positionY="-144" width="128" height="28"/>

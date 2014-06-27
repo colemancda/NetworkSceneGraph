@@ -8,15 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+@import SceneKit;
 
-@class NSGMaterialProperty, NSGNode;
+@class NSGMaterialProperty, NSGNode, NSGPhysicsWorld;
 
 @interface NSGScene : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGMaterialProperty *background;
 @property (nonatomic, retain) NSSet *nodes;
-@property (nonatomic, retain) NSManagedObject *physicsWorld;
+@property (nonatomic, retain) NSGPhysicsWorld *physicsWorld;
+
+@property (nonatomic, readonly) SCNScene *transientValue; // not KVO compliant
+
 @end
 
 @interface NSGScene (CoreDataGeneratedAccessors)
