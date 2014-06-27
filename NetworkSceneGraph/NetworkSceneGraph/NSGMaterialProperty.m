@@ -11,7 +11,7 @@
 #import "NSGMaterial.h"
 #import "NSGMaterialPropertyContent.h"
 #import "NSGScene.h"
-
+#import "NSString+CGColorRef.h"
 
 @implementation NSGMaterialProperty
 
@@ -44,7 +44,21 @@
 
 -(void)setValuesForManagedObject:(NSGMaterialProperty *)managedObject
 {
-    self = [SCNMaterialProperty materialPropertyWithContents:nil];
+    // borderColor
+    
+    CGColorRef managedObjectBorderColor = [managedObject.borderColor CGColorRefValue];
+    
+    CGColorRef currentBorderColor = (__bridge CGColorRef)(self.borderColor);
+    
+    if (!CGColorEqualToColor(managedObjectBorderColor, currentBorderColor)) {
+        
+        self.borderColor = (__bridge id)(managedObjectBorderColor);
+    }
+    
+    // contentsTransform
+    
+    
+    
 }
 
 @end

@@ -52,13 +52,15 @@ static void *KVOContext = &KVOContext;
         
         NSGScene *scene = (NSGScene *)managedObject;
         
+        [self.scene setValuesForManagedObject:scene];
+        
         // download background
         
         [self.store fetchEntityWithName:@"NSGMaterialProperty" resourceID:scene.background.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
            
             NSGMaterialProperty *background = (NSGMaterialProperty *)managedObject;
             
-            [self.scene.background configureUsingManagedObject:background];
+            [self.scene.background setValuesForManagedObject:background];
             
         }];
         

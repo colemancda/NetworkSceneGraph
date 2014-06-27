@@ -2,7 +2,7 @@
 //  NSGScene.m
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -10,7 +10,9 @@
 #import "NSGMaterialProperty.h"
 #import "NSGNode.h"
 #import "NSGPhysicsWorld.h"
-
+#import "NSGMaterialProperty.h"
+#import "NSGNode.h"
+#import "NSGPhysicsWorld.h"
 
 @implementation NSGScene
 
@@ -25,9 +27,29 @@
 
 -(void)setValuesForManagedObject:(NSGScene *)managedObject
 {
+    // background
+    
     if (managedObject.background) {
         
         [self.background setValuesForManagedObject:managedObject.background];
+    }
+    
+    // physics world
+    
+    if (managedObject.physicsWorld) {
+        
+        [self.physicsWorld setValuesForManagedObject:managedObject.physicsWorld];
+    }
+    
+    // nodes
+    
+    for (NSGNode *nodeManagedObject in managedObject.nodes) {
+        
+        NSInteger index = [managedObject.nodes indexOfObject:nodeManagedObject];
+        
+        // get current scenekit node
+        
+        SCNNode *currentNode = 
     }
     
 }

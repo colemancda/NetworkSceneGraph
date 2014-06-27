@@ -105,11 +105,11 @@
         <attribute name="attenuationStartDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="castsShadow" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="orthographicScale" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="shadowBias" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="shadowColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shadowColor" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="shadowMapSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="shadowMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="shadowRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -153,8 +153,8 @@
         <relationship name="transparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="materialTransparent" inverseEntity="NSGMaterialProperty" syncable="YES"/>
     </entity>
     <entity name="NSGMaterialProperty" representedClassName="NSGMaterialProperty" syncable="YES">
-        <attribute name="borderColor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contentsTransform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="borderColor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="contentsTransform" optional="YES" attributeType="Transformable" valueTransformerName="" syncable="YES"/>
         <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="magnificationFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mappingChannel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -181,7 +181,7 @@
         <relationship name="material" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="contents" inverseEntity="NSGMaterialProperty" syncable="YES"/>
     </entity>
     <entity name="NSGMaterialPropertyContentColor" representedClassName="NSGMaterialPropertyContentColor" parentEntity="NSGMaterialPropertyContent" syncable="YES">
-        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Transformable" syncable="YES"/>
     </entity>
     <entity name="NSGMaterialPropertyContentCubeMapImages" representedClassName="NSGMaterialPropertyContentCubeMapImages" parentEntity="NSGMaterialPropertyContent" syncable="YES">
         <attribute name="backImageData" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -200,7 +200,7 @@
     <entity name="NSGMorpher" representedClassName="NSGMorpher" syncable="YES">
         <attribute name="calculationMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="weights" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weights" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="morpher" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="targets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="morpher" inverseEntity="NSGGeometry" syncable="YES"/>
     </entity>
@@ -352,12 +352,12 @@
     <entity name="NSGPhysicsField" representedClassName="NSGPhysicsField" isAbstract="YES" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="direction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="direction" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="exclusive" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="falloffExponent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="halfExtent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="halfExtent" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="minimumDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="offset" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offset" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="scope" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -382,7 +382,7 @@
         <attribute name="shapeKeepAsCompound" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="shapeScale" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shapeType" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="transforms" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transforms" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGGeometry" inverseName="physicsShapeGeometry" inverseEntity="NSGGeometry" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="physicsShape" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="parentShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsShape" inverseName="shapes" inverseEntity="NSGPhysicsShape" syncable="YES"/>
@@ -416,14 +416,14 @@
         <relationship name="wheels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGPhysicsVehicleWheel" inverseName="vehicle" inverseEntity="NSGPhysicsVehicleWheel" syncable="YES"/>
     </entity>
     <entity name="NSGPhysicsVehicleWheel" representedClassName="NSGPhysicsVehicleWheel" syncable="YES">
-        <attribute name="axle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="connectionPosition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="axle" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="connectionPosition" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="frictionSlip" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="maximumSuspensionForce" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="maximumSuspensionTravel" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="radius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="steeringAxis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="steeringAxis" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="suspensionCompression" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="suspensionDamping" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="suspensionRestLength" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -433,7 +433,7 @@
     </entity>
     <entity name="NSGPhysicsVortexField" representedClassName="NSGPhysicsVortexField" parentEntity="NSGPhysicsField" syncable="YES"/>
     <entity name="NSGPhysicsWorld" representedClassName="NSGPhysicsWorld" syncable="YES">
-        <attribute name="gravity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gravity" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="timeStep" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="behaviors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGPhysicsBehavior" inverseName="physicsWorld" inverseEntity="NSGPhysicsBehavior" syncable="YES"/>
@@ -458,7 +458,7 @@
     <entity name="NSGScene" representedClassName="NSGScene" syncable="YES">
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGMaterialProperty" inverseName="sceneBackground" inverseEntity="NSGMaterialProperty" syncable="YES"/>
-        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NSGNode" inverseName="scene" inverseEntity="NSGNode" syncable="YES"/>
         <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSGPhysicsWorld" inverseName="scene" inverseEntity="NSGPhysicsWorld" syncable="YES"/>
     </entity>
     <entity name="NSGSceneLink" representedClassName="NSGSceneLink" parentEntity="NSGLink" syncable="YES">
@@ -500,7 +500,7 @@
     </entity>
     <entity name="NSGText" representedClassName="NSGText" parentEntity="NSGGeometry" syncable="YES">
         <attribute name="alignmentMode" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="attributedStringData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="attributedString" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="chamferRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="containerFrame" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="extrusionDepth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -519,17 +519,17 @@
         <element name="NSGIKConstraint" positionX="-387" positionY="-162" width="128" height="120"/>
         <element name="NSGIKConstraintMaxAllowedRotationAngleForJoint" positionX="-378" positionY="-153" width="128" height="88"/>
         <element name="NSGLevelOfDetail" positionX="-414" positionY="-189" width="128" height="88"/>
-        <element name="NSGLight" positionX="-254" positionY="297" width="128" height="358"/>
+        <element name="NSGLight" positionX="-254" positionY="297" width="128" height="360"/>
         <element name="NSGLink" positionX="-254" positionY="171" width="128" height="88"/>
         <element name="NSGLookAtConstraint" positionX="-396" positionY="-171" width="128" height="73"/>
         <element name="NSGMaterial" positionX="225" positionY="-117" width="128" height="30"/>
         <element name="NSGMaterialProperty" positionX="468" positionY="-342" width="128" height="373"/>
         <element name="NSGMaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
-        <element name="NSGMaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="58"/>
+        <element name="NSGMaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="60"/>
         <element name="NSGMaterialPropertyContentCubeMapImages" positionX="-396" positionY="-171" width="128" height="133"/>
         <element name="NSGMaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="NSGMaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
-        <element name="NSGMorpher" positionX="-396" positionY="-171" width="128" height="120"/>
+        <element name="NSGMorpher" positionX="-396" positionY="-171" width="128" height="118"/>
         <element name="NSGNode" positionX="-450" positionY="-90" width="128" height="675"/>
         <element name="NSGParticleSystem" positionX="-414" positionY="-180" width="128" height="958"/>
         <element name="NSGPhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
@@ -537,7 +537,7 @@
         <element name="NSGPhysicsBody" positionX="-414" positionY="-189" width="128" height="403"/>
         <element name="NSGPhysicsDragField" positionX="-414" positionY="-189" width="128" height="45"/>
         <element name="NSGPhysicsElectricField" positionX="-360" positionY="-126" width="128" height="45"/>
-        <element name="NSGPhysicsField" positionX="-378" positionY="-153" width="128" height="223"/>
+        <element name="NSGPhysicsField" positionX="-378" positionY="-153" width="128" height="225"/>
         <element name="NSGPhysicsHingeJoint" positionX="-396" positionY="-171" width="128" height="133"/>
         <element name="NSGPhysicsLinearGravityField" positionX="-396" positionY="-162" width="128" height="45"/>
         <element name="NSGPhysicsMagneticField" positionX="-414" positionY="-180" width="128" height="45"/>
@@ -550,7 +550,7 @@
         <element name="NSGPhysicsVehicle" positionX="-405" positionY="-180" width="128" height="88"/>
         <element name="NSGPhysicsVehicleWheel" positionX="-414" positionY="-189" width="128" height="253"/>
         <element name="NSGPhysicsVortexField" positionX="-405" positionY="-180" width="128" height="45"/>
-        <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
+        <element name="NSGPhysicsWorld" positionX="-414" positionY="-189" width="128" height="118"/>
         <element name="NSGPlane" positionX="-369" positionY="-144" width="128" height="133"/>
         <element name="NSGPyramid" positionX="-414" positionY="-189" width="128" height="133"/>
         <element name="NSGScene" positionX="-623" positionY="-45" width="128" height="103"/>
@@ -561,6 +561,6 @@
         <element name="NSGSoundSourceData" positionX="-495" positionY="-486" width="128" height="73"/>
         <element name="NSGSoundSourceHLS" positionX="-326" positionY="-504" width="128" height="60"/>
         <element name="NSGSphere" positionX="-74" positionY="-333" width="128" height="88"/>
-        <element name="NSGText" positionX="-612" positionY="-279" width="128" height="163"/>
+        <element name="NSGText" positionX="-612" positionY="-279" width="128" height="165"/>
     </elements>
 </model>

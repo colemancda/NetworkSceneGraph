@@ -13,7 +13,7 @@
 
 @interface NSGPhysicsWorld : NSManagedObject
 
-@property (nonatomic, retain) NSString * gravity;
+@property (nonatomic, retain) NSValue *gravity;
 @property (nonatomic, retain) NSNumber * speed;
 @property (nonatomic, retain) NSNumber * timeStep;
 @property (nonatomic, retain) NSSet *behaviors;
@@ -26,5 +26,11 @@
 - (void)removeBehaviorsObject:(NSGPhysicsBehavior *)value;
 - (void)addBehaviors:(NSSet *)values;
 - (void)removeBehaviors:(NSSet *)values;
+
+@end
+
+@interface SCNPhysicsWorld (NetworkSceneGraphAdditions)
+
+-(void)setValuesForManagedObject:(NSGPhysicsWorld *)managedObject;
 
 @end
