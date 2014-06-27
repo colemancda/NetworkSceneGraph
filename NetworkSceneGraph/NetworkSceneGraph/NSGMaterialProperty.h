@@ -2,20 +2,19 @@
 //  NSGMaterialProperty.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-@import SceneKit;
 
 @class NSGLight, NSGMaterial, NSGMaterialPropertyContent, NSGScene;
 
 @interface NSGMaterialProperty : NSManagedObject
 
-@property (nonatomic, retain) NSString * borderColor;
-@property (nonatomic, retain) NSString * contentsTransform;
+@property (nonatomic, retain) id borderColor;
+@property (nonatomic, retain) id contentsTransform;
 @property (nonatomic, retain) NSNumber * intensity;
 @property (nonatomic, retain) NSNumber * magnificationFilter;
 @property (nonatomic, retain) NSNumber * mappingChannel;
@@ -36,11 +35,5 @@
 @property (nonatomic, retain) NSGMaterial *materialSpecular;
 @property (nonatomic, retain) NSGMaterial *materialTransparent;
 @property (nonatomic, retain) NSGScene *sceneBackground;
-
-@end
-
-@interface SCNMaterialProperty (NetworkSceneGraphAdditions)
-
--(void)setValuesForManagedObject:(NSGMaterialProperty *)managedObject;
 
 @end

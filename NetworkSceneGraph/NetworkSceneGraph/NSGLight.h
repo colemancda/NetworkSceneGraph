@@ -2,7 +2,7 @@
 //  NSGLight.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -18,11 +18,11 @@
 @property (nonatomic, retain) NSNumber * attenuationStartDistance;
 @property (nonatomic, retain) NSNumber * castsShadow;
 @property (nonatomic, retain) NSNumber * categoryBitMask;
-@property (nonatomic, retain) NSString * color;
+@property (nonatomic, retain) id color;
 @property (nonatomic, retain) NSNumber * orthographicScale;
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSNumber * shadowBias;
-@property (nonatomic, retain) NSString * shadowColor;
+@property (nonatomic, retain) id shadowColor;
 @property (nonatomic, retain) NSNumber * shadowMapSize;
 @property (nonatomic, retain) NSNumber * shadowMode;
 @property (nonatomic, retain) NSNumber * shadowRadius;

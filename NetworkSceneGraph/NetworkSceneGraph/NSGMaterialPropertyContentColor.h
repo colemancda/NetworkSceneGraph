@@ -2,7 +2,7 @@
 //  NSGMaterialPropertyContentColor.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -13,6 +13,6 @@
 
 @interface NSGMaterialPropertyContentColor : NSGMaterialPropertyContent
 
-@property (nonatomic, retain) NSString * value;
+@property (nonatomic, retain) id value;
 
 @end

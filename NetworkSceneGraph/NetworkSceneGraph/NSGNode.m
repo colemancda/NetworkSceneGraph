@@ -2,7 +2,7 @@
 //  NSGNode.m
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -28,7 +28,6 @@
 
 @implementation NSGNode
 
-@dynamic categoryBitMask;
 @dynamic eulerAnglesX;
 @dynamic eulerAnglesY;
 @dynamic eulerAnglesZ;
@@ -38,7 +37,6 @@
 @dynamic orientationX;
 @dynamic orientationY;
 @dynamic orientationZ;
-@dynamic paused;
 @dynamic pivot;
 @dynamic positionX;
 @dynamic positionY;
@@ -51,6 +49,10 @@
 @dynamic scaleX;
 @dynamic scaleY;
 @dynamic scaleZ;
+@dynamic transform;
+@dynamic orientation;
+@dynamic worldTransform;
+@dynamic castsShadow;
 @dynamic camera;
 @dynamic childNodes;
 @dynamic constraints;

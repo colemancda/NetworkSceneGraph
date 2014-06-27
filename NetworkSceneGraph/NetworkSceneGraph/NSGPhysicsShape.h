@@ -2,7 +2,7 @@
 //  NSGPhysicsShape.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 @property (nonatomic, retain) NSNumber * shapeKeepAsCompound;
 @property (nonatomic, retain) NSString * shapeScale;
 @property (nonatomic, retain) NSString * shapeType;
-@property (nonatomic, retain) NSString * transforms;
+@property (nonatomic, retain) id transforms;
 @property (nonatomic, retain) NSGGeometry *geometry;
 @property (nonatomic, retain) NSGNode *node;
 @property (nonatomic, retain) NSGPhysicsShape *parentShape;

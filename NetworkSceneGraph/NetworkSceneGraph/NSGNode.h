@@ -2,7 +2,7 @@
 //  NSGNode.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -13,7 +13,6 @@
 
 @interface NSGNode : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * categoryBitMask;
 @property (nonatomic, retain) NSNumber * eulerAnglesX;
 @property (nonatomic, retain) NSNumber * eulerAnglesY;
 @property (nonatomic, retain) NSNumber * eulerAnglesZ;
@@ -23,8 +22,7 @@
 @property (nonatomic, retain) NSNumber * orientationX;
 @property (nonatomic, retain) NSNumber * orientationY;
 @property (nonatomic, retain) NSNumber * orientationZ;
-@property (nonatomic, retain) NSNumber * paused;
-@property (nonatomic, retain) NSString * pivot;
+@property (nonatomic, retain) id pivot;
 @property (nonatomic, retain) NSNumber * positionX;
 @property (nonatomic, retain) NSNumber * positionY;
 @property (nonatomic, retain) NSNumber * positionZ;
@@ -36,6 +34,10 @@
 @property (nonatomic, retain) NSNumber * scaleX;
 @property (nonatomic, retain) NSNumber * scaleY;
 @property (nonatomic, retain) NSNumber * scaleZ;
+@property (nonatomic, retain) id transform;
+@property (nonatomic, retain) id orientation;
+@property (nonatomic, retain) id worldTransform;
+@property (nonatomic, retain) NSNumber * castsShadow;
 @property (nonatomic, retain) NSGCamera *camera;
 @property (nonatomic, retain) NSOrderedSet *childNodes;
 @property (nonatomic, retain) NSOrderedSet *constraints;

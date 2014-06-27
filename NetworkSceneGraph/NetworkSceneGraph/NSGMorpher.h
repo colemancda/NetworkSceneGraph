@@ -2,7 +2,7 @@
 //  NSGMorpher.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * calculationMode;
 @property (nonatomic, retain) NSNumber * resourceID;
-@property (nonatomic, retain) NSString * weights;
+@property (nonatomic, retain) id weights;
 @property (nonatomic, retain) NSGNode *node;
 @property (nonatomic, retain) NSSet *targets;
 @end

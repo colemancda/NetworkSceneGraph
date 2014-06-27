@@ -2,7 +2,7 @@
 //  NSGText.h
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 @interface NSGText : NSGGeometry
 
 @property (nonatomic, retain) NSString * alignmentMode;
-@property (nonatomic, retain) NSData * attributedStringData;
+@property (nonatomic, retain) id attributedString;
 @property (nonatomic, retain) NSNumber * chamferRadius;
 @property (nonatomic, retain) NSNumber * containerFrame;
 @property (nonatomic, retain) NSNumber * extrusionDepth;

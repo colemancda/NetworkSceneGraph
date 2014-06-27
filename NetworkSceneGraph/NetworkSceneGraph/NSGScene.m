@@ -45,11 +45,27 @@
     
     for (NSGNode *nodeManagedObject in managedObject.nodes) {
         
-        NSInteger index = [managedObject.nodes indexOfObject:nodeManagedObject];
+        NSUInteger index = [managedObject.nodes indexOfObject:nodeManagedObject];
         
         // get current scenekit node
         
-        SCNNode *currentNode = 
+        if (index <= self.rootNode.childNodes.count - 1) {
+            
+            SCNNode *currentNode = self.rootNode.childNodes[index];
+            
+            [currentNode setValuesForManagedObject:nodeManagedObject];
+        }
+        
+        else {
+            
+            SCNNode *newNode = [SCNNode node];
+            
+            [newNode setValuesForManagedObject:nodeManagedObject];
+            
+            [self.rootNode addChildNode:newNode];
+        }
+        
+        
     }
     
 }

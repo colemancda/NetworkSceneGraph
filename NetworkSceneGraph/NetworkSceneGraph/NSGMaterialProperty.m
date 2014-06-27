@@ -2,7 +2,7 @@
 //  NSGMaterialProperty.m
 //  NetworkSceneGraph
 //
-//  Created by Alsey Coleman Miller on 6/26/14.
+//  Created by Alsey Coleman Miller on 6/27/14.
 //  Copyright (c) 2014 ColemanCDA. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 #import "NSGMaterial.h"
 #import "NSGMaterialPropertyContent.h"
 #import "NSGScene.h"
-#import "NSString+CGColorRef.h"
+
 
 @implementation NSGMaterialProperty
 
@@ -37,28 +37,5 @@
 @dynamic materialSpecular;
 @dynamic materialTransparent;
 @dynamic sceneBackground;
-
-@end
-
-@implementation SCNMaterialProperty (NetworkSceneGraphAdditions)
-
--(void)setValuesForManagedObject:(NSGMaterialProperty *)managedObject
-{
-    // borderColor
-    
-    CGColorRef managedObjectBorderColor = [managedObject.borderColor CGColorRefValue];
-    
-    CGColorRef currentBorderColor = (__bridge CGColorRef)(self.borderColor);
-    
-    if (!CGColorEqualToColor(managedObjectBorderColor, currentBorderColor)) {
-        
-        self.borderColor = (__bridge id)(managedObjectBorderColor);
-    }
-    
-    // contentsTransform
-    
-    
-    
-}
 
 @end
