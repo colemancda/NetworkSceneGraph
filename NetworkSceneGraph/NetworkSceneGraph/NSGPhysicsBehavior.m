@@ -7,6 +7,7 @@
 //
 
 #import "NSGPhysicsBehavior.h"
+#import "NSGPhysicsWorld.h"
 
 
 @implementation NSGPhysicsBehavior

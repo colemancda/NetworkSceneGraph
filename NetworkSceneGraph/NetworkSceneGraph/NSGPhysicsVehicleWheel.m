@@ -8,6 +8,7 @@
 
 #import "NSGPhysicsVehicleWheel.h"
 #import "NSGNode.h"
+#import "NSGPhysicsVehicle.h"
 
 
 @implementation NSGPhysicsVehicleWheel

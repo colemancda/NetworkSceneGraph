@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSGGeometry, NSGNode, NSGPhysicsShape;
+@class NSGGeometry, NSGNode, NSGPhysicsBody, NSGPhysicsShape;
 
 @interface NSGPhysicsShape : NSManagedObject
 
@@ -20,7 +20,7 @@
 @property (nonatomic, retain) NSGGeometry *geometry;
 @property (nonatomic, retain) NSGNode *node;
 @property (nonatomic, retain) NSGPhysicsShape *parentShape;
-@property (nonatomic, retain) NSManagedObject *physicsBody;
+@property (nonatomic, retain) NSGPhysicsBody *physicsBody;
 @property (nonatomic, retain) NSSet *shapes;
 @end
 

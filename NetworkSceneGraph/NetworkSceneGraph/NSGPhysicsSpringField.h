@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "NSGPhysicsField.h"
 
 
-@interface NSGPhysicsSpringField : NSManagedObject
+@interface NSGPhysicsSpringField : NSGPhysicsField
 
 
 @end

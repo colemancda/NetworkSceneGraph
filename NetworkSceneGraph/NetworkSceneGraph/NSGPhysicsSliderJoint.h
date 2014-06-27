@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "NSGPhysicsBehavior.h"
 
+@class NSGPhysicsBody;
 
 @interface NSGPhysicsSliderJoint : NSGPhysicsBehavior
 
@@ -25,7 +26,7 @@
 @property (nonatomic, retain) NSNumber * motorMaximumTorque;
 @property (nonatomic, retain) NSNumber * motorTargetAngularVelocity;
 @property (nonatomic, retain) NSNumber * motorTargetLinearVelocity;
-@property (nonatomic, retain) NSManagedObject *bodyA;
-@property (nonatomic, retain) NSManagedObject *bodyB;
+@property (nonatomic, retain) NSGPhysicsBody *bodyA;
+@property (nonatomic, retain) NSGPhysicsBody *bodyB;
 
 @end

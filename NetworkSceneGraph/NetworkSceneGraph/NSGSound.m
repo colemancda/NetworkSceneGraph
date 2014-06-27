@@ -13,10 +13,10 @@
 
 @implementation NSGSound
 
-@dynamic resourceID;
 @dynamic gain;
 @dynamic pitch;
-@dynamic soundSource;
+@dynamic resourceID;
 @dynamic node;
+@dynamic soundSource;
 
 @end

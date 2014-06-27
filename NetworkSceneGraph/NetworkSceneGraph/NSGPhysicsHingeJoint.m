@@ -7,6 +7,7 @@
 //
 
 #import "NSGPhysicsHingeJoint.h"
+#import "NSGPhysicsBody.h"
 
 
 @implementation NSGPhysicsHingeJoint

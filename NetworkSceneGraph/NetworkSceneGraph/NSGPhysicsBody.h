@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSGNode, NSGPhysicsBallSocketJoint, NSGPhysicsHingeJoint, NSGPhysicsShape, NSGPhysicsSliderJoint;
+@class NSGNode, NSGPhysicsBallSocketJoint, NSGPhysicsHingeJoint, NSGPhysicsShape, NSGPhysicsSliderJoint, NSGPhysicsVehicle;
 
 @interface NSGPhysicsBody : NSManagedObject
 
@@ -36,6 +36,6 @@
 @property (nonatomic, retain) NSGPhysicsShape *physicsShape;
 @property (nonatomic, retain) NSGPhysicsSliderJoint *physicsSliderJointBodyA;
 @property (nonatomic, retain) NSGPhysicsSliderJoint *physicsSliderJointBodyB;
-@property (nonatomic, retain) NSManagedObject *vehicle;
+@property (nonatomic, retain) NSGPhysicsVehicle *vehicle;
 
 @end

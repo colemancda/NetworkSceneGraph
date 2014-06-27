@@ -13,7 +13,7 @@
 
 @interface NSGSceneLink : NSGLink
 
-@property (nonatomic, retain) NSNumber * sceneResourceID;
 @property (nonatomic, retain) NSNumber * destinationNodeResourceID;
+@property (nonatomic, retain) NSNumber * sceneResourceID;
 
 @end

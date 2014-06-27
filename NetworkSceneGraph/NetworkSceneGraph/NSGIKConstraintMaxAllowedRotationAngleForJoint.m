@@ -7,6 +7,7 @@
 //
 
 #import "NSGIKConstraintMaxAllowedRotationAngleForJoint.h"
+#import "NSGIKConstraint.h"
 #import "NSGNode.h"
 
 

@@ -10,6 +10,8 @@
 #import "NSGScene.h"
 #import "NSGNode.h"
 
+static void *KVOContext = &KVOContext;
+
 @interface NSGSceneController ()
 
 @property (nonatomic) SCNScene *scene;
@@ -20,14 +22,71 @@
 
 @implementation NSGSceneController
 
+-(void)dealloc
+{
+    if (self.store) {
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
+    
+    // KVO
+    
+    [self removeObserver:self
+              forKeyPath:NSStringFromSelector(@selector(store))
+                 context:KVOContext];
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         
+        // KVO
+        
+        [self addObserver:self
+               forKeyPath:NSStringFromSelector(@selector(store))
+                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                  context:KVOContext];
+        
     }
     return self;
 }
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        
+        if ([keyPath isEqualToString:NSStringFromSelector(@selector(store))]) {
+            
+            NOStore *oldValue = change[NSKeyValueChangeOldKey];
+            
+            NOStore *newValue = change[NSKeyValueChangeNewKey];
+            
+            if (oldValue) {
+                
+                [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                                name:NSManagedObjectContextObjectsDidChangeNotification
+                                                              object:oldValue];
+            }
+            
+            if (newValue) {
+                
+                [[NSNotificationCenter defaultCenter] addObserver:self
+                                                         selector:@selector(managedObjectContextObjectsDidChangeNotification:)
+                                                             name:NSManagedObjectContextObjectsDidChangeNotification
+                                                           object:newValue];
+            }
+            
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+#pragma mark - Fetch Scnene
 
 -(void)fetchScene
 {
@@ -40,36 +99,27 @@
             return;
         }
         
-        self.scene = [SCNScene scene];
-        
-        self.pointOfView = [SCNCamera camera];
-        
         NSGScene *scene = (NSGScene *)managedObject;
         
         // download root nodes
         
         for (NSGNode *rootNode in scene.nodes) {
             
-            SCNNode *sceneNode = [SCNNode node];
+            // fetch
             
-            sceneNode.name 
             
-            __block NSGNode *node;
-            
-            // fetch from server
-            
-            while (!node) {
-                
-                [self.store fetchEntityWithName:@"NSGNode" resourceID:rootNode.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
-                   
-                    
-                    
-                }];
-            }
             
         }
         
     }];
+    
+}
+
+#pragma mark - Internal Methods
+
+-(void)managedObjectContextObjectsDidChangeNotification:(NSNotification *)notification
+{
+    
     
 }
 

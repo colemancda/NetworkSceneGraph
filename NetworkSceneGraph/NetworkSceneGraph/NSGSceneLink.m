@@ -11,7 +11,7 @@
 
 @implementation NSGSceneLink
 
-@dynamic sceneResourceID;
 @dynamic destinationNodeResourceID;
+@dynamic sceneResourceID;
 
 @end

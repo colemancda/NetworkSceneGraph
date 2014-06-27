@@ -7,6 +7,7 @@
 //
 
 #import "NSGPhysicsSliderJoint.h"
+#import "NSGPhysicsBody.h"
 
 
 @implementation NSGPhysicsSliderJoint

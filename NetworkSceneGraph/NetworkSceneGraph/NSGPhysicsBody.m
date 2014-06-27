@@ -12,6 +12,7 @@
 #import "NSGPhysicsHingeJoint.h"
 #import "NSGPhysicsShape.h"
 #import "NSGPhysicsSliderJoint.h"
+#import "NSGPhysicsVehicle.h"
 
 
 @implementation NSGPhysicsBody

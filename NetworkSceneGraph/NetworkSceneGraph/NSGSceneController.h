@@ -43,6 +43,10 @@
 
 -(void)fetchScene;
 
+#pragma mark - Internal Methods
+
+-(void)managedObjectContextObjectsDidChangeNotification:(NSNotification *)notification;
+
 @end
 
 /** Delegate protocol for incrementally downloading and caching the network scene graph. */

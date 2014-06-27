@@ -13,10 +13,10 @@
 
 @interface NSGSound : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSNumber * gain;
 @property (nonatomic, retain) NSNumber * pitch;
-@property (nonatomic, retain) NSGSoundDataSource *soundSource;
+@property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGNode *node;
+@property (nonatomic, retain) NSGSoundDataSource *soundSource;
 
 @end

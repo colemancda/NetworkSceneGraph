@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "NSGConstraint.h"
 
 @class NSGNode;
 
-@interface NSGLookAtConstraint : NSManagedObject
+@interface NSGLookAtConstraint : NSGConstraint
 
 @property (nonatomic, retain) NSNumber * gimbalLockEnabled;
 @property (nonatomic, retain) NSGNode *target;

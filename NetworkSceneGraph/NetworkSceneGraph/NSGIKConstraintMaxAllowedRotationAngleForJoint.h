@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSGNode;
+@class NSGIKConstraint, NSGNode;
 
 @interface NSGIKConstraintMaxAllowedRotationAngleForJoint : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * angle;
-@property (nonatomic, retain) NSManagedObject *constraint;
+@property (nonatomic, retain) NSGIKConstraint *constraint;
 @property (nonatomic, retain) NSGNode *node;
 
 @end

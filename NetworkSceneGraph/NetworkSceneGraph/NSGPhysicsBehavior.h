@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class NSGPhysicsWorld;
 
 @interface NSGPhysicsBehavior : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * resourceID;
-@property (nonatomic, retain) NSManagedObject *physicsWorld;
+@property (nonatomic, retain) NSGPhysicsWorld *physicsWorld;
 
 @end

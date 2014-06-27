@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSGNode;
+@class NSGNode, NSGPhysicsVehicle;
 
 @interface NSGPhysicsVehicleWheel : NSManagedObject
 
@@ -26,6 +26,6 @@
 @property (nonatomic, retain) NSNumber * suspensionRestLength;
 @property (nonatomic, retain) NSNumber * suspensionStiffness;
 @property (nonatomic, retain) NSGNode *node;
-@property (nonatomic, retain) NSManagedObject *vehicle;
+@property (nonatomic, retain) NSGPhysicsVehicle *vehicle;
 
 @end

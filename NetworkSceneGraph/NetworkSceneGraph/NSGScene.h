@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-@import SceneKit;
 
 @class NSGMaterialProperty, NSGNode, NSGPhysicsWorld;
 
@@ -18,9 +17,6 @@
 @property (nonatomic, retain) NSGMaterialProperty *background;
 @property (nonatomic, retain) NSSet *nodes;
 @property (nonatomic, retain) NSGPhysicsWorld *physicsWorld;
-
-@property (nonatomic, readonly) SCNScene *transientValue; // not KVO compliant
-
 @end
 
 @interface NSGScene (CoreDataGeneratedAccessors)

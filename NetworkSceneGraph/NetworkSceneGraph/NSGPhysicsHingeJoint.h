@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "NSGPhysicsBehavior.h"
 
+@class NSGPhysicsBody;
 
 @interface NSGPhysicsHingeJoint : NSGPhysicsBehavior
 
@@ -17,7 +18,7 @@
 @property (nonatomic, retain) NSString * anchorB;
 @property (nonatomic, retain) NSString * axisA;
 @property (nonatomic, retain) NSString * axisB;
-@property (nonatomic, retain) NSManagedObject *bodyA;
-@property (nonatomic, retain) NSManagedObject *bodyB;
+@property (nonatomic, retain) NSGPhysicsBody *bodyA;
+@property (nonatomic, retain) NSGPhysicsBody *bodyB;
 
 @end

@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import <SceneKit/SceneKit.h>
 
-@class NSGCamera, NSGGeometry, NSGLight, NSGLink, NSGLookAtConstraint, NSGMorpher, NSGNode, NSGParticleSystem, NSGScene, NSGSkinner, NSGSound;
+@class NSGCamera, NSGConstraint, NSGGeometry, NSGIKConstraint, NSGIKConstraintMaxAllowedRotationAngleForJoint, NSGLight, NSGLink, NSGLookAtConstraint, NSGMorpher, NSGNode, NSGParticleSystem, NSGPhysicsBody, NSGPhysicsShape, NSGPhysicsVehicleWheel, NSGScene, NSGSkinner, NSGSound;
 
 @interface NSGNode : NSManagedObject
 
@@ -49,16 +48,13 @@
 @property (nonatomic, retain) NSGMorpher *morpher;
 @property (nonatomic, retain) NSGNode *parentNode;
 @property (nonatomic, retain) NSSet *particleSystemColliderNodes;
-@property (nonatomic, retain) NSManagedObject *physicsbody;
-@property (nonatomic, retain) NSManagedObject *physicsShape;
-@property (nonatomic, retain) NSManagedObject *physicsVehicleWheelNode;
+@property (nonatomic, retain) NSGPhysicsBody *physicsbody;
+@property (nonatomic, retain) NSGPhysicsShape *physicsShape;
+@property (nonatomic, retain) NSGPhysicsVehicleWheel *physicsVehicleWheelNode;
 @property (nonatomic, retain) NSGScene *scene;
 @property (nonatomic, retain) NSGSkinner *skinnerBones;
 @property (nonatomic, retain) NSGSkinner *skinnerSkeleton;
 @property (nonatomic, retain) NSGSound *sound;
-
-@property (nonatomic, readonly) SCNNode *transientValue; // not KVO compliant
-
 @end
 
 @interface NSGNode (CoreDataGeneratedAccessors)
@@ -73,23 +69,23 @@
 - (void)removeChildNodesObject:(NSGNode *)value;
 - (void)addChildNodes:(NSOrderedSet *)values;
 - (void)removeChildNodes:(NSOrderedSet *)values;
-- (void)insertObject:(NSManagedObject *)value inConstraintsAtIndex:(NSUInteger)idx;
+- (void)insertObject:(NSGConstraint *)value inConstraintsAtIndex:(NSUInteger)idx;
 - (void)removeObjectFromConstraintsAtIndex:(NSUInteger)idx;
 - (void)insertConstraints:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
 - (void)removeConstraintsAtIndexes:(NSIndexSet *)indexes;
-- (void)replaceObjectInConstraintsAtIndex:(NSUInteger)idx withObject:(NSManagedObject *)value;
+- (void)replaceObjectInConstraintsAtIndex:(NSUInteger)idx withObject:(NSGConstraint *)value;
 - (void)replaceConstraintsAtIndexes:(NSIndexSet *)indexes withConstraints:(NSArray *)values;
-- (void)addConstraintsObject:(NSManagedObject *)value;
-- (void)removeConstraintsObject:(NSManagedObject *)value;
+- (void)addConstraintsObject:(NSGConstraint *)value;
+- (void)removeConstraintsObject:(NSGConstraint *)value;
 - (void)addConstraints:(NSOrderedSet *)values;
 - (void)removeConstraints:(NSOrderedSet *)values;
-- (void)addIkConstraintChainRootNodeObject:(NSManagedObject *)value;
-- (void)removeIkConstraintChainRootNodeObject:(NSManagedObject *)value;
+- (void)addIkConstraintChainRootNodeObject:(NSGIKConstraint *)value;
+- (void)removeIkConstraintChainRootNodeObject:(NSGIKConstraint *)value;
 - (void)addIkConstraintChainRootNode:(NSSet *)values;
 - (void)removeIkConstraintChainRootNode:(NSSet *)values;
 
-- (void)addIkConstraintMaxAllowedRotationAngleForJointObject:(NSManagedObject *)value;
-- (void)removeIkConstraintMaxAllowedRotationAngleForJointObject:(NSManagedObject *)value;
+- (void)addIkConstraintMaxAllowedRotationAngleForJointObject:(NSGIKConstraintMaxAllowedRotationAngleForJoint *)value;
+- (void)removeIkConstraintMaxAllowedRotationAngleForJointObject:(NSGIKConstraintMaxAllowedRotationAngleForJoint *)value;
 - (void)addIkConstraintMaxAllowedRotationAngleForJoint:(NSSet *)values;
 - (void)removeIkConstraintMaxAllowedRotationAngleForJoint:(NSSet *)values;
 

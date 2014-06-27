@@ -7,6 +7,7 @@
 //
 
 #import "NSGPhysicsBallSocketJoint.h"
+#import "NSGPhysicsBody.h"
 
 
 @implementation NSGPhysicsBallSocketJoint

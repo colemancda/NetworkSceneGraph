@@ -9,6 +9,7 @@
 #import "NSGPhysicsShape.h"
 #import "NSGGeometry.h"
 #import "NSGNode.h"
+#import "NSGPhysicsBody.h"
 #import "NSGPhysicsShape.h"
 
 

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import <SceneKit/SceneKit.h>
 
 @class NSGPhysicsBehavior, NSGScene;
 
@@ -19,9 +18,6 @@
 @property (nonatomic, retain) NSNumber * timeStep;
 @property (nonatomic, retain) NSSet *behaviors;
 @property (nonatomic, retain) NSGScene *scene;
-
-@property (nonatomic, readonly) SCNPhysicsWorld *transientValue; // not KVO compliant
-
 @end
 
 @interface NSGPhysicsWorld (CoreDataGeneratedAccessors)
