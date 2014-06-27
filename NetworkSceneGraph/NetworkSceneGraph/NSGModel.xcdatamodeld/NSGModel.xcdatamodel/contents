@@ -251,7 +251,7 @@
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" inverseName="node" inverseEntity="Sound" syncable="YES"/>
     </entity>
     <entity name="ParticleSystem" representedClassName="NSGParticleSystem" syncable="YES">
-        <attribute name="acceleration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="acceleration" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="affectedByGravity" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="affectedByPhysicsFields" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="birthDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -263,7 +263,7 @@
         <attribute name="dampingFactor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="emissionDuration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="emissionDurationVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="emittingDirection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emittingDirection" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="fresnelExponent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="idleDuration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="idleDurationVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -284,8 +284,8 @@
         <attribute name="particleAngularVelocityVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="particleBounce" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="particleBounceVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="particleColor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="particleColorVariation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="particleColor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="particleColorVariation" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="particleDiesOnCollision" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="particleFriction" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="particleFrictionVariation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -436,8 +436,8 @@
     <entity name="PhysicsVortexField" representedClassName="NSGPhysicsVortexField" parentEntity="PhysicsField" syncable="YES"/>
     <entity name="PhysicsWorld" representedClassName="NSGPhysicsWorld" syncable="YES">
         <attribute name="gravity" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="timeStep" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="1" syncable="YES"/>
+        <attribute name="timeStep" optional="YES" attributeType="Double" syncable="YES"/>
         <relationship name="behaviors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhysicsBehavior" inverseName="physicsWorld" inverseEntity="PhysicsBehavior" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scene" inverseName="physicsWorld" inverseEntity="Scene" syncable="YES"/>
     </entity>
@@ -468,8 +468,8 @@
         <attribute name="sceneResourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Skinner" representedClassName="NSGSkinner" syncable="YES">
-        <attribute name="baseGeometryBindTransform" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="boneInverseBindTransforms" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="baseGeometryBindTransform" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="boneInverseBindTransforms" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="baseGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="skinnerBaseGeometry" inverseEntity="Geometry" syncable="YES"/>
         <relationship name="boneIndices" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeometrySource" inverseName="skinnerBoneIndices" inverseEntity="GeometrySource" syncable="YES"/>
@@ -478,7 +478,7 @@
         <relationship name="skeleton" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="skinnerSkeleton" inverseEntity="Node" syncable="YES"/>
     </entity>
     <entity name="Sound" representedClassName="NSGSound" syncable="YES">
-        <attribute name="gain" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="gain" optional="YES" attributeType="Float" defaultValueString="1" syncable="YES"/>
         <attribute name="pitch" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="sound" inverseEntity="Node" syncable="YES"/>
