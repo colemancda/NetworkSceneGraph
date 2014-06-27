@@ -24,11 +24,8 @@
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSValue *rotation;
 @property (nonatomic, retain) NSValue *scale;
-@property (nonatomic, retain) NSValue *transform;
 @property (nonatomic, retain) NSValue *orientation;
-@property (nonatomic, retain) NSValue *worldTransform;
 @property (nonatomic, retain) NSNumber * castsShadow;
-@property (nonatomic, retain) NSNumber * categoryBitMask;
 @property (nonatomic, retain) NSGCamera *camera;
 @property (nonatomic, retain) NSOrderedSet *childNodes;
 @property (nonatomic, retain) NSOrderedSet *constraints;
@@ -41,7 +38,7 @@
 @property (nonatomic, retain) NSGMorpher *morpher;
 @property (nonatomic, retain) NSGNode *parentNode;
 @property (nonatomic, retain) NSSet *particleSystemColliderNodes;
-@property (nonatomic, retain) NSGPhysicsBody *physicsbody;
+@property (nonatomic, retain) NSGPhysicsBody *physicsBody;
 @property (nonatomic, retain) NSGPhysicsShape *physicsShape;
 @property (nonatomic, retain) NSGPhysicsVehicleWheel *physicsVehicleWheelNode;
 @property (nonatomic, retain) NSGScene *scene;

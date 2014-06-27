@@ -39,7 +39,11 @@
 
 /** Downloads the scene graph's elements. */
 
--(void)fetchScene;
+-(void)loadScene;
+
+-(void)reloadScene;
+
+-(void)stopLoadingScene;
 
 #pragma mark - Internal Methods
 

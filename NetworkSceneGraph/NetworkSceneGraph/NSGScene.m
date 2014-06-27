@@ -25,6 +25,32 @@
 
 @implementation SCNScene (NetworkSceneGraphAdditions)
 
++(instancetype)sceneWithValuesForManagedObject:(NSGScene *)managedObject
+{
+    // background
+    
+    if (managedObject.background) {
+        
+        [self.background setValuesForManagedObject:managedObject.background];
+    }
+    
+    // physics world
+    
+    if (managedObject.physicsWorld) {
+        
+        [self.physicsWorld setValuesForManagedObject:managedObject.physicsWorld];
+    }
+    
+    // nodes
+    
+    for (NSGNode *nodeManagedObject in managedObject.nodes) {
+        
+        SCNNode *node = [SCNNode nodeWithValuesForManagedObject:nodeManagedObject];
+        
+        [self.rootNode addChildNode:node];
+    }
+}
+
 -(void)setValuesForManagedObject:(NSGScene *)managedObject
 {
     // background

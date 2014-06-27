@@ -206,7 +206,6 @@
     </entity>
     <entity name="Node" representedClassName="NSGNode" syncable="YES">
         <attribute name="castsShadow" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
-        <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
         <attribute name="eulerAngles" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="hidden" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="opacity" optional="YES" attributeType="Double" minValueString="0" maxValueString="1" defaultValueString="1" syncable="YES"/>
@@ -218,8 +217,6 @@
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="rotation" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="scale" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="transform" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="worldTransform" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="node" inverseEntity="Camera" syncable="YES"/>
         <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Node" inverseName="parentNode" inverseEntity="Node" syncable="YES"/>
         <relationship name="constraints" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Constraint" inverseName="node" inverseEntity="Constraint" syncable="YES"/>
@@ -232,7 +229,7 @@
         <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Morpher" inverseName="node" inverseEntity="Morpher" syncable="YES"/>
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="childNodes" inverseEntity="Node" syncable="YES"/>
         <relationship name="particleSystemColliderNodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ParticleSystem" inverseName="colliderNodes" inverseEntity="ParticleSystem" syncable="YES"/>
-        <relationship name="physicsbody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsBody" inverseName="node" inverseEntity="PhysicsBody" syncable="YES"/>
+        <relationship name="physicsBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsBody" inverseName="node" inverseEntity="PhysicsBody" syncable="YES"/>
         <relationship name="physicsShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsShape" inverseName="node" inverseEntity="PhysicsShape" syncable="YES"/>
         <relationship name="physicsVehicleWheelNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsVehicleWheel" inverseName="node" inverseEntity="PhysicsVehicleWheel" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scene" inverseName="nodes" inverseEntity="Scene" syncable="YES"/>
@@ -316,21 +313,19 @@
     </entity>
     <entity name="PhysicsBody" representedClassName="NSGPhysicsBody" syncable="YES">
         <attribute name="allowsResting" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="angularDamping" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="angularVelocity" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="angularVelocityFactor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="collisionBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="damping" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="friction" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="mass" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="angularDamping" optional="YES" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.1" syncable="YES"/>
+        <attribute name="angularVelocity" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="angularVelocityFactor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="damping" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.1" syncable="YES"/>
+        <attribute name="friction" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.5" syncable="YES"/>
+        <attribute name="mass" optional="YES" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="restitution" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="rollingFriction" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="velocity" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="velocityFactor" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="physicsbody" inverseEntity="Node" syncable="YES"/>
+        <attribute name="rollingFriction" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="2" defaultValueString="2" syncable="YES"/>
+        <attribute name="velocity" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="velocityFactor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="physicsBody" inverseEntity="Node" syncable="YES"/>
         <relationship name="physicsBallSocketJointBodyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsBallSocketJoint" inverseName="bodyA" inverseEntity="PhysicsBallSocketJoint" syncable="YES"/>
         <relationship name="physicsBallSocketJointBodyB" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsBallSocketJoint" inverseName="bodyB" inverseEntity="PhysicsBallSocketJoint" syncable="YES"/>
         <relationship name="physicsHingeJointBodyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsHingeJoint" inverseName="bodyA" inverseEntity="PhysicsHingeJoint" syncable="YES"/>
@@ -524,11 +519,11 @@
         <element name="MaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="58"/>
         <element name="MaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
         <element name="Morpher" positionX="-396" positionY="-171" width="128" height="118"/>
-        <element name="Node" positionX="-846" positionY="-154" width="128" height="568"/>
+        <element name="Node" positionX="-846" positionY="-154" width="128" height="523"/>
         <element name="ParticleSystem" positionX="-243" positionY="239" width="128" height="958"/>
         <element name="PhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="PhysicsBehavior" positionX="-432" positionY="0" width="128" height="73"/>
-        <element name="PhysicsBody" positionX="-414" positionY="-189" width="128" height="403"/>
+        <element name="PhysicsBody" positionX="-414" positionY="-189" width="128" height="373"/>
         <element name="PhysicsDragField" positionX="-414" positionY="-189" width="128" height="43"/>
         <element name="PhysicsElectricField" positionX="-360" positionY="-126" width="128" height="43"/>
         <element name="PhysicsField" positionX="-378" positionY="-153" width="128" height="223"/>

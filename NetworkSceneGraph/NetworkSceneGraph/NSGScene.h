@@ -36,8 +36,6 @@
 
 @interface SCNScene (NetworkSceneGraphAdditions)
 
-+(instancetype)sceneWithValuesForManagedObject:(NSGScene *)managedObject;
-
 -(void)setValuesForManagedObject:(NSGScene *)managedObject;
 
 @end

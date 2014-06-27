@@ -38,11 +38,8 @@
 @dynamic resourceID;
 @dynamic rotation;
 @dynamic scale;
-@dynamic transform;
 @dynamic orientation;
-@dynamic worldTransform;
 @dynamic castsShadow;
-@dynamic categoryBitMask;
 @dynamic camera;
 @dynamic childNodes;
 @dynamic constraints;
@@ -55,7 +52,7 @@
 @dynamic morpher;
 @dynamic parentNode;
 @dynamic particleSystemColliderNodes;
-@dynamic physicsbody;
+@dynamic physicsBody;
 @dynamic physicsShape;
 @dynamic physicsVehicleWheelNode;
 @dynamic scene;
@@ -159,38 +156,48 @@
         self.morpher = nil;
     }
     
-    // transform
+    // physics body
     
-    SCNMatrix4 newMatrix = managedObject.transform.SCNMatrix4Value;
-    
-    if (!SCNMatrix4EqualToMatrix4(newMatrix, self.transform)) {
+    if (managedObject.physicsBody) {
         
-        self.transform = newMatrix;
+        if (!self.physicsBody) {
+            
+            self.physicsBody = [SCNPhysicsBody kinematicBody];
+        }
+        
+        [self.physicsBody setValuesForManagedObject:managedObject.physicsBody];
     }
     
-    // position
-    
-    SCNVector3 newPosition = SCNVector3Make(managedObject.positionX.doubleValue,
-                                            managedObject.positionY.doubleValue,
-                                            managedObject.positionZ.doubleValue);
-    
-    if (!SCNVector3EqualToVector3(newPosition, self.position)) {
-        
-        self.position = newPosition;
+    else {
+        self.physicsBody = nil;
     }
     
-    // rotation
+    // child nodes
     
-    SCNVector4 newRotation = managedObject.rotation.SCNVector4Value;
     
-    if (!SCNVector4EqualToVector4(newRotation, self.rotation)) {
-        
-        self.rotation = newRotation;
-    }
     
-    // orientation
+    // set scalar values
     
-    SCNQuaternion newOrientation = managedObject.orientation
+    self.position = SCNVector3Make(managedObject.positionX.doubleValue,
+                                   managedObject.positionY.doubleValue,
+                                   managedObject.positionZ.doubleValue);
+    
+    self.rotation = managedObject.rotation.SCNVector4Value;
+    
+    self.orientation = managedObject.orientation.SCNVector4Value;
+    
+    self.eulerAngles = managedObject.eulerAngles.SCNVector3Value;
+    
+    self.scale = managedObject.scale.SCNVector3Value;
+    
+    self.pivot = managedObject.pivot.SCNMatrix4Value;
+    
+    self.hidden = managedObject.hidden.boolValue;
+    
+    self.opacity = managedObject.opacity.doubleValue;
+    
+    self.castsShadow = managedObject.castsShadow.boolValue;
+    
     
 }
 
