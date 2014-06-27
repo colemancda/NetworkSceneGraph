@@ -41,7 +41,7 @@ static void *KVOContext = &KVOContext;
 
 -(void)fetchScene
 {
-    [self.store fetchEntityWithName:@"NSGScene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+    [self.store fetchEntityWithName:@"Scene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
         
         [self.delegate sceneController:self didFetchSceneWithError:error];
         
@@ -52,15 +52,11 @@ static void *KVOContext = &KVOContext;
         
         NSGScene *scene = (NSGScene *)managedObject;
         
-        [self.scene setValuesForManagedObject:scene];
-        
         // download background
         
-        [self.store fetchEntityWithName:@"NSGMaterialProperty" resourceID:scene.background.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+        [self.store fetchEntityWithName:@"MaterialProperty" resourceID:scene.background.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
            
             NSGMaterialProperty *background = (NSGMaterialProperty *)managedObject;
-            
-            [self.scene.background setValuesForManagedObject:background];
             
         }];
         
@@ -70,8 +66,15 @@ static void *KVOContext = &KVOContext;
             
             // fetch
             
-            
-            
+            [self.store fetchEntityWithName:@"Node" resourceID:rootNode.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+                
+                NSGNode *childNode
+               
+                while (<#condition#>) {
+                    <#statements#>
+                }
+                
+            }];
         }
         
     }];

@@ -14,31 +14,21 @@
 
 @interface NSGNode : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * eulerAnglesX;
-@property (nonatomic, retain) NSNumber * eulerAnglesY;
-@property (nonatomic, retain) NSNumber * eulerAnglesZ;
+@property (nonatomic, retain) NSValue * eulerAngles;
 @property (nonatomic, retain) NSNumber * hidden;
 @property (nonatomic, retain) NSNumber * opacity;
-@property (nonatomic, retain) NSNumber * orientationW;
-@property (nonatomic, retain) NSNumber * orientationX;
-@property (nonatomic, retain) NSNumber * orientationY;
-@property (nonatomic, retain) NSNumber * orientationZ;
 @property (nonatomic, retain) NSValue *pivot;
 @property (nonatomic, retain) NSNumber * positionX;
 @property (nonatomic, retain) NSNumber * positionY;
 @property (nonatomic, retain) NSNumber * positionZ;
 @property (nonatomic, retain) NSNumber * resourceID;
-@property (nonatomic, retain) NSNumber * rotationW;
-@property (nonatomic, retain) NSNumber * rotationX;
-@property (nonatomic, retain) NSNumber * rotationY;
-@property (nonatomic, retain) NSNumber * rotationZ;
-@property (nonatomic, retain) NSNumber * scaleX;
-@property (nonatomic, retain) NSNumber * scaleY;
-@property (nonatomic, retain) NSNumber * scaleZ;
+@property (nonatomic, retain) NSValue *rotation;
+@property (nonatomic, retain) NSValue *scale;
 @property (nonatomic, retain) NSValue *transform;
 @property (nonatomic, retain) NSValue *orientation;
 @property (nonatomic, retain) NSValue *worldTransform;
 @property (nonatomic, retain) NSNumber * castsShadow;
+@property (nonatomic, retain) NSNumber * categoryBitMask;
 @property (nonatomic, retain) NSGCamera *camera;
 @property (nonatomic, retain) NSOrderedSet *childNodes;
 @property (nonatomic, retain) NSOrderedSet *constraints;
@@ -58,6 +48,8 @@
 @property (nonatomic, retain) NSGSkinner *skinnerBones;
 @property (nonatomic, retain) NSGSkinner *skinnerSkeleton;
 @property (nonatomic, retain) NSGSound *sound;
+@property (nonatomic, retain) NSGSkinner *skinner;
+
 @end
 
 @interface NSGNode (CoreDataGeneratedAccessors)

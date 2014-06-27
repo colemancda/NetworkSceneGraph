@@ -22,5 +22,6 @@
 @dynamic bones;
 @dynamic boneWeights;
 @dynamic skeleton;
+@dynamic node;
 
 @end

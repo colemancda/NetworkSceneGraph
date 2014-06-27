@@ -43,6 +43,20 @@
     
     // nodes
     
+    // remove extra nodes first
+    
+    if (managedObject.nodes.count < self.rootNode.childNodes.count) {
+        
+        NSUInteger extraNodes = self.rootNode.childNodes.count - managedObject.nodes.count;
+        
+        for (int i = 0; i < extraNodes; i++) {
+            
+            SCNNode *node = self.rootNode.childNodes[i];
+            
+            [node removeFromParentNode];
+        }
+    }
+    
     for (NSGNode *nodeManagedObject in managedObject.nodes) {
         
         NSUInteger index = [managedObject.nodes indexOfObject:nodeManagedObject];

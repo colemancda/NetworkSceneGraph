@@ -28,8 +28,6 @@
 		6E81804D195D2C9200939068 /* NSGLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81804B195D2C9200939068 /* NSGLight.m */; };
 		6E818050195D2C9200939068 /* NSGMaterial.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81804E195D2C9200939068 /* NSGMaterial.h */; };
 		6E818051195D2C9200939068 /* NSGMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81804F195D2C9200939068 /* NSGMaterial.m */; };
-		6E818054195D2C9200939068 /* NSGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818052195D2C9200939068 /* NSGNode.h */; };
-		6E818055195D2C9200939068 /* NSGNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818053195D2C9200939068 /* NSGNode.m */; };
 		6E818058195D2C9200939068 /* NSGPhysicsNoiseField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818056195D2C9200939068 /* NSGPhysicsNoiseField.h */; };
 		6E818059195D2C9200939068 /* NSGPhysicsNoiseField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818057195D2C9200939068 /* NSGPhysicsNoiseField.m */; };
 		6E81805C195D2C9200939068 /* NSGSound.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81805A195D2C9200939068 /* NSGSound.h */; };
@@ -102,8 +100,6 @@
 		6E8180E1195D2C9600939068 /* NSGPyramid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180DF195D2C9600939068 /* NSGPyramid.m */; };
 		6E8180E4195D2C9600939068 /* NSGPhysicsBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180E2195D2C9600939068 /* NSGPhysicsBody.h */; };
 		6E8180E5195D2C9600939068 /* NSGPhysicsBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180E3195D2C9600939068 /* NSGPhysicsBody.m */; };
-		6E8180E8195D2C9600939068 /* NSGSkinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180E6195D2C9600939068 /* NSGSkinner.h */; };
-		6E8180E9195D2C9600939068 /* NSGSkinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180E7195D2C9600939068 /* NSGSkinner.m */; };
 		6E8180EC195D2C9600939068 /* NSGPhysicsShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180EA195D2C9600939068 /* NSGPhysicsShape.h */; };
 		6E8180ED195D2C9600939068 /* NSGPhysicsShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180EB195D2C9600939068 /* NSGPhysicsShape.m */; };
 		6E8180F0195D2C9600939068 /* NSGBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180EE195D2C9600939068 /* NSGBox.h */; };
@@ -124,6 +120,10 @@
 		6E81810D195D2C9700939068 /* NSGSoundDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81810B195D2C9700939068 /* NSGSoundDataSource.m */; };
 		6E818110195D2C9700939068 /* NSGPhysicsSliderJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81810E195D2C9700939068 /* NSGPhysicsSliderJoint.h */; };
 		6E818111195D2C9700939068 /* NSGPhysicsSliderJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81810F195D2C9700939068 /* NSGPhysicsSliderJoint.m */; };
+		6E818114195D9EE500939068 /* NSGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818112195D9EE500939068 /* NSGNode.h */; };
+		6E818115195D9EE500939068 /* NSGNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818113195D9EE500939068 /* NSGNode.m */; };
+		6E818118195DA4EE00939068 /* NSGSkinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818116195DA4EE00939068 /* NSGSkinner.h */; };
+		6E818119195DA4EE00939068 /* NSGSkinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818117195DA4EE00939068 /* NSGSkinner.m */; };
 		6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBC63D8192FEF3E00FCF7C3 /* NetworkSceneGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EBC63D6192FEF3E00FCF7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC63D4192FEF3E00FCF7C3 /* InfoPlist.strings */; };
 		6EBC63E1192FEF3E00FCF7C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBC63E0192FEF3E00FCF7C3 /* XCTest.framework */; };
@@ -197,8 +197,6 @@
 		6E81804B195D2C9200939068 /* NSGLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLight.m; sourceTree = "<group>"; };
 		6E81804E195D2C9200939068 /* NSGMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterial.h; sourceTree = "<group>"; };
 		6E81804F195D2C9200939068 /* NSGMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterial.m; sourceTree = "<group>"; };
-		6E818052195D2C9200939068 /* NSGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGNode.h; sourceTree = "<group>"; };
-		6E818053195D2C9200939068 /* NSGNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGNode.m; sourceTree = "<group>"; };
 		6E818056195D2C9200939068 /* NSGPhysicsNoiseField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsNoiseField.h; sourceTree = "<group>"; };
 		6E818057195D2C9200939068 /* NSGPhysicsNoiseField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsNoiseField.m; sourceTree = "<group>"; };
 		6E81805A195D2C9200939068 /* NSGSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSound.h; sourceTree = "<group>"; };
@@ -271,8 +269,6 @@
 		6E8180DF195D2C9600939068 /* NSGPyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPyramid.m; sourceTree = "<group>"; };
 		6E8180E2195D2C9600939068 /* NSGPhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsBody.h; sourceTree = "<group>"; };
 		6E8180E3195D2C9600939068 /* NSGPhysicsBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsBody.m; sourceTree = "<group>"; };
-		6E8180E6195D2C9600939068 /* NSGSkinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSkinner.h; sourceTree = "<group>"; };
-		6E8180E7195D2C9600939068 /* NSGSkinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSkinner.m; sourceTree = "<group>"; };
 		6E8180EA195D2C9600939068 /* NSGPhysicsShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsShape.h; sourceTree = "<group>"; };
 		6E8180EB195D2C9600939068 /* NSGPhysicsShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsShape.m; sourceTree = "<group>"; };
 		6E8180EE195D2C9600939068 /* NSGBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGBox.h; sourceTree = "<group>"; };
@@ -293,6 +289,10 @@
 		6E81810B195D2C9700939068 /* NSGSoundDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSoundDataSource.m; sourceTree = "<group>"; };
 		6E81810E195D2C9700939068 /* NSGPhysicsSliderJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsSliderJoint.h; sourceTree = "<group>"; };
 		6E81810F195D2C9700939068 /* NSGPhysicsSliderJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsSliderJoint.m; sourceTree = "<group>"; };
+		6E818112195D9EE500939068 /* NSGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGNode.h; sourceTree = "<group>"; };
+		6E818113195D9EE500939068 /* NSGNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGNode.m; sourceTree = "<group>"; };
+		6E818116195DA4EE00939068 /* NSGSkinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSkinner.h; sourceTree = "<group>"; };
+		6E818117195DA4EE00939068 /* NSGSkinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSkinner.m; sourceTree = "<group>"; };
 		6EB48401194D2CD00086D744 /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = Dependencies/NetworkObjects/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
 		6EBC63C8192FEF3E00FCF7C3 /* NetworkSceneGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSceneGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC63CB192FEF3E00FCF7C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -374,8 +374,10 @@
 			children = (
 				6E81803E195D23C900939068 /* NSGScene.h */,
 				6E81803F195D23C900939068 /* NSGScene.m */,
-				6E818052195D2C9200939068 /* NSGNode.h */,
-				6E818053195D2C9200939068 /* NSGNode.m */,
+				6E818112195D9EE500939068 /* NSGNode.h */,
+				6E818113195D9EE500939068 /* NSGNode.m */,
+				6E818116195DA4EE00939068 /* NSGSkinner.h */,
+				6E818117195DA4EE00939068 /* NSGSkinner.m */,
 				6E8180AA195D2C9400939068 /* NSGPhysicsWorld.h */,
 				6E8180AB195D2C9400939068 /* NSGPhysicsWorld.m */,
 				6E81810E195D2C9700939068 /* NSGPhysicsSliderJoint.h */,
@@ -398,8 +400,6 @@
 				6E8180EF195D2C9600939068 /* NSGBox.m */,
 				6E8180EA195D2C9600939068 /* NSGPhysicsShape.h */,
 				6E8180EB195D2C9600939068 /* NSGPhysicsShape.m */,
-				6E8180E6195D2C9600939068 /* NSGSkinner.h */,
-				6E8180E7195D2C9600939068 /* NSGSkinner.m */,
 				6E8180E2195D2C9600939068 /* NSGPhysicsBody.h */,
 				6E8180E3195D2C9600939068 /* NSGPhysicsBody.m */,
 				6E8180DE195D2C9600939068 /* NSGPyramid.h */,
@@ -605,6 +605,7 @@
 				6E8180D8195D2C9600939068 /* NSGPhysicsField.h in Headers */,
 				6E818090195D2C9400939068 /* NSGMorpher.h in Headers */,
 				6E8180C8195D2C9500939068 /* NSGCylinder.h in Headers */,
+				6E818114195D9EE500939068 /* NSGNode.h in Headers */,
 				6E7170B21950E11A00C5F0E2 /* NSGServerController.h in Headers */,
 				6E818104195D2C9700939068 /* NSGMaterialProperty.h in Headers */,
 				6E818050195D2C9200939068 /* NSGMaterial.h in Headers */,
@@ -627,7 +628,6 @@
 				6E8180A0195D2C9400939068 /* NSGLookAtConstraint.h in Headers */,
 				6E8180EC195D2C9600939068 /* NSGPhysicsShape.h in Headers */,
 				6E81809C195D2C9400939068 /* NSGLevelOfDetail.h in Headers */,
-				6E8180E8195D2C9600939068 /* NSGSkinner.h in Headers */,
 				6E8180B0195D2C9400939068 /* NSGPhysicsTurbulenceField.h in Headers */,
 				6E0C66C0195C7D9600841DB5 /* NSGSceneController.h in Headers */,
 				6E8180D0195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.h in Headers */,
@@ -637,8 +637,8 @@
 				6E81805C195D2C9200939068 /* NSGSound.h in Headers */,
 				6E818060195D2C9200939068 /* NSGSoundDataSourceHLSStream.h in Headers */,
 				6E818078195D2C9300939068 /* NSGGeometrySource.h in Headers */,
-				6E818054195D2C9200939068 /* NSGNode.h in Headers */,
 				6E818084195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.h in Headers */,
+				6E818118195DA4EE00939068 /* NSGSkinner.h in Headers */,
 				6E818088195D2C9300939068 /* NSGPhysicsSpringField.h in Headers */,
 				6E818108195D2C9700939068 /* NSGPhysicsMagneticField.h in Headers */,
 				6E8180F4195D2C9600939068 /* NSGLink.h in Headers */,
@@ -776,6 +776,7 @@
 				6E8180B1195D2C9400939068 /* NSGPhysicsTurbulenceField.m in Sources */,
 				6E8180D5195D2C9500939068 /* NSGParticleSystem.m in Sources */,
 				6E8180A5195D2C9400939068 /* NSGMaterialPropertyContent.m in Sources */,
+				6E818119195DA4EE00939068 /* NSGSkinner.m in Sources */,
 				6E818099195D2C9400939068 /* NSGIKConstraint.m in Sources */,
 				6E81804D195D2C9200939068 /* NSGLight.m in Sources */,
 				6E818101195D2C9700939068 /* NSGCamera.m in Sources */,
@@ -786,7 +787,6 @@
 				6E8180A1195D2C9400939068 /* NSGLookAtConstraint.m in Sources */,
 				6E81810D195D2C9700939068 /* NSGSoundDataSource.m in Sources */,
 				6E8180F5195D2C9600939068 /* NSGLink.m in Sources */,
-				6E818055195D2C9200939068 /* NSGNode.m in Sources */,
 				6E8180C5195D2C9500939068 /* NSGPhysicsVortexField.m in Sources */,
 				6E818091195D2C9400939068 /* NSGMorpher.m in Sources */,
 				6E8180F9195D2C9700939068 /* NSGMaterialPropertyContentColor.m in Sources */,
@@ -802,8 +802,8 @@
 				6E818111195D2C9700939068 /* NSGPhysicsSliderJoint.m in Sources */,
 				6E818071195D2C9300939068 /* NSGPhysicsBallSocketJoint.m in Sources */,
 				6E8180ED195D2C9600939068 /* NSGPhysicsShape.m in Sources */,
-				6E8180E9195D2C9600939068 /* NSGSkinner.m in Sources */,
 				6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
+				6E818115195D9EE500939068 /* NSGNode.m in Sources */,
 				6E818049195D2C9200939068 /* NSGSoundDataSourceData.m in Sources */,
 				6E818045195D2C9100939068 /* NSGSphere.m in Sources */,
 				6E8180C1195D2C9500939068 /* NSGPhysicsVehicleWheel.m in Sources */,

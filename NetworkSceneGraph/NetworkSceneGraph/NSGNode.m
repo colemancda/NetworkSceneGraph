@@ -28,31 +28,21 @@
 
 @implementation NSGNode
 
-@dynamic eulerAnglesX;
-@dynamic eulerAnglesY;
-@dynamic eulerAnglesZ;
+@dynamic eulerAngles;
 @dynamic hidden;
 @dynamic opacity;
-@dynamic orientationW;
-@dynamic orientationX;
-@dynamic orientationY;
-@dynamic orientationZ;
 @dynamic pivot;
 @dynamic positionX;
 @dynamic positionY;
 @dynamic positionZ;
 @dynamic resourceID;
-@dynamic rotationW;
-@dynamic rotationX;
-@dynamic rotationY;
-@dynamic rotationZ;
-@dynamic scaleX;
-@dynamic scaleY;
-@dynamic scaleZ;
+@dynamic rotation;
+@dynamic scale;
 @dynamic transform;
 @dynamic orientation;
 @dynamic worldTransform;
 @dynamic castsShadow;
+@dynamic categoryBitMask;
 @dynamic camera;
 @dynamic childNodes;
 @dynamic constraints;
@@ -72,5 +62,136 @@
 @dynamic skinnerBones;
 @dynamic skinnerSkeleton;
 @dynamic sound;
+@dynamic skinner;
+
+@end
+
+@implementation SCNNode (NetworkSceneGraphAdditions)
+
+-(void)setValuesForManagedObject:(NSGNode *)managedObject
+{
+    // set name
+    
+    if (self.name.integerValue != managedObject.resourceID.integerValue) {
+        
+        self.name = [NSString stringWithFormat:@"%@", managedObject.resourceID];
+    }
+    
+    // light
+    
+    if (managedObject.light) {
+        
+        if (!self.light) {
+            
+            self.light = [SCNLight light];
+        }
+        
+        [self.light setValuesForManagedObject:managedObject.light];
+    }
+    
+    else {
+        self.light = nil;
+    }
+    
+    // camera
+    
+    if (managedObject.camera) {
+        
+        if (!self.camera) {
+            
+            self.camera = [SCNCamera camera];
+        }
+        
+        [self.camera setValuesForManagedObject:managedObject.camera];
+    }
+    
+    else {
+        self.camera = nil;
+    }
+    
+    // geometry
+    
+    if (managedObject.geometry) {
+        
+        if (!self.geometry) {
+            
+            self.geometry = [SCNGeometry geometry];
+        }
+        
+        [self.geometry setValuesForManagedObject:managedObject.geometry];
+    }
+    
+    else {
+        self.geometry = nil;
+    }
+    
+    // skinner
+    
+    if (managedObject.skinner) {
+        
+        if (!self.skinner) {
+            
+            self.skinner = [SCNSkinner skinnerWithValuesForManagedObject:managedObject.skinner];
+        }
+        else {
+            
+            [self.skinner setValuesForManagedObject:managedObject.skinner];
+        }
+    }
+    
+    else {
+        self.skinner = nil;
+    }
+    
+    // morpher
+    
+    if (managedObject.morpher) {
+        
+        if (!self.morpher) {
+            
+            self.morpher = [[SCNMorpher alloc] init];
+        }
+        
+        [self.morpher setValuesForManagedObject:managedObject.morpher];
+    }
+    
+    else {
+        self.morpher = nil;
+    }
+    
+    // transform
+    
+    SCNMatrix4 newMatrix = managedObject.transform.SCNMatrix4Value;
+    
+    if (!SCNMatrix4EqualToMatrix4(newMatrix, self.transform)) {
+        
+        self.transform = newMatrix;
+    }
+    
+    // position
+    
+    SCNVector3 newPosition = SCNVector3Make(managedObject.positionX.doubleValue,
+                                            managedObject.positionY.doubleValue,
+                                            managedObject.positionZ.doubleValue);
+    
+    if (!SCNVector3EqualToVector3(newPosition, self.position)) {
+        
+        self.position = newPosition;
+    }
+    
+    // rotation
+    
+    SCNVector4 newRotation = managedObject.rotation.SCNVector4Value;
+    
+    if (!SCNVector4EqualToVector4(newRotation, self.rotation)) {
+        
+        self.rotation = newRotation;
+    }
+    
+    // orientation
+    
+    SCNQuaternion newOrientation = managedObject.orientation
+    
+}
 
 @end

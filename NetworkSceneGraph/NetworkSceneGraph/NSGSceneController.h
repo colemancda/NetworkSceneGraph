@@ -35,8 +35,6 @@
 
 // These properties are created and managed by the controller
 
-@property (nonatomic, readonly) SCNScene *scene;
-
 @property (nonatomic, readonly) id audioStream;
 
 /** Downloads the scene graph's elements. */
