@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+@import SceneKit;
 
 @class NSGGeometry;
 
@@ -20,5 +21,11 @@
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGGeometry *geometry;
 @property (nonatomic, retain) NSGGeometry *geometryEdgeCreasesElement;
+
+@end
+
+@interface SCNGeometryElement (NetworkSceneGraphAdditions)
+
++(instancetype)geometryElementWithValuesForManagedObject:(NSGGeometryElement *)managedObject;
 
 @end

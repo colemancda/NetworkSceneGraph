@@ -24,7 +24,7 @@
 @property (nonatomic, retain) NSSet *levelsOfDetail;
 @property (nonatomic, retain) NSOrderedSet *materials;
 @property (nonatomic, retain) NSGMorpher *morpher;
-@property (nonatomic, retain) NSGNode *node;
+@property (nonatomic, retain) NSSet *node;
 @property (nonatomic, retain) NSGParticleSystem *particleSystemEmitterShape;
 @property (nonatomic, retain) NSGPhysicsShape *physicsShapeGeometry;
 @property (nonatomic, retain) NSGSkinner *skinnerBaseGeometry;
@@ -62,4 +62,9 @@
 - (void)removeMaterialsObject:(NSGMaterial *)value;
 - (void)addMaterials:(NSOrderedSet *)values;
 - (void)removeMaterials:(NSOrderedSet *)values;
+- (void)addNodeObject:(NSGNode *)value;
+- (void)removeNodeObject:(NSGNode *)value;
+- (void)addNode:(NSSet *)values;
+- (void)removeNode:(NSSet *)values;
+
 @end

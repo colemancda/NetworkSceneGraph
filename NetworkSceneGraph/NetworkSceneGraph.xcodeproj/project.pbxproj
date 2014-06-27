@@ -14,112 +14,30 @@
 		6E124F311934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E124F2E1934F840004D6A32 /* NSGModel.xcdatamodeld */; };
 		6E124F3719350FFB004D6A32 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E124F3619350FFB004D6A32 /* SceneKit.framework */; };
 		6E5CFB5E194D3751000DD664 /* NetworkObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB48407194D2CD00086D744 /* NetworkObjects.framework */; };
+		6E5EE9AF195DF8EC009DF45E /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5EE9AD195DF8EC009DF45E /* NSGGeometry.h */; };
+		6E5EE9B0195DF8EC009DF45E /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5EE9AE195DF8EC009DF45E /* NSGGeometry.m */; };
+		6E5EE9B3195DFB38009DF45E /* NSGPhysicsWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5EE9B1195DFB38009DF45E /* NSGPhysicsWorld.h */; };
+		6E5EE9B4195DFB38009DF45E /* NSGPhysicsWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5EE9B2195DFB38009DF45E /* NSGPhysicsWorld.m */; };
 		6E7170B21950E11A00C5F0E2 /* NSGServerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7170B01950E11A00C5F0E2 /* NSGServerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E7170B31950E11A00C5F0E2 /* NSGServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7170B11950E11A00C5F0E2 /* NSGServerController.m */; };
 		6E7170B71950EA0900C5F0E2 /* NSGDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7170B51950EA0900C5F0E2 /* NSGDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E7170B81950EA0900C5F0E2 /* NSGDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7170B61950EA0900C5F0E2 /* NSGDefines.m */; };
 		6E818040195D23C900939068 /* NSGScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81803E195D23C900939068 /* NSGScene.h */; };
 		6E818041195D23C900939068 /* NSGScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81803F195D23C900939068 /* NSGScene.m */; };
-		6E818044195D2C9100939068 /* NSGSphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818042195D2C9100939068 /* NSGSphere.h */; };
-		6E818045195D2C9100939068 /* NSGSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818043195D2C9100939068 /* NSGSphere.m */; };
-		6E818048195D2C9200939068 /* NSGSoundDataSourceData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818046195D2C9200939068 /* NSGSoundDataSourceData.h */; };
-		6E818049195D2C9200939068 /* NSGSoundDataSourceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818047195D2C9200939068 /* NSGSoundDataSourceData.m */; };
 		6E81804C195D2C9200939068 /* NSGLight.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81804A195D2C9200939068 /* NSGLight.h */; };
 		6E81804D195D2C9200939068 /* NSGLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81804B195D2C9200939068 /* NSGLight.m */; };
-		6E818050195D2C9200939068 /* NSGMaterial.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81804E195D2C9200939068 /* NSGMaterial.h */; };
-		6E818051195D2C9200939068 /* NSGMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81804F195D2C9200939068 /* NSGMaterial.m */; };
-		6E818058195D2C9200939068 /* NSGPhysicsNoiseField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818056195D2C9200939068 /* NSGPhysicsNoiseField.h */; };
-		6E818059195D2C9200939068 /* NSGPhysicsNoiseField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818057195D2C9200939068 /* NSGPhysicsNoiseField.m */; };
-		6E81805C195D2C9200939068 /* NSGSound.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81805A195D2C9200939068 /* NSGSound.h */; };
-		6E81805D195D2C9200939068 /* NSGSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81805B195D2C9200939068 /* NSGSound.m */; };
-		6E818060195D2C9200939068 /* NSGSoundDataSourceHLSStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81805E195D2C9200939068 /* NSGSoundDataSourceHLSStream.h */; };
-		6E818061195D2C9200939068 /* NSGSoundDataSourceHLSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81805F195D2C9200939068 /* NSGSoundDataSourceHLSStream.m */; };
-		6E818064195D2C9200939068 /* NSGPhysicsRadialGravityField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818062195D2C9200939068 /* NSGPhysicsRadialGravityField.h */; };
-		6E818065195D2C9200939068 /* NSGPhysicsRadialGravityField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818063195D2C9200939068 /* NSGPhysicsRadialGravityField.m */; };
-		6E818068195D2C9200939068 /* NSGConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818066195D2C9200939068 /* NSGConstraint.h */; };
-		6E818069195D2C9200939068 /* NSGConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818067195D2C9200939068 /* NSGConstraint.m */; };
-		6E81806C195D2C9300939068 /* NSGMaterialPropertyContentImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81806A195D2C9300939068 /* NSGMaterialPropertyContentImage.h */; };
-		6E81806D195D2C9300939068 /* NSGMaterialPropertyContentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81806B195D2C9300939068 /* NSGMaterialPropertyContentImage.m */; };
-		6E818070195D2C9300939068 /* NSGPhysicsBallSocketJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81806E195D2C9300939068 /* NSGPhysicsBallSocketJoint.h */; };
-		6E818071195D2C9300939068 /* NSGPhysicsBallSocketJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81806F195D2C9300939068 /* NSGPhysicsBallSocketJoint.m */; };
-		6E818074195D2C9300939068 /* NSGPhysicsElectricField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818072195D2C9300939068 /* NSGPhysicsElectricField.h */; };
-		6E818075195D2C9300939068 /* NSGPhysicsElectricField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818073195D2C9300939068 /* NSGPhysicsElectricField.m */; };
 		6E818078195D2C9300939068 /* NSGGeometrySource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818076195D2C9300939068 /* NSGGeometrySource.h */; };
 		6E818079195D2C9300939068 /* NSGGeometrySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818077195D2C9300939068 /* NSGGeometrySource.m */; };
-		6E81807C195D2C9300939068 /* NSGPhysicsVehicle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81807A195D2C9300939068 /* NSGPhysicsVehicle.h */; };
-		6E81807D195D2C9300939068 /* NSGPhysicsVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81807B195D2C9300939068 /* NSGPhysicsVehicle.m */; };
-		6E818080195D2C9300939068 /* NSGPlane.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81807E195D2C9300939068 /* NSGPlane.h */; };
-		6E818081195D2C9300939068 /* NSGPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81807F195D2C9300939068 /* NSGPlane.m */; };
-		6E818084195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818082195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.h */; };
-		6E818085195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818083195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.m */; };
-		6E818088195D2C9300939068 /* NSGPhysicsSpringField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818086195D2C9300939068 /* NSGPhysicsSpringField.h */; };
-		6E818089195D2C9300939068 /* NSGPhysicsSpringField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818087195D2C9300939068 /* NSGPhysicsSpringField.m */; };
-		6E81808C195D2C9300939068 /* NSGPhysicsLinearGravityField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81808A195D2C9300939068 /* NSGPhysicsLinearGravityField.h */; };
-		6E81808D195D2C9300939068 /* NSGPhysicsLinearGravityField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81808B195D2C9300939068 /* NSGPhysicsLinearGravityField.m */; };
 		6E818090195D2C9400939068 /* NSGMorpher.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81808E195D2C9400939068 /* NSGMorpher.h */; };
 		6E818091195D2C9400939068 /* NSGMorpher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81808F195D2C9400939068 /* NSGMorpher.m */; };
-		6E818094195D2C9400939068 /* NSGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818092195D2C9400939068 /* NSGGeometry.h */; };
-		6E818095195D2C9400939068 /* NSGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818093195D2C9400939068 /* NSGGeometry.m */; };
-		6E818098195D2C9400939068 /* NSGIKConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818096195D2C9400939068 /* NSGIKConstraint.h */; };
-		6E818099195D2C9400939068 /* NSGIKConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818097195D2C9400939068 /* NSGIKConstraint.m */; };
-		6E81809C195D2C9400939068 /* NSGLevelOfDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81809A195D2C9400939068 /* NSGLevelOfDetail.h */; };
-		6E81809D195D2C9400939068 /* NSGLevelOfDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81809B195D2C9400939068 /* NSGLevelOfDetail.m */; };
-		6E8180A0195D2C9400939068 /* NSGLookAtConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81809E195D2C9400939068 /* NSGLookAtConstraint.h */; };
-		6E8180A1195D2C9400939068 /* NSGLookAtConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81809F195D2C9400939068 /* NSGLookAtConstraint.m */; };
-		6E8180A4195D2C9400939068 /* NSGMaterialPropertyContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180A2195D2C9400939068 /* NSGMaterialPropertyContent.h */; };
-		6E8180A5195D2C9400939068 /* NSGMaterialPropertyContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180A3195D2C9400939068 /* NSGMaterialPropertyContent.m */; };
-		6E8180A8195D2C9400939068 /* NSGPhysicsBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180A6195D2C9400939068 /* NSGPhysicsBehavior.h */; };
-		6E8180A9195D2C9400939068 /* NSGPhysicsBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180A7195D2C9400939068 /* NSGPhysicsBehavior.m */; };
-		6E8180AC195D2C9400939068 /* NSGPhysicsWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180AA195D2C9400939068 /* NSGPhysicsWorld.h */; };
-		6E8180AD195D2C9400939068 /* NSGPhysicsWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180AB195D2C9400939068 /* NSGPhysicsWorld.m */; };
-		6E8180B0195D2C9400939068 /* NSGPhysicsTurbulenceField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180AE195D2C9400939068 /* NSGPhysicsTurbulenceField.h */; };
-		6E8180B1195D2C9400939068 /* NSGPhysicsTurbulenceField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180AF195D2C9400939068 /* NSGPhysicsTurbulenceField.m */; };
 		6E8180B4195D2C9500939068 /* NSGGeometryElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180B2195D2C9500939068 /* NSGGeometryElement.h */; };
 		6E8180B5195D2C9500939068 /* NSGGeometryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180B3195D2C9500939068 /* NSGGeometryElement.m */; };
-		6E8180B8195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180B6195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.h */; };
-		6E8180B9195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180B7195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.m */; };
-		6E8180BC195D2C9500939068 /* NSGPhysicsHingeJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180BA195D2C9500939068 /* NSGPhysicsHingeJoint.h */; };
-		6E8180BD195D2C9500939068 /* NSGPhysicsHingeJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180BB195D2C9500939068 /* NSGPhysicsHingeJoint.m */; };
-		6E8180C0195D2C9500939068 /* NSGPhysicsVehicleWheel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180BE195D2C9500939068 /* NSGPhysicsVehicleWheel.h */; };
-		6E8180C1195D2C9500939068 /* NSGPhysicsVehicleWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180BF195D2C9500939068 /* NSGPhysicsVehicleWheel.m */; };
-		6E8180C4195D2C9500939068 /* NSGPhysicsVortexField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180C2195D2C9500939068 /* NSGPhysicsVortexField.h */; };
-		6E8180C5195D2C9500939068 /* NSGPhysicsVortexField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180C3195D2C9500939068 /* NSGPhysicsVortexField.m */; };
-		6E8180C8195D2C9500939068 /* NSGCylinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180C6195D2C9500939068 /* NSGCylinder.h */; };
-		6E8180C9195D2C9500939068 /* NSGCylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180C7195D2C9500939068 /* NSGCylinder.m */; };
-		6E8180CC195D2C9500939068 /* NSGSceneLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180CA195D2C9500939068 /* NSGSceneLink.h */; };
-		6E8180CD195D2C9500939068 /* NSGSceneLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180CB195D2C9500939068 /* NSGSceneLink.m */; };
-		6E8180D0195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180CE195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.h */; };
-		6E8180D1195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180CF195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.m */; };
-		6E8180D4195D2C9500939068 /* NSGParticleSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180D2195D2C9500939068 /* NSGParticleSystem.h */; };
-		6E8180D5195D2C9500939068 /* NSGParticleSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180D3195D2C9500939068 /* NSGParticleSystem.m */; };
-		6E8180D8195D2C9600939068 /* NSGPhysicsField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180D6195D2C9600939068 /* NSGPhysicsField.h */; };
-		6E8180D9195D2C9600939068 /* NSGPhysicsField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180D7195D2C9600939068 /* NSGPhysicsField.m */; };
-		6E8180DC195D2C9600939068 /* NSGPhysicsDragField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180DA195D2C9600939068 /* NSGPhysicsDragField.h */; };
-		6E8180DD195D2C9600939068 /* NSGPhysicsDragField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180DB195D2C9600939068 /* NSGPhysicsDragField.m */; };
-		6E8180E0195D2C9600939068 /* NSGPyramid.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180DE195D2C9600939068 /* NSGPyramid.h */; };
-		6E8180E1195D2C9600939068 /* NSGPyramid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180DF195D2C9600939068 /* NSGPyramid.m */; };
-		6E8180E4195D2C9600939068 /* NSGPhysicsBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180E2195D2C9600939068 /* NSGPhysicsBody.h */; };
-		6E8180E5195D2C9600939068 /* NSGPhysicsBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180E3195D2C9600939068 /* NSGPhysicsBody.m */; };
-		6E8180EC195D2C9600939068 /* NSGPhysicsShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180EA195D2C9600939068 /* NSGPhysicsShape.h */; };
-		6E8180ED195D2C9600939068 /* NSGPhysicsShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180EB195D2C9600939068 /* NSGPhysicsShape.m */; };
-		6E8180F0195D2C9600939068 /* NSGBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180EE195D2C9600939068 /* NSGBox.h */; };
-		6E8180F1195D2C9600939068 /* NSGBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180EF195D2C9600939068 /* NSGBox.m */; };
 		6E8180F4195D2C9600939068 /* NSGLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180F2195D2C9600939068 /* NSGLink.h */; };
 		6E8180F5195D2C9600939068 /* NSGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180F3195D2C9600939068 /* NSGLink.m */; };
-		6E8180F8195D2C9700939068 /* NSGMaterialPropertyContentColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180F6195D2C9700939068 /* NSGMaterialPropertyContentColor.h */; };
-		6E8180F9195D2C9700939068 /* NSGMaterialPropertyContentColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180F7195D2C9700939068 /* NSGMaterialPropertyContentColor.m */; };
-		6E8180FC195D2C9700939068 /* NSGText.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180FA195D2C9700939068 /* NSGText.h */; };
-		6E8180FD195D2C9700939068 /* NSGText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180FB195D2C9700939068 /* NSGText.m */; };
 		6E818100195D2C9700939068 /* NSGCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8180FE195D2C9700939068 /* NSGCamera.h */; };
 		6E818101195D2C9700939068 /* NSGCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8180FF195D2C9700939068 /* NSGCamera.m */; };
 		6E818104195D2C9700939068 /* NSGMaterialProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818102195D2C9700939068 /* NSGMaterialProperty.h */; };
 		6E818105195D2C9700939068 /* NSGMaterialProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818103195D2C9700939068 /* NSGMaterialProperty.m */; };
-		6E818108195D2C9700939068 /* NSGPhysicsMagneticField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818106195D2C9700939068 /* NSGPhysicsMagneticField.h */; };
-		6E818109195D2C9700939068 /* NSGPhysicsMagneticField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818107195D2C9700939068 /* NSGPhysicsMagneticField.m */; };
-		6E81810C195D2C9700939068 /* NSGSoundDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81810A195D2C9700939068 /* NSGSoundDataSource.h */; };
-		6E81810D195D2C9700939068 /* NSGSoundDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81810B195D2C9700939068 /* NSGSoundDataSource.m */; };
-		6E818110195D2C9700939068 /* NSGPhysicsSliderJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E81810E195D2C9700939068 /* NSGPhysicsSliderJoint.h */; };
-		6E818111195D2C9700939068 /* NSGPhysicsSliderJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81810F195D2C9700939068 /* NSGPhysicsSliderJoint.m */; };
 		6E818114195D9EE500939068 /* NSGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818112195D9EE500939068 /* NSGNode.h */; };
 		6E818115195D9EE500939068 /* NSGNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E818113195D9EE500939068 /* NSGNode.m */; };
 		6E818118195DA4EE00939068 /* NSGSkinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E818116195DA4EE00939068 /* NSGSkinner.h */; };
@@ -183,112 +101,30 @@
 		6E0C66BD195C7D9600841DB5 /* NSGSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSceneController.h; sourceTree = "<group>"; };
 		6E124F2F1934F840004D6A32 /* NSGModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSGModel.xcdatamodel; sourceTree = "<group>"; };
 		6E124F3619350FFB004D6A32 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		6E5EE9AD195DF8EC009DF45E /* NSGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometry.h; sourceTree = "<group>"; };
+		6E5EE9AE195DF8EC009DF45E /* NSGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometry.m; sourceTree = "<group>"; };
+		6E5EE9B1195DFB38009DF45E /* NSGPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsWorld.h; sourceTree = "<group>"; };
+		6E5EE9B2195DFB38009DF45E /* NSGPhysicsWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsWorld.m; sourceTree = "<group>"; };
 		6E7170B01950E11A00C5F0E2 /* NSGServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGServerController.h; sourceTree = "<group>"; };
 		6E7170B11950E11A00C5F0E2 /* NSGServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGServerController.m; sourceTree = "<group>"; };
 		6E7170B51950EA0900C5F0E2 /* NSGDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGDefines.h; sourceTree = "<group>"; };
 		6E7170B61950EA0900C5F0E2 /* NSGDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGDefines.m; sourceTree = "<group>"; };
 		6E81803E195D23C900939068 /* NSGScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGScene.h; sourceTree = "<group>"; };
 		6E81803F195D23C900939068 /* NSGScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGScene.m; sourceTree = "<group>"; };
-		6E818042195D2C9100939068 /* NSGSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSphere.h; sourceTree = "<group>"; };
-		6E818043195D2C9100939068 /* NSGSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSphere.m; sourceTree = "<group>"; };
-		6E818046195D2C9200939068 /* NSGSoundDataSourceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSoundDataSourceData.h; sourceTree = "<group>"; };
-		6E818047195D2C9200939068 /* NSGSoundDataSourceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSoundDataSourceData.m; sourceTree = "<group>"; };
 		6E81804A195D2C9200939068 /* NSGLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLight.h; sourceTree = "<group>"; };
 		6E81804B195D2C9200939068 /* NSGLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLight.m; sourceTree = "<group>"; };
-		6E81804E195D2C9200939068 /* NSGMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterial.h; sourceTree = "<group>"; };
-		6E81804F195D2C9200939068 /* NSGMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterial.m; sourceTree = "<group>"; };
-		6E818056195D2C9200939068 /* NSGPhysicsNoiseField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsNoiseField.h; sourceTree = "<group>"; };
-		6E818057195D2C9200939068 /* NSGPhysicsNoiseField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsNoiseField.m; sourceTree = "<group>"; };
-		6E81805A195D2C9200939068 /* NSGSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSound.h; sourceTree = "<group>"; };
-		6E81805B195D2C9200939068 /* NSGSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSound.m; sourceTree = "<group>"; };
-		6E81805E195D2C9200939068 /* NSGSoundDataSourceHLSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSoundDataSourceHLSStream.h; sourceTree = "<group>"; };
-		6E81805F195D2C9200939068 /* NSGSoundDataSourceHLSStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSoundDataSourceHLSStream.m; sourceTree = "<group>"; };
-		6E818062195D2C9200939068 /* NSGPhysicsRadialGravityField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsRadialGravityField.h; sourceTree = "<group>"; };
-		6E818063195D2C9200939068 /* NSGPhysicsRadialGravityField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsRadialGravityField.m; sourceTree = "<group>"; };
-		6E818066195D2C9200939068 /* NSGConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGConstraint.h; sourceTree = "<group>"; };
-		6E818067195D2C9200939068 /* NSGConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGConstraint.m; sourceTree = "<group>"; };
-		6E81806A195D2C9300939068 /* NSGMaterialPropertyContentImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentImage.h; sourceTree = "<group>"; };
-		6E81806B195D2C9300939068 /* NSGMaterialPropertyContentImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentImage.m; sourceTree = "<group>"; };
-		6E81806E195D2C9300939068 /* NSGPhysicsBallSocketJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsBallSocketJoint.h; sourceTree = "<group>"; };
-		6E81806F195D2C9300939068 /* NSGPhysicsBallSocketJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsBallSocketJoint.m; sourceTree = "<group>"; };
-		6E818072195D2C9300939068 /* NSGPhysicsElectricField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsElectricField.h; sourceTree = "<group>"; };
-		6E818073195D2C9300939068 /* NSGPhysicsElectricField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsElectricField.m; sourceTree = "<group>"; };
 		6E818076195D2C9300939068 /* NSGGeometrySource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometrySource.h; sourceTree = "<group>"; };
 		6E818077195D2C9300939068 /* NSGGeometrySource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometrySource.m; sourceTree = "<group>"; };
-		6E81807A195D2C9300939068 /* NSGPhysicsVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsVehicle.h; sourceTree = "<group>"; };
-		6E81807B195D2C9300939068 /* NSGPhysicsVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsVehicle.m; sourceTree = "<group>"; };
-		6E81807E195D2C9300939068 /* NSGPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPlane.h; sourceTree = "<group>"; };
-		6E81807F195D2C9300939068 /* NSGPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPlane.m; sourceTree = "<group>"; };
-		6E818082195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentVideoHLS.h; sourceTree = "<group>"; };
-		6E818083195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentVideoHLS.m; sourceTree = "<group>"; };
-		6E818086195D2C9300939068 /* NSGPhysicsSpringField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsSpringField.h; sourceTree = "<group>"; };
-		6E818087195D2C9300939068 /* NSGPhysicsSpringField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsSpringField.m; sourceTree = "<group>"; };
-		6E81808A195D2C9300939068 /* NSGPhysicsLinearGravityField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsLinearGravityField.h; sourceTree = "<group>"; };
-		6E81808B195D2C9300939068 /* NSGPhysicsLinearGravityField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsLinearGravityField.m; sourceTree = "<group>"; };
 		6E81808E195D2C9400939068 /* NSGMorpher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMorpher.h; sourceTree = "<group>"; };
 		6E81808F195D2C9400939068 /* NSGMorpher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMorpher.m; sourceTree = "<group>"; };
-		6E818092195D2C9400939068 /* NSGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometry.h; sourceTree = "<group>"; };
-		6E818093195D2C9400939068 /* NSGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometry.m; sourceTree = "<group>"; };
-		6E818096195D2C9400939068 /* NSGIKConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGIKConstraint.h; sourceTree = "<group>"; };
-		6E818097195D2C9400939068 /* NSGIKConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGIKConstraint.m; sourceTree = "<group>"; };
-		6E81809A195D2C9400939068 /* NSGLevelOfDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLevelOfDetail.h; sourceTree = "<group>"; };
-		6E81809B195D2C9400939068 /* NSGLevelOfDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLevelOfDetail.m; sourceTree = "<group>"; };
-		6E81809E195D2C9400939068 /* NSGLookAtConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLookAtConstraint.h; sourceTree = "<group>"; };
-		6E81809F195D2C9400939068 /* NSGLookAtConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLookAtConstraint.m; sourceTree = "<group>"; };
-		6E8180A2195D2C9400939068 /* NSGMaterialPropertyContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContent.h; sourceTree = "<group>"; };
-		6E8180A3195D2C9400939068 /* NSGMaterialPropertyContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContent.m; sourceTree = "<group>"; };
-		6E8180A6195D2C9400939068 /* NSGPhysicsBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsBehavior.h; sourceTree = "<group>"; };
-		6E8180A7195D2C9400939068 /* NSGPhysicsBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsBehavior.m; sourceTree = "<group>"; };
-		6E8180AA195D2C9400939068 /* NSGPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsWorld.h; sourceTree = "<group>"; };
-		6E8180AB195D2C9400939068 /* NSGPhysicsWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsWorld.m; sourceTree = "<group>"; };
-		6E8180AE195D2C9400939068 /* NSGPhysicsTurbulenceField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsTurbulenceField.h; sourceTree = "<group>"; };
-		6E8180AF195D2C9400939068 /* NSGPhysicsTurbulenceField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsTurbulenceField.m; sourceTree = "<group>"; };
 		6E8180B2195D2C9500939068 /* NSGGeometryElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGGeometryElement.h; sourceTree = "<group>"; };
 		6E8180B3195D2C9500939068 /* NSGGeometryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGGeometryElement.m; sourceTree = "<group>"; };
-		6E8180B6195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentCubeMapImages.h; sourceTree = "<group>"; };
-		6E8180B7195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentCubeMapImages.m; sourceTree = "<group>"; };
-		6E8180BA195D2C9500939068 /* NSGPhysicsHingeJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsHingeJoint.h; sourceTree = "<group>"; };
-		6E8180BB195D2C9500939068 /* NSGPhysicsHingeJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsHingeJoint.m; sourceTree = "<group>"; };
-		6E8180BE195D2C9500939068 /* NSGPhysicsVehicleWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsVehicleWheel.h; sourceTree = "<group>"; };
-		6E8180BF195D2C9500939068 /* NSGPhysicsVehicleWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsVehicleWheel.m; sourceTree = "<group>"; };
-		6E8180C2195D2C9500939068 /* NSGPhysicsVortexField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsVortexField.h; sourceTree = "<group>"; };
-		6E8180C3195D2C9500939068 /* NSGPhysicsVortexField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsVortexField.m; sourceTree = "<group>"; };
-		6E8180C6195D2C9500939068 /* NSGCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGCylinder.h; sourceTree = "<group>"; };
-		6E8180C7195D2C9500939068 /* NSGCylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGCylinder.m; sourceTree = "<group>"; };
-		6E8180CA195D2C9500939068 /* NSGSceneLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSceneLink.h; sourceTree = "<group>"; };
-		6E8180CB195D2C9500939068 /* NSGSceneLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSceneLink.m; sourceTree = "<group>"; };
-		6E8180CE195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGIKConstraintMaxAllowedRotationAngleForJoint.h; sourceTree = "<group>"; };
-		6E8180CF195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGIKConstraintMaxAllowedRotationAngleForJoint.m; sourceTree = "<group>"; };
-		6E8180D2195D2C9500939068 /* NSGParticleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGParticleSystem.h; sourceTree = "<group>"; };
-		6E8180D3195D2C9500939068 /* NSGParticleSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGParticleSystem.m; sourceTree = "<group>"; };
-		6E8180D6195D2C9600939068 /* NSGPhysicsField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsField.h; sourceTree = "<group>"; };
-		6E8180D7195D2C9600939068 /* NSGPhysicsField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsField.m; sourceTree = "<group>"; };
-		6E8180DA195D2C9600939068 /* NSGPhysicsDragField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsDragField.h; sourceTree = "<group>"; };
-		6E8180DB195D2C9600939068 /* NSGPhysicsDragField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsDragField.m; sourceTree = "<group>"; };
-		6E8180DE195D2C9600939068 /* NSGPyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPyramid.h; sourceTree = "<group>"; };
-		6E8180DF195D2C9600939068 /* NSGPyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPyramid.m; sourceTree = "<group>"; };
-		6E8180E2195D2C9600939068 /* NSGPhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsBody.h; sourceTree = "<group>"; };
-		6E8180E3195D2C9600939068 /* NSGPhysicsBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsBody.m; sourceTree = "<group>"; };
-		6E8180EA195D2C9600939068 /* NSGPhysicsShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsShape.h; sourceTree = "<group>"; };
-		6E8180EB195D2C9600939068 /* NSGPhysicsShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsShape.m; sourceTree = "<group>"; };
-		6E8180EE195D2C9600939068 /* NSGBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGBox.h; sourceTree = "<group>"; };
-		6E8180EF195D2C9600939068 /* NSGBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGBox.m; sourceTree = "<group>"; };
 		6E8180F2195D2C9600939068 /* NSGLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGLink.h; sourceTree = "<group>"; };
 		6E8180F3195D2C9600939068 /* NSGLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGLink.m; sourceTree = "<group>"; };
-		6E8180F6195D2C9700939068 /* NSGMaterialPropertyContentColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialPropertyContentColor.h; sourceTree = "<group>"; };
-		6E8180F7195D2C9700939068 /* NSGMaterialPropertyContentColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialPropertyContentColor.m; sourceTree = "<group>"; };
-		6E8180FA195D2C9700939068 /* NSGText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGText.h; sourceTree = "<group>"; };
-		6E8180FB195D2C9700939068 /* NSGText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGText.m; sourceTree = "<group>"; };
 		6E8180FE195D2C9700939068 /* NSGCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGCamera.h; sourceTree = "<group>"; };
 		6E8180FF195D2C9700939068 /* NSGCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGCamera.m; sourceTree = "<group>"; };
 		6E818102195D2C9700939068 /* NSGMaterialProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGMaterialProperty.h; sourceTree = "<group>"; };
 		6E818103195D2C9700939068 /* NSGMaterialProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGMaterialProperty.m; sourceTree = "<group>"; };
-		6E818106195D2C9700939068 /* NSGPhysicsMagneticField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsMagneticField.h; sourceTree = "<group>"; };
-		6E818107195D2C9700939068 /* NSGPhysicsMagneticField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsMagneticField.m; sourceTree = "<group>"; };
-		6E81810A195D2C9700939068 /* NSGSoundDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSoundDataSource.h; sourceTree = "<group>"; };
-		6E81810B195D2C9700939068 /* NSGSoundDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGSoundDataSource.m; sourceTree = "<group>"; };
-		6E81810E195D2C9700939068 /* NSGPhysicsSliderJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGPhysicsSliderJoint.h; sourceTree = "<group>"; };
-		6E81810F195D2C9700939068 /* NSGPhysicsSliderJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGPhysicsSliderJoint.m; sourceTree = "<group>"; };
 		6E818112195D9EE500939068 /* NSGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGNode.h; sourceTree = "<group>"; };
 		6E818113195D9EE500939068 /* NSGNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGNode.m; sourceTree = "<group>"; };
 		6E818116195DA4EE00939068 /* NSGSkinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGSkinner.h; sourceTree = "<group>"; };
@@ -372,112 +208,30 @@
 		6EB02C7419352EEB00A732C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6E5EE9B1195DFB38009DF45E /* NSGPhysicsWorld.h */,
+				6E5EE9B2195DFB38009DF45E /* NSGPhysicsWorld.m */,
+				6E5EE9AD195DF8EC009DF45E /* NSGGeometry.h */,
+				6E5EE9AE195DF8EC009DF45E /* NSGGeometry.m */,
 				6E81803E195D23C900939068 /* NSGScene.h */,
 				6E81803F195D23C900939068 /* NSGScene.m */,
 				6E818112195D9EE500939068 /* NSGNode.h */,
 				6E818113195D9EE500939068 /* NSGNode.m */,
 				6E818116195DA4EE00939068 /* NSGSkinner.h */,
 				6E818117195DA4EE00939068 /* NSGSkinner.m */,
-				6E8180AA195D2C9400939068 /* NSGPhysicsWorld.h */,
-				6E8180AB195D2C9400939068 /* NSGPhysicsWorld.m */,
-				6E81810E195D2C9700939068 /* NSGPhysicsSliderJoint.h */,
-				6E81810F195D2C9700939068 /* NSGPhysicsSliderJoint.m */,
-				6E81810A195D2C9700939068 /* NSGSoundDataSource.h */,
-				6E81810B195D2C9700939068 /* NSGSoundDataSource.m */,
-				6E818106195D2C9700939068 /* NSGPhysicsMagneticField.h */,
-				6E818107195D2C9700939068 /* NSGPhysicsMagneticField.m */,
-				6E818102195D2C9700939068 /* NSGMaterialProperty.h */,
-				6E818103195D2C9700939068 /* NSGMaterialProperty.m */,
-				6E8180FE195D2C9700939068 /* NSGCamera.h */,
-				6E8180FF195D2C9700939068 /* NSGCamera.m */,
-				6E8180FA195D2C9700939068 /* NSGText.h */,
-				6E8180FB195D2C9700939068 /* NSGText.m */,
-				6E8180F6195D2C9700939068 /* NSGMaterialPropertyContentColor.h */,
-				6E8180F7195D2C9700939068 /* NSGMaterialPropertyContentColor.m */,
-				6E8180F2195D2C9600939068 /* NSGLink.h */,
-				6E8180F3195D2C9600939068 /* NSGLink.m */,
-				6E8180EE195D2C9600939068 /* NSGBox.h */,
-				6E8180EF195D2C9600939068 /* NSGBox.m */,
-				6E8180EA195D2C9600939068 /* NSGPhysicsShape.h */,
-				6E8180EB195D2C9600939068 /* NSGPhysicsShape.m */,
-				6E8180E2195D2C9600939068 /* NSGPhysicsBody.h */,
-				6E8180E3195D2C9600939068 /* NSGPhysicsBody.m */,
-				6E8180DE195D2C9600939068 /* NSGPyramid.h */,
-				6E8180DF195D2C9600939068 /* NSGPyramid.m */,
-				6E8180DA195D2C9600939068 /* NSGPhysicsDragField.h */,
-				6E8180DB195D2C9600939068 /* NSGPhysicsDragField.m */,
-				6E8180D6195D2C9600939068 /* NSGPhysicsField.h */,
-				6E8180D7195D2C9600939068 /* NSGPhysicsField.m */,
-				6E8180D2195D2C9500939068 /* NSGParticleSystem.h */,
-				6E8180D3195D2C9500939068 /* NSGParticleSystem.m */,
-				6E8180CE195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.h */,
-				6E8180CF195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.m */,
-				6E8180CA195D2C9500939068 /* NSGSceneLink.h */,
-				6E8180CB195D2C9500939068 /* NSGSceneLink.m */,
-				6E8180C6195D2C9500939068 /* NSGCylinder.h */,
-				6E8180C7195D2C9500939068 /* NSGCylinder.m */,
-				6E8180C2195D2C9500939068 /* NSGPhysicsVortexField.h */,
-				6E8180C3195D2C9500939068 /* NSGPhysicsVortexField.m */,
-				6E8180BE195D2C9500939068 /* NSGPhysicsVehicleWheel.h */,
-				6E8180BF195D2C9500939068 /* NSGPhysicsVehicleWheel.m */,
-				6E8180BA195D2C9500939068 /* NSGPhysicsHingeJoint.h */,
-				6E8180BB195D2C9500939068 /* NSGPhysicsHingeJoint.m */,
-				6E8180B6195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.h */,
-				6E8180B7195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.m */,
-				6E8180B2195D2C9500939068 /* NSGGeometryElement.h */,
-				6E8180B3195D2C9500939068 /* NSGGeometryElement.m */,
-				6E8180AE195D2C9400939068 /* NSGPhysicsTurbulenceField.h */,
-				6E8180AF195D2C9400939068 /* NSGPhysicsTurbulenceField.m */,
-				6E8180A6195D2C9400939068 /* NSGPhysicsBehavior.h */,
-				6E8180A7195D2C9400939068 /* NSGPhysicsBehavior.m */,
-				6E8180A2195D2C9400939068 /* NSGMaterialPropertyContent.h */,
-				6E8180A3195D2C9400939068 /* NSGMaterialPropertyContent.m */,
-				6E81809E195D2C9400939068 /* NSGLookAtConstraint.h */,
-				6E81809F195D2C9400939068 /* NSGLookAtConstraint.m */,
-				6E81809A195D2C9400939068 /* NSGLevelOfDetail.h */,
-				6E81809B195D2C9400939068 /* NSGLevelOfDetail.m */,
-				6E818096195D2C9400939068 /* NSGIKConstraint.h */,
-				6E818097195D2C9400939068 /* NSGIKConstraint.m */,
-				6E818092195D2C9400939068 /* NSGGeometry.h */,
-				6E818093195D2C9400939068 /* NSGGeometry.m */,
-				6E81808E195D2C9400939068 /* NSGMorpher.h */,
-				6E81808F195D2C9400939068 /* NSGMorpher.m */,
-				6E81808A195D2C9300939068 /* NSGPhysicsLinearGravityField.h */,
-				6E81808B195D2C9300939068 /* NSGPhysicsLinearGravityField.m */,
-				6E818086195D2C9300939068 /* NSGPhysicsSpringField.h */,
-				6E818087195D2C9300939068 /* NSGPhysicsSpringField.m */,
-				6E818082195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.h */,
-				6E818083195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.m */,
-				6E81807E195D2C9300939068 /* NSGPlane.h */,
-				6E81807F195D2C9300939068 /* NSGPlane.m */,
-				6E81807A195D2C9300939068 /* NSGPhysicsVehicle.h */,
-				6E81807B195D2C9300939068 /* NSGPhysicsVehicle.m */,
-				6E818076195D2C9300939068 /* NSGGeometrySource.h */,
-				6E818077195D2C9300939068 /* NSGGeometrySource.m */,
-				6E818072195D2C9300939068 /* NSGPhysicsElectricField.h */,
-				6E818073195D2C9300939068 /* NSGPhysicsElectricField.m */,
-				6E81806E195D2C9300939068 /* NSGPhysicsBallSocketJoint.h */,
-				6E81806F195D2C9300939068 /* NSGPhysicsBallSocketJoint.m */,
-				6E81806A195D2C9300939068 /* NSGMaterialPropertyContentImage.h */,
-				6E81806B195D2C9300939068 /* NSGMaterialPropertyContentImage.m */,
-				6E818066195D2C9200939068 /* NSGConstraint.h */,
-				6E818067195D2C9200939068 /* NSGConstraint.m */,
-				6E818062195D2C9200939068 /* NSGPhysicsRadialGravityField.h */,
-				6E818063195D2C9200939068 /* NSGPhysicsRadialGravityField.m */,
-				6E81805E195D2C9200939068 /* NSGSoundDataSourceHLSStream.h */,
-				6E81805F195D2C9200939068 /* NSGSoundDataSourceHLSStream.m */,
-				6E81805A195D2C9200939068 /* NSGSound.h */,
-				6E81805B195D2C9200939068 /* NSGSound.m */,
-				6E818056195D2C9200939068 /* NSGPhysicsNoiseField.h */,
-				6E818057195D2C9200939068 /* NSGPhysicsNoiseField.m */,
-				6E81804E195D2C9200939068 /* NSGMaterial.h */,
-				6E81804F195D2C9200939068 /* NSGMaterial.m */,
 				6E81804A195D2C9200939068 /* NSGLight.h */,
 				6E81804B195D2C9200939068 /* NSGLight.m */,
-				6E818046195D2C9200939068 /* NSGSoundDataSourceData.h */,
-				6E818047195D2C9200939068 /* NSGSoundDataSourceData.m */,
-				6E818042195D2C9100939068 /* NSGSphere.h */,
-				6E818043195D2C9100939068 /* NSGSphere.m */,
+				6E8180FE195D2C9700939068 /* NSGCamera.h */,
+				6E8180FF195D2C9700939068 /* NSGCamera.m */,
+				6E8180F2195D2C9600939068 /* NSGLink.h */,
+				6E8180F3195D2C9600939068 /* NSGLink.m */,
+				6E81808E195D2C9400939068 /* NSGMorpher.h */,
+				6E81808F195D2C9400939068 /* NSGMorpher.m */,
+				6E818076195D2C9300939068 /* NSGGeometrySource.h */,
+				6E818077195D2C9300939068 /* NSGGeometrySource.m */,
+				6E8180B2195D2C9500939068 /* NSGGeometryElement.h */,
+				6E8180B3195D2C9500939068 /* NSGGeometryElement.m */,
+				6E818102195D2C9700939068 /* NSGMaterialProperty.h */,
+				6E818103195D2C9700939068 /* NSGMaterialProperty.m */,
 				6E4EBBD41936D1B400FC2546 /* Categories */,
 			);
 			name = Model;
@@ -584,63 +338,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8180E0195D2C9600939068 /* NSGPyramid.h in Headers */,
-				6E8180C0195D2C9500939068 /* NSGPhysicsVehicleWheel.h in Headers */,
-				6E81808C195D2C9300939068 /* NSGPhysicsLinearGravityField.h in Headers */,
-				6E8180F8195D2C9700939068 /* NSGMaterialPropertyContentColor.h in Headers */,
-				6E8180BC195D2C9500939068 /* NSGPhysicsHingeJoint.h in Headers */,
-				6E818064195D2C9200939068 /* NSGPhysicsRadialGravityField.h in Headers */,
 				6E818040195D23C900939068 /* NSGScene.h in Headers */,
-				6E818068195D2C9200939068 /* NSGConstraint.h in Headers */,
-				6E818098195D2C9400939068 /* NSGIKConstraint.h in Headers */,
-				6E8180A8195D2C9400939068 /* NSGPhysicsBehavior.h in Headers */,
 				6EB390371939114600078904 /* NetworkSceneGraph.h in Headers */,
-				6E8180E4195D2C9600939068 /* NSGPhysicsBody.h in Headers */,
+				6E5EE9B3195DFB38009DF45E /* NSGPhysicsWorld.h in Headers */,
 				6E8180B4195D2C9500939068 /* NSGGeometryElement.h in Headers */,
-				6E818080195D2C9300939068 /* NSGPlane.h in Headers */,
+				6E5EE9AF195DF8EC009DF45E /* NSGGeometry.h in Headers */,
 				6E7170B71950EA0900C5F0E2 /* NSGDefines.h in Headers */,
-				6E8180FC195D2C9700939068 /* NSGText.h in Headers */,
-				6E8180D4195D2C9500939068 /* NSGParticleSystem.h in Headers */,
-				6E8180CC195D2C9500939068 /* NSGSceneLink.h in Headers */,
-				6E8180D8195D2C9600939068 /* NSGPhysicsField.h in Headers */,
 				6E818090195D2C9400939068 /* NSGMorpher.h in Headers */,
-				6E8180C8195D2C9500939068 /* NSGCylinder.h in Headers */,
 				6E818114195D9EE500939068 /* NSGNode.h in Headers */,
 				6E7170B21950E11A00C5F0E2 /* NSGServerController.h in Headers */,
 				6E818104195D2C9700939068 /* NSGMaterialProperty.h in Headers */,
-				6E818050195D2C9200939068 /* NSGMaterial.h in Headers */,
-				6E818058195D2C9200939068 /* NSGPhysicsNoiseField.h in Headers */,
 				6E818100195D2C9700939068 /* NSGCamera.h in Headers */,
-				6E818048195D2C9200939068 /* NSGSoundDataSourceData.h in Headers */,
-				6E8180DC195D2C9600939068 /* NSGPhysicsDragField.h in Headers */,
-				6E81806C195D2C9300939068 /* NSGMaterialPropertyContentImage.h in Headers */,
-				6E8180AC195D2C9400939068 /* NSGPhysicsWorld.h in Headers */,
-				6E81807C195D2C9300939068 /* NSGPhysicsVehicle.h in Headers */,
-				6E8180F0195D2C9600939068 /* NSGBox.h in Headers */,
 				6E81804C195D2C9200939068 /* NSGLight.h in Headers */,
-				6E818110195D2C9700939068 /* NSGPhysicsSliderJoint.h in Headers */,
-				6E818044195D2C9100939068 /* NSGSphere.h in Headers */,
-				6E818070195D2C9300939068 /* NSGPhysicsBallSocketJoint.h in Headers */,
-				6E8180A4195D2C9400939068 /* NSGMaterialPropertyContent.h in Headers */,
-				6E8180C4195D2C9500939068 /* NSGPhysicsVortexField.h in Headers */,
 				6ED5C6391938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.h in Headers */,
-				6E818074195D2C9300939068 /* NSGPhysicsElectricField.h in Headers */,
-				6E8180A0195D2C9400939068 /* NSGLookAtConstraint.h in Headers */,
-				6E8180EC195D2C9600939068 /* NSGPhysicsShape.h in Headers */,
-				6E81809C195D2C9400939068 /* NSGLevelOfDetail.h in Headers */,
-				6E8180B0195D2C9400939068 /* NSGPhysicsTurbulenceField.h in Headers */,
 				6E0C66C0195C7D9600841DB5 /* NSGSceneController.h in Headers */,
-				6E8180D0195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.h in Headers */,
-				6E818094195D2C9400939068 /* NSGGeometry.h in Headers */,
-				6E81810C195D2C9700939068 /* NSGSoundDataSource.h in Headers */,
-				6E8180B8195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.h in Headers */,
-				6E81805C195D2C9200939068 /* NSGSound.h in Headers */,
-				6E818060195D2C9200939068 /* NSGSoundDataSourceHLSStream.h in Headers */,
 				6E818078195D2C9300939068 /* NSGGeometrySource.h in Headers */,
-				6E818084195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.h in Headers */,
 				6E818118195DA4EE00939068 /* NSGSkinner.h in Headers */,
-				6E818088195D2C9300939068 /* NSGPhysicsSpringField.h in Headers */,
-				6E818108195D2C9700939068 /* NSGPhysicsMagneticField.h in Headers */,
 				6E8180F4195D2C9600939068 /* NSGLink.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -769,64 +482,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8180BD195D2C9500939068 /* NSGPhysicsHingeJoint.m in Sources */,
-				6E8180AD195D2C9400939068 /* NSGPhysicsWorld.m in Sources */,
-				6E81808D195D2C9300939068 /* NSGPhysicsLinearGravityField.m in Sources */,
-				6E8180B9195D2C9500939068 /* NSGMaterialPropertyContentCubeMapImages.m in Sources */,
-				6E8180B1195D2C9400939068 /* NSGPhysicsTurbulenceField.m in Sources */,
-				6E8180D5195D2C9500939068 /* NSGParticleSystem.m in Sources */,
-				6E8180A5195D2C9400939068 /* NSGMaterialPropertyContent.m in Sources */,
+				6E5EE9B4195DFB38009DF45E /* NSGPhysicsWorld.m in Sources */,
 				6E818119195DA4EE00939068 /* NSGSkinner.m in Sources */,
-				6E818099195D2C9400939068 /* NSGIKConstraint.m in Sources */,
 				6E81804D195D2C9200939068 /* NSGLight.m in Sources */,
 				6E818101195D2C9700939068 /* NSGCamera.m in Sources */,
-				6E81809D195D2C9400939068 /* NSGLevelOfDetail.m in Sources */,
-				6E81805D195D2C9200939068 /* NSGSound.m in Sources */,
-				6E8180E5195D2C9600939068 /* NSGPhysicsBody.m in Sources */,
-				6E8180F1195D2C9600939068 /* NSGBox.m in Sources */,
-				6E8180A1195D2C9400939068 /* NSGLookAtConstraint.m in Sources */,
-				6E81810D195D2C9700939068 /* NSGSoundDataSource.m in Sources */,
 				6E8180F5195D2C9600939068 /* NSGLink.m in Sources */,
-				6E8180C5195D2C9500939068 /* NSGPhysicsVortexField.m in Sources */,
 				6E818091195D2C9400939068 /* NSGMorpher.m in Sources */,
-				6E8180F9195D2C9700939068 /* NSGMaterialPropertyContentColor.m in Sources */,
-				6E8180E1195D2C9600939068 /* NSGPyramid.m in Sources */,
-				6E818081195D2C9300939068 /* NSGPlane.m in Sources */,
-				6E8180A9195D2C9400939068 /* NSGPhysicsBehavior.m in Sources */,
 				6E818079195D2C9300939068 /* NSGGeometrySource.m in Sources */,
-				6E81807D195D2C9300939068 /* NSGPhysicsVehicle.m in Sources */,
-				6E8180C9195D2C9500939068 /* NSGCylinder.m in Sources */,
-				6E8180CD195D2C9500939068 /* NSGSceneLink.m in Sources */,
-				6E818109195D2C9700939068 /* NSGPhysicsMagneticField.m in Sources */,
-				6E8180DD195D2C9600939068 /* NSGPhysicsDragField.m in Sources */,
-				6E818111195D2C9700939068 /* NSGPhysicsSliderJoint.m in Sources */,
-				6E818071195D2C9300939068 /* NSGPhysicsBallSocketJoint.m in Sources */,
-				6E8180ED195D2C9600939068 /* NSGPhysicsShape.m in Sources */,
+				6E5EE9B0195DF8EC009DF45E /* NSGGeometry.m in Sources */,
 				6E124F301934F840004D6A32 /* NSGModel.xcdatamodeld in Sources */,
 				6E818115195D9EE500939068 /* NSGNode.m in Sources */,
-				6E818049195D2C9200939068 /* NSGSoundDataSourceData.m in Sources */,
-				6E818045195D2C9100939068 /* NSGSphere.m in Sources */,
-				6E8180C1195D2C9500939068 /* NSGPhysicsVehicleWheel.m in Sources */,
 				6E0C66BE195C7D9600841DB5 /* NSGSceneController.m in Sources */,
-				6E81806D195D2C9300939068 /* NSGMaterialPropertyContentImage.m in Sources */,
 				6E818105195D2C9700939068 /* NSGMaterialProperty.m in Sources */,
-				6E8180FD195D2C9700939068 /* NSGText.m in Sources */,
-				6E818069195D2C9200939068 /* NSGConstraint.m in Sources */,
-				6E818059195D2C9200939068 /* NSGPhysicsNoiseField.m in Sources */,
 				6E7170B81950EA0900C5F0E2 /* NSGDefines.m in Sources */,
-				6E818085195D2C9300939068 /* NSGMaterialPropertyContentVideoHLS.m in Sources */,
-				6E818061195D2C9200939068 /* NSGSoundDataSourceHLSStream.m in Sources */,
-				6E818075195D2C9300939068 /* NSGPhysicsElectricField.m in Sources */,
-				6E818065195D2C9200939068 /* NSGPhysicsRadialGravityField.m in Sources */,
-				6E8180D1195D2C9500939068 /* NSGIKConstraintMaxAllowedRotationAngleForJoint.m in Sources */,
 				6E818041195D23C900939068 /* NSGScene.m in Sources */,
-				6E818089195D2C9300939068 /* NSGPhysicsSpringField.m in Sources */,
 				6E7170B31950E11A00C5F0E2 /* NSGServerController.m in Sources */,
 				6ED5C63A1938CE4000CE0EE0 /* NSManagedObjectModel+NetworkSceneGraph.m in Sources */,
 				6E8180B5195D2C9500939068 /* NSGGeometryElement.m in Sources */,
-				6E818051195D2C9200939068 /* NSGMaterial.m in Sources */,
-				6E818095195D2C9400939068 /* NSGGeometry.m in Sources */,
-				6E8180D9195D2C9600939068 /* NSGPhysicsField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

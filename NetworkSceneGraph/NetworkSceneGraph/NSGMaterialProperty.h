@@ -13,8 +13,8 @@
 
 @interface NSGMaterialProperty : NSManagedObject
 
-@property (nonatomic, retain) id borderColor;
-@property (nonatomic, retain) id contentsTransform;
+@property (nonatomic, retain) NSValue * borderColor;
+@property (nonatomic, retain) NSValue *contentsTransform;
 @property (nonatomic, retain) NSNumber * intensity;
 @property (nonatomic, retain) NSNumber * magnificationFilter;
 @property (nonatomic, retain) NSNumber * mappingChannel;
@@ -35,5 +35,11 @@
 @property (nonatomic, retain) NSGMaterial *materialSpecular;
 @property (nonatomic, retain) NSGMaterial *materialTransparent;
 @property (nonatomic, retain) NSGScene *sceneBackground;
+
+@end
+
+@interface SCNMaterialProperty (NetworkSceneGraphAdditions)
+
+-(void)setValuesForManagedObject:(NSGMaterialProperty *)managedObject;
 
 @end

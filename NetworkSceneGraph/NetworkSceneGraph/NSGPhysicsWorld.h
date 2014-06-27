@@ -13,9 +13,10 @@
 
 @interface NSGPhysicsWorld : NSManagedObject
 
-@property (nonatomic, retain) id gravity;
+@property (nonatomic, retain) NSValue  * gravity;
 @property (nonatomic, retain) NSNumber * speed;
 @property (nonatomic, retain) NSNumber * timeStep;
+@property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSSet *behaviors;
 @property (nonatomic, retain) NSGScene *scene;
 @end

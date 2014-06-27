@@ -25,3 +25,18 @@
 @dynamic node;
 
 @end
+
+@implementation SCNSkinner (NetworkSceneGraphAdditions)
+
++(instancetype)skinnerWithValuesForManagedObject:(NSGSkinner *)managedObject
+{
+    SCNGeometry *baseGeometry = [SCNGeometry ]
+    
+    return [SCNSkinner skinnerWithBaseGeometry:<#(SCNGeometry *)#>
+                                         bones:<#(NSArray *)#>
+                     boneInverseBindTransforms:managedObject.boneInverseBindTransforms
+                                   boneWeights:<#(SCNGeometrySource *)#>
+                                   boneIndices:<#(SCNGeometrySource *)#>];
+}
+
+@end

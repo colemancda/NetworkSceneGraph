@@ -126,14 +126,7 @@
     
     if (managedObject.skinner) {
         
-        if (!self.skinner) {
-            
-            self.skinner = [SCNSkinner skinnerWithValuesForManagedObject:managedObject.skinner];
-        }
-        else {
-            
-            [self.skinner setValuesForManagedObject:managedObject.skinner];
-        }
+        self.skinner = [SCNSkinner skinnerWithValuesForManagedObject:managedObject.skinner];
     }
     
     else {
@@ -232,8 +225,6 @@
     self.opacity = managedObject.opacity.doubleValue;
     
     self.castsShadow = managedObject.castsShadow.boolValue;
-    
-    
 }
 
 @end

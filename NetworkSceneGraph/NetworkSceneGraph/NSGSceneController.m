@@ -11,6 +11,7 @@
 #import "NSGScene.h"
 #import "NSGNode.h"
 #import "NSGMaterialProperty.h"
+#import "NSGPhysicsWorld.h"
 
 static void *KVOContext = &KVOContext;
 
@@ -43,7 +44,11 @@ static void *KVOContext = &KVOContext;
 {
     [self.store fetchEntityWithName:@"Scene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
         
-        [self.delegate sceneController:self didFetchSceneWithError:error];
+        [self.delegate sceneController:self
+                 didFetchManagedObject:managedObject
+                       withEntityNamed:@"Scene"
+                            resourceID:self.sceneResourceID
+                                 error:error];
         
         if (error) {
             
@@ -52,13 +57,51 @@ static void *KVOContext = &KVOContext;
         
         NSGScene *scene = (NSGScene *)managedObject;
         
-        // download background
-        
-        [self.store fetchEntityWithName:@"MaterialProperty" resourceID:scene.background.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
-           
-            NSGMaterialProperty *background = (NSGMaterialProperty *)managedObject;
+        if (scene.background) {
             
-        }];
+            // download background
+            
+            [self.store fetchEntityWithName:@"MaterialProperty" resourceID:scene.background.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+                
+                [self.delegate sceneController:self
+                         didFetchManagedObject:managedObject
+                               withEntityNamed:@"MaterialProperty"
+                                    resourceID:self.sceneResourceID
+                                         error:error];
+                
+                if (error) {
+                    
+                    return;
+                }
+                
+                NSGMaterialProperty *background = (NSGMaterialProperty *)managedObject;
+                
+                [self.scene.background setValuesForManagedObject:background];
+                
+            }];
+        }
+        
+        if (scene.physicsWorld) {
+            
+            // download physics world
+            
+            [self.store fetchEntityWithName:@"PhysicsWorld" resourceID:scene.physicsWorld.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+                
+                [self.delegate sceneController:self
+                         didFetchManagedObject:managedObject
+                               withEntityNamed:@"PhysicsWorld"
+                                    resourceID:self.sceneResourceID
+                                         error:error];
+                
+                if (error) {
+                    
+                    return;
+                }
+                
+                [self.scene.physicsWorld setValuesForManagedObject:managedObject];
+                
+            }];
+        }
         
         // download root nodes
         
@@ -78,14 +121,6 @@ static void *KVOContext = &KVOContext;
         }
         
     }];
-    
-}
-
-#pragma mark - Internal Methods
-
--(void)managedObjectContextObjectsDidChangeNotification:(NSNotification *)notification
-{
-    
     
 }
 

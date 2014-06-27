@@ -16,6 +16,7 @@
 @dynamic gravity;
 @dynamic speed;
 @dynamic timeStep;
+@dynamic resourceID;
 @dynamic behaviors;
 @dynamic scene;
 

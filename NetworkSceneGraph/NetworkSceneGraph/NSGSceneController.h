@@ -14,6 +14,9 @@
 @protocol NSGSceneControllerDelegate;
 
 @interface NSGSceneController : NSObject
+{
+    BOOL _shouldStopSceneLoading;
+}
 
 #pragma mark - Configuration Properties
 
@@ -41,13 +44,7 @@
 
 -(void)loadScene;
 
--(void)reloadScene;
-
 -(void)stopLoadingScene;
-
-#pragma mark - Internal Methods
-
-
 
 @end
 
@@ -55,9 +52,7 @@
 
 @protocol NSGSceneControllerDelegate <NSObject>
 
--(void)sceneController:(NSGSceneController *)sceneController didFetchSceneWithError:(NSError *)error;
-
--(void)sceneController:(NSGSceneController *)sceneController didFetchNodeWithError:(NSError *)error;
+-(void)sceneController:(NSGSceneController *)sceneController didFetchManagedObject:(NSManagedObject *)managedObject withEntityNamed:(NSString *)entityName resourceID:(NSNumber *)resourceID error:(NSError *)error;
 
 
 @end

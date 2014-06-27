@@ -28,3 +28,19 @@
 @dynamic skinnerBoneWeights;
 
 @end
+
+@implementation SCNGeometrySource (NetworkSceneGraphAdditions)
+
++(instancetype)geometrySourceWithValuesForManagedObject:(NSGGeometrySource *)managedObject
+{
+    return [SCNGeometrySource geometrySourceWithData:managedObject.data
+                                            semantic:managedObject.semantic
+                                         vectorCount:managedObject.vectorCount.integerValue
+                                     floatComponents:managedObject.floatComponents.boolValue
+                                 componentsPerVector:managedObject.componentsPerVector.integerValue
+                                   bytesPerComponent:managedObject.bytesPerComponent.integerValue
+                                          dataOffset:managedObject.dataOffset.integerValue
+                                          dataStride:managedObject.dataStride.integerValue];
+}
+
+@end

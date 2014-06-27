@@ -21,3 +21,15 @@
 @dynamic geometryEdgeCreasesElement;
 
 @end
+
+@implementation SCNGeometryElement (NetworkSceneGraphAdditions)
+
++(instancetype)geometryElementWithValuesForManagedObject:(NSGGeometryElement *)managedObject
+{
+    return [SCNGeometryElement geometryElementWithData:managedObject.data
+                                         primitiveType:managedObject.primitiveType.integerValue
+                                        primitiveCount:managedObject.primitiveCount.integerValue
+                                         bytesPerIndex:managedObject.bytesPerIndex.integerValue];
+}
+
+@end

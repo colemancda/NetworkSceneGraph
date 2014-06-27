@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+@import SceneKit;
 
 @class NSGGeometry, NSGSkinner;
 
@@ -26,5 +27,11 @@
 @property (nonatomic, retain) NSGGeometry *geometryEdgeCreasesSource;
 @property (nonatomic, retain) NSGSkinner *skinnerBoneIndices;
 @property (nonatomic, retain) NSGSkinner *skinnerBoneWeights;
+
+@end
+
+@interface SCNGeometrySource (NetworkSceneGraphAdditions)
+
++(instancetype)geometrySourceWithValuesForManagedObject:(NSGGeometrySource *)managedObject;
 
 @end

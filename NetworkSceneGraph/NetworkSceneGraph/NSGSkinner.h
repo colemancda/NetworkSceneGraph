@@ -15,7 +15,7 @@
 @interface NSGSkinner : NSManagedObject
 
 @property (nonatomic, retain) NSValue *baseGeometryBindTransform;
-@property (nonatomic, retain) NSValue *boneInverseBindTransforms;
+@property (nonatomic, retain) NSArray *boneInverseBindTransforms; // Array of values
 @property (nonatomic, retain) NSNumber * resourceID;
 @property (nonatomic, retain) NSGGeometry *baseGeometry;
 @property (nonatomic, retain) NSGGeometrySource *boneIndices;
