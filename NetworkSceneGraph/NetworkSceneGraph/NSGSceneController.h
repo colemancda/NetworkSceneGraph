@@ -9,16 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h>
 #import <NetworkObjects/NetworkObjects.h>
-@class NSGScene;
 
-@protocol NSGSceneControllerDelegate;
+/* Block used to report and control progress of loading a scene. 
+ */
+
+typedef void (^NSGSceneControllerLoadSceneProgressBlock)(NSManagedObject *fetchedManagedObject, NSError *error, BOOL *stop);
 
 @interface NSGSceneController : NSObject
 {
     BOOL _shouldStopSceneLoading;
 }
 
-#pragma mark - Configuration Properties
+#pragma mark - Properties
 
 // These properties setup the controller, should not be changed while fetching.
 
@@ -32,27 +34,12 @@
 
 @property (nonatomic) NSNumber *destinationNodeResourceID;
 
-@property (nonatomic) id<NSGSceneControllerDelegate> delegate;
-
-#pragma mark - Output Properties
-
 // These properties are created and managed by the controller
 
 @property (nonatomic, readonly) id audioStream;
 
 /** Downloads the scene graph's elements. */
 
--(void)loadScene;
-
--(void)stopLoadingScene;
-
-@end
-
-/** Delegate protocol for incrementally downloading and caching the network scene graph. */
-
-@protocol NSGSceneControllerDelegate <NSObject>
-
--(void)sceneController:(NSGSceneController *)sceneController didFetchManagedObject:(NSManagedObject *)managedObject withEntityNamed:(NSString *)entityName resourceID:(NSNumber *)resourceID error:(NSError *)error;
-
+-(void)loadSceneWithProgressBlock:(NSGSceneControllerLoadSceneProgressBlock)block;
 
 @end

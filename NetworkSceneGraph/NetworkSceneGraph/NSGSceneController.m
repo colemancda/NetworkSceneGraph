@@ -15,6 +15,14 @@
 
 static void *KVOContext = &KVOContext;
 
+@interface NSGSceneController (RecursivelyFetchRelationshipValues)
+
+-(void)recursivelyFetchRelationshipValuesOfManagedObject:(NSManagedObject *)managedObject
+                                           newerThanDate:(NSDate *)date
+                                                   block:(NSGSceneControllerLoadSceneProgressBlock)block;
+
+@end
+
 @interface NSGSceneController ()
 
 @property (nonatomic) SCNScene *scene;
@@ -40,87 +48,115 @@ static void *KVOContext = &KVOContext;
 
 #pragma mark - Fetch Scene
 
--(void)fetchScene
+-(void)loadSceneWithProgressBlock:(NSGSceneControllerLoadSceneProgressBlock)block
 {
     [self.store fetchEntityWithName:@"Scene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
         
-        [self.delegate sceneController:self
-                 didFetchManagedObject:managedObject
-                       withEntityNamed:@"Scene"
-                            resourceID:self.sceneResourceID
-                                 error:error];
+        BOOL shouldStop = NO;
+        
+        // managedObject will only be nil for the scene managed object
+        
+        block(managedObject, error, &shouldStop);
         
         if (error) {
+            
+            if (!shouldStop) {
+                
+                [self loadSceneWithProgressBlock:block];
+            }
             
             return;
         }
         
-        NSGScene *scene = (NSGScene *)managedObject;
-        
-        if (scene.background) {
-            
-            // download background
-            
-            [self.store fetchEntityWithName:@"MaterialProperty" resourceID:scene.background.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+        NSDate *date = [NSDate date];
                 
-                [self.delegate sceneController:self
-                         didFetchManagedObject:managedObject
-                               withEntityNamed:@"MaterialProperty"
-                                    resourceID:self.sceneResourceID
-                                         error:error];
-                
-                if (error) {
-                    
-                    return;
-                }
-                
-                NSGMaterialProperty *background = (NSGMaterialProperty *)managedObject;
-                
-                [self.scene.background setValuesForManagedObject:background];
-                
-            }];
-        }
-        
-        if (scene.physicsWorld) {
-            
-            // download physics world
-            
-            [self.store fetchEntityWithName:@"PhysicsWorld" resourceID:scene.physicsWorld.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
-                
-                [self.delegate sceneController:self
-                         didFetchManagedObject:managedObject
-                               withEntityNamed:@"PhysicsWorld"
-                                    resourceID:self.sceneResourceID
-                                         error:error];
-                
-                if (error) {
-                    
-                    return;
-                }
-                
-                [self.scene.physicsWorld setValuesForManagedObject:managedObject];
-                
-            }];
-        }
-        
-        // download root nodes
-        
-        for (NSGNode *rootNode in scene.nodes) {
-            
-            // fetch
-            
-            [self.store fetchEntityWithName:@"Node" resourceID:rootNode.resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
-                
-                NSGNode *childNode
-               
-                while (<#condition#>) {
-                    <#statements#>
-                }
-                
-            }];
-        }
-        
+        [self recursivelyFetchRelationshipValuesOfManagedObject:managedObject
+                                                  newerThanDate:date
+                                                          block:block];
     }];
+}
+
+@end
+
+@implementation NSGSceneController (RecursivelyFetchRelationshipValues)
+
+-(void)recursivelyFetchRelationshipValuesOfManagedObject:(NSManagedObject *)managedObject
+                                           newerThanDate:(NSDate *)date
+                                                   block:(NSGSceneControllerLoadSceneProgressBlock)block
+{
+    for (NSString *relationshipName in managedObject.entity.relationshipsByName) {
+        
+        NSRelationshipDescription *relationship = managedObject.entity.relationshipsByName[relationshipName];
+        
+        // to many relationship
+        
+        if (!relationship.isToMany) {
+            
+            __block NSNumber *resourceID;
+            
+            __block NSManagedObject *destinationObject;
+            
+            __block NSDate *dateCached;
+            
+            [self.store.managedObjectContext performBlockAndWait:^{
+                
+                destinationObject = [managedObject valueForKey:relationshipName];
+                
+                resourceID = [destinationObject valueForKey:self.store.resourceIDAttributeName];
+                
+                dateCached = [destinationObject valueForKey:self.store.dateCachedAttributeName];
+                
+            }];
+            
+            // download is not cached or cache is old
+            
+            if (!dateCached || [dateCached compare:date] == NSOrderedAscending) {
+                
+                [self.store fetchEntityWithName:relationship.destinationEntity.name resourceID:resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+                    
+                    [self.store.managedObjectContext performBlock:^{
+                        
+                        [self.delegate sceneController:self didFetchSceneGraphElement:destinationObject withError:error];
+                        
+                        // download the relationship values of this managed object
+                        
+                        [self incrementallyFetchRelationshipValuesOfManagedObject:destinationObject newerThanDate:date];
+                        
+                    }];
+                }];
+            }
+        }
+        
+        else {
+            
+            [self.store.managedObjectContext performBlock:^{
+                
+                for (NSManagedObject *destinationObject in [managedObject valueForKey:relationshipName]) {
+                    
+                    NSNumber *resourceID = [destinationObject valueForKey:self.store.resourceIDAttributeName];
+                    
+                    // download if not cached or cache is old
+                    
+                    if ([date compare:[NSDate date]] == NSOrderedAscending) {
+                        
+                        [self.store fetchEntityWithName:relationship.destinationEntity.name resourceID:resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+                            
+                            [self.store.managedObjectContext performBlock:^{
+                                
+                                [self.delegate sceneController:self didFetchSceneGraphElement:destinationObject withError:error];
+                                
+                                // download the relationship values of this managed object
+                                
+                                [self incrementallyFetchRelationshipValuesOfManagedObject:destinationObject newerThanDate:date];
+                                
+                            }];
+                        }];
+                    }
+                }
+                
+            }];
+        }
+    }
     
 }
 
