@@ -21,13 +21,18 @@ static void *KVOContext = &KVOContext;
                                            newerThanDate:(NSDate *)date
                                                    block:(NSGSceneControllerLoadSceneProgressBlock)block;
 
+-(void)fetchEntityAndRecursivelyFetchRelationshipValuesOfEntityWithName:(NSString *)entityName
+                                                             resourceID:(NSNumber *)resourceID
+                                                       cachePlaceholder:(NSManagedObject *)cachePlaceholder
+                                                             dateCached:(NSDate *)dateCached
+                                                          newerThanDate:(NSDate *)date
+                                                                  block:(NSGSceneControllerLoadSceneProgressBlock)block;
+
 @end
 
 @interface NSGSceneController ()
 
 @property (nonatomic) SCNScene *scene;
-
-@property (nonatomic) SCNCamera *pointOfView;
 
 @end
 
@@ -40,8 +45,6 @@ static void *KVOContext = &KVOContext;
         
         self.scene = [SCNScene scene];
         
-        self.pointOfView = [SCNCamera camera];
-        
     }
     return self;
 }
@@ -52,18 +55,20 @@ static void *KVOContext = &KVOContext;
 {
     [self.store fetchEntityWithName:@"Scene" resourceID:self.sceneResourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
         
-        BOOL shouldStop = NO;
+        BOOL stop = NO;
         
         // managedObject will only be nil for the scene managed object
         
-        block(managedObject, error, &shouldStop);
+        block(managedObject, error, &stop);
+        
+        if (stop) {
+            
+            return;
+        }
         
         if (error) {
             
-            if (!shouldStop) {
-                
-                [self loadSceneWithProgressBlock:block];
-            }
+            [self loadSceneWithProgressBlock:block];
             
             return;
         }
@@ -108,23 +113,13 @@ static void *KVOContext = &KVOContext;
                 
             }];
             
-            // download is not cached or cache is old
+            // download if not cached or cache is old
             
-            if (!dateCached || [dateCached compare:date] == NSOrderedAscending) {
-                
-                [self.store fetchEntityWithName:relationship.destinationEntity.name resourceID:resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
-                    
-                    [self.store.managedObjectContext performBlock:^{
-                        
-                        [self.delegate sceneController:self didFetchSceneGraphElement:destinationObject withError:error];
-                        
-                        // download the relationship values of this managed object
-                        
-                        [self incrementallyFetchRelationshipValuesOfManagedObject:destinationObject newerThanDate:date];
-                        
-                    }];
-                }];
-            }
+            [self fetchEntityAndRecursivelyFetchRelationshipValuesOfEntityWithName:relationship.destinationEntity.name
+                                                                        resourceID:resourceID
+                                                                  cachePlaceholder:destinationObject                                                                        dateCached:dateCached
+                                                                     newerThanDate:date
+                                                                             block:block];
         }
         
         else {
@@ -135,27 +130,62 @@ static void *KVOContext = &KVOContext;
                     
                     NSNumber *resourceID = [destinationObject valueForKey:self.store.resourceIDAttributeName];
                     
+                    NSDate *dateCached = [destinationObject valueForKey:self.store.dateCachedAttributeName];
+                    
                     // download if not cached or cache is old
                     
-                    if ([date compare:[NSDate date]] == NSOrderedAscending) {
-                        
-                        [self.store fetchEntityWithName:relationship.destinationEntity.name resourceID:resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
-                            
-                            [self.store.managedObjectContext performBlock:^{
-                                
-                                [self.delegate sceneController:self didFetchSceneGraphElement:destinationObject withError:error];
-                                
-                                // download the relationship values of this managed object
-                                
-                                [self incrementallyFetchRelationshipValuesOfManagedObject:destinationObject newerThanDate:date];
-                                
-                            }];
-                        }];
-                    }
+                    [self fetchEntityAndRecursivelyFetchRelationshipValuesOfEntityWithName:relationship.destinationEntity.name
+                                                                                resourceID:resourceID
+                                                                          cachePlaceholder:destinationObject
+                                                                                dateCached:dateCached
+                                                                             newerThanDate:date
+                                                                                     block:block];
+                    
                 }
                 
             }];
         }
+    }
+    
+}
+
+-(void)fetchEntityAndRecursivelyFetchRelationshipValuesOfEntityWithName:(NSString *)entityName
+                                                             resourceID:(NSNumber *)resourceID
+                                                       cachePlaceholder:(NSManagedObject *)cachePlaceholder
+                                                             dateCached:(NSDate *)dateCached
+                                                          newerThanDate:(NSDate *)date
+                                                                  block:(NSGSceneControllerLoadSceneProgressBlock)block
+{
+    // download if not cached or cache is old
+
+    if (!dateCached || [dateCached compare:date] == NSOrderedAscending) {
+        
+        [self.store fetchEntityWithName:entityName resourceID:resourceID URLSession:self.URLSession completion:^(NSError *error, NSManagedObject *managedObject) {
+            
+            BOOL stop = NO;
+            
+            block(managedObject, error, &stop);
+            
+            if (stop) {
+                
+                return;
+            }
+            
+            if (error) {
+                
+                [self fetchEntityAndRecursivelyFetchRelationshipValuesOfEntityWithName:entityName
+                                                                            resourceID:resourceID
+                                                                      cachePlaceholder:cachePlaceholder
+                                                                            dateCached:dateCached
+                                                                         newerThanDate:date
+                                                                                 block:block];
+                
+                return;
+            }
+            
+            [self recursivelyFetchRelationshipValuesOfManagedObject:cachePlaceholder newerThanDate:date block:block];
+            
+        }];
     }
     
 }
