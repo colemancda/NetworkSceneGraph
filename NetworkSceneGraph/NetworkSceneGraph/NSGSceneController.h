@@ -16,9 +16,6 @@
 typedef void (^NSGSceneControllerLoadSceneProgressBlock)(NSManagedObject *fetchedManagedObject, NSError *error, BOOL *stop);
 
 @interface NSGSceneController : NSObject
-{
-    BOOL _shouldStopSceneLoading;
-}
 
 #pragma mark - Properties
 

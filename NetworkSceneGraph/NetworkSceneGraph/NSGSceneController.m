@@ -164,7 +164,7 @@ static void *KVOContext = &KVOContext;
             
             BOOL stop = NO;
             
-            block(managedObject, error, &stop);
+            block(cachePlaceholder, error, &stop);
             
             if (stop) {
                 
