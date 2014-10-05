@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Node: NSManagedObject {
+public class Node: NSManagedObject {
 
     @NSManaged var descriptionText: String
     @NSManaged var hidden: NSNumber

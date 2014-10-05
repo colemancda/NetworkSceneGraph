@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class MaterialProperty: NSManagedObject {
+public class MaterialProperty: NSManagedObject {
 
     @NSManaged var borderColor: NSValue
     @NSManaged var intensity: NSNumber

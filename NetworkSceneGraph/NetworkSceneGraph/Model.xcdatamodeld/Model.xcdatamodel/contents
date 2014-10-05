@@ -360,7 +360,7 @@
     </entity>
     <entity name="PhysicsVortexField" representedClassName="PhysicsVortexField" parentEntity="PhysicsField" syncable="YES"/>
     <entity name="PhysicsWorld" representedClassName="PhysicsWorld" syncable="YES">
-        <attribute name="gravity" optional="YES" attributeType="Transformable" valueTransformerName="SCNVector3ValueTransformer" syncable="YES"/>
+        <attribute name="gravity" optional="YES" attributeType="Transformable" valueTransformerName="" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="timeStep" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>

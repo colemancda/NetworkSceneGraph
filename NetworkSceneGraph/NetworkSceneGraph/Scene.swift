@@ -9,11 +9,11 @@
 import Foundation
 import CoreData
 
-class Scene: NSManagedObject {
+public class Scene: NSManagedObject {
 
-    @NSManaged var id: NSNumber
-    @NSManaged var background: MaterialProperty
-    @NSManaged var nodes: NSSet
-    @NSManaged var physicsWorld: PhysicsWorld
+    @NSManaged public var id: NSNumber
+    @NSManaged public var background: MaterialProperty
+    @NSManaged public var nodes: NSSet
+    @NSManaged public var physicsWorld: PhysicsWorld
 
 }

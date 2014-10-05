@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class PhysicsWorld: NSManagedObject {
+public class PhysicsWorld: NSManagedObject {
 
     @NSManaged var gravity: NSValue
     @NSManaged var speed: NSNumber
