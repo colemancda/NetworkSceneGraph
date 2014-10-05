@@ -2,3 +2,5 @@
 *.xcuserstate
 
 NetworkSceneGraph/NetworkSceneGraph.xcodeproj/project.xcworkspace/xcuserdata/Coleman.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.xcbkptlist
