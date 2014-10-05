@@ -22,7 +22,7 @@
         <relationship name="geometrySources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GeometrySource" inverseName="geometry" inverseEntity="GeometrySource" syncable="YES"/>
         <relationship name="levelsOfDetail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Geometry" inverseName="geometryLevelOfDetail" inverseEntity="Geometry" syncable="YES"/>
         <relationship name="materials" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Material" inverseName="geometry" inverseEntity="Material" syncable="YES"/>
-        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mopher" inverseName="targets" inverseEntity="Mopher" syncable="YES"/>
+        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Morpher" inverseName="targets" inverseEntity="Morpher" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="geometry" inverseEntity="Node" syncable="YES"/>
         <relationship name="particleSystemEmitterShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParticleSystem" inverseName="emitterShape" inverseEntity="ParticleSystem" syncable="YES"/>
         <relationship name="physicsShapeGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsShape" inverseName="geometry" inverseEntity="PhysicsShape" syncable="YES"/>
@@ -68,8 +68,8 @@
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="light" inverseEntity="Node" syncable="YES"/>
     </entity>
     <entity name="Link" syncable="YES">
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="sceneResourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="sceneID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="link" inverseEntity="Node" syncable="YES"/>
     </entity>
@@ -84,40 +84,40 @@
         <attribute name="shininess" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="transparency" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="transparencyMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="ambient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="ambientMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
-        <relationship name="diffuse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="diffuseMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
-        <relationship name="emission" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="emissionMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="ambient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialAmbient" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="diffuse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialDiffuse" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="emission" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialEmission" inverseEntity="MaterialProperty" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="materials" inverseEntity="Geometry" syncable="YES"/>
-        <relationship name="multiply" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="multiplyMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
-        <relationship name="normal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="normalMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
-        <relationship name="reflective" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="reflectiveMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
-        <relationship name="specular" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="specularMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
-        <relationship name="transparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="transparentMaterial" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="multiply" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialMultiply" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="normal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialNormal" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="reflective" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialReflective" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="specular" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialSpecular" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="transparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="materialTransparent" inverseEntity="MaterialProperty" syncable="YES"/>
     </entity>
     <entity name="MaterialProperty" syncable="YES">
-        <attribute name="borderColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="borderColor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="magnificationFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mappingChannel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="maxAnisotropy" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="minificationFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mipFilter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="wrapS" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="wrapT" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="ambientMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="ambient" inverseEntity="Material" syncable="YES"/>
-        <relationship name="backgroundScene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scene" inverseName="background" inverseEntity="Scene" syncable="YES"/>
-        <relationship name="contents" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialPropertyContent" inverseName="material" inverseEntity="MaterialPropertyContent" syncable="YES"/>
-        <relationship name="diffuseMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="diffuse" inverseEntity="Material" syncable="YES"/>
-        <relationship name="emissionMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="emission" inverseEntity="Material" syncable="YES"/>
-        <relationship name="multiplyMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="multiply" inverseEntity="Material" syncable="YES"/>
-        <relationship name="normalMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="normal" inverseEntity="Material" syncable="YES"/>
-        <relationship name="reflectiveMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="reflective" inverseEntity="Material" syncable="YES"/>
-        <relationship name="specularMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="specular" inverseEntity="Material" syncable="YES"/>
-        <relationship name="transparentMaterial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="transparent" inverseEntity="Material" syncable="YES"/>
+        <relationship name="contents" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MaterialPropertyContent" inverseName="material" inverseEntity="MaterialPropertyContent" syncable="YES"/>
+        <relationship name="materialAmbient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="ambient" inverseEntity="Material" syncable="YES"/>
+        <relationship name="materialDiffuse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="diffuse" inverseEntity="Material" syncable="YES"/>
+        <relationship name="materialEmission" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="emission" inverseEntity="Material" syncable="YES"/>
+        <relationship name="materialMultiply" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="multiply" inverseEntity="Material" syncable="YES"/>
+        <relationship name="materialNormal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="normal" inverseEntity="Material" syncable="YES"/>
+        <relationship name="materialReflective" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="reflective" inverseEntity="Material" syncable="YES"/>
+        <relationship name="materialSpecular" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="specular" inverseEntity="Material" syncable="YES"/>
+        <relationship name="materialTransparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="transparent" inverseEntity="Material" syncable="YES"/>
+        <relationship name="sceneBackground" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scene" inverseName="background" inverseEntity="Scene" syncable="YES"/>
     </entity>
     <entity name="MaterialPropertyContent" isAbstract="YES" syncable="YES">
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="material" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="contents" inverseEntity="MaterialProperty" syncable="YES"/>
     </entity>
     <entity name="MaterialPropertyContentColor" parentEntity="MaterialPropertyContent" syncable="YES">
@@ -140,10 +140,10 @@
     <entity name="MaterialPropertyContentVideoHLS" parentEntity="MaterialPropertyContent" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
-    <entity name="Mopher" syncable="YES">
+    <entity name="Morpher" syncable="YES">
         <attribute name="calculationMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="weights" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weights" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="morpher" inverseEntity="Node" syncable="YES"/>
         <relationship name="targets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Geometry" inverseName="morpher" inverseEntity="Geometry" syncable="YES"/>
     </entity>
@@ -151,26 +151,26 @@
         <attribute name="categoryBitMask" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hidden" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="opacity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="paused" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="rotation" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scale" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="node" inverseEntity="Camera" syncable="YES"/>
-        <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Node" inverseName="parentNode" inverseEntity="Node" syncable="YES"/>
-        <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="node" inverseEntity="Geometry" syncable="YES"/>
-        <relationship name="light" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Light" inverseName="node" inverseEntity="Light" syncable="YES"/>
-        <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Link" inverseName="node" inverseEntity="Link" syncable="YES"/>
-        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mopher" inverseName="node" inverseEntity="Mopher" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="rotation" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="scale" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="camera" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Camera" inverseName="node" inverseEntity="Camera" syncable="YES"/>
+        <relationship name="childNodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Node" inverseName="parentNode" inverseEntity="Node" syncable="YES"/>
+        <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Geometry" inverseName="node" inverseEntity="Geometry" syncable="YES"/>
+        <relationship name="light" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Light" inverseName="node" inverseEntity="Light" syncable="YES"/>
+        <relationship name="link" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Link" inverseName="node" inverseEntity="Link" syncable="YES"/>
+        <relationship name="morpher" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Morpher" inverseName="node" inverseEntity="Morpher" syncable="YES"/>
         <relationship name="parentNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="childNodes" inverseEntity="Node" syncable="YES"/>
-        <relationship name="physicsbody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsBody" inverseName="node" inverseEntity="PhysicsBody" syncable="YES"/>
-        <relationship name="physicsShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsShape" inverseName="node" inverseEntity="PhysicsShape" syncable="YES"/>
-        <relationship name="physicsVehicleWheelNode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsVehicleWheel" inverseName="node" inverseEntity="PhysicsVehicleWheel" syncable="YES"/>
+        <relationship name="physicsBody" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PhysicsBody" inverseName="node" inverseEntity="PhysicsBody" syncable="YES"/>
+        <relationship name="physicsShape" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PhysicsShape" inverseName="node" inverseEntity="PhysicsShape" syncable="YES"/>
+        <relationship name="physicsVehicleWheelNode" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PhysicsVehicleWheel" inverseName="node" inverseEntity="PhysicsVehicleWheel" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scene" inverseName="nodes" inverseEntity="Scene" syncable="YES"/>
         <relationship name="skinnerBones" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Skinner" inverseName="bones" inverseEntity="Skinner" syncable="YES"/>
         <relationship name="skinnerSkeleton" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Skinner" inverseName="skeleton" inverseEntity="Skinner" syncable="YES"/>
-        <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" inverseName="node" inverseEntity="Sound" syncable="YES"/>
+        <relationship name="sound" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Sound" inverseName="node" inverseEntity="Sound" syncable="YES"/>
     </entity>
     <entity name="ParticleSystem" syncable="YES">
         <attribute name="acceleration" optional="YES" attributeType="String" syncable="YES"/>
@@ -258,7 +258,7 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="velocity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="velocityFactor" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="physicsbody" inverseEntity="Node" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="physicsBody" inverseEntity="Node" syncable="YES"/>
         <relationship name="physicsBallSocketJointBodyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsBallSocketJoint" inverseName="bodyA" inverseEntity="PhysicsBallSocketJoint" syncable="YES"/>
         <relationship name="physicsBallSocketJointBodyB" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsBallSocketJoint" inverseName="bodyB" inverseEntity="PhysicsBallSocketJoint" syncable="YES"/>
         <relationship name="physicsHingeJointBodyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsHingeJoint" inverseName="bodyA" inverseEntity="PhysicsHingeJoint" syncable="YES"/>
@@ -353,7 +353,7 @@
         <relationship name="vehicle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsVehicle" inverseName="wheels" inverseEntity="PhysicsVehicle" syncable="YES"/>
     </entity>
     <entity name="PhysicsVortexField" parentEntity="PhysicsField" syncable="YES"/>
-    <entity name="PhysicsWorld" syncable="YES">
+    <entity name="PhysicsWorld" representedClassName="PhysicsWorld" syncable="YES">
         <attribute name="gravity" optional="YES" attributeType="Transformable" valueTransformerName="SCNVector3ValueTransformer" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="timeStep" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -362,7 +362,7 @@
     </entity>
     <entity name="Scene" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="background" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MaterialProperty" inverseName="backgroundScene" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="background" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MaterialProperty" inverseName="sceneBackground" inverseEntity="MaterialProperty" syncable="YES"/>
         <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Node" inverseName="scene" inverseEntity="Node" syncable="YES"/>
         <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PhysicsWorld" inverseName="scene" inverseEntity="PhysicsWorld" syncable="YES"/>
     </entity>
@@ -399,17 +399,17 @@
         <element name="GeometryElement" positionX="-9" positionY="83" width="128" height="133"/>
         <element name="GeometrySource" positionX="-36" positionY="-144" width="128" height="223"/>
         <element name="Light" positionX="-254" positionY="297" width="128" height="255"/>
-        <element name="Link" positionX="-254" positionY="171" width="128" height="105"/>
+        <element name="Link" positionX="-254" positionY="171" width="128" height="103"/>
         <element name="Material" positionX="225" positionY="-117" width="128" height="330"/>
-        <element name="MaterialProperty" positionX="468" positionY="-342" width="128" height="345"/>
-        <element name="MaterialPropertyContent" positionX="664" positionY="-190" width="128" height="75"/>
+        <element name="MaterialProperty" positionX="468" positionY="-342" width="128" height="343"/>
+        <element name="MaterialPropertyContent" positionX="664" positionY="-190" width="128" height="73"/>
         <element name="MaterialPropertyContentColor" positionX="709" positionY="-13" width="128" height="60"/>
         <element name="MaterialPropertyContentCubeMapImages" positionX="-396" positionY="-171" width="128" height="135"/>
         <element name="MaterialPropertyContentImage" positionX="720" positionY="90" width="128" height="60"/>
         <element name="MaterialPropertyContentImageURL" positionX="567" positionY="126" width="128" height="60"/>
         <element name="MaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="60"/>
-        <element name="Mopher" positionX="-396" positionY="-171" width="128" height="120"/>
-        <element name="Node" positionX="-450" positionY="-90" width="128" height="390"/>
+        <element name="Morpher" positionX="-396" positionY="-171" width="128" height="118"/>
+        <element name="Node" positionX="-450" positionY="-90" width="128" height="388"/>
         <element name="ParticleSystem" positionX="-414" positionY="-180" width="128" height="915"/>
         <element name="PhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="105"/>
         <element name="PhysicsBehavior" positionX="-405" positionY="-180" width="128" height="75"/>
