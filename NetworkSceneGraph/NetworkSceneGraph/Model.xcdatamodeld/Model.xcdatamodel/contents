@@ -228,9 +228,9 @@
         <attribute name="warmupDuration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="colliderNodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Node" inverseName="particleSystemColliderNodes" inverseEntity="Node" syncable="YES"/>
         <relationship name="emitterShape" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Geometry" inverseName="particleSystemEmitterShape" inverseEntity="Geometry" syncable="YES"/>
-        <relationship name="particleSystemSystemSpawnedOnCollision" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="ParticleSystem" inverseName="systemSpawnedOnCollision" inverseEntity="ParticleSystem" syncable="YES"/>
-        <relationship name="particleSystemSystemSpawnedOnDying" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="ParticleSystem" inverseName="systemSpawnedOnDying" inverseEntity="ParticleSystem" syncable="YES"/>
-        <relationship name="particleSystemSystemSpawnedOnLiving" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="ParticleSystem" inverseName="systemSpawnedOnLiving" inverseEntity="ParticleSystem" syncable="YES"/>
+        <relationship name="particleSystemSystemSpawnedOnCollision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParticleSystem" inverseName="systemSpawnedOnCollision" inverseEntity="ParticleSystem" syncable="YES"/>
+        <relationship name="particleSystemSystemSpawnedOnDying" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParticleSystem" inverseName="systemSpawnedOnDying" inverseEntity="ParticleSystem" syncable="YES"/>
+        <relationship name="particleSystemSystemSpawnedOnLiving" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParticleSystem" inverseName="systemSpawnedOnLiving" inverseEntity="ParticleSystem" syncable="YES"/>
         <relationship name="systemSpawnedOnCollision" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ParticleSystem" inverseName="particleSystemSystemSpawnedOnCollision" inverseEntity="ParticleSystem" syncable="YES"/>
         <relationship name="systemSpawnedOnDying" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ParticleSystem" inverseName="particleSystemSystemSpawnedOnDying" inverseEntity="ParticleSystem" syncable="YES"/>
         <relationship name="systemSpawnedOnLiving" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ParticleSystem" inverseName="particleSystemSystemSpawnedOnLiving" inverseEntity="ParticleSystem" syncable="YES"/>
@@ -417,10 +417,11 @@
         <element name="MaterialPropertyContentVideoHLS" positionX="567" positionY="36" width="128" height="58"/>
         <element name="Morpher" positionX="-396" positionY="-171" width="128" height="118"/>
         <element name="Node" positionX="-450" positionY="-90" width="128" height="388"/>
-        <element name="ParticleSystem" positionX="-414" positionY="-180" width="128" height="958"/>
+        <element name="ParticleSystem" positionX="-414" positionY="-180" width="128" height="960"/>
         <element name="PhysicsBallSocketJoint" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="PhysicsBehavior" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="PhysicsBody" positionX="-414" positionY="-189" width="128" height="403"/>
+        <element name="PhysicsCustomField" positionX="-414" positionY="-189" width="128" height="58"/>
         <element name="PhysicsDragField" positionX="-414" positionY="-189" width="128" height="43"/>
         <element name="PhysicsElectricField" positionX="-360" positionY="-126" width="128" height="43"/>
         <element name="PhysicsField" positionX="-378" positionY="-153" width="128" height="208"/>
@@ -443,6 +444,5 @@
         <element name="SoundDataSource" positionX="-432" positionY="-333" width="128" height="73"/>
         <element name="SoundDataSourceData" positionX="-405" positionY="-180" width="128" height="73"/>
         <element name="SoundDataSourceHLS" positionX="-603" positionY="-297" width="128" height="58"/>
-        <element name="PhysicsCustomField" positionX="-414" positionY="-189" width="128" height="58"/>
     </elements>
 </model>

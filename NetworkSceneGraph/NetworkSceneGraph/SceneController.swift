@@ -10,14 +10,16 @@ import Foundation
 import SceneKit
 import CoreData
 
+let NetworkSceneGraphManagedObjectModel = NSBundle(identifier: "com.ColemanCDA.NetworkSceneGraph")
+
 /** This controller class will tell the self.viewScene to display the scene in self.representedScene. */
-public class SceneController {
+@objc public class SceneController {
     
     // MARK: - Properties
     
     // MARK: View
     
-    public let viewScene = SCNScene()
+    public lazy var viewScene: SCNScene = self.initViewScene()
     
     // MARK: Model
     
@@ -39,14 +41,23 @@ public class SceneController {
         self.managedObjectContext = managedObjectContext;
         
         // observe changes
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "managedObjectContextObjectsDidChange", name: NSManagedObjectContextObjectsDidChangeNotification, object: self.managedObjectContext)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "managedObjectContextObjectsDidChange:", name: NSManagedObjectContextObjectsDidChangeNotification, object: self.managedObjectContext)
     }
     
     // MARK: - Private Methods
     
     private func managedObjectContextObjectsDidChange(notification: NSNotification) {
         
+        let insertedObjects = notification.userInfo?[NSInsertedObjectsKey] as? [NSManagedObject]
         
+        
+    }
+    
+    private func initViewScene() -> SCNScene {
+        
+        let viewScene = SCNScene()
+        
+        return viewScene
     }
     
     

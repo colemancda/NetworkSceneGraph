@@ -162,8 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				6E4974FB19E111B70064B5D8 /* NetworkSceneGraph.h */,
-				6E4975CE19E1A46B0064B5D8 /* Controller */,
 				6E49751219E112340064B5D8 /* Model.xcdatamodeld */,
+				6E4975CE19E1A46B0064B5D8 /* Controller */,
 				6E49757019E19AFB0064B5D8 /* Model */,
 				6E4974F919E111B70064B5D8 /* Supporting Files */,
 			);
