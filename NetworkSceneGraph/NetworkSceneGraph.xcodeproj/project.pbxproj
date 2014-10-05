@@ -78,7 +78,7 @@
 			children = (
 				6E4974FB19E111B70064B5D8 /* NetworkSceneGraph.h */,
 				6E49751219E112340064B5D8 /* Model.xcdatamodeld */,
-				6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */,
+				6E49757019E19AFB0064B5D8 /* Model */,
 				6E4974F919E111B70064B5D8 /* Supporting Files */,
 			);
 			path = NetworkSceneGraph;
@@ -107,6 +107,62 @@
 				6E49750719E111B70064B5D8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E49751B19E198A00064B5D8 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		6E49757019E19AFB0064B5D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E49751B19E198A00064B5D8 /* Transformers */,
+				6E49757119E19B050064B5D8 /* NSManagedObject */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6E49757119E19B050064B5D8 /* NSManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				6E49757519E19BD20064B5D8 /* PhysicsJoint */,
+				6E49757419E19B870064B5D8 /* SoundDataSource */,
+				6E49757319E19B310064B5D8 /* MaterialPropertyContent */,
+				6E49757219E19B210064B5D8 /* PhysicsField */,
+			);
+			name = NSManagedObject;
+			sourceTree = "<group>";
+		};
+		6E49757219E19B210064B5D8 /* PhysicsField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PhysicsField;
+			sourceTree = "<group>";
+		};
+		6E49757319E19B310064B5D8 /* MaterialPropertyContent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MaterialPropertyContent;
+			sourceTree = "<group>";
+		};
+		6E49757419E19B870064B5D8 /* SoundDataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SoundDataSource;
+			sourceTree = "<group>";
+		};
+		6E49757519E19BD20064B5D8 /* PhysicsJoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PhysicsJoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +466,7 @@
 				6E49750E19E111B70064B5D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E49750F19E111B70064B5D8 /* Build configuration list for PBXNativeTarget "NetworkSceneGraphTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +475,7 @@
 				6E49751119E111B70064B5D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
