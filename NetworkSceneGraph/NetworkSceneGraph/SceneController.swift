@@ -11,7 +11,7 @@ import SceneKit
 import CoreData
 
 /** The managed object model used by this NetworkSceneGraph. */
-let NetworkSceneGraphManagedObjectModel = NSManagedObjectModel(contentsOfURL: NSBundle(identifier: "com.ColemanCDA.NetworkSceneGraph")!.URLForResource("Model", withExtension: "momd")!)!
+public let NetworkSceneGraphManagedObjectModel = NSManagedObjectModel(contentsOfURL: NSBundle(identifier: "com.ColemanCDA.NetworkSceneGraph")!.URLForResource("Model", withExtension: "momd")!)!
 
 /** This controller class will tell the self.viewScene to display the scene in self.representedScene. */
 @objc public class SceneController {
@@ -48,6 +48,8 @@ let NetworkSceneGraphManagedObjectModel = NSManagedObjectModel(contentsOfURL: NS
     private func initViewScene() -> SCNScene {
         
         let viewScene = SCNScene()
+        
+        
         
         return viewScene
     }
