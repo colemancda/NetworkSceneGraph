@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BA465FE5-5DB9-4CC0-90FF-0B0D027F6AD5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NetworkSceneGraph</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>02855A41E4B944A83F59EB56873D3BF1FE611797</key>
+		<string>https://github.com/colemancda/NetworkSceneGraph.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NetworkSceneGraph/NetworkSceneGraph.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>02855A41E4B944A83F59EB56873D3BF1FE611797</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/colemancda/NetworkSceneGraph.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>02855A41E4B944A83F59EB56873D3BF1FE611797</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>02855A41E4B944A83F59EB56873D3BF1FE611797</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NetworkSceneGraph</string>
+		</dict>
+	</array>
+</dict>
+</plist>
