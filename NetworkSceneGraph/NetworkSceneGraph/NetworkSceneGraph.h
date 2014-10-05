@@ -7,6 +7,7 @@
 //
 
 @import Foundation;
+@import SceneKit;
 
 //! Project version number for NetworkSceneGraph.
 FOUNDATION_EXPORT double NetworkSceneGraphVersionNumber;

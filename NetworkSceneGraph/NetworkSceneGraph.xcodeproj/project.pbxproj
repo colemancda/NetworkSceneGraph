@@ -11,6 +11,8 @@
 		6E49750219E111B70064B5D8 /* NetworkSceneGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4974F619E111B70064B5D8 /* NetworkSceneGraph.framework */; };
 		6E49750919E111B70064B5D8 /* NetworkSceneGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49750819E111B70064B5D8 /* NetworkSceneGraphTests.swift */; };
 		6E49751419E112340064B5D8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751219E112340064B5D8 /* Model.xcdatamodeld */; };
+		6E49751719E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */; };
+		6E49751819E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,7 @@
 		6E49750719E111B70064B5D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E49750819E111B70064B5D8 /* NetworkSceneGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSceneGraphTests.swift; sourceTree = "<group>"; };
 		6E49751319E112340064B5D8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNVector3ValueTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 			children = (
 				6E4974FB19E111B70064B5D8 /* NetworkSceneGraph.h */,
 				6E49751219E112340064B5D8 /* Model.xcdatamodeld */,
+				6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */,
 				6E4974F919E111B70064B5D8 /* Supporting Files */,
 			);
 			path = NetworkSceneGraph;
@@ -212,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E49751719E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */,
 				6E49751419E112340064B5D8 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E49751819E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */,
 				6E49750919E111B70064B5D8 /* NetworkSceneGraphTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +329,7 @@
 		6E49750D19E111B70064B5D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -331,13 +338,16 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		6E49750E19E111B70064B5D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -346,6 +356,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

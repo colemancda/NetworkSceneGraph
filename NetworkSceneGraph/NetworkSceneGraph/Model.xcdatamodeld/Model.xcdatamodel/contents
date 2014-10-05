@@ -6,18 +6,17 @@
         <attribute name="focalBlurRadius" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="focalDistance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="focalSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="orthographicScale" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="usesOrthographicProjection" optional="YES" attributeType="Boolean" defaultValueString="0.0" syncable="YES"/>
         <attribute name="xFov" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="yFov" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="zFar" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="zNear" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="camera" inverseEntity="Node" syncable="YES"/>
-        <relationship name="scenePointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scene" inverseName="pointOfView" inverseEntity="Scene" syncable="YES"/>
     </entity>
     <entity name="Geometry" syncable="YES">
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometryElements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GeometryElement" inverseName="geometry" inverseEntity="GeometryElement" syncable="YES"/>
         <relationship name="geometryLevelOfDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="levelsOfDetail" inverseEntity="Geometry" syncable="YES"/>
         <relationship name="geometrySources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GeometrySource" inverseName="geometry" inverseEntity="GeometrySource" syncable="YES"/>
@@ -33,9 +32,9 @@
     <entity name="GeometryElement" syncable="YES">
         <attribute name="bytesPerIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="primitiveCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="primitiveType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="geometryElements" inverseEntity="Geometry" syncable="YES"/>
     </entity>
     <entity name="GeometrySource" syncable="YES">
@@ -45,7 +44,7 @@
         <attribute name="dataOffset" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="dataStride" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="floatComponents" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="semantic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vectorCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="geometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="geometrySources" inverseEntity="Geometry" syncable="YES"/>
@@ -355,23 +354,22 @@
     </entity>
     <entity name="PhysicsVortexField" parentEntity="PhysicsField" syncable="YES"/>
     <entity name="PhysicsWorld" syncable="YES">
-        <attribute name="gravity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gravity" optional="YES" attributeType="Transformable" valueTransformerName="SCNVector3ValueTransformer" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="timeStep" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="behaviors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhysicsBehavior" inverseName="physicsWorld" inverseEntity="PhysicsBehavior" syncable="YES"/>
+        <relationship name="behaviors" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PhysicsBehavior" inverseName="physicsWorld" inverseEntity="PhysicsBehavior" syncable="YES"/>
         <relationship name="scene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scene" inverseName="physicsWorld" inverseEntity="Scene" syncable="YES"/>
     </entity>
     <entity name="Scene" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MaterialProperty" inverseName="backgroundScene" inverseEntity="MaterialProperty" syncable="YES"/>
-        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Node" inverseName="scene" inverseEntity="Node" syncable="YES"/>
-        <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhysicsWorld" inverseName="scene" inverseEntity="PhysicsWorld" syncable="YES"/>
-        <relationship name="pointOfView" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="scenePointOfView" inverseEntity="Camera" syncable="YES"/>
+        <relationship name="background" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MaterialProperty" inverseName="backgroundScene" inverseEntity="MaterialProperty" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Node" inverseName="scene" inverseEntity="Node" syncable="YES"/>
+        <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PhysicsWorld" inverseName="scene" inverseEntity="PhysicsWorld" syncable="YES"/>
     </entity>
     <entity name="Skinner" syncable="YES">
         <attribute name="baseGeometryBindTransform" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="boneInverseBindTransforms" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="baseGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="skinnerBaseGeometry" inverseEntity="Geometry" syncable="YES"/>
         <relationship name="boneIndices" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeometrySource" inverseName="skinnerBoneIndices" inverseEntity="GeometrySource" syncable="YES"/>
         <relationship name="bones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Node" inverseName="skinnerBones" inverseEntity="Node" syncable="YES"/>
@@ -379,13 +377,13 @@
         <relationship name="skeleton" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="skinnerSkeleton" inverseEntity="Node" syncable="YES"/>
     </entity>
     <entity name="Sound" representedClassName="" syncable="YES">
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="audibleGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="soundAudibleGeometry" inverseEntity="Geometry" syncable="YES"/>
-        <relationship name="dataSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SoundDataSource" inverseName="sound" inverseEntity="SoundDataSource" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="audibleGeometry" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Geometry" inverseName="soundAudibleGeometry" inverseEntity="Geometry" syncable="YES"/>
+        <relationship name="dataSource" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SoundDataSource" inverseName="sound" inverseEntity="SoundDataSource" syncable="YES"/>
         <relationship name="node" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="sound" inverseEntity="Node" syncable="YES"/>
     </entity>
     <entity name="SoundDataSource" representedClassName="" isAbstract="YES" syncable="YES">
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" inverseName="dataSource" inverseEntity="Sound" syncable="YES"/>
     </entity>
     <entity name="SoundDataSourceData" representedClassName="NSGSoundDataSourceData" parentEntity="SoundDataSource" syncable="YES">
@@ -396,10 +394,10 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Camera" positionX="-252" positionY="-253" width="128" height="253"/>
+        <element name="Camera" positionX="-252" positionY="-253" width="128" height="238"/>
         <element name="Geometry" positionX="-252" positionY="26" width="128" height="223"/>
-        <element name="GeometryElement" positionX="-9" positionY="83" width="128" height="135"/>
-        <element name="GeometrySource" positionX="-36" positionY="-144" width="128" height="225"/>
+        <element name="GeometryElement" positionX="-9" positionY="83" width="128" height="133"/>
+        <element name="GeometrySource" positionX="-36" positionY="-144" width="128" height="223"/>
         <element name="Light" positionX="-254" positionY="297" width="128" height="255"/>
         <element name="Link" positionX="-254" positionY="171" width="128" height="105"/>
         <element name="Material" positionX="225" positionY="-117" width="128" height="330"/>
@@ -431,10 +429,10 @@
         <element name="PhysicsVehicle" positionX="-405" positionY="-180" width="128" height="90"/>
         <element name="PhysicsVehicleWheel" positionX="-414" positionY="-189" width="128" height="255"/>
         <element name="PhysicsVortexField" positionX="-405" positionY="-180" width="128" height="45"/>
-        <element name="PhysicsWorld" positionX="-414" positionY="-189" width="128" height="120"/>
-        <element name="Scene" positionX="-623" positionY="-45" width="128" height="120"/>
-        <element name="Skinner" positionX="-387" positionY="-162" width="128" height="165"/>
-        <element name="Sound" positionX="-369" positionY="-144" width="128" height="105"/>
+        <element name="PhysicsWorld" positionX="-414" positionY="-189" width="128" height="118"/>
+        <element name="Scene" positionX="-623" positionY="-45" width="128" height="103"/>
+        <element name="Skinner" positionX="-387" positionY="-162" width="128" height="163"/>
+        <element name="Sound" positionX="-369" positionY="-144" width="128" height="103"/>
         <element name="SoundDataSource" positionX="-432" positionY="-333" width="128" height="73"/>
         <element name="SoundDataSourceData" positionX="-405" positionY="-180" width="128" height="75"/>
         <element name="SoundDataSourceHLS" positionX="-603" positionY="-297" width="128" height="58"/>
