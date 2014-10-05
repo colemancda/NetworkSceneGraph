@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class PhysicsShape: NSManagedObject {
+public class PhysicsShape: NSManagedObject {
 
     @NSManaged var shapeKeepAsCompound: NSNumber
     @NSManaged var shapeScale: NSValue

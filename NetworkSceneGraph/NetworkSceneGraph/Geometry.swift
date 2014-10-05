@@ -9,19 +9,19 @@
 import Foundation
 import CoreData
 
-class Geometry: NSManagedObject {
+public class Geometry: NSManagedObject {
 
-    @NSManaged var id: NSNumber
-    @NSManaged var geometryElements: NSSet
-    @NSManaged var geometryLevelOfDetail: Geometry
-    @NSManaged var geometrySources: NSSet
-    @NSManaged var levelsOfDetail: NSSet
-    @NSManaged var materials: NSSet
-    @NSManaged var morpher: Morpher
-    @NSManaged var node: Node
-    @NSManaged var particleSystemEmitterShape: ParticleSystem
-    @NSManaged var physicsShapeGeometry: PhysicsShape
-    @NSManaged var skinnerBaseGeometry: Skinner
-    @NSManaged var soundAudibleGeometry: Sound
+    @NSManaged public var id: NSNumber
+    @NSManaged public var geometryElements: NSSet
+    @NSManaged public var geometryLevelOfDetail: Geometry
+    @NSManaged public var geometrySources: NSSet
+    @NSManaged public var levelsOfDetail: NSSet
+    @NSManaged public var materials: NSSet
+    @NSManaged public var morpher: Morpher
+    @NSManaged public var node: Node
+    @NSManaged public var particleSystemEmitterShape: ParticleSystem
+    @NSManaged public var physicsShapeGeometry: PhysicsShape
+    @NSManaged public var skinnerBaseGeometry: Skinner
+    @NSManaged public var soundAudibleGeometry: Sound
 
 }

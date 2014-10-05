@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Skinner: NSManagedObject {
+public class Skinner: NSManagedObject {
 
     @NSManaged var baseGeometryBindTransform: NSValue
     @NSManaged var boneInverseBindTransforms: NSValue

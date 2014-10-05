@@ -9,9 +9,9 @@
 import Foundation
 import CoreData
 
-class MaterialPropertyContent: NSManagedObject {
+public class MaterialPropertyContent: NSManagedObject {
 
-    @NSManaged var id: NSNumber
-    @NSManaged var material: MaterialProperty
+    @NSManaged public var id: NSNumber?
+    @NSManaged public var material: MaterialProperty?
 
 }

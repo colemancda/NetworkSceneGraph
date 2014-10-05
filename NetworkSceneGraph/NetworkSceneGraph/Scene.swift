@@ -11,9 +11,9 @@ import CoreData
 
 public class Scene: NSManagedObject {
 
-    @NSManaged public var id: NSNumber
-    @NSManaged public var background: MaterialProperty
+    @NSManaged public var id: NSNumber?
+    @NSManaged public var background: MaterialProperty?
     @NSManaged public var nodes: NSSet
-    @NSManaged public var physicsWorld: PhysicsWorld
+    @NSManaged public var physicsWorld: PhysicsWorld?
 
 }

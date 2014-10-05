@@ -9,12 +9,12 @@
 import Foundation
 import CoreData
 
-class Morpher: NSManagedObject {
+public class Morpher: NSManagedObject {
 
-    @NSManaged var calculationMode: NSNumber
-    @NSManaged var id: NSNumber
-    @NSManaged var weights: NSValue
-    @NSManaged var node: Node
-    @NSManaged var targets: NSSet
+    @NSManaged public var calculationMode: NSNumber
+    @NSManaged public var id: NSNumber
+    @NSManaged public var weights: NSValue
+    @NSManaged public var node: Node
+    @NSManaged public var targets: NSSet
 
 }

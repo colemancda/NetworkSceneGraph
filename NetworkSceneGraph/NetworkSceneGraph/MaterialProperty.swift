@@ -11,25 +11,25 @@ import CoreData
 
 public class MaterialProperty: NSManagedObject {
 
-    @NSManaged var borderColor: NSValue
-    @NSManaged var intensity: NSNumber
-    @NSManaged var magnificationFilter: NSNumber
-    @NSManaged var mappingChannel: NSNumber
-    @NSManaged var maxAnisotropy: NSNumber
-    @NSManaged var minificationFilter: NSNumber
-    @NSManaged var mipFilter: NSNumber
-    @NSManaged var id: NSNumber
-    @NSManaged var wrapS: NSNumber
-    @NSManaged var wrapT: NSNumber
-    @NSManaged var materialAmbient: Material
-    @NSManaged var sceneBackground: Scene
-    @NSManaged var contents: MaterialPropertyContent
-    @NSManaged var materialDiffuse: Material
-    @NSManaged var materialEmission: Material
-    @NSManaged var materialMultiply: Material
-    @NSManaged var materialNormal: Material
-    @NSManaged var materialReflective: Material
-    @NSManaged var materialSpecular: Material
-    @NSManaged var materialTransparent: Material
+    @NSManaged public var borderColor: NSValue?
+    @NSManaged public var intensity: NSNumber?
+    @NSManaged public var magnificationFilter: NSNumber?
+    @NSManaged public var mappingChannel: NSNumber?
+    @NSManaged public var maxAnisotropy: NSNumber
+    @NSManaged public var minificationFilter: NSNumber
+    @NSManaged public var mipFilter: NSNumber
+    @NSManaged public var id: NSNumber
+    @NSManaged public var wrapS: NSNumber
+    @NSManaged public var wrapT: NSNumber
+    @NSManaged public var materialAmbient: Material
+    @NSManaged public var sceneBackground: Scene
+    @NSManaged public var contents: MaterialPropertyContent
+    @NSManaged public var materialDiffuse: Material
+    @NSManaged public var materialEmission: Material
+    @NSManaged public var materialMultiply: Material
+    @NSManaged public var materialNormal: Material
+    @NSManaged public var materialReflective: Material
+    @NSManaged public var materialSpecular: Material
+    @NSManaged public var materialTransparent: Material
 
 }

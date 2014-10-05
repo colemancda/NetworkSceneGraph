@@ -9,68 +9,68 @@
 import Foundation
 import CoreData
 
-class ParticleSystem: NSManagedObject {
+public class ParticleSystem: NSManagedObject {
 
-    @NSManaged var acceleration: NSValue
-    @NSManaged var affectedByGravity: NSNumber
-    @NSManaged var affectedByPhysicsFields: NSNumber
-    @NSManaged var birthDirection: NSNumber
-    @NSManaged var birthLocation: NSNumber
-    @NSManaged var birthRate: NSNumber
-    @NSManaged var birthRateVariation: NSNumber
-    @NSManaged var blackPassEnabled: NSNumber
-    @NSManaged var blendMode: NSNumber
-    @NSManaged var dampingFactor: NSNumber
-    @NSManaged var emissionDuration: NSNumber
-    @NSManaged var emissionDurationVariation: NSNumber
-    @NSManaged var emittingDirection: NSValue
-    @NSManaged var fresnelExponent: NSNumber
-    @NSManaged var idleDuration: NSNumber
-    @NSManaged var idleDurationVariation: NSNumber
-    @NSManaged var imageSequenceAnimationMode: NSNumber
-    @NSManaged var imageSequenceColumnCount: NSNumber
-    @NSManaged var imageSequenceFrameRate: NSNumber
-    @NSManaged var imageSequenceFrameRateVariation: NSNumber
-    @NSManaged var imageSequenceInitialFrame: NSNumber
-    @NSManaged var imageSequenceInitialFrameVariation: NSNumber
-    @NSManaged var imageSequenceRowCount: NSNumber
-    @NSManaged var lightingEnabled: NSNumber
-    @NSManaged var local: NSNumber
-    @NSManaged var loops: NSNumber
-    @NSManaged var orientationMode: NSNumber
-    @NSManaged var particleAngle: NSNumber
-    @NSManaged var particleAngleVariation: NSNumber
-    @NSManaged var particleAngularVelocity: NSNumber
-    @NSManaged var particleAngularVelocityVariation: NSNumber
-    @NSManaged var particleBounce: NSNumber
-    @NSManaged var particleBounceVariation: NSNumber
-    @NSManaged var particleColor: NSValue
-    @NSManaged var particleColorVariation: NSValue
-    @NSManaged var particleDiesOnCollision: NSNumber
-    @NSManaged var particleFriction: NSNumber
-    @NSManaged var particleFrictionVariation: NSNumber
-    @NSManaged var particleImageData: NSData
-    @NSManaged var particleLifeSpan: NSNumber
-    @NSManaged var particleLifeSpanVariation: NSNumber
-    @NSManaged var particleMass: NSNumber
-    @NSManaged var particleMassVariation: NSNumber
-    @NSManaged var particleSize: NSNumber
-    @NSManaged var particleSizeVariation: NSNumber
-    @NSManaged var particleVelocity: NSNumber
-    @NSManaged var particleVelocityVariation: NSNumber
-    @NSManaged var id: NSNumber
-    @NSManaged var sortingMode: NSNumber
-    @NSManaged var speedFactor: NSNumber
-    @NSManaged var spreadingAngle: NSNumber
-    @NSManaged var stretchFactor: NSNumber
-    @NSManaged var warmupDuration: NSNumber
-    @NSManaged var colliderNodes: NSSet
-    @NSManaged var emitterShape: Geometry
-    @NSManaged var systemSpawnedOnCollision: ParticleSystem
-    @NSManaged var systemSpawnedOnDying: ParticleSystem
-    @NSManaged var systemSpawnedOnLiving: ParticleSystem
-    @NSManaged var particleSystemSystemSpawnedOnLiving: ParticleSystem
-    @NSManaged var particleSystemSystemSpawnedOnDying: ParticleSystem
-    @NSManaged var particleSystemSystemSpawnedOnCollision: ParticleSystem
+    @NSManaged public var acceleration: NSValue
+    @NSManaged public var affectedByGravity: NSNumber
+    @NSManaged public var affectedByPhysicsFields: NSNumber
+    @NSManaged public var birthDirection: NSNumber
+    @NSManaged public var birthLocation: NSNumber
+    @NSManaged public var birthRate: NSNumber
+    @NSManaged public var birthRateVariation: NSNumber
+    @NSManaged public var blackPassEnabled: NSNumber
+    @NSManaged public var blendMode: NSNumber
+    @NSManaged public var dampingFactor: NSNumber
+    @NSManaged public var emissionDuration: NSNumber
+    @NSManaged public var emissionDurationVariation: NSNumber
+    @NSManaged public var emittingDirection: NSValue
+    @NSManaged public var fresnelExponent: NSNumber
+    @NSManaged public var idleDuration: NSNumber
+    @NSManaged public var idleDurationVariation: NSNumber
+    @NSManaged public var imageSequenceAnimationMode: NSNumber
+    @NSManaged public var imageSequenceColumnCount: NSNumber
+    @NSManaged public var imageSequenceFrameRate: NSNumber
+    @NSManaged public var imageSequenceFrameRateVariation: NSNumber
+    @NSManaged public var imageSequenceInitialFrame: NSNumber
+    @NSManaged public var imageSequenceInitialFrameVariation: NSNumber
+    @NSManaged public var imageSequenceRowCount: NSNumber
+    @NSManaged public var lightingEnabled: NSNumber
+    @NSManaged public var local: NSNumber
+    @NSManaged public var loops: NSNumber
+    @NSManaged public var orientationMode: NSNumber
+    @NSManaged public var particleAngle: NSNumber
+    @NSManaged public var particleAngleVariation: NSNumber
+    @NSManaged public var particleAngularVelocity: NSNumber
+    @NSManaged public var particleAngularVelocityVariation: NSNumber
+    @NSManaged public var particleBounce: NSNumber
+    @NSManaged public var particleBounceVariation: NSNumber
+    @NSManaged public var particleColor: NSValue
+    @NSManaged public var particleColorVariation: NSValue
+    @NSManaged public var particleDiesOnCollision: NSNumber
+    @NSManaged public var particleFriction: NSNumber
+    @NSManaged public var particleFrictionVariation: NSNumber
+    @NSManaged public var particleImageData: NSData
+    @NSManaged public var particleLifeSpan: NSNumber
+    @NSManaged public var particleLifeSpanVariation: NSNumber
+    @NSManaged public var particleMass: NSNumber
+    @NSManaged public var particleMassVariation: NSNumber
+    @NSManaged public var particleSize: NSNumber
+    @NSManaged public var particleSizeVariation: NSNumber
+    @NSManaged public var particleVelocity: NSNumber
+    @NSManaged public var particleVelocityVariation: NSNumber
+    @NSManaged public var id: NSNumber
+    @NSManaged public var sortingMode: NSNumber
+    @NSManaged public var speedFactor: NSNumber
+    @NSManaged public var spreadingAngle: NSNumber
+    @NSManaged public var stretchFactor: NSNumber
+    @NSManaged public var warmupDuration: NSNumber
+    @NSManaged public var colliderNodes: NSSet
+    @NSManaged public var emitterShape: Geometry
+    @NSManaged public var systemSpawnedOnCollision: ParticleSystem
+    @NSManaged public var systemSpawnedOnDying: ParticleSystem
+    @NSManaged public var systemSpawnedOnLiving: ParticleSystem
+    @NSManaged public var particleSystemSystemSpawnedOnLiving: ParticleSystem
+    @NSManaged public var particleSystemSystemSpawnedOnDying: ParticleSystem
+    @NSManaged public var particleSystemSystemSpawnedOnCollision: ParticleSystem
 
 }

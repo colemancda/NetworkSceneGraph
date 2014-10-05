@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Sound: NSManagedObject {
+public class Sound: NSManagedObject {
 
     @NSManaged var id: NSNumber
     @NSManaged var audibleGeometry: Geometry

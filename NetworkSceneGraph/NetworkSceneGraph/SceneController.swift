@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import SceneKit
 import CoreData
+import SceneKit
 
 /** The managed object model used by this NetworkSceneGraph. */
 public let NetworkSceneGraphManagedObjectModel = NSManagedObjectModel(contentsOfURL: NSBundle(identifier: "com.ColemanCDA.NetworkSceneGraph")!.URLForResource("Model", withExtension: "momd")!)!
@@ -49,7 +49,11 @@ public let NetworkSceneGraphManagedObjectModel = NSManagedObjectModel(contentsOf
         
         let viewScene = SCNScene()
         
-        
+        // set the background
+        if self.representedScene.background != nil {
+            
+            viewScene.background 
+        }
         
         return viewScene
     }
