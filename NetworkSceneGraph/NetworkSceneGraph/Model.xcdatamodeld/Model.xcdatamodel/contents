@@ -77,10 +77,10 @@
         <attribute name="cullMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="doubleSided" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="fresnelExponent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="lightingModel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="litPerPixel" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="locksAmbientWithDiffuse" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="resourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="shininess" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="transparency" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="transparencyMode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -374,8 +374,8 @@
         <relationship name="physicsWorld" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PhysicsWorld" inverseName="scene" inverseEntity="PhysicsWorld" syncable="YES"/>
     </entity>
     <entity name="Skinner" representedClassName="Skinner" syncable="YES">
-        <attribute name="baseGeometryBindTransform" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="boneInverseBindTransforms" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="baseGeometryBindTransform" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="boneInverseBindTransforms" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="baseGeometry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geometry" inverseName="skinnerBaseGeometry" inverseEntity="Geometry" syncable="YES"/>
         <relationship name="boneIndices" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeometrySource" inverseName="skinnerBoneIndices" inverseEntity="GeometrySource" syncable="YES"/>

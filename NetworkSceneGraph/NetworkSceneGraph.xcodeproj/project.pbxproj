@@ -13,6 +13,49 @@
 		6E49751419E112340064B5D8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751219E112340064B5D8 /* Model.xcdatamodeld */; };
 		6E49751719E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */; };
 		6E49751819E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */; };
+		6E49757719E19D900064B5D8 /* PhysicsVehicleWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757619E19D900064B5D8 /* PhysicsVehicleWheel.swift */; };
+		6E49757919E19D910064B5D8 /* PhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757819E19D910064B5D8 /* PhysicsBody.swift */; };
+		6E49757B19E19D910064B5D8 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757A19E19D910064B5D8 /* Material.swift */; };
+		6E49757D19E19D910064B5D8 /* SoundDataSourceHLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757C19E19D910064B5D8 /* SoundDataSourceHLS.swift */; };
+		6E49757F19E19D920064B5D8 /* Morpher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757E19E19D920064B5D8 /* Morpher.swift */; };
+		6E49758119E19D920064B5D8 /* MaterialPropertyContentImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758019E19D920064B5D8 /* MaterialPropertyContentImageURL.swift */; };
+		6E49758319E19D920064B5D8 /* PhysicsField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758219E19D920064B5D8 /* PhysicsField.swift */; };
+		6E49758519E19D920064B5D8 /* PhysicsElectricField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758419E19D920064B5D8 /* PhysicsElectricField.swift */; };
+		6E49758719E19D920064B5D8 /* PhysicsHingeJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758619E19D920064B5D8 /* PhysicsHingeJoint.swift */; };
+		6E49758919E19D920064B5D8 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758819E19D920064B5D8 /* Link.swift */; };
+		6E49758B19E19D920064B5D8 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758A19E19D920064B5D8 /* Node.swift */; };
+		6E49758D19E19D920064B5D8 /* PhysicsMagneticField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758C19E19D920064B5D8 /* PhysicsMagneticField.swift */; };
+		6E49758F19E19D920064B5D8 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49758E19E19D920064B5D8 /* Geometry.swift */; };
+		6E49759119E19D920064B5D8 /* MaterialPropertyContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49759019E19D920064B5D8 /* MaterialPropertyContent.swift */; };
+		6E49759319E19D920064B5D8 /* PhysicsVortexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49759219E19D920064B5D8 /* PhysicsVortexField.swift */; };
+		6E49759519E19D920064B5D8 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49759419E19D920064B5D8 /* Scene.swift */; };
+		6E49759919E19D920064B5D8 /* SoundDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49759819E19D920064B5D8 /* SoundDataSource.swift */; };
+		6E49759B19E19D920064B5D8 /* PhysicsWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49759A19E19D920064B5D8 /* PhysicsWorld.swift */; };
+		6E49759D19E19D920064B5D8 /* PhysicsLinearGravityField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49759C19E19D920064B5D8 /* PhysicsLinearGravityField.swift */; };
+		6E49759F19E19D920064B5D8 /* GeometryElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49759E19E19D920064B5D8 /* GeometryElement.swift */; };
+		6E4975A119E19D920064B5D8 /* SoundDataSourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975A019E19D920064B5D8 /* SoundDataSourceData.swift */; };
+		6E4975A319E19D920064B5D8 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975A219E19D920064B5D8 /* Camera.swift */; };
+		6E4975A519E19D920064B5D8 /* MaterialPropertyContentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975A419E19D920064B5D8 /* MaterialPropertyContentColor.swift */; };
+		6E4975A719E19D930064B5D8 /* ParticleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975A619E19D930064B5D8 /* ParticleSystem.swift */; };
+		6E4975A919E19D930064B5D8 /* PhysicsBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975A819E19D930064B5D8 /* PhysicsBehavior.swift */; };
+		6E4975AB19E19D930064B5D8 /* GeometrySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975AA19E19D930064B5D8 /* GeometrySource.swift */; };
+		6E4975AD19E19D930064B5D8 /* PhysicsRadialGravityField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975AC19E19D930064B5D8 /* PhysicsRadialGravityField.swift */; };
+		6E4975AF19E19D930064B5D8 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975AE19E19D930064B5D8 /* Light.swift */; };
+		6E4975B119E19D930064B5D8 /* PhysicsCustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975B019E19D930064B5D8 /* PhysicsCustomField.swift */; };
+		6E4975B319E19D930064B5D8 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975B219E19D930064B5D8 /* Sound.swift */; };
+		6E4975B519E19D930064B5D8 /* PhysicsSliderJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975B419E19D930064B5D8 /* PhysicsSliderJoint.swift */; };
+		6E4975B719E19D930064B5D8 /* MaterialProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975B619E19D930064B5D8 /* MaterialProperty.swift */; };
+		6E4975B919E19D930064B5D8 /* MaterialPropertyContentVideoHLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975B819E19D930064B5D8 /* MaterialPropertyContentVideoHLS.swift */; };
+		6E4975BB19E19D930064B5D8 /* PhysicsBallSocketJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975BA19E19D930064B5D8 /* PhysicsBallSocketJoint.swift */; };
+		6E4975BD19E19D930064B5D8 /* PhysicsNoiseField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975BC19E19D930064B5D8 /* PhysicsNoiseField.swift */; };
+		6E4975BF19E19D930064B5D8 /* PhysicsShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975BE19E19D930064B5D8 /* PhysicsShape.swift */; };
+		6E4975C119E19D930064B5D8 /* PhysicsVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975C019E19D930064B5D8 /* PhysicsVehicle.swift */; };
+		6E4975C319E19D930064B5D8 /* PhysicsTurbulenceField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975C219E19D930064B5D8 /* PhysicsTurbulenceField.swift */; };
+		6E4975C519E19D930064B5D8 /* MaterialPropertyContentCubeMapImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975C419E19D930064B5D8 /* MaterialPropertyContentCubeMapImages.swift */; };
+		6E4975C719E19D930064B5D8 /* MaterialPropertyContentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975C619E19D930064B5D8 /* MaterialPropertyContentImage.swift */; };
+		6E4975C919E19D930064B5D8 /* PhysicsDragField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975C819E19D930064B5D8 /* PhysicsDragField.swift */; };
+		6E4975CB19E19D930064B5D8 /* PhysicsSpringField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975CA19E19D930064B5D8 /* PhysicsSpringField.swift */; };
+		6E4975CD19E19E0A0064B5D8 /* Skinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4975CC19E19E0A0064B5D8 /* Skinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +77,49 @@
 		6E49750819E111B70064B5D8 /* NetworkSceneGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSceneGraphTests.swift; sourceTree = "<group>"; };
 		6E49751319E112340064B5D8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNVector3ValueTransformer.swift; sourceTree = "<group>"; };
+		6E49757619E19D900064B5D8 /* PhysicsVehicleWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsVehicleWheel.swift; sourceTree = "<group>"; };
+		6E49757819E19D910064B5D8 /* PhysicsBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsBody.swift; sourceTree = "<group>"; };
+		6E49757A19E19D910064B5D8 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		6E49757C19E19D910064B5D8 /* SoundDataSourceHLS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundDataSourceHLS.swift; sourceTree = "<group>"; };
+		6E49757E19E19D920064B5D8 /* Morpher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Morpher.swift; sourceTree = "<group>"; };
+		6E49758019E19D920064B5D8 /* MaterialPropertyContentImageURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialPropertyContentImageURL.swift; sourceTree = "<group>"; };
+		6E49758219E19D920064B5D8 /* PhysicsField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsField.swift; sourceTree = "<group>"; };
+		6E49758419E19D920064B5D8 /* PhysicsElectricField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsElectricField.swift; sourceTree = "<group>"; };
+		6E49758619E19D920064B5D8 /* PhysicsHingeJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsHingeJoint.swift; sourceTree = "<group>"; };
+		6E49758819E19D920064B5D8 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		6E49758A19E19D920064B5D8 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		6E49758C19E19D920064B5D8 /* PhysicsMagneticField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsMagneticField.swift; sourceTree = "<group>"; };
+		6E49758E19E19D920064B5D8 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		6E49759019E19D920064B5D8 /* MaterialPropertyContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialPropertyContent.swift; sourceTree = "<group>"; };
+		6E49759219E19D920064B5D8 /* PhysicsVortexField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsVortexField.swift; sourceTree = "<group>"; };
+		6E49759419E19D920064B5D8 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		6E49759819E19D920064B5D8 /* SoundDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundDataSource.swift; sourceTree = "<group>"; };
+		6E49759A19E19D920064B5D8 /* PhysicsWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsWorld.swift; sourceTree = "<group>"; };
+		6E49759C19E19D920064B5D8 /* PhysicsLinearGravityField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsLinearGravityField.swift; sourceTree = "<group>"; };
+		6E49759E19E19D920064B5D8 /* GeometryElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryElement.swift; sourceTree = "<group>"; };
+		6E4975A019E19D920064B5D8 /* SoundDataSourceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundDataSourceData.swift; sourceTree = "<group>"; };
+		6E4975A219E19D920064B5D8 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		6E4975A419E19D920064B5D8 /* MaterialPropertyContentColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialPropertyContentColor.swift; sourceTree = "<group>"; };
+		6E4975A619E19D930064B5D8 /* ParticleSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleSystem.swift; sourceTree = "<group>"; };
+		6E4975A819E19D930064B5D8 /* PhysicsBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsBehavior.swift; sourceTree = "<group>"; };
+		6E4975AA19E19D930064B5D8 /* GeometrySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometrySource.swift; sourceTree = "<group>"; };
+		6E4975AC19E19D930064B5D8 /* PhysicsRadialGravityField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsRadialGravityField.swift; sourceTree = "<group>"; };
+		6E4975AE19E19D930064B5D8 /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		6E4975B019E19D930064B5D8 /* PhysicsCustomField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsCustomField.swift; sourceTree = "<group>"; };
+		6E4975B219E19D930064B5D8 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		6E4975B419E19D930064B5D8 /* PhysicsSliderJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsSliderJoint.swift; sourceTree = "<group>"; };
+		6E4975B619E19D930064B5D8 /* MaterialProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialProperty.swift; sourceTree = "<group>"; };
+		6E4975B819E19D930064B5D8 /* MaterialPropertyContentVideoHLS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialPropertyContentVideoHLS.swift; sourceTree = "<group>"; };
+		6E4975BA19E19D930064B5D8 /* PhysicsBallSocketJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsBallSocketJoint.swift; sourceTree = "<group>"; };
+		6E4975BC19E19D930064B5D8 /* PhysicsNoiseField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsNoiseField.swift; sourceTree = "<group>"; };
+		6E4975BE19E19D930064B5D8 /* PhysicsShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsShape.swift; sourceTree = "<group>"; };
+		6E4975C019E19D930064B5D8 /* PhysicsVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsVehicle.swift; sourceTree = "<group>"; };
+		6E4975C219E19D930064B5D8 /* PhysicsTurbulenceField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsTurbulenceField.swift; sourceTree = "<group>"; };
+		6E4975C419E19D930064B5D8 /* MaterialPropertyContentCubeMapImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialPropertyContentCubeMapImages.swift; sourceTree = "<group>"; };
+		6E4975C619E19D930064B5D8 /* MaterialPropertyContentImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialPropertyContentImage.swift; sourceTree = "<group>"; };
+		6E4975C819E19D930064B5D8 /* PhysicsDragField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsDragField.swift; sourceTree = "<group>"; };
+		6E4975CA19E19D930064B5D8 /* PhysicsSpringField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsSpringField.swift; sourceTree = "<group>"; };
+		6E4975CC19E19E0A0064B5D8 /* Skinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +215,29 @@
 		6E49757119E19B050064B5D8 /* NSManagedObject */ = {
 			isa = PBXGroup;
 			children = (
+				6E49759419E19D920064B5D8 /* Scene.swift */,
+				6E49758A19E19D920064B5D8 /* Node.swift */,
+				6E49758E19E19D920064B5D8 /* Geometry.swift */,
+				6E4975CC19E19E0A0064B5D8 /* Skinner.swift */,
+				6E4975C019E19D930064B5D8 /* PhysicsVehicle.swift */,
+				6E4975BE19E19D930064B5D8 /* PhysicsShape.swift */,
+				6E4975B619E19D930064B5D8 /* MaterialProperty.swift */,
+				6E4975B219E19D930064B5D8 /* Sound.swift */,
+				6E4975AE19E19D930064B5D8 /* Light.swift */,
+				6E49758819E19D920064B5D8 /* Link.swift */,
+				6E4975A219E19D920064B5D8 /* Camera.swift */,
+				6E49757819E19D910064B5D8 /* PhysicsBody.swift */,
+				6E49759E19E19D920064B5D8 /* GeometryElement.swift */,
+				6E4975AA19E19D930064B5D8 /* GeometrySource.swift */,
+				6E49757A19E19D910064B5D8 /* Material.swift */,
+				6E49759019E19D920064B5D8 /* MaterialPropertyContent.swift */,
+				6E4975A819E19D930064B5D8 /* PhysicsBehavior.swift */,
+				6E4975A619E19D930064B5D8 /* ParticleSystem.swift */,
+				6E49759A19E19D920064B5D8 /* PhysicsWorld.swift */,
+				6E49759819E19D920064B5D8 /* SoundDataSource.swift */,
+				6E49757E19E19D920064B5D8 /* Morpher.swift */,
+				6E49757619E19D900064B5D8 /* PhysicsVehicleWheel.swift */,
+				6E49758219E19D920064B5D8 /* PhysicsField.swift */,
 				6E49757519E19BD20064B5D8 /* PhysicsJoint */,
 				6E49757419E19B870064B5D8 /* SoundDataSource */,
 				6E49757319E19B310064B5D8 /* MaterialPropertyContent */,
@@ -140,6 +249,16 @@
 		6E49757219E19B210064B5D8 /* PhysicsField */ = {
 			isa = PBXGroup;
 			children = (
+				6E4975CA19E19D930064B5D8 /* PhysicsSpringField.swift */,
+				6E4975C819E19D930064B5D8 /* PhysicsDragField.swift */,
+				6E4975C219E19D930064B5D8 /* PhysicsTurbulenceField.swift */,
+				6E4975BC19E19D930064B5D8 /* PhysicsNoiseField.swift */,
+				6E4975B019E19D930064B5D8 /* PhysicsCustomField.swift */,
+				6E4975AC19E19D930064B5D8 /* PhysicsRadialGravityField.swift */,
+				6E49759C19E19D920064B5D8 /* PhysicsLinearGravityField.swift */,
+				6E49759219E19D920064B5D8 /* PhysicsVortexField.swift */,
+				6E49758419E19D920064B5D8 /* PhysicsElectricField.swift */,
+				6E49758C19E19D920064B5D8 /* PhysicsMagneticField.swift */,
 			);
 			name = PhysicsField;
 			sourceTree = "<group>";
@@ -147,6 +266,11 @@
 		6E49757319E19B310064B5D8 /* MaterialPropertyContent */ = {
 			isa = PBXGroup;
 			children = (
+				6E4975C619E19D930064B5D8 /* MaterialPropertyContentImage.swift */,
+				6E4975C419E19D930064B5D8 /* MaterialPropertyContentCubeMapImages.swift */,
+				6E4975B819E19D930064B5D8 /* MaterialPropertyContentVideoHLS.swift */,
+				6E4975A419E19D920064B5D8 /* MaterialPropertyContentColor.swift */,
+				6E49758019E19D920064B5D8 /* MaterialPropertyContentImageURL.swift */,
 			);
 			name = MaterialPropertyContent;
 			sourceTree = "<group>";
@@ -154,6 +278,8 @@
 		6E49757419E19B870064B5D8 /* SoundDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				6E4975A019E19D920064B5D8 /* SoundDataSourceData.swift */,
+				6E49757C19E19D910064B5D8 /* SoundDataSourceHLS.swift */,
 			);
 			name = SoundDataSource;
 			sourceTree = "<group>";
@@ -161,6 +287,9 @@
 		6E49757519E19BD20064B5D8 /* PhysicsJoint */ = {
 			isa = PBXGroup;
 			children = (
+				6E4975B419E19D930064B5D8 /* PhysicsSliderJoint.swift */,
+				6E4975BA19E19D930064B5D8 /* PhysicsBallSocketJoint.swift */,
+				6E49758619E19D920064B5D8 /* PhysicsHingeJoint.swift */,
 			);
 			name = PhysicsJoint;
 			sourceTree = "<group>";
@@ -272,8 +401,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E4975B719E19D930064B5D8 /* MaterialProperty.swift in Sources */,
+				6E49759919E19D920064B5D8 /* SoundDataSource.swift in Sources */,
+				6E4975B319E19D930064B5D8 /* Sound.swift in Sources */,
+				6E49758D19E19D920064B5D8 /* PhysicsMagneticField.swift in Sources */,
+				6E49759D19E19D920064B5D8 /* PhysicsLinearGravityField.swift in Sources */,
+				6E4975A719E19D930064B5D8 /* ParticleSystem.swift in Sources */,
+				6E49757D19E19D910064B5D8 /* SoundDataSourceHLS.swift in Sources */,
+				6E49757B19E19D910064B5D8 /* Material.swift in Sources */,
 				6E49751719E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */,
+				6E49758F19E19D920064B5D8 /* Geometry.swift in Sources */,
+				6E4975C919E19D930064B5D8 /* PhysicsDragField.swift in Sources */,
+				6E49758919E19D920064B5D8 /* Link.swift in Sources */,
+				6E49758719E19D920064B5D8 /* PhysicsHingeJoint.swift in Sources */,
+				6E49759119E19D920064B5D8 /* MaterialPropertyContent.swift in Sources */,
+				6E4975C319E19D930064B5D8 /* PhysicsTurbulenceField.swift in Sources */,
+				6E49759519E19D920064B5D8 /* Scene.swift in Sources */,
+				6E4975AD19E19D930064B5D8 /* PhysicsRadialGravityField.swift in Sources */,
+				6E49758B19E19D920064B5D8 /* Node.swift in Sources */,
+				6E4975C519E19D930064B5D8 /* MaterialPropertyContentCubeMapImages.swift in Sources */,
+				6E4975BF19E19D930064B5D8 /* PhysicsShape.swift in Sources */,
+				6E49759319E19D920064B5D8 /* PhysicsVortexField.swift in Sources */,
+				6E4975C119E19D930064B5D8 /* PhysicsVehicle.swift in Sources */,
+				6E49758519E19D920064B5D8 /* PhysicsElectricField.swift in Sources */,
+				6E4975CD19E19E0A0064B5D8 /* Skinner.swift in Sources */,
+				6E4975B519E19D930064B5D8 /* PhysicsSliderJoint.swift in Sources */,
+				6E49757919E19D910064B5D8 /* PhysicsBody.swift in Sources */,
+				6E4975A519E19D920064B5D8 /* MaterialPropertyContentColor.swift in Sources */,
+				6E49757F19E19D920064B5D8 /* Morpher.swift in Sources */,
+				6E4975BB19E19D930064B5D8 /* PhysicsBallSocketJoint.swift in Sources */,
+				6E49758119E19D920064B5D8 /* MaterialPropertyContentImageURL.swift in Sources */,
+				6E49759F19E19D920064B5D8 /* GeometryElement.swift in Sources */,
+				6E4975CB19E19D930064B5D8 /* PhysicsSpringField.swift in Sources */,
+				6E4975B119E19D930064B5D8 /* PhysicsCustomField.swift in Sources */,
+				6E4975B919E19D930064B5D8 /* MaterialPropertyContentVideoHLS.swift in Sources */,
+				6E4975A119E19D920064B5D8 /* SoundDataSourceData.swift in Sources */,
+				6E4975AB19E19D930064B5D8 /* GeometrySource.swift in Sources */,
+				6E4975AF19E19D930064B5D8 /* Light.swift in Sources */,
 				6E49751419E112340064B5D8 /* Model.xcdatamodeld in Sources */,
+				6E4975BD19E19D930064B5D8 /* PhysicsNoiseField.swift in Sources */,
+				6E4975A319E19D920064B5D8 /* Camera.swift in Sources */,
+				6E49757719E19D900064B5D8 /* PhysicsVehicleWheel.swift in Sources */,
+				6E49758319E19D920064B5D8 /* PhysicsField.swift in Sources */,
+				6E49759B19E19D920064B5D8 /* PhysicsWorld.swift in Sources */,
+				6E4975C719E19D930064B5D8 /* MaterialPropertyContentImage.swift in Sources */,
+				6E4975A919E19D930064B5D8 /* PhysicsBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
