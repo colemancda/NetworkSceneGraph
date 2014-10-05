@@ -11,8 +11,8 @@ import CoreData
 
 class PhysicsBallSocketJoint: PhysicsBehavior {
 
-    @NSManaged var anchorA: AnyObject
-    @NSManaged var anchorB: AnyObject
+    @NSManaged var anchorA: NSValue
+    @NSManaged var anchorB: NSValue
     @NSManaged var bodyA: PhysicsBody
     @NSManaged var bodyB: PhysicsBody
 

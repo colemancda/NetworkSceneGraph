@@ -12,9 +12,9 @@ import CoreData
 class PhysicsShape: NSManagedObject {
 
     @NSManaged var shapeKeepAsCompound: NSNumber
-    @NSManaged var shapeScale: AnyObject
-    @NSManaged var shapeType: AnyObject
-    @NSManaged var transforms: AnyObject
+    @NSManaged var shapeScale: NSValue
+    @NSManaged var shapeType: NSValue
+    @NSManaged var transforms: NSValue
     @NSManaged var id: NSNumber
     @NSManaged var geometry: Geometry
     @NSManaged var node: Node

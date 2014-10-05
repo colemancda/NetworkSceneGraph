@@ -15,10 +15,10 @@ class Node: NSManagedObject {
     @NSManaged var hidden: NSNumber
     @NSManaged var opacity: NSNumber
     @NSManaged var paused: NSNumber
-    @NSManaged var position: AnyObject
+    @NSManaged var position: NSValue
     @NSManaged var id: NSNumber
-    @NSManaged var rotation: AnyObject
-    @NSManaged var scale: AnyObject
+    @NSManaged var rotation: NSValue
+    @NSManaged var scale: NSValue
     @NSManaged var camera: Camera
     @NSManaged var childNodes: NSSet
     @NSManaged var geometry: Geometry

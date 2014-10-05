@@ -13,7 +13,7 @@ class Morpher: NSManagedObject {
 
     @NSManaged var calculationMode: NSNumber
     @NSManaged var id: NSNumber
-    @NSManaged var weights: AnyObject
+    @NSManaged var weights: NSValue
     @NSManaged var node: Node
     @NSManaged var targets: NSSet
 

@@ -11,7 +11,7 @@ import CoreData
 
 class MaterialProperty: NSManagedObject {
 
-    @NSManaged var borderColor: AnyObject
+    @NSManaged var borderColor: NSValue
     @NSManaged var intensity: NSNumber
     @NSManaged var magnificationFilter: NSNumber
     @NSManaged var mappingChannel: NSNumber

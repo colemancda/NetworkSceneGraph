@@ -11,8 +11,8 @@ import CoreData
 
 class Skinner: NSManagedObject {
 
-    @NSManaged var baseGeometryBindTransform: AnyObject
-    @NSManaged var boneInverseBindTransforms: AnyObject
+    @NSManaged var baseGeometryBindTransform: NSValue
+    @NSManaged var boneInverseBindTransforms: NSValue
     @NSManaged var id: NSNumber
     @NSManaged var baseGeometry: Geometry
     @NSManaged var boneIndices: GeometrySource

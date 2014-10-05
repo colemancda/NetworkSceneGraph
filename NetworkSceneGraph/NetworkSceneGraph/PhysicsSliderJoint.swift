@@ -11,10 +11,10 @@ import CoreData
 
 class PhysicsSliderJoint: PhysicsBehavior {
 
-    @NSManaged var anchorA: AnyObject
-    @NSManaged var anchorB: AnyObject
-    @NSManaged var axisA: AnyObject
-    @NSManaged var axisB: AnyObject
+    @NSManaged var anchorA: NSValue
+    @NSManaged var anchorB: NSValue
+    @NSManaged var axisA: NSValue
+    @NSManaged var axisB: NSValue
     @NSManaged var maximumAngularLimit: NSNumber
     @NSManaged var maximumLinearLimit: NSNumber
     @NSManaged var minimumAngularLimit: NSNumber

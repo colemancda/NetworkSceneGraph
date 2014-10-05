@@ -11,14 +11,14 @@ import CoreData
 
 class PhysicsVehicleWheel: NSManagedObject {
 
-    @NSManaged var axle: AnyObject
-    @NSManaged var connectionPosition: AnyObject
+    @NSManaged var axle: NSValue
+    @NSManaged var connectionPosition: NSValue
     @NSManaged var frictionSlip: NSNumber
     @NSManaged var maximumSuspensionForce: NSNumber
     @NSManaged var maximumSuspensionTravel: NSNumber
     @NSManaged var radius: NSNumber
     @NSManaged var id: NSNumber
-    @NSManaged var steeringAxis: AnyObject
+    @NSManaged var steeringAxis: NSValue
     @NSManaged var suspensionCompression: NSNumber
     @NSManaged var suspensionDamping: NSNumber
     @NSManaged var suspensionRestLength: NSNumber

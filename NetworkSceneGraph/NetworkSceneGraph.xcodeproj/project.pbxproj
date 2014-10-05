@@ -11,8 +11,6 @@
 		6E49750219E111B70064B5D8 /* NetworkSceneGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4974F619E111B70064B5D8 /* NetworkSceneGraph.framework */; };
 		6E49750919E111B70064B5D8 /* NetworkSceneGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49750819E111B70064B5D8 /* NetworkSceneGraphTests.swift */; };
 		6E49751419E112340064B5D8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751219E112340064B5D8 /* Model.xcdatamodeld */; };
-		6E49751719E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */; };
-		6E49751819E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */; };
 		6E49757719E19D900064B5D8 /* PhysicsVehicleWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757619E19D900064B5D8 /* PhysicsVehicleWheel.swift */; };
 		6E49757919E19D910064B5D8 /* PhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757819E19D910064B5D8 /* PhysicsBody.swift */; };
 		6E49757B19E19D910064B5D8 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49757A19E19D910064B5D8 /* Material.swift */; };
@@ -76,7 +74,6 @@
 		6E49750719E111B70064B5D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E49750819E111B70064B5D8 /* NetworkSceneGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSceneGraphTests.swift; sourceTree = "<group>"; };
 		6E49751319E112340064B5D8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNVector3ValueTransformer.swift; sourceTree = "<group>"; };
 		6E49757619E19D900064B5D8 /* PhysicsVehicleWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsVehicleWheel.swift; sourceTree = "<group>"; };
 		6E49757819E19D910064B5D8 /* PhysicsBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsBody.swift; sourceTree = "<group>"; };
 		6E49757A19E19D910064B5D8 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
@@ -195,18 +192,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6E49751B19E198A00064B5D8 /* Transformers */ = {
-			isa = PBXGroup;
-			children = (
-				6E49751619E117D50064B5D8 /* SCNVector3ValueTransformer.swift */,
-			);
-			name = Transformers;
-			sourceTree = "<group>";
-		};
 		6E49757019E19AFB0064B5D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6E49751B19E198A00064B5D8 /* Transformers */,
 				6E49757119E19B050064B5D8 /* NSManagedObject */,
 			);
 			name = Model;
@@ -409,7 +397,6 @@
 				6E4975A719E19D930064B5D8 /* ParticleSystem.swift in Sources */,
 				6E49757D19E19D910064B5D8 /* SoundDataSourceHLS.swift in Sources */,
 				6E49757B19E19D910064B5D8 /* Material.swift in Sources */,
-				6E49751719E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */,
 				6E49758F19E19D920064B5D8 /* Geometry.swift in Sources */,
 				6E4975C919E19D930064B5D8 /* PhysicsDragField.swift in Sources */,
 				6E49758919E19D920064B5D8 /* Link.swift in Sources */,
@@ -453,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E49751819E117D50064B5D8 /* SCNVector3ValueTransformer.swift in Sources */,
 				6E49750919E111B70064B5D8 /* NetworkSceneGraphTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

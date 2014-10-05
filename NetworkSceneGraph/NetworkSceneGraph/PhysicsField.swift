@@ -12,12 +12,12 @@ import CoreData
 class PhysicsField: NSManagedObject {
 
     @NSManaged var active: NSNumber
-    @NSManaged var direction: AnyObject
+    @NSManaged var direction: NSValue
     @NSManaged var exclusive: NSNumber
     @NSManaged var falloffExponent: NSNumber
-    @NSManaged var halfExtent: AnyObject
+    @NSManaged var halfExtent: NSValue
     @NSManaged var minimumDistance: NSNumber
-    @NSManaged var offset: AnyObject
+    @NSManaged var offset: NSValue
     @NSManaged var id: NSNumber
     @NSManaged var scope: NSNumber
     @NSManaged var strength: NSNumber

@@ -11,7 +11,7 @@ import CoreData
 
 class PhysicsWorld: NSManagedObject {
 
-    @NSManaged var gravity: AnyObject
+    @NSManaged var gravity: NSValue
     @NSManaged var speed: NSNumber
     @NSManaged var timeStep: NSNumber
     @NSManaged var id: NSNumber

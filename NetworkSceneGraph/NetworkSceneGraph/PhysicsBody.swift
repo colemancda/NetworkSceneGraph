@@ -13,8 +13,8 @@ class PhysicsBody: NSManagedObject {
 
     @NSManaged var allowsResting: NSNumber
     @NSManaged var angularDamping: NSNumber
-    @NSManaged var angularVelocity: AnyObject
-    @NSManaged var angularVelocityFactor: AnyObject
+    @NSManaged var angularVelocity: NSValue
+    @NSManaged var angularVelocityFactor: NSValue
     @NSManaged var categoryBitMask: NSNumber
     @NSManaged var collisionBitMask: NSNumber
     @NSManaged var damping: NSNumber
@@ -24,8 +24,8 @@ class PhysicsBody: NSManagedObject {
     @NSManaged var restitution: NSNumber
     @NSManaged var rollingFriction: NSNumber
     @NSManaged var type: NSNumber
-    @NSManaged var velocity: AnyObject
-    @NSManaged var velocityFactor: AnyObject
+    @NSManaged var velocity: NSValue
+    @NSManaged var velocityFactor: NSValue
     @NSManaged var node: Node
     @NSManaged var physicsBallSocketJointBodyA: PhysicsBallSocketJoint
     @NSManaged var physicsBallSocketJointBodyB: PhysicsBallSocketJoint

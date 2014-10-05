@@ -11,7 +11,7 @@ import CoreData
 
 class ParticleSystem: NSManagedObject {
 
-    @NSManaged var acceleration: AnyObject
+    @NSManaged var acceleration: NSValue
     @NSManaged var affectedByGravity: NSNumber
     @NSManaged var affectedByPhysicsFields: NSNumber
     @NSManaged var birthDirection: NSNumber
@@ -23,7 +23,7 @@ class ParticleSystem: NSManagedObject {
     @NSManaged var dampingFactor: NSNumber
     @NSManaged var emissionDuration: NSNumber
     @NSManaged var emissionDurationVariation: NSNumber
-    @NSManaged var emittingDirection: AnyObject
+    @NSManaged var emittingDirection: NSValue
     @NSManaged var fresnelExponent: NSNumber
     @NSManaged var idleDuration: NSNumber
     @NSManaged var idleDurationVariation: NSNumber
@@ -44,8 +44,8 @@ class ParticleSystem: NSManagedObject {
     @NSManaged var particleAngularVelocityVariation: NSNumber
     @NSManaged var particleBounce: NSNumber
     @NSManaged var particleBounceVariation: NSNumber
-    @NSManaged var particleColor: AnyObject
-    @NSManaged var particleColorVariation: AnyObject
+    @NSManaged var particleColor: NSValue
+    @NSManaged var particleColorVariation: NSValue
     @NSManaged var particleDiesOnCollision: NSNumber
     @NSManaged var particleFriction: NSNumber
     @NSManaged var particleFrictionVariation: NSNumber

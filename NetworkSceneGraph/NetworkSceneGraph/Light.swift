@@ -12,7 +12,7 @@ import CoreData
 class Light: NSManagedObject {
 
     @NSManaged var castsShadow: NSNumber
-    @NSManaged var color: AnyObject
+    @NSManaged var color: NSValue
     @NSManaged var lightAttenuationEnd: NSNumber
     @NSManaged var lightAttenuationFalloffExponent: NSNumber
     @NSManaged var lightAttenuationStart: NSNumber
@@ -21,7 +21,7 @@ class Light: NSManagedObject {
     @NSManaged var lightSpotInnerAngle: NSNumber
     @NSManaged var lightSpotOuterAngle: NSNumber
     @NSManaged var id: NSNumber
-    @NSManaged var shadowColor: AnyObject
+    @NSManaged var shadowColor: NSValue
     @NSManaged var shadowRadius: NSNumber
     @NSManaged var type: NSNumber
     @NSManaged var node: Node
