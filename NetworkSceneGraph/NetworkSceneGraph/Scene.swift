@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import SceneKit
 
 public class Scene: NSManagedObject {
 

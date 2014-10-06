@@ -49,11 +49,7 @@ public let NetworkSceneGraphManagedObjectModel = NSManagedObjectModel(contentsOf
         
         let viewScene = SCNScene()
         
-        // set the background
-        if self.representedScene.background != nil {
-            
-            viewScene.background 
-        }
+        self.configureViewScene(viewScene, withManagedObject: self.representedScene)
         
         return viewScene
     }
@@ -64,8 +60,29 @@ public let NetworkSceneGraphManagedObjectModel = NSManagedObjectModel(contentsOf
         
         let insertedObjects = notification.userInfo?[NSInsertedObjectsKey] as? [NSManagedObject]
         
+    }
+    
+    // MARK: - Configure View
+    
+    private func configureViewScene(viewScene: SCNScene, withManagedObject managedObject: Scene) {
+        
+        // background
+        if managedObject.background != nil {
+            
+            self.configureViewMaterialProperty(viewScene.background, withManagedObject: managedObject.background!)
+        }
+        else {
+            
+            viewScene.background.
+        }
+        
         
     }
     
+    private func configureViewMaterialProperty(viewMaterialProperty: SCNMaterialProperty, withManagedObject managedObject: MaterialProperty) {
+        
+        // configure contents
+        viewMaterialProperty
+    }
     
 }
